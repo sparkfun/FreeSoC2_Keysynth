@@ -1,0 +1,905 @@
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccQwYCSj.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.main,"ax",%progbits
+  19              		.align	2
+  20              		.global	main
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	main, %function
+  24              	main:
+  25              	.LFB56:
+  26              		.file 1 ".\\main.c"
+   1:.\main.c      **** /* ========================================
+   2:.\main.c      ****  *
+   3:.\main.c      ****  * Copyright YOUR COMPANY, THE YEAR
+   4:.\main.c      ****  * All Rights Reserved
+   5:.\main.c      ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:.\main.c      ****  *
+   7:.\main.c      ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:.\main.c      ****  * WHICH IS THE PROPERTY OF your company.
+   9:.\main.c      ****  *
+  10:.\main.c      ****  * ========================================
+  11:.\main.c      **** */
+  12:.\main.c      **** #include <project.h>
+  13:.\main.c      **** #include <stdbool.h>
+  14:.\main.c      **** 
+  15:.\main.c      **** int main()
+  16:.\main.c      **** {
+  27              		.loc 1 16 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 8
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31 0000 80B5     		push	{r7, lr}
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 7, -8
+  34              		.cfi_offset 14, -4
+  35 0002 82B0     		sub	sp, sp, #8
+  36              		.cfi_def_cfa_offset 16
+  37 0004 00AF     		add	r7, sp, #0
+  38              		.cfi_def_cfa_register 7
+  17:.\main.c      ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  18:.\main.c      **** 
+  19:.\main.c      ****     A_B_Start();
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccQwYCSj.s 			page 2
+
+
+  39              		.loc 1 19 0
+  40 0006 FFF7FEFF 		bl	A_B_Start
+  20:.\main.c      ****     C_D_Start();
+  41              		.loc 1 20 0
+  42 000a FFF7FEFF 		bl	C_D_Start
+  21:.\main.c      ****     E_F_Start();
+  43              		.loc 1 21 0
+  44 000e FFF7FEFF 		bl	E_F_Start
+  22:.\main.c      ****     G_A_Start();
+  45              		.loc 1 22 0
+  46 0012 FFF7FEFF 		bl	G_A_Start
+  23:.\main.c      ****     OutMux_Start();
+  47              		.loc 1 23 0
+  48 0016 FFF7FEFF 		bl	OutMux_Start
+  24:.\main.c      ****     Pot_Vals_Start();
+  49              		.loc 1 24 0
+  50 001a FFF7FEFF 		bl	Pot_Vals_Start
+  25:.\main.c      ****     ADC_Start();
+  51              		.loc 1 25 0
+  52 001e FFF7FEFF 		bl	ADC_Start
+  26:.\main.c      ****     Tremolo_Start();
+  53              		.loc 1 26 0
+  54 0022 FFF7FEFF 		bl	Tremolo_Start
+  27:.\main.c      ****     Amp_Start();
+  55              		.loc 1 27 0
+  56 0026 FFF7FEFF 		bl	Amp_Start
+  28:.\main.c      ****     
+  29:.\main.c      ****     uint8 InputReg;
+  30:.\main.c      ****     int16 Pot_A_val;
+  31:.\main.c      ****     int16 Pot_B_val;
+  32:.\main.c      ****     
+  33:.\main.c      ****     Amp_SetGain(Amp_GAIN_01);
+  57              		.loc 1 33 0
+  58 002a 0020     		movs	r0, #0
+  59 002c FFF7FEFF 		bl	Amp_SetGain
+  60              	.L23:
+  34:.\main.c      ****     
+  35:.\main.c      ****     /* CyGlobalIntEnable; */ /* Uncomment this line to enable global interrupts. */
+  36:.\main.c      ****     for(;;)
+  37:.\main.c      ****     {
+  38:.\main.c      ****         
+  39:.\main.c      **** 
+  40:.\main.c      ****         Pot_Vals_Select(0);
+  61              		.loc 1 40 0
+  62 0030 0020     		movs	r0, #0
+  63 0032 FFF7FEFF 		bl	Pot_Vals_Select
+  41:.\main.c      ****         CyDelay(25);
+  64              		.loc 1 41 0
+  65 0036 1920     		movs	r0, #25
+  66 0038 FFF7FEFF 		bl	CyDelay
+  42:.\main.c      ****         ADC_StartConvert();
+  67              		.loc 1 42 0
+  68 003c FFF7FEFF 		bl	ADC_StartConvert
+  43:.\main.c      ****         ADC_IsEndConversion(ADC_WAIT_FOR_RESULT);
+  69              		.loc 1 43 0
+  70 0040 0020     		movs	r0, #0
+  71 0042 FFF7FEFF 		bl	ADC_IsEndConversion
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccQwYCSj.s 			page 3
+
+
+  44:.\main.c      ****         Pot_A_val = ADC_GetResult16();
+  72              		.loc 1 44 0
+  73 0046 FFF7FEFF 		bl	ADC_GetResult16
+  74 004a 0346     		mov	r3, r0
+  75 004c FB80     		strh	r3, [r7, #6]	@ movhi
+  45:.\main.c      **** 
+  46:.\main.c      **** 
+  47:.\main.c      ****         
+  48:.\main.c      ****         Pot_Vals_Select(1);
+  76              		.loc 1 48 0
+  77 004e 0120     		movs	r0, #1
+  78 0050 FFF7FEFF 		bl	Pot_Vals_Select
+  49:.\main.c      ****         CyDelay(25);
+  79              		.loc 1 49 0
+  80 0054 1920     		movs	r0, #25
+  81 0056 FFF7FEFF 		bl	CyDelay
+  50:.\main.c      ****         ADC_StartConvert();
+  82              		.loc 1 50 0
+  83 005a FFF7FEFF 		bl	ADC_StartConvert
+  51:.\main.c      ****         ADC_IsEndConversion(ADC_WAIT_FOR_RESULT);
+  84              		.loc 1 51 0
+  85 005e 0020     		movs	r0, #0
+  86 0060 FFF7FEFF 		bl	ADC_IsEndConversion
+  52:.\main.c      ****         Pot_B_val = ADC_GetResult16();
+  87              		.loc 1 52 0
+  88 0064 FFF7FEFF 		bl	ADC_GetResult16
+  89 0068 0346     		mov	r3, r0
+  90 006a BB80     		strh	r3, [r7, #4]	@ movhi
+  53:.\main.c      ****         
+  54:.\main.c      ****         
+  55:.\main.c      ****         InputReg = Status_Reg_Read();
+  91              		.loc 1 55 0
+  92 006c FFF7FEFF 		bl	Status_Reg_Read
+  93 0070 0346     		mov	r3, r0
+  94 0072 FB70     		strb	r3, [r7, #3]
+  56:.\main.c      ****         
+  57:.\main.c      ****         
+  58:.\main.c      ****         switch(InputReg){
+  95              		.loc 1 58 0
+  96 0074 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+  97 0076 082B     		cmp	r3, #8
+  98 0078 29D0     		beq	.L3
+  99 007a 082B     		cmp	r3, #8
+ 100 007c 06DC     		bgt	.L4
+ 101 007e 022B     		cmp	r3, #2
+ 102 0080 17D0     		beq	.L5
+ 103 0082 042B     		cmp	r3, #4
+ 104 0084 1CD0     		beq	.L6
+ 105 0086 012B     		cmp	r3, #1
+ 106 0088 0CD0     		beq	.L7
+ 107 008a 43E0     		b	.L2
+ 108              	.L4:
+ 109 008c 202B     		cmp	r3, #32
+ 110 008e 2CD0     		beq	.L8
+ 111 0090 202B     		cmp	r3, #32
+ 112 0092 02DC     		bgt	.L9
+ 113 0094 102B     		cmp	r3, #16
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccQwYCSj.s 			page 4
+
+
+ 114 0096 21D0     		beq	.L10
+ 115 0098 3CE0     		b	.L2
+ 116              	.L9:
+ 117 009a 402B     		cmp	r3, #64
+ 118 009c 2CD0     		beq	.L11
+ 119 009e 802B     		cmp	r3, #128
+ 120 00a0 31D0     		beq	.L12
+ 121 00a2 37E0     		b	.L2
+ 122              	.L7:
+  59:.\main.c      ****             
+  60:.\main.c      ****          case 1:
+  61:.\main.c      ****             
+  62:.\main.c      ****             Control_Reg_Write(0); //0000
+ 123              		.loc 1 62 0
+ 124 00a4 0020     		movs	r0, #0
+ 125 00a6 FFF7FEFF 		bl	Control_Reg_Write
+  63:.\main.c      ****             OutMux_Select(0);    
+ 126              		.loc 1 63 0
+ 127 00aa 0020     		movs	r0, #0
+ 128 00ac FFF7FEFF 		bl	OutMux_FastSelect
+  64:.\main.c      ****             
+  65:.\main.c      ****          break;
+ 129              		.loc 1 65 0
+ 130 00b0 33E0     		b	.L13
+ 131              	.L5:
+  66:.\main.c      ****             
+  67:.\main.c      ****          case 2:
+  68:.\main.c      ****             
+  69:.\main.c      ****             Control_Reg_Write(1); //0001
+ 132              		.loc 1 69 0
+ 133 00b2 0120     		movs	r0, #1
+ 134 00b4 FFF7FEFF 		bl	Control_Reg_Write
+  70:.\main.c      ****             OutMux_Select(0);   
+ 135              		.loc 1 70 0
+ 136 00b8 0020     		movs	r0, #0
+ 137 00ba FFF7FEFF 		bl	OutMux_FastSelect
+  71:.\main.c      ****             
+  72:.\main.c      ****          break;
+ 138              		.loc 1 72 0
+ 139 00be 2CE0     		b	.L13
+ 140              	.L6:
+  73:.\main.c      ****             
+  74:.\main.c      ****          case 4:
+  75:.\main.c      ****             
+  76:.\main.c      ****             Control_Reg_Write(1); //0001
+ 141              		.loc 1 76 0
+ 142 00c0 0120     		movs	r0, #1
+ 143 00c2 FFF7FEFF 		bl	Control_Reg_Write
+  77:.\main.c      ****             OutMux_Select(1);            
+ 144              		.loc 1 77 0
+ 145 00c6 0120     		movs	r0, #1
+ 146 00c8 FFF7FEFF 		bl	OutMux_FastSelect
+  78:.\main.c      ****             
+  79:.\main.c      ****          break;
+ 147              		.loc 1 79 0
+ 148 00cc 25E0     		b	.L13
+ 149              	.L3:
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccQwYCSj.s 			page 5
+
+
+  80:.\main.c      ****             
+  81:.\main.c      ****          case 8:
+  82:.\main.c      ****             
+  83:.\main.c      ****             Control_Reg_Write(2); //0010
+ 150              		.loc 1 83 0
+ 151 00ce 0220     		movs	r0, #2
+ 152 00d0 FFF7FEFF 		bl	Control_Reg_Write
+  84:.\main.c      ****             OutMux_Select(1);
+ 153              		.loc 1 84 0
+ 154 00d4 0120     		movs	r0, #1
+ 155 00d6 FFF7FEFF 		bl	OutMux_FastSelect
+  85:.\main.c      ****              
+  86:.\main.c      ****          break;
+ 156              		.loc 1 86 0
+ 157 00da 1EE0     		b	.L13
+ 158              	.L10:
+  87:.\main.c      ****             
+  88:.\main.c      ****          case 16:
+  89:.\main.c      ****             
+  90:.\main.c      ****         Control_Reg_Write(2); //0010
+ 159              		.loc 1 90 0
+ 160 00dc 0220     		movs	r0, #2
+ 161 00de FFF7FEFF 		bl	Control_Reg_Write
+  91:.\main.c      ****         OutMux_Select(2);            
+ 162              		.loc 1 91 0
+ 163 00e2 0220     		movs	r0, #2
+ 164 00e4 FFF7FEFF 		bl	OutMux_FastSelect
+  92:.\main.c      ****             
+  93:.\main.c      ****          break;
+ 165              		.loc 1 93 0
+ 166 00e8 17E0     		b	.L13
+ 167              	.L8:
+  94:.\main.c      ****             
+  95:.\main.c      ****          case 32:
+  96:.\main.c      ****             
+  97:.\main.c      ****         Control_Reg_Write(4); //0100
+ 168              		.loc 1 97 0
+ 169 00ea 0420     		movs	r0, #4
+ 170 00ec FFF7FEFF 		bl	Control_Reg_Write
+  98:.\main.c      ****         OutMux_Select(2);            
+ 171              		.loc 1 98 0
+ 172 00f0 0220     		movs	r0, #2
+ 173 00f2 FFF7FEFF 		bl	OutMux_FastSelect
+  99:.\main.c      ****             
+ 100:.\main.c      ****          break;
+ 174              		.loc 1 100 0
+ 175 00f6 10E0     		b	.L13
+ 176              	.L11:
+ 101:.\main.c      ****             
+ 102:.\main.c      ****          case 64:
+ 103:.\main.c      ****             
+ 104:.\main.c      ****         Control_Reg_Write(4); //0100
+ 177              		.loc 1 104 0
+ 178 00f8 0420     		movs	r0, #4
+ 179 00fa FFF7FEFF 		bl	Control_Reg_Write
+ 105:.\main.c      ****         OutMux_Select(3);                       
+ 180              		.loc 1 105 0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccQwYCSj.s 			page 6
+
+
+ 181 00fe 0320     		movs	r0, #3
+ 182 0100 FFF7FEFF 		bl	OutMux_FastSelect
+ 106:.\main.c      ****             
+ 107:.\main.c      ****          break;
+ 183              		.loc 1 107 0
+ 184 0104 09E0     		b	.L13
+ 185              	.L12:
+ 108:.\main.c      ****             
+ 109:.\main.c      ****          case 128:
+ 110:.\main.c      ****             
+ 111:.\main.c      ****         Control_Reg_Write(8); //1000
+ 186              		.loc 1 111 0
+ 187 0106 0820     		movs	r0, #8
+ 188 0108 FFF7FEFF 		bl	Control_Reg_Write
+ 112:.\main.c      ****         OutMux_Select(3);                 
+ 189              		.loc 1 112 0
+ 190 010c 0320     		movs	r0, #3
+ 191 010e FFF7FEFF 		bl	OutMux_FastSelect
+ 113:.\main.c      ****             
+ 114:.\main.c      ****          break;
+ 192              		.loc 1 114 0
+ 193 0112 02E0     		b	.L13
+ 194              	.L2:
+ 115:.\main.c      ****             
+ 116:.\main.c      ****          default:
+ 117:.\main.c      ****             
+ 118:.\main.c      ****             OutMux_DisconnectAll();
+ 195              		.loc 1 118 0
+ 196 0114 FFF7FEFF 		bl	OutMux_DisconnectAll
+ 119:.\main.c      ****             
+ 120:.\main.c      ****          break;
+ 197              		.loc 1 120 0
+ 198 0118 00BF     		nop
+ 199              	.L13:
+ 121:.\main.c      ****             
+ 122:.\main.c      ****         }
+ 123:.\main.c      ****         
+ 124:.\main.c      ****         Pot_A_val = Pot_A_val*20/1024;
+ 200              		.loc 1 124 0
+ 201 011a B7F90620 		ldrsh	r2, [r7, #6]
+ 202 011e 1346     		mov	r3, r2
+ 203 0120 9B00     		lsls	r3, r3, #2
+ 204 0122 1344     		add	r3, r3, r2
+ 205 0124 9B00     		lsls	r3, r3, #2
+ 206 0126 002B     		cmp	r3, #0
+ 207 0128 01DA     		bge	.L14
+ 208 012a 03F2FF33 		addw	r3, r3, #1023
+ 209              	.L14:
+ 210 012e 9B12     		asrs	r3, r3, #10
+ 211 0130 FB80     		strh	r3, [r7, #6]	@ movhi
+ 125:.\main.c      ****         Pot_B_val = Pot_B_val*3/1024;
+ 212              		.loc 1 125 0
+ 213 0132 B7F90420 		ldrsh	r2, [r7, #4]
+ 214 0136 1346     		mov	r3, r2
+ 215 0138 5B00     		lsls	r3, r3, #1
+ 216 013a 1344     		add	r3, r3, r2
+ 217 013c 002B     		cmp	r3, #0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccQwYCSj.s 			page 7
+
+
+ 218 013e 01DA     		bge	.L15
+ 219 0140 03F2FF33 		addw	r3, r3, #1023
+ 220              	.L15:
+ 221 0144 9B12     		asrs	r3, r3, #10
+ 222 0146 BB80     		strh	r3, [r7, #4]	@ movhi
+ 126:.\main.c      ****                 
+ 127:.\main.c      ****         if(Pot_A_val > 1){
+ 223              		.loc 1 127 0
+ 224 0148 B7F90630 		ldrsh	r3, [r7, #6]
+ 225 014c 012B     		cmp	r3, #1
+ 226 014e 16DD     		ble	.L16
+ 128:.\main.c      ****             
+ 129:.\main.c      ****             CyDelay(Pot_A_val*5);
+ 227              		.loc 1 129 0
+ 228 0150 B7F90620 		ldrsh	r2, [r7, #6]
+ 229 0154 1346     		mov	r3, r2
+ 230 0156 9B00     		lsls	r3, r3, #2
+ 231 0158 1344     		add	r3, r3, r2
+ 232 015a 1846     		mov	r0, r3
+ 233 015c FFF7FEFF 		bl	CyDelay
+ 130:.\main.c      ****             Tremolo_Select(1);
+ 234              		.loc 1 130 0
+ 235 0160 0120     		movs	r0, #1
+ 236 0162 FFF7FEFF 		bl	Tremolo_Select
+ 131:.\main.c      ****             CyDelay(Pot_A_val*5);
+ 237              		.loc 1 131 0
+ 238 0166 B7F90620 		ldrsh	r2, [r7, #6]
+ 239 016a 1346     		mov	r3, r2
+ 240 016c 9B00     		lsls	r3, r3, #2
+ 241 016e 1344     		add	r3, r3, r2
+ 242 0170 1846     		mov	r0, r3
+ 243 0172 FFF7FEFF 		bl	CyDelay
+ 132:.\main.c      ****             Tremolo_Select(0);
+ 244              		.loc 1 132 0
+ 245 0176 0020     		movs	r0, #0
+ 246 0178 FFF7FEFF 		bl	Tremolo_Select
+ 247 017c 02E0     		b	.L17
+ 248              	.L16:
+ 133:.\main.c      ****             
+ 134:.\main.c      ****         }else{
+ 135:.\main.c      ****             
+ 136:.\main.c      ****             Tremolo_Select(0);
+ 249              		.loc 1 136 0
+ 250 017e 0020     		movs	r0, #0
+ 251 0180 FFF7FEFF 		bl	Tremolo_Select
+ 252              	.L17:
+ 137:.\main.c      ****             
+ 138:.\main.c      ****         }
+ 139:.\main.c      ****         
+ 140:.\main.c      ****         switch(Pot_B_val){
+ 253              		.loc 1 140 0
+ 254 0184 B7F90430 		ldrsh	r3, [r7, #4]
+ 255 0188 012B     		cmp	r3, #1
+ 256 018a 07D0     		beq	.L19
+ 257 018c 022B     		cmp	r3, #2
+ 258 018e 09D0     		beq	.L20
+ 259 0190 002B     		cmp	r3, #0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccQwYCSj.s 			page 8
+
+
+ 260 0192 0BD1     		bne	.L24
+ 141:.\main.c      ****             
+ 142:.\main.c      ****          case 0: 
+ 143:.\main.c      ****             Amp_SetGain(Amp_GAIN_01);
+ 261              		.loc 1 143 0
+ 262 0194 0020     		movs	r0, #0
+ 263 0196 FFF7FEFF 		bl	Amp_SetGain
+ 144:.\main.c      ****             break;
+ 264              		.loc 1 144 0
+ 265 019a 0BE0     		b	.L22
+ 266              	.L19:
+ 145:.\main.c      ****             
+ 146:.\main.c      ****          case 1:
+ 147:.\main.c      ****             Amp_SetGain(Amp_GAIN_02);
+ 267              		.loc 1 147 0
+ 268 019c 0120     		movs	r0, #1
+ 269 019e FFF7FEFF 		bl	Amp_SetGain
+ 148:.\main.c      ****             break;
+ 270              		.loc 1 148 0
+ 271 01a2 07E0     		b	.L22
+ 272              	.L20:
+ 149:.\main.c      ****             
+ 150:.\main.c      ****          case 2: 
+ 151:.\main.c      ****             Amp_SetGain(Amp_GAIN_04);
+ 273              		.loc 1 151 0
+ 274 01a4 0220     		movs	r0, #2
+ 275 01a6 FFF7FEFF 		bl	Amp_SetGain
+ 152:.\main.c      ****             break;
+ 276              		.loc 1 152 0
+ 277 01aa 03E0     		b	.L22
+ 278              	.L24:
+ 153:.\main.c      ****             
+ 154:.\main.c      ****          default:
+ 155:.\main.c      ****             Amp_SetGain(Amp_GAIN_01);
+ 279              		.loc 1 155 0
+ 280 01ac 0020     		movs	r0, #0
+ 281 01ae FFF7FEFF 		bl	Amp_SetGain
+ 156:.\main.c      ****             break;
+ 282              		.loc 1 156 0
+ 283 01b2 00BF     		nop
+ 284              	.L22:
+ 157:.\main.c      ****                        
+ 158:.\main.c      ****         }
+ 159:.\main.c      ****         
+ 160:.\main.c      ****     }
+ 285              		.loc 1 160 0
+ 286 01b4 3CE7     		b	.L23
+ 287              		.cfi_endproc
+ 288              	.LFE56:
+ 289              		.size	main, .-main
+ 290 01b6 00BF     		.text
+ 291              	.Letext0:
+ 292              		.file 2 "c:\\program files\\cypress\\psoc creator\\3.2\\psoc creator\\import\\gnu\\arm\\4.8.4\\arm
+ 293              		.file 3 "c:\\program files\\cypress\\psoc creator\\3.2\\psoc creator\\import\\gnu\\arm\\4.8.4\\arm
+ 294              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 295              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 296              		.section	.debug_info,"",%progbits
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccQwYCSj.s 			page 9
+
+
+ 297              	.Ldebug_info0:
+ 298 0000 05010000 		.4byte	0x105
+ 299 0004 0400     		.2byte	0x4
+ 300 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 301 000a 04       		.byte	0x4
+ 302 000b 01       		.uleb128 0x1
+ 303 000c 2C010000 		.4byte	.LASF20
+ 304 0010 01       		.byte	0x1
+ 305 0011 92000000 		.4byte	.LASF21
+ 306 0015 A2000000 		.4byte	.LASF22
+ 307 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 308 001d 00000000 		.4byte	0
+ 309 0021 00000000 		.4byte	.Ldebug_line0
+ 310 0025 02       		.uleb128 0x2
+ 311 0026 01       		.byte	0x1
+ 312 0027 06       		.byte	0x6
+ 313 0028 F7000000 		.4byte	.LASF0
+ 314 002c 02       		.uleb128 0x2
+ 315 002d 01       		.byte	0x1
+ 316 002e 08       		.byte	0x8
+ 317 002f 6C000000 		.4byte	.LASF1
+ 318 0033 02       		.uleb128 0x2
+ 319 0034 02       		.byte	0x2
+ 320 0035 05       		.byte	0x5
+ 321 0036 22010000 		.4byte	.LASF2
+ 322 003a 02       		.uleb128 0x2
+ 323 003b 02       		.byte	0x2
+ 324 003c 07       		.byte	0x7
+ 325 003d 0E000000 		.4byte	.LASF3
+ 326 0041 03       		.uleb128 0x3
+ 327 0042 03010000 		.4byte	.LASF9
+ 328 0046 02       		.byte	0x2
+ 329 0047 37       		.byte	0x37
+ 330 0048 4C000000 		.4byte	0x4c
+ 331 004c 02       		.uleb128 0x2
+ 332 004d 04       		.byte	0x4
+ 333 004e 05       		.byte	0x5
+ 334 004f 7F000000 		.4byte	.LASF4
+ 335 0053 02       		.uleb128 0x2
+ 336 0054 04       		.byte	0x4
+ 337 0055 07       		.byte	0x7
+ 338 0056 39000000 		.4byte	.LASF5
+ 339 005a 02       		.uleb128 0x2
+ 340 005b 08       		.byte	0x8
+ 341 005c 05       		.byte	0x5
+ 342 005d 00000000 		.4byte	.LASF6
+ 343 0061 02       		.uleb128 0x2
+ 344 0062 08       		.byte	0x8
+ 345 0063 07       		.byte	0x7
+ 346 0064 4B000000 		.4byte	.LASF7
+ 347 0068 04       		.uleb128 0x4
+ 348 0069 04       		.byte	0x4
+ 349 006a 05       		.byte	0x5
+ 350 006b 696E7400 		.ascii	"int\000"
+ 351 006f 02       		.uleb128 0x2
+ 352 0070 04       		.byte	0x4
+ 353 0071 07       		.byte	0x7
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccQwYCSj.s 			page 10
+
+
+ 354 0072 21000000 		.4byte	.LASF8
+ 355 0076 03       		.uleb128 0x3
+ 356 0077 A8010000 		.4byte	.LASF10
+ 357 007b 03       		.byte	0x3
+ 358 007c 41       		.byte	0x41
+ 359 007d 41000000 		.4byte	0x41
+ 360 0081 03       		.uleb128 0x3
+ 361 0082 33000000 		.4byte	.LASF11
+ 362 0086 04       		.byte	0x4
+ 363 0087 A1       		.byte	0xa1
+ 364 0088 2C000000 		.4byte	0x2c
+ 365 008c 03       		.uleb128 0x3
+ 366 008d 1C010000 		.4byte	.LASF12
+ 367 0091 04       		.byte	0x4
+ 368 0092 A5       		.byte	0xa5
+ 369 0093 33000000 		.4byte	0x33
+ 370 0097 02       		.uleb128 0x2
+ 371 0098 04       		.byte	0x4
+ 372 0099 04       		.byte	0x4
+ 373 009a 0D010000 		.4byte	.LASF13
+ 374 009e 02       		.uleb128 0x2
+ 375 009f 08       		.byte	0x8
+ 376 00a0 04       		.byte	0x4
+ 377 00a1 9B000000 		.4byte	.LASF14
+ 378 00a5 02       		.uleb128 0x2
+ 379 00a6 01       		.byte	0x1
+ 380 00a7 08       		.byte	0x8
+ 381 00a8 7A000000 		.4byte	.LASF15
+ 382 00ac 02       		.uleb128 0x2
+ 383 00ad 04       		.byte	0x4
+ 384 00ae 07       		.byte	0x7
+ 385 00af B0010000 		.4byte	.LASF16
+ 386 00b3 05       		.uleb128 0x5
+ 387 00b4 2E000000 		.4byte	.LASF23
+ 388 00b8 01       		.byte	0x1
+ 389 00b9 0F       		.byte	0xf
+ 390 00ba 68000000 		.4byte	0x68
+ 391 00be 00000000 		.4byte	.LFB56
+ 392 00c2 B6010000 		.4byte	.LFE56-.LFB56
+ 393 00c6 01       		.uleb128 0x1
+ 394 00c7 9C       		.byte	0x9c
+ 395 00c8 F7000000 		.4byte	0xf7
+ 396 00cc 06       		.uleb128 0x6
+ 397 00cd 13010000 		.4byte	.LASF17
+ 398 00d1 01       		.byte	0x1
+ 399 00d2 1D       		.byte	0x1d
+ 400 00d3 81000000 		.4byte	0x81
+ 401 00d7 02       		.uleb128 0x2
+ 402 00d8 91       		.byte	0x91
+ 403 00d9 73       		.sleb128 -13
+ 404 00da 06       		.uleb128 0x6
+ 405 00db 62000000 		.4byte	.LASF18
+ 406 00df 01       		.byte	0x1
+ 407 00e0 1E       		.byte	0x1e
+ 408 00e1 8C000000 		.4byte	0x8c
+ 409 00e5 02       		.uleb128 0x2
+ 410 00e6 91       		.byte	0x91
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccQwYCSj.s 			page 11
+
+
+ 411 00e7 76       		.sleb128 -10
+ 412 00e8 06       		.uleb128 0x6
+ 413 00e9 88000000 		.4byte	.LASF19
+ 414 00ed 01       		.byte	0x1
+ 415 00ee 1F       		.byte	0x1f
+ 416 00ef 8C000000 		.4byte	0x8c
+ 417 00f3 02       		.uleb128 0x2
+ 418 00f4 91       		.byte	0x91
+ 419 00f5 74       		.sleb128 -12
+ 420 00f6 00       		.byte	0
+ 421 00f7 07       		.uleb128 0x7
+ 422 00f8 EA000000 		.4byte	.LASF24
+ 423 00fc 05       		.byte	0x5
+ 424 00fd 1606     		.2byte	0x616
+ 425 00ff 03010000 		.4byte	0x103
+ 426 0103 08       		.uleb128 0x8
+ 427 0104 76000000 		.4byte	0x76
+ 428 0108 00       		.byte	0
+ 429              		.section	.debug_abbrev,"",%progbits
+ 430              	.Ldebug_abbrev0:
+ 431 0000 01       		.uleb128 0x1
+ 432 0001 11       		.uleb128 0x11
+ 433 0002 01       		.byte	0x1
+ 434 0003 25       		.uleb128 0x25
+ 435 0004 0E       		.uleb128 0xe
+ 436 0005 13       		.uleb128 0x13
+ 437 0006 0B       		.uleb128 0xb
+ 438 0007 03       		.uleb128 0x3
+ 439 0008 0E       		.uleb128 0xe
+ 440 0009 1B       		.uleb128 0x1b
+ 441 000a 0E       		.uleb128 0xe
+ 442 000b 55       		.uleb128 0x55
+ 443 000c 17       		.uleb128 0x17
+ 444 000d 11       		.uleb128 0x11
+ 445 000e 01       		.uleb128 0x1
+ 446 000f 10       		.uleb128 0x10
+ 447 0010 17       		.uleb128 0x17
+ 448 0011 00       		.byte	0
+ 449 0012 00       		.byte	0
+ 450 0013 02       		.uleb128 0x2
+ 451 0014 24       		.uleb128 0x24
+ 452 0015 00       		.byte	0
+ 453 0016 0B       		.uleb128 0xb
+ 454 0017 0B       		.uleb128 0xb
+ 455 0018 3E       		.uleb128 0x3e
+ 456 0019 0B       		.uleb128 0xb
+ 457 001a 03       		.uleb128 0x3
+ 458 001b 0E       		.uleb128 0xe
+ 459 001c 00       		.byte	0
+ 460 001d 00       		.byte	0
+ 461 001e 03       		.uleb128 0x3
+ 462 001f 16       		.uleb128 0x16
+ 463 0020 00       		.byte	0
+ 464 0021 03       		.uleb128 0x3
+ 465 0022 0E       		.uleb128 0xe
+ 466 0023 3A       		.uleb128 0x3a
+ 467 0024 0B       		.uleb128 0xb
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccQwYCSj.s 			page 12
+
+
+ 468 0025 3B       		.uleb128 0x3b
+ 469 0026 0B       		.uleb128 0xb
+ 470 0027 49       		.uleb128 0x49
+ 471 0028 13       		.uleb128 0x13
+ 472 0029 00       		.byte	0
+ 473 002a 00       		.byte	0
+ 474 002b 04       		.uleb128 0x4
+ 475 002c 24       		.uleb128 0x24
+ 476 002d 00       		.byte	0
+ 477 002e 0B       		.uleb128 0xb
+ 478 002f 0B       		.uleb128 0xb
+ 479 0030 3E       		.uleb128 0x3e
+ 480 0031 0B       		.uleb128 0xb
+ 481 0032 03       		.uleb128 0x3
+ 482 0033 08       		.uleb128 0x8
+ 483 0034 00       		.byte	0
+ 484 0035 00       		.byte	0
+ 485 0036 05       		.uleb128 0x5
+ 486 0037 2E       		.uleb128 0x2e
+ 487 0038 01       		.byte	0x1
+ 488 0039 3F       		.uleb128 0x3f
+ 489 003a 19       		.uleb128 0x19
+ 490 003b 03       		.uleb128 0x3
+ 491 003c 0E       		.uleb128 0xe
+ 492 003d 3A       		.uleb128 0x3a
+ 493 003e 0B       		.uleb128 0xb
+ 494 003f 3B       		.uleb128 0x3b
+ 495 0040 0B       		.uleb128 0xb
+ 496 0041 49       		.uleb128 0x49
+ 497 0042 13       		.uleb128 0x13
+ 498 0043 11       		.uleb128 0x11
+ 499 0044 01       		.uleb128 0x1
+ 500 0045 12       		.uleb128 0x12
+ 501 0046 06       		.uleb128 0x6
+ 502 0047 40       		.uleb128 0x40
+ 503 0048 18       		.uleb128 0x18
+ 504 0049 9642     		.uleb128 0x2116
+ 505 004b 19       		.uleb128 0x19
+ 506 004c 01       		.uleb128 0x1
+ 507 004d 13       		.uleb128 0x13
+ 508 004e 00       		.byte	0
+ 509 004f 00       		.byte	0
+ 510 0050 06       		.uleb128 0x6
+ 511 0051 34       		.uleb128 0x34
+ 512 0052 00       		.byte	0
+ 513 0053 03       		.uleb128 0x3
+ 514 0054 0E       		.uleb128 0xe
+ 515 0055 3A       		.uleb128 0x3a
+ 516 0056 0B       		.uleb128 0xb
+ 517 0057 3B       		.uleb128 0x3b
+ 518 0058 0B       		.uleb128 0xb
+ 519 0059 49       		.uleb128 0x49
+ 520 005a 13       		.uleb128 0x13
+ 521 005b 02       		.uleb128 0x2
+ 522 005c 18       		.uleb128 0x18
+ 523 005d 00       		.byte	0
+ 524 005e 00       		.byte	0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccQwYCSj.s 			page 13
+
+
+ 525 005f 07       		.uleb128 0x7
+ 526 0060 34       		.uleb128 0x34
+ 527 0061 00       		.byte	0
+ 528 0062 03       		.uleb128 0x3
+ 529 0063 0E       		.uleb128 0xe
+ 530 0064 3A       		.uleb128 0x3a
+ 531 0065 0B       		.uleb128 0xb
+ 532 0066 3B       		.uleb128 0x3b
+ 533 0067 05       		.uleb128 0x5
+ 534 0068 49       		.uleb128 0x49
+ 535 0069 13       		.uleb128 0x13
+ 536 006a 3F       		.uleb128 0x3f
+ 537 006b 19       		.uleb128 0x19
+ 538 006c 3C       		.uleb128 0x3c
+ 539 006d 19       		.uleb128 0x19
+ 540 006e 00       		.byte	0
+ 541 006f 00       		.byte	0
+ 542 0070 08       		.uleb128 0x8
+ 543 0071 35       		.uleb128 0x35
+ 544 0072 00       		.byte	0
+ 545 0073 49       		.uleb128 0x49
+ 546 0074 13       		.uleb128 0x13
+ 547 0075 00       		.byte	0
+ 548 0076 00       		.byte	0
+ 549 0077 00       		.byte	0
+ 550              		.section	.debug_aranges,"",%progbits
+ 551 0000 1C000000 		.4byte	0x1c
+ 552 0004 0200     		.2byte	0x2
+ 553 0006 00000000 		.4byte	.Ldebug_info0
+ 554 000a 04       		.byte	0x4
+ 555 000b 00       		.byte	0
+ 556 000c 0000     		.2byte	0
+ 557 000e 0000     		.2byte	0
+ 558 0010 00000000 		.4byte	.LFB56
+ 559 0014 B6010000 		.4byte	.LFE56-.LFB56
+ 560 0018 00000000 		.4byte	0
+ 561 001c 00000000 		.4byte	0
+ 562              		.section	.debug_ranges,"",%progbits
+ 563              	.Ldebug_ranges0:
+ 564 0000 00000000 		.4byte	.LFB56
+ 565 0004 B6010000 		.4byte	.LFE56
+ 566 0008 00000000 		.4byte	0
+ 567 000c 00000000 		.4byte	0
+ 568              		.section	.debug_line,"",%progbits
+ 569              	.Ldebug_line0:
+ 570 0000 95010000 		.section	.debug_str,"MS",%progbits,1
+ 570      02003D01 
+ 570      00000201 
+ 570      FB0E0D00 
+ 570      01010101 
+ 571              	.LASF6:
+ 572 0000 6C6F6E67 		.ascii	"long long int\000"
+ 572      206C6F6E 
+ 572      6720696E 
+ 572      7400
+ 573              	.LASF3:
+ 574 000e 73686F72 		.ascii	"short unsigned int\000"
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccQwYCSj.s 			page 14
+
+
+ 574      7420756E 
+ 574      7369676E 
+ 574      65642069 
+ 574      6E7400
+ 575              	.LASF8:
+ 576 0021 756E7369 		.ascii	"unsigned int\000"
+ 576      676E6564 
+ 576      20696E74 
+ 576      00
+ 577              	.LASF23:
+ 578 002e 6D61696E 		.ascii	"main\000"
+ 578      00
+ 579              	.LASF11:
+ 580 0033 75696E74 		.ascii	"uint8\000"
+ 580      3800
+ 581              	.LASF5:
+ 582 0039 6C6F6E67 		.ascii	"long unsigned int\000"
+ 582      20756E73 
+ 582      69676E65 
+ 582      6420696E 
+ 582      7400
+ 583              	.LASF7:
+ 584 004b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 584      206C6F6E 
+ 584      6720756E 
+ 584      7369676E 
+ 584      65642069 
+ 585              	.LASF18:
+ 586 0062 506F745F 		.ascii	"Pot_A_val\000"
+ 586      415F7661 
+ 586      6C00
+ 587              	.LASF1:
+ 588 006c 756E7369 		.ascii	"unsigned char\000"
+ 588      676E6564 
+ 588      20636861 
+ 588      7200
+ 589              	.LASF15:
+ 590 007a 63686172 		.ascii	"char\000"
+ 590      00
+ 591              	.LASF4:
+ 592 007f 6C6F6E67 		.ascii	"long int\000"
+ 592      20696E74 
+ 592      00
+ 593              	.LASF19:
+ 594 0088 506F745F 		.ascii	"Pot_B_val\000"
+ 594      425F7661 
+ 594      6C00
+ 595              	.LASF21:
+ 596 0092 2E5C6D61 		.ascii	".\\main.c\000"
+ 596      696E2E63 
+ 596      00
+ 597              	.LASF14:
+ 598 009b 646F7562 		.ascii	"double\000"
+ 598      6C6500
+ 599              	.LASF22:
+ 600 00a2 433A5C55 		.ascii	"C:\\Users\\IEUser\\Downloads\\PSoC_Creator\\Filter_"
+ 600      73657273 
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccQwYCSj.s 			page 15
+
+
+ 600      5C494555 
+ 600      7365725C 
+ 600      446F776E 
+ 601 00d0 4144435F 		.ascii	"ADC_VDAC01\\Design01.cydsn\000"
+ 601      56444143 
+ 601      30315C44 
+ 601      65736967 
+ 601      6E30312E 
+ 602              	.LASF24:
+ 603 00ea 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 603      52784275 
+ 603      66666572 
+ 603      00
+ 604              	.LASF0:
+ 605 00f7 7369676E 		.ascii	"signed char\000"
+ 605      65642063 
+ 605      68617200 
+ 606              	.LASF9:
+ 607 0103 5F5F696E 		.ascii	"__int32_t\000"
+ 607      7433325F 
+ 607      7400
+ 608              	.LASF13:
+ 609 010d 666C6F61 		.ascii	"float\000"
+ 609      7400
+ 610              	.LASF17:
+ 611 0113 496E7075 		.ascii	"InputReg\000"
+ 611      74526567 
+ 611      00
+ 612              	.LASF12:
+ 613 011c 696E7431 		.ascii	"int16\000"
+ 613      3600
+ 614              	.LASF2:
+ 615 0122 73686F72 		.ascii	"short int\000"
+ 615      7420696E 
+ 615      7400
+ 616              	.LASF20:
+ 617 012c 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 617      4320342E 
+ 617      382E3420 
+ 617      32303134 
+ 617      30353236 
+ 618 015f 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
+ 618      20726576 
+ 618      6973696F 
+ 618      6E203231 
+ 618      31333538 
+ 619 0192 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 619      66756E63 
+ 619      74696F6E 
+ 619      2D736563 
+ 619      74696F6E 
+ 620              	.LASF10:
+ 621 01a8 696E7433 		.ascii	"int32_t\000"
+ 621      325F7400 
+ 622              	.LASF16:
+ 623 01b0 73697A65 		.ascii	"sizetype\000"
+ 623      74797065 
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccQwYCSj.s 			page 16
+
+
+ 623      00
+ 624              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

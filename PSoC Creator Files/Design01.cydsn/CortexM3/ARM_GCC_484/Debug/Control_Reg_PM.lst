@@ -1,0 +1,766 @@
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckUMJBY.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"Control_Reg_PM.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.bss
+  19              		.align	2
+  20              	Control_Reg_backup:
+  21 0000 00       		.space	1
+  22 0001 000000   		.section	.text.Control_Reg_SaveConfig,"ax",%progbits
+  23              		.align	2
+  24              		.global	Control_Reg_SaveConfig
+  25              		.thumb
+  26              		.thumb_func
+  27              		.type	Control_Reg_SaveConfig, %function
+  28              	Control_Reg_SaveConfig:
+  29              	.LFB0:
+  30              		.file 1 ".\\Generated_Source\\PSoC5\\Control_Reg_PM.c"
+   1:.\Generated_Source\PSoC5/Control_Reg_PM.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * File Name: Control_Reg_PM.c
+   3:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Version 1.80
+   4:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+   5:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Description:
+   6:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *  This file contains the setup, control, and status commands to support 
+   7:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *  the component operation in the low power mode. 
+   8:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+   9:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Note:
+  10:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+  11:.\Generated_Source\PSoC5/Control_Reg_PM.c **** ********************************************************************************
+  12:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Copyright 2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC5/Control_Reg_PM.c **** 
+  18:.\Generated_Source\PSoC5/Control_Reg_PM.c **** #include "Control_Reg.h"
+  19:.\Generated_Source\PSoC5/Control_Reg_PM.c **** 
+  20:.\Generated_Source\PSoC5/Control_Reg_PM.c **** /* Check for removal by optimization */
+  21:.\Generated_Source\PSoC5/Control_Reg_PM.c **** #if !defined(Control_Reg_Sync_ctrl_reg__REMOVED)
+  22:.\Generated_Source\PSoC5/Control_Reg_PM.c **** 
+  23:.\Generated_Source\PSoC5/Control_Reg_PM.c **** static Control_Reg_BACKUP_STRUCT  Control_Reg_backup = {0u};
+  24:.\Generated_Source\PSoC5/Control_Reg_PM.c **** 
+  25:.\Generated_Source\PSoC5/Control_Reg_PM.c ****     
+  26:.\Generated_Source\PSoC5/Control_Reg_PM.c **** /*******************************************************************************
+  27:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Function Name: Control_Reg_SaveConfig
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckUMJBY.s 			page 2
+
+
+  28:.\Generated_Source\PSoC5/Control_Reg_PM.c **** ********************************************************************************
+  29:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+  30:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Summary:
+  31:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *  Saves the control register value.
+  32:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+  33:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Parameters:
+  34:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *  None
+  35:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+  36:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Return:
+  37:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *  None
+  38:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+  39:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *******************************************************************************/
+  40:.\Generated_Source\PSoC5/Control_Reg_PM.c **** void Control_Reg_SaveConfig(void) 
+  41:.\Generated_Source\PSoC5/Control_Reg_PM.c **** {
+  31              		.loc 1 41 0
+  32              		.cfi_startproc
+  33              		@ args = 0, pretend = 0, frame = 0
+  34              		@ frame_needed = 1, uses_anonymous_args = 0
+  35              		@ link register save eliminated.
+  36 0000 80B4     		push	{r7}
+  37              		.cfi_def_cfa_offset 4
+  38              		.cfi_offset 7, -4
+  39 0002 00AF     		add	r7, sp, #0
+  40              		.cfi_def_cfa_register 7
+  42:.\Generated_Source\PSoC5/Control_Reg_PM.c ****     Control_Reg_backup.controlState = Control_Reg_Control;
+  41              		.loc 1 42 0
+  42 0004 044B     		ldr	r3, .L2
+  43 0006 1B78     		ldrb	r3, [r3]
+  44 0008 DAB2     		uxtb	r2, r3
+  45 000a 044B     		ldr	r3, .L2+4
+  46 000c 1A70     		strb	r2, [r3]
+  43:.\Generated_Source\PSoC5/Control_Reg_PM.c **** }
+  47              		.loc 1 43 0
+  48 000e BD46     		mov	sp, r7
+  49              		@ sp needed
+  50 0010 5DF8047B 		ldr	r7, [sp], #4
+  51 0014 7047     		bx	lr
+  52              	.L3:
+  53 0016 00BF     		.align	2
+  54              	.L2:
+  55 0018 7A640040 		.word	1073767546
+  56 001c 00000000 		.word	Control_Reg_backup
+  57              		.cfi_endproc
+  58              	.LFE0:
+  59              		.size	Control_Reg_SaveConfig, .-Control_Reg_SaveConfig
+  60              		.section	.text.Control_Reg_RestoreConfig,"ax",%progbits
+  61              		.align	2
+  62              		.global	Control_Reg_RestoreConfig
+  63              		.thumb
+  64              		.thumb_func
+  65              		.type	Control_Reg_RestoreConfig, %function
+  66              	Control_Reg_RestoreConfig:
+  67              	.LFB1:
+  44:.\Generated_Source\PSoC5/Control_Reg_PM.c **** 
+  45:.\Generated_Source\PSoC5/Control_Reg_PM.c **** 
+  46:.\Generated_Source\PSoC5/Control_Reg_PM.c **** /*******************************************************************************
+  47:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Function Name: Control_Reg_RestoreConfig
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckUMJBY.s 			page 3
+
+
+  48:.\Generated_Source\PSoC5/Control_Reg_PM.c **** ********************************************************************************
+  49:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+  50:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Summary:
+  51:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *  Restores the control register value.
+  52:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+  53:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Parameters:
+  54:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *  None
+  55:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+  56:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Return:
+  57:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *  None
+  58:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+  59:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+  60:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *******************************************************************************/
+  61:.\Generated_Source\PSoC5/Control_Reg_PM.c **** void Control_Reg_RestoreConfig(void) 
+  62:.\Generated_Source\PSoC5/Control_Reg_PM.c **** {
+  68              		.loc 1 62 0
+  69              		.cfi_startproc
+  70              		@ args = 0, pretend = 0, frame = 0
+  71              		@ frame_needed = 1, uses_anonymous_args = 0
+  72              		@ link register save eliminated.
+  73 0000 80B4     		push	{r7}
+  74              		.cfi_def_cfa_offset 4
+  75              		.cfi_offset 7, -4
+  76 0002 00AF     		add	r7, sp, #0
+  77              		.cfi_def_cfa_register 7
+  63:.\Generated_Source\PSoC5/Control_Reg_PM.c ****      Control_Reg_Control = Control_Reg_backup.controlState;
+  78              		.loc 1 63 0
+  79 0004 034B     		ldr	r3, .L5
+  80 0006 044A     		ldr	r2, .L5+4
+  81 0008 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
+  82 000a 1A70     		strb	r2, [r3]
+  64:.\Generated_Source\PSoC5/Control_Reg_PM.c **** }
+  83              		.loc 1 64 0
+  84 000c BD46     		mov	sp, r7
+  85              		@ sp needed
+  86 000e 5DF8047B 		ldr	r7, [sp], #4
+  87 0012 7047     		bx	lr
+  88              	.L6:
+  89              		.align	2
+  90              	.L5:
+  91 0014 7A640040 		.word	1073767546
+  92 0018 00000000 		.word	Control_Reg_backup
+  93              		.cfi_endproc
+  94              	.LFE1:
+  95              		.size	Control_Reg_RestoreConfig, .-Control_Reg_RestoreConfig
+  96              		.section	.text.Control_Reg_Sleep,"ax",%progbits
+  97              		.align	2
+  98              		.global	Control_Reg_Sleep
+  99              		.thumb
+ 100              		.thumb_func
+ 101              		.type	Control_Reg_Sleep, %function
+ 102              	Control_Reg_Sleep:
+ 103              	.LFB2:
+  65:.\Generated_Source\PSoC5/Control_Reg_PM.c **** 
+  66:.\Generated_Source\PSoC5/Control_Reg_PM.c **** 
+  67:.\Generated_Source\PSoC5/Control_Reg_PM.c **** /*******************************************************************************
+  68:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Function Name: Control_Reg_Sleep
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckUMJBY.s 			page 4
+
+
+  69:.\Generated_Source\PSoC5/Control_Reg_PM.c **** ********************************************************************************
+  70:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+  71:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Summary:
+  72:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *  Prepares the component for entering the low power mode.
+  73:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+  74:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Parameters:
+  75:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *  None
+  76:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+  77:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Return:
+  78:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *  None
+  79:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+  80:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *******************************************************************************/
+  81:.\Generated_Source\PSoC5/Control_Reg_PM.c **** void Control_Reg_Sleep(void) 
+  82:.\Generated_Source\PSoC5/Control_Reg_PM.c **** {
+ 104              		.loc 1 82 0
+ 105              		.cfi_startproc
+ 106              		@ args = 0, pretend = 0, frame = 0
+ 107              		@ frame_needed = 1, uses_anonymous_args = 0
+ 108 0000 80B5     		push	{r7, lr}
+ 109              		.cfi_def_cfa_offset 8
+ 110              		.cfi_offset 7, -8
+ 111              		.cfi_offset 14, -4
+ 112 0002 00AF     		add	r7, sp, #0
+ 113              		.cfi_def_cfa_register 7
+  83:.\Generated_Source\PSoC5/Control_Reg_PM.c ****     Control_Reg_SaveConfig();
+ 114              		.loc 1 83 0
+ 115 0004 FFF7FEFF 		bl	Control_Reg_SaveConfig
+  84:.\Generated_Source\PSoC5/Control_Reg_PM.c **** }
+ 116              		.loc 1 84 0
+ 117 0008 80BD     		pop	{r7, pc}
+ 118              		.cfi_endproc
+ 119              	.LFE2:
+ 120              		.size	Control_Reg_Sleep, .-Control_Reg_Sleep
+ 121 000a 00BF     		.section	.text.Control_Reg_Wakeup,"ax",%progbits
+ 122              		.align	2
+ 123              		.global	Control_Reg_Wakeup
+ 124              		.thumb
+ 125              		.thumb_func
+ 126              		.type	Control_Reg_Wakeup, %function
+ 127              	Control_Reg_Wakeup:
+ 128              	.LFB3:
+  85:.\Generated_Source\PSoC5/Control_Reg_PM.c **** 
+  86:.\Generated_Source\PSoC5/Control_Reg_PM.c **** 
+  87:.\Generated_Source\PSoC5/Control_Reg_PM.c **** /*******************************************************************************
+  88:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Function Name: Control_Reg_Wakeup
+  89:.\Generated_Source\PSoC5/Control_Reg_PM.c **** ********************************************************************************
+  90:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+  91:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Summary:
+  92:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *  Restores the component after waking up from the low power mode.
+  93:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+  94:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Parameters:
+  95:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *  None
+  96:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+  97:.\Generated_Source\PSoC5/Control_Reg_PM.c **** * Return:
+  98:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *  None
+  99:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *
+ 100:.\Generated_Source\PSoC5/Control_Reg_PM.c **** *******************************************************************************/
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckUMJBY.s 			page 5
+
+
+ 101:.\Generated_Source\PSoC5/Control_Reg_PM.c **** void Control_Reg_Wakeup(void)  
+ 102:.\Generated_Source\PSoC5/Control_Reg_PM.c **** {
+ 129              		.loc 1 102 0
+ 130              		.cfi_startproc
+ 131              		@ args = 0, pretend = 0, frame = 0
+ 132              		@ frame_needed = 1, uses_anonymous_args = 0
+ 133 0000 80B5     		push	{r7, lr}
+ 134              		.cfi_def_cfa_offset 8
+ 135              		.cfi_offset 7, -8
+ 136              		.cfi_offset 14, -4
+ 137 0002 00AF     		add	r7, sp, #0
+ 138              		.cfi_def_cfa_register 7
+ 103:.\Generated_Source\PSoC5/Control_Reg_PM.c ****     Control_Reg_RestoreConfig();
+ 139              		.loc 1 103 0
+ 140 0004 FFF7FEFF 		bl	Control_Reg_RestoreConfig
+ 104:.\Generated_Source\PSoC5/Control_Reg_PM.c **** }
+ 141              		.loc 1 104 0
+ 142 0008 80BD     		pop	{r7, pc}
+ 143              		.cfi_endproc
+ 144              	.LFE3:
+ 145              		.size	Control_Reg_Wakeup, .-Control_Reg_Wakeup
+ 146 000a 00BF     		.text
+ 147              	.Letext0:
+ 148              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 149              		.file 3 ".\\Generated_Source\\PSoC5\\Control_Reg.h"
+ 150              		.section	.debug_info,"",%progbits
+ 151              	.Ldebug_info0:
+ 152 0000 0E010000 		.4byte	0x10e
+ 153 0004 0400     		.2byte	0x4
+ 154 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 155 000a 04       		.byte	0x4
+ 156 000b 01       		.uleb128 0x1
+ 157 000c 23010000 		.4byte	.LASF19
+ 158 0010 01       		.byte	0x1
+ 159 0011 00000000 		.4byte	.LASF20
+ 160 0015 C2010000 		.4byte	.LASF21
+ 161 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 162 001d 00000000 		.4byte	0
+ 163 0021 00000000 		.4byte	.Ldebug_line0
+ 164 0025 02       		.uleb128 0x2
+ 165 0026 01       		.byte	0x1
+ 166 0027 06       		.byte	0x6
+ 167 0028 13020000 		.4byte	.LASF0
+ 168 002c 02       		.uleb128 0x2
+ 169 002d 01       		.byte	0x1
+ 170 002e 08       		.byte	0x8
+ 171 002f 30000000 		.4byte	.LASF1
+ 172 0033 02       		.uleb128 0x2
+ 173 0034 02       		.byte	0x2
+ 174 0035 05       		.byte	0x5
+ 175 0036 B2010000 		.4byte	.LASF2
+ 176 003a 02       		.uleb128 0x2
+ 177 003b 02       		.byte	0x2
+ 178 003c 07       		.byte	0x7
+ 179 003d 55000000 		.4byte	.LASF3
+ 180 0041 02       		.uleb128 0x2
+ 181 0042 04       		.byte	0x4
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckUMJBY.s 			page 6
+
+
+ 182 0043 05       		.byte	0x5
+ 183 0044 0A020000 		.4byte	.LASF4
+ 184 0048 02       		.uleb128 0x2
+ 185 0049 04       		.byte	0x4
+ 186 004a 07       		.byte	0x7
+ 187 004b 43000000 		.4byte	.LASF5
+ 188 004f 02       		.uleb128 0x2
+ 189 0050 08       		.byte	0x8
+ 190 0051 05       		.byte	0x5
+ 191 0052 9F010000 		.4byte	.LASF6
+ 192 0056 02       		.uleb128 0x2
+ 193 0057 08       		.byte	0x8
+ 194 0058 07       		.byte	0x7
+ 195 0059 0C010000 		.4byte	.LASF7
+ 196 005d 03       		.uleb128 0x3
+ 197 005e 04       		.byte	0x4
+ 198 005f 05       		.byte	0x5
+ 199 0060 696E7400 		.ascii	"int\000"
+ 200 0064 02       		.uleb128 0x2
+ 201 0065 04       		.byte	0x4
+ 202 0066 07       		.byte	0x7
+ 203 0067 E5000000 		.4byte	.LASF8
+ 204 006b 04       		.uleb128 0x4
+ 205 006c BC010000 		.4byte	.LASF12
+ 206 0070 02       		.byte	0x2
+ 207 0071 A1       		.byte	0xa1
+ 208 0072 2C000000 		.4byte	0x2c
+ 209 0076 02       		.uleb128 0x2
+ 210 0077 04       		.byte	0x4
+ 211 0078 04       		.byte	0x4
+ 212 0079 2A000000 		.4byte	.LASF9
+ 213 007d 02       		.uleb128 0x2
+ 214 007e 08       		.byte	0x8
+ 215 007f 04       		.byte	0x4
+ 216 0080 A2000000 		.4byte	.LASF10
+ 217 0084 02       		.uleb128 0x2
+ 218 0085 01       		.byte	0x1
+ 219 0086 08       		.byte	0x8
+ 220 0087 AD010000 		.4byte	.LASF11
+ 221 008b 05       		.uleb128 0x5
+ 222 008c 3E000000 		.4byte	.LASF13
+ 223 0090 02       		.byte	0x2
+ 224 0091 4B01     		.2byte	0x14b
+ 225 0093 97000000 		.4byte	0x97
+ 226 0097 06       		.uleb128 0x6
+ 227 0098 6B000000 		.4byte	0x6b
+ 228 009c 07       		.uleb128 0x7
+ 229 009d 01       		.byte	0x1
+ 230 009e 03       		.byte	0x3
+ 231 009f 1C       		.byte	0x1c
+ 232 00a0 B1000000 		.4byte	0xb1
+ 233 00a4 08       		.uleb128 0x8
+ 234 00a5 82000000 		.4byte	.LASF22
+ 235 00a9 03       		.byte	0x3
+ 236 00aa 1E       		.byte	0x1e
+ 237 00ab 6B000000 		.4byte	0x6b
+ 238 00af 00       		.byte	0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckUMJBY.s 			page 7
+
+
+ 239 00b0 00       		.byte	0
+ 240 00b1 04       		.uleb128 0x4
+ 241 00b2 68000000 		.4byte	.LASF14
+ 242 00b6 03       		.byte	0x3
+ 243 00b7 20       		.byte	0x20
+ 244 00b8 9C000000 		.4byte	0x9c
+ 245 00bc 09       		.uleb128 0x9
+ 246 00bd BB000000 		.4byte	.LASF15
+ 247 00c1 01       		.byte	0x1
+ 248 00c2 28       		.byte	0x28
+ 249 00c3 00000000 		.4byte	.LFB0
+ 250 00c7 20000000 		.4byte	.LFE0-.LFB0
+ 251 00cb 01       		.uleb128 0x1
+ 252 00cc 9C       		.byte	0x9c
+ 253 00cd 09       		.uleb128 0x9
+ 254 00ce F2000000 		.4byte	.LASF16
+ 255 00d2 01       		.byte	0x1
+ 256 00d3 3D       		.byte	0x3d
+ 257 00d4 00000000 		.4byte	.LFB1
+ 258 00d8 1C000000 		.4byte	.LFE1-.LFB1
+ 259 00dc 01       		.uleb128 0x1
+ 260 00dd 9C       		.byte	0x9c
+ 261 00de 0A       		.uleb128 0xa
+ 262 00df A9000000 		.4byte	.LASF17
+ 263 00e3 01       		.byte	0x1
+ 264 00e4 51       		.byte	0x51
+ 265 00e5 00000000 		.4byte	.LFB2
+ 266 00e9 0A000000 		.4byte	.LFE2-.LFB2
+ 267 00ed 01       		.uleb128 0x1
+ 268 00ee 9C       		.byte	0x9c
+ 269 00ef 0A       		.uleb128 0xa
+ 270 00f0 D2000000 		.4byte	.LASF18
+ 271 00f4 01       		.byte	0x1
+ 272 00f5 65       		.byte	0x65
+ 273 00f6 00000000 		.4byte	.LFB3
+ 274 00fa 0A000000 		.4byte	.LFE3-.LFB3
+ 275 00fe 01       		.uleb128 0x1
+ 276 00ff 9C       		.byte	0x9c
+ 277 0100 0B       		.uleb128 0xb
+ 278 0101 8F000000 		.4byte	.LASF23
+ 279 0105 01       		.byte	0x1
+ 280 0106 17       		.byte	0x17
+ 281 0107 B1000000 		.4byte	0xb1
+ 282 010b 05       		.uleb128 0x5
+ 283 010c 03       		.byte	0x3
+ 284 010d 00000000 		.4byte	Control_Reg_backup
+ 285 0111 00       		.byte	0
+ 286              		.section	.debug_abbrev,"",%progbits
+ 287              	.Ldebug_abbrev0:
+ 288 0000 01       		.uleb128 0x1
+ 289 0001 11       		.uleb128 0x11
+ 290 0002 01       		.byte	0x1
+ 291 0003 25       		.uleb128 0x25
+ 292 0004 0E       		.uleb128 0xe
+ 293 0005 13       		.uleb128 0x13
+ 294 0006 0B       		.uleb128 0xb
+ 295 0007 03       		.uleb128 0x3
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckUMJBY.s 			page 8
+
+
+ 296 0008 0E       		.uleb128 0xe
+ 297 0009 1B       		.uleb128 0x1b
+ 298 000a 0E       		.uleb128 0xe
+ 299 000b 55       		.uleb128 0x55
+ 300 000c 17       		.uleb128 0x17
+ 301 000d 11       		.uleb128 0x11
+ 302 000e 01       		.uleb128 0x1
+ 303 000f 10       		.uleb128 0x10
+ 304 0010 17       		.uleb128 0x17
+ 305 0011 00       		.byte	0
+ 306 0012 00       		.byte	0
+ 307 0013 02       		.uleb128 0x2
+ 308 0014 24       		.uleb128 0x24
+ 309 0015 00       		.byte	0
+ 310 0016 0B       		.uleb128 0xb
+ 311 0017 0B       		.uleb128 0xb
+ 312 0018 3E       		.uleb128 0x3e
+ 313 0019 0B       		.uleb128 0xb
+ 314 001a 03       		.uleb128 0x3
+ 315 001b 0E       		.uleb128 0xe
+ 316 001c 00       		.byte	0
+ 317 001d 00       		.byte	0
+ 318 001e 03       		.uleb128 0x3
+ 319 001f 24       		.uleb128 0x24
+ 320 0020 00       		.byte	0
+ 321 0021 0B       		.uleb128 0xb
+ 322 0022 0B       		.uleb128 0xb
+ 323 0023 3E       		.uleb128 0x3e
+ 324 0024 0B       		.uleb128 0xb
+ 325 0025 03       		.uleb128 0x3
+ 326 0026 08       		.uleb128 0x8
+ 327 0027 00       		.byte	0
+ 328 0028 00       		.byte	0
+ 329 0029 04       		.uleb128 0x4
+ 330 002a 16       		.uleb128 0x16
+ 331 002b 00       		.byte	0
+ 332 002c 03       		.uleb128 0x3
+ 333 002d 0E       		.uleb128 0xe
+ 334 002e 3A       		.uleb128 0x3a
+ 335 002f 0B       		.uleb128 0xb
+ 336 0030 3B       		.uleb128 0x3b
+ 337 0031 0B       		.uleb128 0xb
+ 338 0032 49       		.uleb128 0x49
+ 339 0033 13       		.uleb128 0x13
+ 340 0034 00       		.byte	0
+ 341 0035 00       		.byte	0
+ 342 0036 05       		.uleb128 0x5
+ 343 0037 16       		.uleb128 0x16
+ 344 0038 00       		.byte	0
+ 345 0039 03       		.uleb128 0x3
+ 346 003a 0E       		.uleb128 0xe
+ 347 003b 3A       		.uleb128 0x3a
+ 348 003c 0B       		.uleb128 0xb
+ 349 003d 3B       		.uleb128 0x3b
+ 350 003e 05       		.uleb128 0x5
+ 351 003f 49       		.uleb128 0x49
+ 352 0040 13       		.uleb128 0x13
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckUMJBY.s 			page 9
+
+
+ 353 0041 00       		.byte	0
+ 354 0042 00       		.byte	0
+ 355 0043 06       		.uleb128 0x6
+ 356 0044 35       		.uleb128 0x35
+ 357 0045 00       		.byte	0
+ 358 0046 49       		.uleb128 0x49
+ 359 0047 13       		.uleb128 0x13
+ 360 0048 00       		.byte	0
+ 361 0049 00       		.byte	0
+ 362 004a 07       		.uleb128 0x7
+ 363 004b 13       		.uleb128 0x13
+ 364 004c 01       		.byte	0x1
+ 365 004d 0B       		.uleb128 0xb
+ 366 004e 0B       		.uleb128 0xb
+ 367 004f 3A       		.uleb128 0x3a
+ 368 0050 0B       		.uleb128 0xb
+ 369 0051 3B       		.uleb128 0x3b
+ 370 0052 0B       		.uleb128 0xb
+ 371 0053 01       		.uleb128 0x1
+ 372 0054 13       		.uleb128 0x13
+ 373 0055 00       		.byte	0
+ 374 0056 00       		.byte	0
+ 375 0057 08       		.uleb128 0x8
+ 376 0058 0D       		.uleb128 0xd
+ 377 0059 00       		.byte	0
+ 378 005a 03       		.uleb128 0x3
+ 379 005b 0E       		.uleb128 0xe
+ 380 005c 3A       		.uleb128 0x3a
+ 381 005d 0B       		.uleb128 0xb
+ 382 005e 3B       		.uleb128 0x3b
+ 383 005f 0B       		.uleb128 0xb
+ 384 0060 49       		.uleb128 0x49
+ 385 0061 13       		.uleb128 0x13
+ 386 0062 38       		.uleb128 0x38
+ 387 0063 0B       		.uleb128 0xb
+ 388 0064 00       		.byte	0
+ 389 0065 00       		.byte	0
+ 390 0066 09       		.uleb128 0x9
+ 391 0067 2E       		.uleb128 0x2e
+ 392 0068 00       		.byte	0
+ 393 0069 3F       		.uleb128 0x3f
+ 394 006a 19       		.uleb128 0x19
+ 395 006b 03       		.uleb128 0x3
+ 396 006c 0E       		.uleb128 0xe
+ 397 006d 3A       		.uleb128 0x3a
+ 398 006e 0B       		.uleb128 0xb
+ 399 006f 3B       		.uleb128 0x3b
+ 400 0070 0B       		.uleb128 0xb
+ 401 0071 27       		.uleb128 0x27
+ 402 0072 19       		.uleb128 0x19
+ 403 0073 11       		.uleb128 0x11
+ 404 0074 01       		.uleb128 0x1
+ 405 0075 12       		.uleb128 0x12
+ 406 0076 06       		.uleb128 0x6
+ 407 0077 40       		.uleb128 0x40
+ 408 0078 18       		.uleb128 0x18
+ 409 0079 9742     		.uleb128 0x2117
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckUMJBY.s 			page 10
+
+
+ 410 007b 19       		.uleb128 0x19
+ 411 007c 00       		.byte	0
+ 412 007d 00       		.byte	0
+ 413 007e 0A       		.uleb128 0xa
+ 414 007f 2E       		.uleb128 0x2e
+ 415 0080 00       		.byte	0
+ 416 0081 3F       		.uleb128 0x3f
+ 417 0082 19       		.uleb128 0x19
+ 418 0083 03       		.uleb128 0x3
+ 419 0084 0E       		.uleb128 0xe
+ 420 0085 3A       		.uleb128 0x3a
+ 421 0086 0B       		.uleb128 0xb
+ 422 0087 3B       		.uleb128 0x3b
+ 423 0088 0B       		.uleb128 0xb
+ 424 0089 27       		.uleb128 0x27
+ 425 008a 19       		.uleb128 0x19
+ 426 008b 11       		.uleb128 0x11
+ 427 008c 01       		.uleb128 0x1
+ 428 008d 12       		.uleb128 0x12
+ 429 008e 06       		.uleb128 0x6
+ 430 008f 40       		.uleb128 0x40
+ 431 0090 18       		.uleb128 0x18
+ 432 0091 9642     		.uleb128 0x2116
+ 433 0093 19       		.uleb128 0x19
+ 434 0094 00       		.byte	0
+ 435 0095 00       		.byte	0
+ 436 0096 0B       		.uleb128 0xb
+ 437 0097 34       		.uleb128 0x34
+ 438 0098 00       		.byte	0
+ 439 0099 03       		.uleb128 0x3
+ 440 009a 0E       		.uleb128 0xe
+ 441 009b 3A       		.uleb128 0x3a
+ 442 009c 0B       		.uleb128 0xb
+ 443 009d 3B       		.uleb128 0x3b
+ 444 009e 0B       		.uleb128 0xb
+ 445 009f 49       		.uleb128 0x49
+ 446 00a0 13       		.uleb128 0x13
+ 447 00a1 02       		.uleb128 0x2
+ 448 00a2 18       		.uleb128 0x18
+ 449 00a3 00       		.byte	0
+ 450 00a4 00       		.byte	0
+ 451 00a5 00       		.byte	0
+ 452              		.section	.debug_aranges,"",%progbits
+ 453 0000 34000000 		.4byte	0x34
+ 454 0004 0200     		.2byte	0x2
+ 455 0006 00000000 		.4byte	.Ldebug_info0
+ 456 000a 04       		.byte	0x4
+ 457 000b 00       		.byte	0
+ 458 000c 0000     		.2byte	0
+ 459 000e 0000     		.2byte	0
+ 460 0010 00000000 		.4byte	.LFB0
+ 461 0014 20000000 		.4byte	.LFE0-.LFB0
+ 462 0018 00000000 		.4byte	.LFB1
+ 463 001c 1C000000 		.4byte	.LFE1-.LFB1
+ 464 0020 00000000 		.4byte	.LFB2
+ 465 0024 0A000000 		.4byte	.LFE2-.LFB2
+ 466 0028 00000000 		.4byte	.LFB3
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckUMJBY.s 			page 11
+
+
+ 467 002c 0A000000 		.4byte	.LFE3-.LFB3
+ 468 0030 00000000 		.4byte	0
+ 469 0034 00000000 		.4byte	0
+ 470              		.section	.debug_ranges,"",%progbits
+ 471              	.Ldebug_ranges0:
+ 472 0000 00000000 		.4byte	.LFB0
+ 473 0004 20000000 		.4byte	.LFE0
+ 474 0008 00000000 		.4byte	.LFB1
+ 475 000c 1C000000 		.4byte	.LFE1
+ 476 0010 00000000 		.4byte	.LFB2
+ 477 0014 0A000000 		.4byte	.LFE2
+ 478 0018 00000000 		.4byte	.LFB3
+ 479 001c 0A000000 		.4byte	.LFE3
+ 480 0020 00000000 		.4byte	0
+ 481 0024 00000000 		.4byte	0
+ 482              		.section	.debug_line,"",%progbits
+ 483              	.Ldebug_line0:
+ 484 0000 AA000000 		.section	.debug_str,"MS",%progbits,1
+ 484      02005E00 
+ 484      00000201 
+ 484      FB0E0D00 
+ 484      01010101 
+ 485              	.LASF20:
+ 486 0000 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Control_Reg_PM.c\000"
+ 486      6E657261 
+ 486      7465645F 
+ 486      536F7572 
+ 486      63655C50 
+ 487              	.LASF9:
+ 488 002a 666C6F61 		.ascii	"float\000"
+ 488      7400
+ 489              	.LASF1:
+ 490 0030 756E7369 		.ascii	"unsigned char\000"
+ 490      676E6564 
+ 490      20636861 
+ 490      7200
+ 491              	.LASF13:
+ 492 003e 72656738 		.ascii	"reg8\000"
+ 492      00
+ 493              	.LASF5:
+ 494 0043 6C6F6E67 		.ascii	"long unsigned int\000"
+ 494      20756E73 
+ 494      69676E65 
+ 494      6420696E 
+ 494      7400
+ 495              	.LASF3:
+ 496 0055 73686F72 		.ascii	"short unsigned int\000"
+ 496      7420756E 
+ 496      7369676E 
+ 496      65642069 
+ 496      6E7400
+ 497              	.LASF14:
+ 498 0068 436F6E74 		.ascii	"Control_Reg_BACKUP_STRUCT\000"
+ 498      726F6C5F 
+ 498      5265675F 
+ 498      4241434B 
+ 498      55505F53 
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckUMJBY.s 			page 12
+
+
+ 499              	.LASF22:
+ 500 0082 636F6E74 		.ascii	"controlState\000"
+ 500      726F6C53 
+ 500      74617465 
+ 500      00
+ 501              	.LASF23:
+ 502 008f 436F6E74 		.ascii	"Control_Reg_backup\000"
+ 502      726F6C5F 
+ 502      5265675F 
+ 502      6261636B 
+ 502      757000
+ 503              	.LASF10:
+ 504 00a2 646F7562 		.ascii	"double\000"
+ 504      6C6500
+ 505              	.LASF17:
+ 506 00a9 436F6E74 		.ascii	"Control_Reg_Sleep\000"
+ 506      726F6C5F 
+ 506      5265675F 
+ 506      536C6565 
+ 506      7000
+ 507              	.LASF15:
+ 508 00bb 436F6E74 		.ascii	"Control_Reg_SaveConfig\000"
+ 508      726F6C5F 
+ 508      5265675F 
+ 508      53617665 
+ 508      436F6E66 
+ 509              	.LASF18:
+ 510 00d2 436F6E74 		.ascii	"Control_Reg_Wakeup\000"
+ 510      726F6C5F 
+ 510      5265675F 
+ 510      57616B65 
+ 510      757000
+ 511              	.LASF8:
+ 512 00e5 756E7369 		.ascii	"unsigned int\000"
+ 512      676E6564 
+ 512      20696E74 
+ 512      00
+ 513              	.LASF16:
+ 514 00f2 436F6E74 		.ascii	"Control_Reg_RestoreConfig\000"
+ 514      726F6C5F 
+ 514      5265675F 
+ 514      52657374 
+ 514      6F726543 
+ 515              	.LASF7:
+ 516 010c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 516      206C6F6E 
+ 516      6720756E 
+ 516      7369676E 
+ 516      65642069 
+ 517              	.LASF19:
+ 518 0123 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 518      4320342E 
+ 518      382E3420 
+ 518      32303134 
+ 518      30353236 
+ 519 0156 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
+ 519      20726576 
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckUMJBY.s 			page 13
+
+
+ 519      6973696F 
+ 519      6E203231 
+ 519      31333538 
+ 520 0189 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 520      66756E63 
+ 520      74696F6E 
+ 520      2D736563 
+ 520      74696F6E 
+ 521              	.LASF6:
+ 522 019f 6C6F6E67 		.ascii	"long long int\000"
+ 522      206C6F6E 
+ 522      6720696E 
+ 522      7400
+ 523              	.LASF11:
+ 524 01ad 63686172 		.ascii	"char\000"
+ 524      00
+ 525              	.LASF2:
+ 526 01b2 73686F72 		.ascii	"short int\000"
+ 526      7420696E 
+ 526      7400
+ 527              	.LASF12:
+ 528 01bc 75696E74 		.ascii	"uint8\000"
+ 528      3800
+ 529              	.LASF21:
+ 530 01c2 433A5C55 		.ascii	"C:\\Users\\IEUser\\Downloads\\PSoC_Creator\\Filter_"
+ 530      73657273 
+ 530      5C494555 
+ 530      7365725C 
+ 530      446F776E 
+ 531 01f0 4144435F 		.ascii	"ADC_VDAC01\\Design01.cydsn\000"
+ 531      56444143 
+ 531      30315C44 
+ 531      65736967 
+ 531      6E30312E 
+ 532              	.LASF4:
+ 533 020a 6C6F6E67 		.ascii	"long int\000"
+ 533      20696E74 
+ 533      00
+ 534              	.LASF0:
+ 535 0213 7369676E 		.ascii	"signed char\000"
+ 535      65642063 
+ 535      68617200 
+ 536              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

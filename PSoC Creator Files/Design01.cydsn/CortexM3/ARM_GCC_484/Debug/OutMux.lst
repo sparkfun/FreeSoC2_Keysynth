@@ -1,0 +1,810 @@
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccv8OJOI.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"OutMux.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.data
+  19              		.type	OutMux_lastChannel, %object
+  20              		.size	OutMux_lastChannel, 1
+  21              	OutMux_lastChannel:
+  22 0000 FF       		.byte	-1
+  23              		.section	.text.OutMux_Start,"ax",%progbits
+  24              		.align	2
+  25              		.global	OutMux_Start
+  26              		.thumb
+  27              		.thumb_func
+  28              		.type	OutMux_Start, %function
+  29              	OutMux_Start:
+  30              	.LFB0:
+  31              		.file 1 ".\\Generated_Source\\PSoC5\\OutMux.c"
+   1:.\Generated_Source\PSoC5/OutMux.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/OutMux.c **** * File Name: OutMux.c
+   3:.\Generated_Source\PSoC5/OutMux.c **** * Version 1.80
+   4:.\Generated_Source\PSoC5/OutMux.c **** *
+   5:.\Generated_Source\PSoC5/OutMux.c **** *  Description:
+   6:.\Generated_Source\PSoC5/OutMux.c **** *    This file contains all functions required for the analog multiplexer
+   7:.\Generated_Source\PSoC5/OutMux.c **** *    AMux User Module.
+   8:.\Generated_Source\PSoC5/OutMux.c **** *
+   9:.\Generated_Source\PSoC5/OutMux.c **** *   Note:
+  10:.\Generated_Source\PSoC5/OutMux.c **** *
+  11:.\Generated_Source\PSoC5/OutMux.c **** *******************************************************************************
+  12:.\Generated_Source\PSoC5/OutMux.c **** * Copyright 2008-2010, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC5/OutMux.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:.\Generated_Source\PSoC5/OutMux.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:.\Generated_Source\PSoC5/OutMux.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC5/OutMux.c **** ********************************************************************************/
+  17:.\Generated_Source\PSoC5/OutMux.c **** 
+  18:.\Generated_Source\PSoC5/OutMux.c **** #include "OutMux.h"
+  19:.\Generated_Source\PSoC5/OutMux.c **** 
+  20:.\Generated_Source\PSoC5/OutMux.c **** static uint8 OutMux_lastChannel = OutMux_NULL_CHANNEL;
+  21:.\Generated_Source\PSoC5/OutMux.c **** 
+  22:.\Generated_Source\PSoC5/OutMux.c **** 
+  23:.\Generated_Source\PSoC5/OutMux.c **** /*******************************************************************************
+  24:.\Generated_Source\PSoC5/OutMux.c **** * Function Name: OutMux_Start
+  25:.\Generated_Source\PSoC5/OutMux.c **** ********************************************************************************
+  26:.\Generated_Source\PSoC5/OutMux.c **** * Summary:
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccv8OJOI.s 			page 2
+
+
+  27:.\Generated_Source\PSoC5/OutMux.c **** *  Disconnect all channels.
+  28:.\Generated_Source\PSoC5/OutMux.c **** *
+  29:.\Generated_Source\PSoC5/OutMux.c **** * Parameters:
+  30:.\Generated_Source\PSoC5/OutMux.c **** *  void
+  31:.\Generated_Source\PSoC5/OutMux.c **** *
+  32:.\Generated_Source\PSoC5/OutMux.c **** * Return:
+  33:.\Generated_Source\PSoC5/OutMux.c **** *  void
+  34:.\Generated_Source\PSoC5/OutMux.c **** *
+  35:.\Generated_Source\PSoC5/OutMux.c **** *******************************************************************************/
+  36:.\Generated_Source\PSoC5/OutMux.c **** void OutMux_Start(void) 
+  37:.\Generated_Source\PSoC5/OutMux.c **** {
+  32              		.loc 1 37 0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 8
+  35              		@ frame_needed = 1, uses_anonymous_args = 0
+  36 0000 80B5     		push	{r7, lr}
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 7, -8
+  39              		.cfi_offset 14, -4
+  40 0002 82B0     		sub	sp, sp, #8
+  41              		.cfi_def_cfa_offset 16
+  42 0004 00AF     		add	r7, sp, #0
+  43              		.cfi_def_cfa_register 7
+  38:.\Generated_Source\PSoC5/OutMux.c ****     uint8 chan;
+  39:.\Generated_Source\PSoC5/OutMux.c **** 
+  40:.\Generated_Source\PSoC5/OutMux.c ****     for(chan = 0u; chan < OutMux_CHANNELS ; chan++)
+  44              		.loc 1 40 0
+  45 0006 0023     		movs	r3, #0
+  46 0008 FB71     		strb	r3, [r7, #7]
+  47 000a 06E0     		b	.L2
+  48              	.L3:
+  41:.\Generated_Source\PSoC5/OutMux.c ****     {
+  42:.\Generated_Source\PSoC5/OutMux.c **** #if (OutMux_MUXTYPE == OutMux_MUX_SINGLE)
+  43:.\Generated_Source\PSoC5/OutMux.c ****         OutMux_Unset(chan);
+  49              		.loc 1 43 0 discriminator 2
+  50 000c FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  51 000e 1846     		mov	r0, r3
+  52 0010 FFF7FEFF 		bl	OutMux_Unset
+  40:.\Generated_Source\PSoC5/OutMux.c ****     for(chan = 0u; chan < OutMux_CHANNELS ; chan++)
+  53              		.loc 1 40 0 discriminator 2
+  54 0014 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  55 0016 0133     		adds	r3, r3, #1
+  56 0018 FB71     		strb	r3, [r7, #7]
+  57              	.L2:
+  40:.\Generated_Source\PSoC5/OutMux.c ****     for(chan = 0u; chan < OutMux_CHANNELS ; chan++)
+  58              		.loc 1 40 0 is_stmt 0 discriminator 1
+  59 001a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  60 001c 032B     		cmp	r3, #3
+  61 001e F5D9     		bls	.L3
+  44:.\Generated_Source\PSoC5/OutMux.c **** #else
+  45:.\Generated_Source\PSoC5/OutMux.c ****         OutMux_CYAMUXSIDE_A_Unset(chan);
+  46:.\Generated_Source\PSoC5/OutMux.c ****         OutMux_CYAMUXSIDE_B_Unset(chan);
+  47:.\Generated_Source\PSoC5/OutMux.c **** #endif
+  48:.\Generated_Source\PSoC5/OutMux.c ****     }
+  49:.\Generated_Source\PSoC5/OutMux.c **** 
+  50:.\Generated_Source\PSoC5/OutMux.c ****     OutMux_lastChannel = OutMux_NULL_CHANNEL;
+  62              		.loc 1 50 0 is_stmt 1
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccv8OJOI.s 			page 3
+
+
+  63 0020 024B     		ldr	r3, .L4
+  64 0022 FF22     		movs	r2, #255
+  65 0024 1A70     		strb	r2, [r3]
+  51:.\Generated_Source\PSoC5/OutMux.c **** }
+  66              		.loc 1 51 0
+  67 0026 0837     		adds	r7, r7, #8
+  68 0028 BD46     		mov	sp, r7
+  69              		@ sp needed
+  70 002a 80BD     		pop	{r7, pc}
+  71              	.L5:
+  72              		.align	2
+  73              	.L4:
+  74 002c 00000000 		.word	OutMux_lastChannel
+  75              		.cfi_endproc
+  76              	.LFE0:
+  77              		.size	OutMux_Start, .-OutMux_Start
+  78              		.section	.text.OutMux_FastSelect,"ax",%progbits
+  79              		.align	2
+  80              		.global	OutMux_FastSelect
+  81              		.thumb
+  82              		.thumb_func
+  83              		.type	OutMux_FastSelect, %function
+  84              	OutMux_FastSelect:
+  85              	.LFB1:
+  52:.\Generated_Source\PSoC5/OutMux.c **** 
+  53:.\Generated_Source\PSoC5/OutMux.c **** 
+  54:.\Generated_Source\PSoC5/OutMux.c **** #if (!OutMux_ATMOSTONE)
+  55:.\Generated_Source\PSoC5/OutMux.c **** /*******************************************************************************
+  56:.\Generated_Source\PSoC5/OutMux.c **** * Function Name: OutMux_Select
+  57:.\Generated_Source\PSoC5/OutMux.c **** ********************************************************************************
+  58:.\Generated_Source\PSoC5/OutMux.c **** * Summary:
+  59:.\Generated_Source\PSoC5/OutMux.c **** *  This functions first disconnects all channels then connects the given
+  60:.\Generated_Source\PSoC5/OutMux.c **** *  channel.
+  61:.\Generated_Source\PSoC5/OutMux.c **** *
+  62:.\Generated_Source\PSoC5/OutMux.c **** * Parameters:
+  63:.\Generated_Source\PSoC5/OutMux.c **** *  channel:  The channel to connect to the common terminal.
+  64:.\Generated_Source\PSoC5/OutMux.c **** *
+  65:.\Generated_Source\PSoC5/OutMux.c **** * Return:
+  66:.\Generated_Source\PSoC5/OutMux.c **** *  void
+  67:.\Generated_Source\PSoC5/OutMux.c **** *
+  68:.\Generated_Source\PSoC5/OutMux.c **** *******************************************************************************/
+  69:.\Generated_Source\PSoC5/OutMux.c **** void OutMux_Select(uint8 channel) 
+  70:.\Generated_Source\PSoC5/OutMux.c **** {
+  71:.\Generated_Source\PSoC5/OutMux.c ****     OutMux_DisconnectAll();        /* Disconnect all previous connections */
+  72:.\Generated_Source\PSoC5/OutMux.c ****     OutMux_Connect(channel);       /* Make the given selection */
+  73:.\Generated_Source\PSoC5/OutMux.c ****     OutMux_lastChannel = channel;  /* Update last channel */
+  74:.\Generated_Source\PSoC5/OutMux.c **** }
+  75:.\Generated_Source\PSoC5/OutMux.c **** #endif
+  76:.\Generated_Source\PSoC5/OutMux.c **** 
+  77:.\Generated_Source\PSoC5/OutMux.c **** 
+  78:.\Generated_Source\PSoC5/OutMux.c **** /*******************************************************************************
+  79:.\Generated_Source\PSoC5/OutMux.c **** * Function Name: OutMux_FastSelect
+  80:.\Generated_Source\PSoC5/OutMux.c **** ********************************************************************************
+  81:.\Generated_Source\PSoC5/OutMux.c **** * Summary:
+  82:.\Generated_Source\PSoC5/OutMux.c **** *  This function first disconnects the last connection made with FastSelect or
+  83:.\Generated_Source\PSoC5/OutMux.c **** *  Select, then connects the given channel. The FastSelect function is similar
+  84:.\Generated_Source\PSoC5/OutMux.c **** *  to the Select function, except it is faster since it only disconnects the
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccv8OJOI.s 			page 4
+
+
+  85:.\Generated_Source\PSoC5/OutMux.c **** *  last channel selected rather than all channels.
+  86:.\Generated_Source\PSoC5/OutMux.c **** *
+  87:.\Generated_Source\PSoC5/OutMux.c **** * Parameters:
+  88:.\Generated_Source\PSoC5/OutMux.c **** *  channel:  The channel to connect to the common terminal.
+  89:.\Generated_Source\PSoC5/OutMux.c **** *
+  90:.\Generated_Source\PSoC5/OutMux.c **** * Return:
+  91:.\Generated_Source\PSoC5/OutMux.c **** *  void
+  92:.\Generated_Source\PSoC5/OutMux.c **** *
+  93:.\Generated_Source\PSoC5/OutMux.c **** *******************************************************************************/
+  94:.\Generated_Source\PSoC5/OutMux.c **** void OutMux_FastSelect(uint8 channel) 
+  95:.\Generated_Source\PSoC5/OutMux.c **** {
+  86              		.loc 1 95 0
+  87              		.cfi_startproc
+  88              		@ args = 0, pretend = 0, frame = 8
+  89              		@ frame_needed = 1, uses_anonymous_args = 0
+  90 0000 80B5     		push	{r7, lr}
+  91              		.cfi_def_cfa_offset 8
+  92              		.cfi_offset 7, -8
+  93              		.cfi_offset 14, -4
+  94 0002 82B0     		sub	sp, sp, #8
+  95              		.cfi_def_cfa_offset 16
+  96 0004 00AF     		add	r7, sp, #0
+  97              		.cfi_def_cfa_register 7
+  98 0006 0346     		mov	r3, r0
+  99 0008 FB71     		strb	r3, [r7, #7]
+  96:.\Generated_Source\PSoC5/OutMux.c ****     /* Disconnect the last valid channel */
+  97:.\Generated_Source\PSoC5/OutMux.c ****     if( OutMux_lastChannel != OutMux_NULL_CHANNEL)
+ 100              		.loc 1 97 0
+ 101 000a 094B     		ldr	r3, .L8
+ 102 000c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 103 000e FF2B     		cmp	r3, #255
+ 104 0010 04D0     		beq	.L7
+  98:.\Generated_Source\PSoC5/OutMux.c ****     {
+  99:.\Generated_Source\PSoC5/OutMux.c ****         OutMux_Disconnect(OutMux_lastChannel);
+ 105              		.loc 1 99 0
+ 106 0012 074B     		ldr	r3, .L8
+ 107 0014 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 108 0016 1846     		mov	r0, r3
+ 109 0018 FFF7FEFF 		bl	OutMux_Unset
+ 110              	.L7:
+ 100:.\Generated_Source\PSoC5/OutMux.c ****     }
+ 101:.\Generated_Source\PSoC5/OutMux.c **** 
+ 102:.\Generated_Source\PSoC5/OutMux.c ****     /* Make the new channel connection */
+ 103:.\Generated_Source\PSoC5/OutMux.c **** #if (OutMux_MUXTYPE == OutMux_MUX_SINGLE)
+ 104:.\Generated_Source\PSoC5/OutMux.c ****     OutMux_Set(channel);
+ 111              		.loc 1 104 0
+ 112 001c FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 113 001e 1846     		mov	r0, r3
+ 114 0020 FFF7FEFF 		bl	OutMux_Set
+ 105:.\Generated_Source\PSoC5/OutMux.c **** #else
+ 106:.\Generated_Source\PSoC5/OutMux.c ****     OutMux_CYAMUXSIDE_A_Set(channel);
+ 107:.\Generated_Source\PSoC5/OutMux.c ****     OutMux_CYAMUXSIDE_B_Set(channel);
+ 108:.\Generated_Source\PSoC5/OutMux.c **** #endif
+ 109:.\Generated_Source\PSoC5/OutMux.c **** 
+ 110:.\Generated_Source\PSoC5/OutMux.c **** 
+ 111:.\Generated_Source\PSoC5/OutMux.c ****     OutMux_lastChannel = channel;   /* Update last channel */
+ 115              		.loc 1 111 0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccv8OJOI.s 			page 5
+
+
+ 116 0024 024B     		ldr	r3, .L8
+ 117 0026 FA79     		ldrb	r2, [r7, #7]
+ 118 0028 1A70     		strb	r2, [r3]
+ 112:.\Generated_Source\PSoC5/OutMux.c **** }
+ 119              		.loc 1 112 0
+ 120 002a 0837     		adds	r7, r7, #8
+ 121 002c BD46     		mov	sp, r7
+ 122              		@ sp needed
+ 123 002e 80BD     		pop	{r7, pc}
+ 124              	.L9:
+ 125              		.align	2
+ 126              	.L8:
+ 127 0030 00000000 		.word	OutMux_lastChannel
+ 128              		.cfi_endproc
+ 129              	.LFE1:
+ 130              		.size	OutMux_FastSelect, .-OutMux_FastSelect
+ 131              		.section	.text.OutMux_DisconnectAll,"ax",%progbits
+ 132              		.align	2
+ 133              		.global	OutMux_DisconnectAll
+ 134              		.thumb
+ 135              		.thumb_func
+ 136              		.type	OutMux_DisconnectAll, %function
+ 137              	OutMux_DisconnectAll:
+ 138              	.LFB2:
+ 113:.\Generated_Source\PSoC5/OutMux.c **** 
+ 114:.\Generated_Source\PSoC5/OutMux.c **** 
+ 115:.\Generated_Source\PSoC5/OutMux.c **** #if (OutMux_MUXTYPE == OutMux_MUX_DIFF)
+ 116:.\Generated_Source\PSoC5/OutMux.c **** #if (!OutMux_ATMOSTONE)
+ 117:.\Generated_Source\PSoC5/OutMux.c **** /*******************************************************************************
+ 118:.\Generated_Source\PSoC5/OutMux.c **** * Function Name: OutMux_Connect
+ 119:.\Generated_Source\PSoC5/OutMux.c **** ********************************************************************************
+ 120:.\Generated_Source\PSoC5/OutMux.c **** * Summary:
+ 121:.\Generated_Source\PSoC5/OutMux.c **** *  This function connects the given channel without affecting other connections.
+ 122:.\Generated_Source\PSoC5/OutMux.c **** *
+ 123:.\Generated_Source\PSoC5/OutMux.c **** * Parameters:
+ 124:.\Generated_Source\PSoC5/OutMux.c **** *  channel:  The channel to connect to the common terminal.
+ 125:.\Generated_Source\PSoC5/OutMux.c **** *
+ 126:.\Generated_Source\PSoC5/OutMux.c **** * Return:
+ 127:.\Generated_Source\PSoC5/OutMux.c **** *  void
+ 128:.\Generated_Source\PSoC5/OutMux.c **** *
+ 129:.\Generated_Source\PSoC5/OutMux.c **** *******************************************************************************/
+ 130:.\Generated_Source\PSoC5/OutMux.c **** void OutMux_Connect(uint8 channel) 
+ 131:.\Generated_Source\PSoC5/OutMux.c **** {
+ 132:.\Generated_Source\PSoC5/OutMux.c ****     OutMux_CYAMUXSIDE_A_Set(channel);
+ 133:.\Generated_Source\PSoC5/OutMux.c ****     OutMux_CYAMUXSIDE_B_Set(channel);
+ 134:.\Generated_Source\PSoC5/OutMux.c **** }
+ 135:.\Generated_Source\PSoC5/OutMux.c **** #endif
+ 136:.\Generated_Source\PSoC5/OutMux.c **** 
+ 137:.\Generated_Source\PSoC5/OutMux.c **** /*******************************************************************************
+ 138:.\Generated_Source\PSoC5/OutMux.c **** * Function Name: OutMux_Disconnect
+ 139:.\Generated_Source\PSoC5/OutMux.c **** ********************************************************************************
+ 140:.\Generated_Source\PSoC5/OutMux.c **** * Summary:
+ 141:.\Generated_Source\PSoC5/OutMux.c **** *  This function disconnects the given channel from the common or output
+ 142:.\Generated_Source\PSoC5/OutMux.c **** *  terminal without affecting other connections.
+ 143:.\Generated_Source\PSoC5/OutMux.c **** *
+ 144:.\Generated_Source\PSoC5/OutMux.c **** * Parameters:
+ 145:.\Generated_Source\PSoC5/OutMux.c **** *  channel:  The channel to disconnect from the common terminal.
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccv8OJOI.s 			page 6
+
+
+ 146:.\Generated_Source\PSoC5/OutMux.c **** *
+ 147:.\Generated_Source\PSoC5/OutMux.c **** * Return:
+ 148:.\Generated_Source\PSoC5/OutMux.c **** *  void
+ 149:.\Generated_Source\PSoC5/OutMux.c **** *
+ 150:.\Generated_Source\PSoC5/OutMux.c **** *******************************************************************************/
+ 151:.\Generated_Source\PSoC5/OutMux.c **** void OutMux_Disconnect(uint8 channel) 
+ 152:.\Generated_Source\PSoC5/OutMux.c **** {
+ 153:.\Generated_Source\PSoC5/OutMux.c ****     OutMux_CYAMUXSIDE_A_Unset(channel);
+ 154:.\Generated_Source\PSoC5/OutMux.c ****     OutMux_CYAMUXSIDE_B_Unset(channel);
+ 155:.\Generated_Source\PSoC5/OutMux.c **** }
+ 156:.\Generated_Source\PSoC5/OutMux.c **** #endif
+ 157:.\Generated_Source\PSoC5/OutMux.c **** 
+ 158:.\Generated_Source\PSoC5/OutMux.c **** #if (OutMux_ATMOSTONE)
+ 159:.\Generated_Source\PSoC5/OutMux.c **** /*******************************************************************************
+ 160:.\Generated_Source\PSoC5/OutMux.c **** * Function Name: OutMux_DisconnectAll
+ 161:.\Generated_Source\PSoC5/OutMux.c **** ********************************************************************************
+ 162:.\Generated_Source\PSoC5/OutMux.c **** * Summary:
+ 163:.\Generated_Source\PSoC5/OutMux.c **** *  This function disconnects all channels.
+ 164:.\Generated_Source\PSoC5/OutMux.c **** *
+ 165:.\Generated_Source\PSoC5/OutMux.c **** * Parameters:
+ 166:.\Generated_Source\PSoC5/OutMux.c **** *  void
+ 167:.\Generated_Source\PSoC5/OutMux.c **** *
+ 168:.\Generated_Source\PSoC5/OutMux.c **** * Return:
+ 169:.\Generated_Source\PSoC5/OutMux.c **** *  void
+ 170:.\Generated_Source\PSoC5/OutMux.c **** *
+ 171:.\Generated_Source\PSoC5/OutMux.c **** *******************************************************************************/
+ 172:.\Generated_Source\PSoC5/OutMux.c **** void OutMux_DisconnectAll(void) 
+ 173:.\Generated_Source\PSoC5/OutMux.c **** {
+ 139              		.loc 1 173 0
+ 140              		.cfi_startproc
+ 141              		@ args = 0, pretend = 0, frame = 0
+ 142              		@ frame_needed = 1, uses_anonymous_args = 0
+ 143 0000 80B5     		push	{r7, lr}
+ 144              		.cfi_def_cfa_offset 8
+ 145              		.cfi_offset 7, -8
+ 146              		.cfi_offset 14, -4
+ 147 0002 00AF     		add	r7, sp, #0
+ 148              		.cfi_def_cfa_register 7
+ 174:.\Generated_Source\PSoC5/OutMux.c ****     if(OutMux_lastChannel != OutMux_NULL_CHANNEL) 
+ 149              		.loc 1 174 0
+ 150 0004 064B     		ldr	r3, .L12
+ 151 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 152 0008 FF2B     		cmp	r3, #255
+ 153 000a 07D0     		beq	.L10
+ 175:.\Generated_Source\PSoC5/OutMux.c ****     {
+ 176:.\Generated_Source\PSoC5/OutMux.c ****         OutMux_Disconnect(OutMux_lastChannel);
+ 154              		.loc 1 176 0
+ 155 000c 044B     		ldr	r3, .L12
+ 156 000e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 157 0010 1846     		mov	r0, r3
+ 158 0012 FFF7FEFF 		bl	OutMux_Unset
+ 177:.\Generated_Source\PSoC5/OutMux.c ****         OutMux_lastChannel = OutMux_NULL_CHANNEL;
+ 159              		.loc 1 177 0
+ 160 0016 024B     		ldr	r3, .L12
+ 161 0018 FF22     		movs	r2, #255
+ 162 001a 1A70     		strb	r2, [r3]
+ 163              	.L10:
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccv8OJOI.s 			page 7
+
+
+ 178:.\Generated_Source\PSoC5/OutMux.c ****     }
+ 179:.\Generated_Source\PSoC5/OutMux.c **** }
+ 164              		.loc 1 179 0
+ 165 001c 80BD     		pop	{r7, pc}
+ 166              	.L13:
+ 167 001e 00BF     		.align	2
+ 168              	.L12:
+ 169 0020 00000000 		.word	OutMux_lastChannel
+ 170              		.cfi_endproc
+ 171              	.LFE2:
+ 172              		.size	OutMux_DisconnectAll, .-OutMux_DisconnectAll
+ 173              		.text
+ 174              	.Letext0:
+ 175              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 176              		.section	.debug_info,"",%progbits
+ 177              	.Ldebug_info0:
+ 178 0000 F2000000 		.4byte	0xf2
+ 179 0004 0400     		.2byte	0x4
+ 180 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 181 000a 04       		.byte	0x4
+ 182 000b 01       		.uleb128 0x1
+ 183 000c A6000000 		.4byte	.LASF16
+ 184 0010 01       		.byte	0x1
+ 185 0011 27010000 		.4byte	.LASF17
+ 186 0015 6C010000 		.4byte	.LASF18
+ 187 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 188 001d 00000000 		.4byte	0
+ 189 0021 00000000 		.4byte	.Ldebug_line0
+ 190 0025 02       		.uleb128 0x2
+ 191 0026 01       		.byte	0x1
+ 192 0027 06       		.byte	0x6
+ 193 0028 BD010000 		.4byte	.LASF0
+ 194 002c 02       		.uleb128 0x2
+ 195 002d 01       		.byte	0x1
+ 196 002e 08       		.byte	0x8
+ 197 002f 48000000 		.4byte	.LASF1
+ 198 0033 02       		.uleb128 0x2
+ 199 0034 02       		.byte	0x2
+ 200 0035 05       		.byte	0x5
+ 201 0036 5C010000 		.4byte	.LASF2
+ 202 003a 02       		.uleb128 0x2
+ 203 003b 02       		.byte	0x2
+ 204 003c 07       		.byte	0x7
+ 205 003d 68000000 		.4byte	.LASF3
+ 206 0041 02       		.uleb128 0x2
+ 207 0042 04       		.byte	0x4
+ 208 0043 05       		.byte	0x5
+ 209 0044 B4010000 		.4byte	.LASF4
+ 210 0048 02       		.uleb128 0x2
+ 211 0049 04       		.byte	0x4
+ 212 004a 07       		.byte	0x7
+ 213 004b 56000000 		.4byte	.LASF5
+ 214 004f 02       		.uleb128 0x2
+ 215 0050 08       		.byte	0x8
+ 216 0051 05       		.byte	0x5
+ 217 0052 49010000 		.4byte	.LASF6
+ 218 0056 02       		.uleb128 0x2
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccv8OJOI.s 			page 8
+
+
+ 219 0057 08       		.byte	0x8
+ 220 0058 07       		.byte	0x7
+ 221 0059 8F000000 		.4byte	.LASF7
+ 222 005d 03       		.uleb128 0x3
+ 223 005e 04       		.byte	0x4
+ 224 005f 05       		.byte	0x5
+ 225 0060 696E7400 		.ascii	"int\000"
+ 226 0064 02       		.uleb128 0x2
+ 227 0065 04       		.byte	0x4
+ 228 0066 07       		.byte	0x7
+ 229 0067 82000000 		.4byte	.LASF8
+ 230 006b 04       		.uleb128 0x4
+ 231 006c 66010000 		.4byte	.LASF19
+ 232 0070 02       		.byte	0x2
+ 233 0071 A1       		.byte	0xa1
+ 234 0072 2C000000 		.4byte	0x2c
+ 235 0076 02       		.uleb128 0x2
+ 236 0077 04       		.byte	0x4
+ 237 0078 04       		.byte	0x4
+ 238 0079 2D000000 		.4byte	.LASF9
+ 239 007d 02       		.uleb128 0x2
+ 240 007e 08       		.byte	0x8
+ 241 007f 04       		.byte	0x4
+ 242 0080 7B000000 		.4byte	.LASF10
+ 243 0084 02       		.uleb128 0x2
+ 244 0085 01       		.byte	0x1
+ 245 0086 08       		.byte	0x8
+ 246 0087 57010000 		.4byte	.LASF11
+ 247 008b 05       		.uleb128 0x5
+ 248 008c C9010000 		.4byte	.LASF12
+ 249 0090 01       		.byte	0x1
+ 250 0091 24       		.byte	0x24
+ 251 0092 00000000 		.4byte	.LFB0
+ 252 0096 30000000 		.4byte	.LFE0-.LFB0
+ 253 009a 01       		.uleb128 0x1
+ 254 009b 9C       		.byte	0x9c
+ 255 009c AF000000 		.4byte	0xaf
+ 256 00a0 06       		.uleb128 0x6
+ 257 00a1 22010000 		.4byte	.LASF14
+ 258 00a5 01       		.byte	0x1
+ 259 00a6 26       		.byte	0x26
+ 260 00a7 6B000000 		.4byte	0x6b
+ 261 00ab 02       		.uleb128 0x2
+ 262 00ac 91       		.byte	0x91
+ 263 00ad 77       		.sleb128 -9
+ 264 00ae 00       		.byte	0
+ 265 00af 05       		.uleb128 0x5
+ 266 00b0 1B000000 		.4byte	.LASF13
+ 267 00b4 01       		.byte	0x1
+ 268 00b5 5E       		.byte	0x5e
+ 269 00b6 00000000 		.4byte	.LFB1
+ 270 00ba 34000000 		.4byte	.LFE1-.LFB1
+ 271 00be 01       		.uleb128 0x1
+ 272 00bf 9C       		.byte	0x9c
+ 273 00c0 D3000000 		.4byte	0xd3
+ 274 00c4 07       		.uleb128 0x7
+ 275 00c5 00000000 		.4byte	.LASF20
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccv8OJOI.s 			page 9
+
+
+ 276 00c9 01       		.byte	0x1
+ 277 00ca 5E       		.byte	0x5e
+ 278 00cb 6B000000 		.4byte	0x6b
+ 279 00cf 02       		.uleb128 0x2
+ 280 00d0 91       		.byte	0x91
+ 281 00d1 77       		.sleb128 -9
+ 282 00d2 00       		.byte	0
+ 283 00d3 08       		.uleb128 0x8
+ 284 00d4 33000000 		.4byte	.LASF21
+ 285 00d8 01       		.byte	0x1
+ 286 00d9 AC       		.byte	0xac
+ 287 00da 00000000 		.4byte	.LFB2
+ 288 00de 24000000 		.4byte	.LFE2-.LFB2
+ 289 00e2 01       		.uleb128 0x1
+ 290 00e3 9C       		.byte	0x9c
+ 291 00e4 06       		.uleb128 0x6
+ 292 00e5 08000000 		.4byte	.LASF15
+ 293 00e9 01       		.byte	0x1
+ 294 00ea 14       		.byte	0x14
+ 295 00eb 6B000000 		.4byte	0x6b
+ 296 00ef 05       		.uleb128 0x5
+ 297 00f0 03       		.byte	0x3
+ 298 00f1 00000000 		.4byte	OutMux_lastChannel
+ 299 00f5 00       		.byte	0
+ 300              		.section	.debug_abbrev,"",%progbits
+ 301              	.Ldebug_abbrev0:
+ 302 0000 01       		.uleb128 0x1
+ 303 0001 11       		.uleb128 0x11
+ 304 0002 01       		.byte	0x1
+ 305 0003 25       		.uleb128 0x25
+ 306 0004 0E       		.uleb128 0xe
+ 307 0005 13       		.uleb128 0x13
+ 308 0006 0B       		.uleb128 0xb
+ 309 0007 03       		.uleb128 0x3
+ 310 0008 0E       		.uleb128 0xe
+ 311 0009 1B       		.uleb128 0x1b
+ 312 000a 0E       		.uleb128 0xe
+ 313 000b 55       		.uleb128 0x55
+ 314 000c 17       		.uleb128 0x17
+ 315 000d 11       		.uleb128 0x11
+ 316 000e 01       		.uleb128 0x1
+ 317 000f 10       		.uleb128 0x10
+ 318 0010 17       		.uleb128 0x17
+ 319 0011 00       		.byte	0
+ 320 0012 00       		.byte	0
+ 321 0013 02       		.uleb128 0x2
+ 322 0014 24       		.uleb128 0x24
+ 323 0015 00       		.byte	0
+ 324 0016 0B       		.uleb128 0xb
+ 325 0017 0B       		.uleb128 0xb
+ 326 0018 3E       		.uleb128 0x3e
+ 327 0019 0B       		.uleb128 0xb
+ 328 001a 03       		.uleb128 0x3
+ 329 001b 0E       		.uleb128 0xe
+ 330 001c 00       		.byte	0
+ 331 001d 00       		.byte	0
+ 332 001e 03       		.uleb128 0x3
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccv8OJOI.s 			page 10
+
+
+ 333 001f 24       		.uleb128 0x24
+ 334 0020 00       		.byte	0
+ 335 0021 0B       		.uleb128 0xb
+ 336 0022 0B       		.uleb128 0xb
+ 337 0023 3E       		.uleb128 0x3e
+ 338 0024 0B       		.uleb128 0xb
+ 339 0025 03       		.uleb128 0x3
+ 340 0026 08       		.uleb128 0x8
+ 341 0027 00       		.byte	0
+ 342 0028 00       		.byte	0
+ 343 0029 04       		.uleb128 0x4
+ 344 002a 16       		.uleb128 0x16
+ 345 002b 00       		.byte	0
+ 346 002c 03       		.uleb128 0x3
+ 347 002d 0E       		.uleb128 0xe
+ 348 002e 3A       		.uleb128 0x3a
+ 349 002f 0B       		.uleb128 0xb
+ 350 0030 3B       		.uleb128 0x3b
+ 351 0031 0B       		.uleb128 0xb
+ 352 0032 49       		.uleb128 0x49
+ 353 0033 13       		.uleb128 0x13
+ 354 0034 00       		.byte	0
+ 355 0035 00       		.byte	0
+ 356 0036 05       		.uleb128 0x5
+ 357 0037 2E       		.uleb128 0x2e
+ 358 0038 01       		.byte	0x1
+ 359 0039 3F       		.uleb128 0x3f
+ 360 003a 19       		.uleb128 0x19
+ 361 003b 03       		.uleb128 0x3
+ 362 003c 0E       		.uleb128 0xe
+ 363 003d 3A       		.uleb128 0x3a
+ 364 003e 0B       		.uleb128 0xb
+ 365 003f 3B       		.uleb128 0x3b
+ 366 0040 0B       		.uleb128 0xb
+ 367 0041 27       		.uleb128 0x27
+ 368 0042 19       		.uleb128 0x19
+ 369 0043 11       		.uleb128 0x11
+ 370 0044 01       		.uleb128 0x1
+ 371 0045 12       		.uleb128 0x12
+ 372 0046 06       		.uleb128 0x6
+ 373 0047 40       		.uleb128 0x40
+ 374 0048 18       		.uleb128 0x18
+ 375 0049 9642     		.uleb128 0x2116
+ 376 004b 19       		.uleb128 0x19
+ 377 004c 01       		.uleb128 0x1
+ 378 004d 13       		.uleb128 0x13
+ 379 004e 00       		.byte	0
+ 380 004f 00       		.byte	0
+ 381 0050 06       		.uleb128 0x6
+ 382 0051 34       		.uleb128 0x34
+ 383 0052 00       		.byte	0
+ 384 0053 03       		.uleb128 0x3
+ 385 0054 0E       		.uleb128 0xe
+ 386 0055 3A       		.uleb128 0x3a
+ 387 0056 0B       		.uleb128 0xb
+ 388 0057 3B       		.uleb128 0x3b
+ 389 0058 0B       		.uleb128 0xb
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccv8OJOI.s 			page 11
+
+
+ 390 0059 49       		.uleb128 0x49
+ 391 005a 13       		.uleb128 0x13
+ 392 005b 02       		.uleb128 0x2
+ 393 005c 18       		.uleb128 0x18
+ 394 005d 00       		.byte	0
+ 395 005e 00       		.byte	0
+ 396 005f 07       		.uleb128 0x7
+ 397 0060 05       		.uleb128 0x5
+ 398 0061 00       		.byte	0
+ 399 0062 03       		.uleb128 0x3
+ 400 0063 0E       		.uleb128 0xe
+ 401 0064 3A       		.uleb128 0x3a
+ 402 0065 0B       		.uleb128 0xb
+ 403 0066 3B       		.uleb128 0x3b
+ 404 0067 0B       		.uleb128 0xb
+ 405 0068 49       		.uleb128 0x49
+ 406 0069 13       		.uleb128 0x13
+ 407 006a 02       		.uleb128 0x2
+ 408 006b 18       		.uleb128 0x18
+ 409 006c 00       		.byte	0
+ 410 006d 00       		.byte	0
+ 411 006e 08       		.uleb128 0x8
+ 412 006f 2E       		.uleb128 0x2e
+ 413 0070 00       		.byte	0
+ 414 0071 3F       		.uleb128 0x3f
+ 415 0072 19       		.uleb128 0x19
+ 416 0073 03       		.uleb128 0x3
+ 417 0074 0E       		.uleb128 0xe
+ 418 0075 3A       		.uleb128 0x3a
+ 419 0076 0B       		.uleb128 0xb
+ 420 0077 3B       		.uleb128 0x3b
+ 421 0078 0B       		.uleb128 0xb
+ 422 0079 27       		.uleb128 0x27
+ 423 007a 19       		.uleb128 0x19
+ 424 007b 11       		.uleb128 0x11
+ 425 007c 01       		.uleb128 0x1
+ 426 007d 12       		.uleb128 0x12
+ 427 007e 06       		.uleb128 0x6
+ 428 007f 40       		.uleb128 0x40
+ 429 0080 18       		.uleb128 0x18
+ 430 0081 9642     		.uleb128 0x2116
+ 431 0083 19       		.uleb128 0x19
+ 432 0084 00       		.byte	0
+ 433 0085 00       		.byte	0
+ 434 0086 00       		.byte	0
+ 435              		.section	.debug_aranges,"",%progbits
+ 436 0000 2C000000 		.4byte	0x2c
+ 437 0004 0200     		.2byte	0x2
+ 438 0006 00000000 		.4byte	.Ldebug_info0
+ 439 000a 04       		.byte	0x4
+ 440 000b 00       		.byte	0
+ 441 000c 0000     		.2byte	0
+ 442 000e 0000     		.2byte	0
+ 443 0010 00000000 		.4byte	.LFB0
+ 444 0014 30000000 		.4byte	.LFE0-.LFB0
+ 445 0018 00000000 		.4byte	.LFB1
+ 446 001c 34000000 		.4byte	.LFE1-.LFB1
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccv8OJOI.s 			page 12
+
+
+ 447 0020 00000000 		.4byte	.LFB2
+ 448 0024 24000000 		.4byte	.LFE2-.LFB2
+ 449 0028 00000000 		.4byte	0
+ 450 002c 00000000 		.4byte	0
+ 451              		.section	.debug_ranges,"",%progbits
+ 452              	.Ldebug_ranges0:
+ 453 0000 00000000 		.4byte	.LFB0
+ 454 0004 30000000 		.4byte	.LFE0
+ 455 0008 00000000 		.4byte	.LFB1
+ 456 000c 34000000 		.4byte	.LFE1
+ 457 0010 00000000 		.4byte	.LFB2
+ 458 0014 24000000 		.4byte	.LFE2
+ 459 0018 00000000 		.4byte	0
+ 460 001c 00000000 		.4byte	0
+ 461              		.section	.debug_line,"",%progbits
+ 462              	.Ldebug_line0:
+ 463 0000 99000000 		.section	.debug_str,"MS",%progbits,1
+ 463      02004500 
+ 463      00000201 
+ 463      FB0E0D00 
+ 463      01010101 
+ 464              	.LASF20:
+ 465 0000 6368616E 		.ascii	"channel\000"
+ 465      6E656C00 
+ 466              	.LASF15:
+ 467 0008 4F75744D 		.ascii	"OutMux_lastChannel\000"
+ 467      75785F6C 
+ 467      61737443 
+ 467      68616E6E 
+ 467      656C00
+ 468              	.LASF13:
+ 469 001b 4F75744D 		.ascii	"OutMux_FastSelect\000"
+ 469      75785F46 
+ 469      61737453 
+ 469      656C6563 
+ 469      7400
+ 470              	.LASF9:
+ 471 002d 666C6F61 		.ascii	"float\000"
+ 471      7400
+ 472              	.LASF21:
+ 473 0033 4F75744D 		.ascii	"OutMux_DisconnectAll\000"
+ 473      75785F44 
+ 473      6973636F 
+ 473      6E6E6563 
+ 473      74416C6C 
+ 474              	.LASF1:
+ 475 0048 756E7369 		.ascii	"unsigned char\000"
+ 475      676E6564 
+ 475      20636861 
+ 475      7200
+ 476              	.LASF5:
+ 477 0056 6C6F6E67 		.ascii	"long unsigned int\000"
+ 477      20756E73 
+ 477      69676E65 
+ 477      6420696E 
+ 477      7400
+ 478              	.LASF3:
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccv8OJOI.s 			page 13
+
+
+ 479 0068 73686F72 		.ascii	"short unsigned int\000"
+ 479      7420756E 
+ 479      7369676E 
+ 479      65642069 
+ 479      6E7400
+ 480              	.LASF10:
+ 481 007b 646F7562 		.ascii	"double\000"
+ 481      6C6500
+ 482              	.LASF8:
+ 483 0082 756E7369 		.ascii	"unsigned int\000"
+ 483      676E6564 
+ 483      20696E74 
+ 483      00
+ 484              	.LASF7:
+ 485 008f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 485      206C6F6E 
+ 485      6720756E 
+ 485      7369676E 
+ 485      65642069 
+ 486              	.LASF16:
+ 487 00a6 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 487      4320342E 
+ 487      382E3420 
+ 487      32303134 
+ 487      30353236 
+ 488 00d9 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
+ 488      20726576 
+ 488      6973696F 
+ 488      6E203231 
+ 488      31333538 
+ 489 010c 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 489      66756E63 
+ 489      74696F6E 
+ 489      2D736563 
+ 489      74696F6E 
+ 490              	.LASF14:
+ 491 0122 6368616E 		.ascii	"chan\000"
+ 491      00
+ 492              	.LASF17:
+ 493 0127 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\OutMux.c\000"
+ 493      6E657261 
+ 493      7465645F 
+ 493      536F7572 
+ 493      63655C50 
+ 494              	.LASF6:
+ 495 0149 6C6F6E67 		.ascii	"long long int\000"
+ 495      206C6F6E 
+ 495      6720696E 
+ 495      7400
+ 496              	.LASF11:
+ 497 0157 63686172 		.ascii	"char\000"
+ 497      00
+ 498              	.LASF2:
+ 499 015c 73686F72 		.ascii	"short int\000"
+ 499      7420696E 
+ 499      7400
+ 500              	.LASF19:
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccv8OJOI.s 			page 14
+
+
+ 501 0166 75696E74 		.ascii	"uint8\000"
+ 501      3800
+ 502              	.LASF18:
+ 503 016c 433A5C55 		.ascii	"C:\\Users\\IEUser\\Downloads\\PSoC_Creator\\Filter_"
+ 503      73657273 
+ 503      5C494555 
+ 503      7365725C 
+ 503      446F776E 
+ 504 019a 4144435F 		.ascii	"ADC_VDAC01\\Design01.cydsn\000"
+ 504      56444143 
+ 504      30315C44 
+ 504      65736967 
+ 504      6E30312E 
+ 505              	.LASF4:
+ 506 01b4 6C6F6E67 		.ascii	"long int\000"
+ 506      20696E74 
+ 506      00
+ 507              	.LASF0:
+ 508 01bd 7369676E 		.ascii	"signed char\000"
+ 508      65642063 
+ 508      68617200 
+ 509              	.LASF12:
+ 510 01c9 4F75744D 		.ascii	"OutMux_Start\000"
+ 510      75785F53 
+ 510      74617274 
+ 510      00
+ 511              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

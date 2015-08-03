@@ -1,0 +1,728 @@
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccJEwhAe.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"Tremolo.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.data
+  19              		.type	Tremolo_lastChannel, %object
+  20              		.size	Tremolo_lastChannel, 1
+  21              	Tremolo_lastChannel:
+  22 0000 FF       		.byte	-1
+  23              		.section	.text.Tremolo_Start,"ax",%progbits
+  24              		.align	2
+  25              		.global	Tremolo_Start
+  26              		.thumb
+  27              		.thumb_func
+  28              		.type	Tremolo_Start, %function
+  29              	Tremolo_Start:
+  30              	.LFB0:
+  31              		.file 1 ".\\Generated_Source\\PSoC5\\Tremolo.c"
+   1:.\Generated_Source\PSoC5/Tremolo.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/Tremolo.c **** * File Name: Tremolo.c
+   3:.\Generated_Source\PSoC5/Tremolo.c **** * Version 1.80
+   4:.\Generated_Source\PSoC5/Tremolo.c **** *
+   5:.\Generated_Source\PSoC5/Tremolo.c **** *  Description:
+   6:.\Generated_Source\PSoC5/Tremolo.c **** *    This file contains all functions required for the analog multiplexer
+   7:.\Generated_Source\PSoC5/Tremolo.c **** *    AMux User Module.
+   8:.\Generated_Source\PSoC5/Tremolo.c **** *
+   9:.\Generated_Source\PSoC5/Tremolo.c **** *   Note:
+  10:.\Generated_Source\PSoC5/Tremolo.c **** *
+  11:.\Generated_Source\PSoC5/Tremolo.c **** *******************************************************************************
+  12:.\Generated_Source\PSoC5/Tremolo.c **** * Copyright 2008-2010, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC5/Tremolo.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:.\Generated_Source\PSoC5/Tremolo.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:.\Generated_Source\PSoC5/Tremolo.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC5/Tremolo.c **** ********************************************************************************/
+  17:.\Generated_Source\PSoC5/Tremolo.c **** 
+  18:.\Generated_Source\PSoC5/Tremolo.c **** #include "Tremolo.h"
+  19:.\Generated_Source\PSoC5/Tremolo.c **** 
+  20:.\Generated_Source\PSoC5/Tremolo.c **** static uint8 Tremolo_lastChannel = Tremolo_NULL_CHANNEL;
+  21:.\Generated_Source\PSoC5/Tremolo.c **** 
+  22:.\Generated_Source\PSoC5/Tremolo.c **** 
+  23:.\Generated_Source\PSoC5/Tremolo.c **** /*******************************************************************************
+  24:.\Generated_Source\PSoC5/Tremolo.c **** * Function Name: Tremolo_Start
+  25:.\Generated_Source\PSoC5/Tremolo.c **** ********************************************************************************
+  26:.\Generated_Source\PSoC5/Tremolo.c **** * Summary:
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccJEwhAe.s 			page 2
+
+
+  27:.\Generated_Source\PSoC5/Tremolo.c **** *  Disconnect all channels.
+  28:.\Generated_Source\PSoC5/Tremolo.c **** *
+  29:.\Generated_Source\PSoC5/Tremolo.c **** * Parameters:
+  30:.\Generated_Source\PSoC5/Tremolo.c **** *  void
+  31:.\Generated_Source\PSoC5/Tremolo.c **** *
+  32:.\Generated_Source\PSoC5/Tremolo.c **** * Return:
+  33:.\Generated_Source\PSoC5/Tremolo.c **** *  void
+  34:.\Generated_Source\PSoC5/Tremolo.c **** *
+  35:.\Generated_Source\PSoC5/Tremolo.c **** *******************************************************************************/
+  36:.\Generated_Source\PSoC5/Tremolo.c **** void Tremolo_Start(void) 
+  37:.\Generated_Source\PSoC5/Tremolo.c **** {
+  32              		.loc 1 37 0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 8
+  35              		@ frame_needed = 1, uses_anonymous_args = 0
+  36 0000 80B5     		push	{r7, lr}
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 7, -8
+  39              		.cfi_offset 14, -4
+  40 0002 82B0     		sub	sp, sp, #8
+  41              		.cfi_def_cfa_offset 16
+  42 0004 00AF     		add	r7, sp, #0
+  43              		.cfi_def_cfa_register 7
+  38:.\Generated_Source\PSoC5/Tremolo.c ****     uint8 chan;
+  39:.\Generated_Source\PSoC5/Tremolo.c **** 
+  40:.\Generated_Source\PSoC5/Tremolo.c ****     for(chan = 0u; chan < Tremolo_CHANNELS ; chan++)
+  44              		.loc 1 40 0
+  45 0006 0023     		movs	r3, #0
+  46 0008 FB71     		strb	r3, [r7, #7]
+  47 000a 06E0     		b	.L2
+  48              	.L3:
+  41:.\Generated_Source\PSoC5/Tremolo.c ****     {
+  42:.\Generated_Source\PSoC5/Tremolo.c **** #if (Tremolo_MUXTYPE == Tremolo_MUX_SINGLE)
+  43:.\Generated_Source\PSoC5/Tremolo.c ****         Tremolo_Unset(chan);
+  49              		.loc 1 43 0 discriminator 2
+  50 000c FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  51 000e 1846     		mov	r0, r3
+  52 0010 FFF7FEFF 		bl	Tremolo_Unset
+  40:.\Generated_Source\PSoC5/Tremolo.c ****     for(chan = 0u; chan < Tremolo_CHANNELS ; chan++)
+  53              		.loc 1 40 0 discriminator 2
+  54 0014 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  55 0016 0133     		adds	r3, r3, #1
+  56 0018 FB71     		strb	r3, [r7, #7]
+  57              	.L2:
+  40:.\Generated_Source\PSoC5/Tremolo.c ****     for(chan = 0u; chan < Tremolo_CHANNELS ; chan++)
+  58              		.loc 1 40 0 is_stmt 0 discriminator 1
+  59 001a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  60 001c 012B     		cmp	r3, #1
+  61 001e F5D9     		bls	.L3
+  44:.\Generated_Source\PSoC5/Tremolo.c **** #else
+  45:.\Generated_Source\PSoC5/Tremolo.c ****         Tremolo_CYAMUXSIDE_A_Unset(chan);
+  46:.\Generated_Source\PSoC5/Tremolo.c ****         Tremolo_CYAMUXSIDE_B_Unset(chan);
+  47:.\Generated_Source\PSoC5/Tremolo.c **** #endif
+  48:.\Generated_Source\PSoC5/Tremolo.c ****     }
+  49:.\Generated_Source\PSoC5/Tremolo.c **** 
+  50:.\Generated_Source\PSoC5/Tremolo.c ****     Tremolo_lastChannel = Tremolo_NULL_CHANNEL;
+  62              		.loc 1 50 0 is_stmt 1
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccJEwhAe.s 			page 3
+
+
+  63 0020 024B     		ldr	r3, .L4
+  64 0022 FF22     		movs	r2, #255
+  65 0024 1A70     		strb	r2, [r3]
+  51:.\Generated_Source\PSoC5/Tremolo.c **** }
+  66              		.loc 1 51 0
+  67 0026 0837     		adds	r7, r7, #8
+  68 0028 BD46     		mov	sp, r7
+  69              		@ sp needed
+  70 002a 80BD     		pop	{r7, pc}
+  71              	.L5:
+  72              		.align	2
+  73              	.L4:
+  74 002c 00000000 		.word	Tremolo_lastChannel
+  75              		.cfi_endproc
+  76              	.LFE0:
+  77              		.size	Tremolo_Start, .-Tremolo_Start
+  78              		.section	.text.Tremolo_Select,"ax",%progbits
+  79              		.align	2
+  80              		.global	Tremolo_Select
+  81              		.thumb
+  82              		.thumb_func
+  83              		.type	Tremolo_Select, %function
+  84              	Tremolo_Select:
+  85              	.LFB1:
+  52:.\Generated_Source\PSoC5/Tremolo.c **** 
+  53:.\Generated_Source\PSoC5/Tremolo.c **** 
+  54:.\Generated_Source\PSoC5/Tremolo.c **** #if (!Tremolo_ATMOSTONE)
+  55:.\Generated_Source\PSoC5/Tremolo.c **** /*******************************************************************************
+  56:.\Generated_Source\PSoC5/Tremolo.c **** * Function Name: Tremolo_Select
+  57:.\Generated_Source\PSoC5/Tremolo.c **** ********************************************************************************
+  58:.\Generated_Source\PSoC5/Tremolo.c **** * Summary:
+  59:.\Generated_Source\PSoC5/Tremolo.c **** *  This functions first disconnects all channels then connects the given
+  60:.\Generated_Source\PSoC5/Tremolo.c **** *  channel.
+  61:.\Generated_Source\PSoC5/Tremolo.c **** *
+  62:.\Generated_Source\PSoC5/Tremolo.c **** * Parameters:
+  63:.\Generated_Source\PSoC5/Tremolo.c **** *  channel:  The channel to connect to the common terminal.
+  64:.\Generated_Source\PSoC5/Tremolo.c **** *
+  65:.\Generated_Source\PSoC5/Tremolo.c **** * Return:
+  66:.\Generated_Source\PSoC5/Tremolo.c **** *  void
+  67:.\Generated_Source\PSoC5/Tremolo.c **** *
+  68:.\Generated_Source\PSoC5/Tremolo.c **** *******************************************************************************/
+  69:.\Generated_Source\PSoC5/Tremolo.c **** void Tremolo_Select(uint8 channel) 
+  70:.\Generated_Source\PSoC5/Tremolo.c **** {
+  86              		.loc 1 70 0
+  87              		.cfi_startproc
+  88              		@ args = 0, pretend = 0, frame = 8
+  89              		@ frame_needed = 1, uses_anonymous_args = 0
+  90 0000 80B5     		push	{r7, lr}
+  91              		.cfi_def_cfa_offset 8
+  92              		.cfi_offset 7, -8
+  93              		.cfi_offset 14, -4
+  94 0002 82B0     		sub	sp, sp, #8
+  95              		.cfi_def_cfa_offset 16
+  96 0004 00AF     		add	r7, sp, #0
+  97              		.cfi_def_cfa_register 7
+  98 0006 0346     		mov	r3, r0
+  99 0008 FB71     		strb	r3, [r7, #7]
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccJEwhAe.s 			page 4
+
+
+  71:.\Generated_Source\PSoC5/Tremolo.c ****     Tremolo_DisconnectAll();        /* Disconnect all previous connections */
+ 100              		.loc 1 71 0
+ 101 000a FFF7FEFF 		bl	Tremolo_Start
+  72:.\Generated_Source\PSoC5/Tremolo.c ****     Tremolo_Connect(channel);       /* Make the given selection */
+ 102              		.loc 1 72 0
+ 103 000e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 104 0010 1846     		mov	r0, r3
+ 105 0012 FFF7FEFF 		bl	Tremolo_Set
+  73:.\Generated_Source\PSoC5/Tremolo.c ****     Tremolo_lastChannel = channel;  /* Update last channel */
+ 106              		.loc 1 73 0
+ 107 0016 034B     		ldr	r3, .L7
+ 108 0018 FA79     		ldrb	r2, [r7, #7]
+ 109 001a 1A70     		strb	r2, [r3]
+  74:.\Generated_Source\PSoC5/Tremolo.c **** }
+ 110              		.loc 1 74 0
+ 111 001c 0837     		adds	r7, r7, #8
+ 112 001e BD46     		mov	sp, r7
+ 113              		@ sp needed
+ 114 0020 80BD     		pop	{r7, pc}
+ 115              	.L8:
+ 116 0022 00BF     		.align	2
+ 117              	.L7:
+ 118 0024 00000000 		.word	Tremolo_lastChannel
+ 119              		.cfi_endproc
+ 120              	.LFE1:
+ 121              		.size	Tremolo_Select, .-Tremolo_Select
+ 122              		.section	.text.Tremolo_FastSelect,"ax",%progbits
+ 123              		.align	2
+ 124              		.global	Tremolo_FastSelect
+ 125              		.thumb
+ 126              		.thumb_func
+ 127              		.type	Tremolo_FastSelect, %function
+ 128              	Tremolo_FastSelect:
+ 129              	.LFB2:
+  75:.\Generated_Source\PSoC5/Tremolo.c **** #endif
+  76:.\Generated_Source\PSoC5/Tremolo.c **** 
+  77:.\Generated_Source\PSoC5/Tremolo.c **** 
+  78:.\Generated_Source\PSoC5/Tremolo.c **** /*******************************************************************************
+  79:.\Generated_Source\PSoC5/Tremolo.c **** * Function Name: Tremolo_FastSelect
+  80:.\Generated_Source\PSoC5/Tremolo.c **** ********************************************************************************
+  81:.\Generated_Source\PSoC5/Tremolo.c **** * Summary:
+  82:.\Generated_Source\PSoC5/Tremolo.c **** *  This function first disconnects the last connection made with FastSelect or
+  83:.\Generated_Source\PSoC5/Tremolo.c **** *  Select, then connects the given channel. The FastSelect function is similar
+  84:.\Generated_Source\PSoC5/Tremolo.c **** *  to the Select function, except it is faster since it only disconnects the
+  85:.\Generated_Source\PSoC5/Tremolo.c **** *  last channel selected rather than all channels.
+  86:.\Generated_Source\PSoC5/Tremolo.c **** *
+  87:.\Generated_Source\PSoC5/Tremolo.c **** * Parameters:
+  88:.\Generated_Source\PSoC5/Tremolo.c **** *  channel:  The channel to connect to the common terminal.
+  89:.\Generated_Source\PSoC5/Tremolo.c **** *
+  90:.\Generated_Source\PSoC5/Tremolo.c **** * Return:
+  91:.\Generated_Source\PSoC5/Tremolo.c **** *  void
+  92:.\Generated_Source\PSoC5/Tremolo.c **** *
+  93:.\Generated_Source\PSoC5/Tremolo.c **** *******************************************************************************/
+  94:.\Generated_Source\PSoC5/Tremolo.c **** void Tremolo_FastSelect(uint8 channel) 
+  95:.\Generated_Source\PSoC5/Tremolo.c **** {
+ 130              		.loc 1 95 0
+ 131              		.cfi_startproc
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccJEwhAe.s 			page 5
+
+
+ 132              		@ args = 0, pretend = 0, frame = 8
+ 133              		@ frame_needed = 1, uses_anonymous_args = 0
+ 134 0000 80B5     		push	{r7, lr}
+ 135              		.cfi_def_cfa_offset 8
+ 136              		.cfi_offset 7, -8
+ 137              		.cfi_offset 14, -4
+ 138 0002 82B0     		sub	sp, sp, #8
+ 139              		.cfi_def_cfa_offset 16
+ 140 0004 00AF     		add	r7, sp, #0
+ 141              		.cfi_def_cfa_register 7
+ 142 0006 0346     		mov	r3, r0
+ 143 0008 FB71     		strb	r3, [r7, #7]
+  96:.\Generated_Source\PSoC5/Tremolo.c ****     /* Disconnect the last valid channel */
+  97:.\Generated_Source\PSoC5/Tremolo.c ****     if( Tremolo_lastChannel != Tremolo_NULL_CHANNEL)
+ 144              		.loc 1 97 0
+ 145 000a 094B     		ldr	r3, .L11
+ 146 000c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 147 000e FF2B     		cmp	r3, #255
+ 148 0010 04D0     		beq	.L10
+  98:.\Generated_Source\PSoC5/Tremolo.c ****     {
+  99:.\Generated_Source\PSoC5/Tremolo.c ****         Tremolo_Disconnect(Tremolo_lastChannel);
+ 149              		.loc 1 99 0
+ 150 0012 074B     		ldr	r3, .L11
+ 151 0014 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 152 0016 1846     		mov	r0, r3
+ 153 0018 FFF7FEFF 		bl	Tremolo_Unset
+ 154              	.L10:
+ 100:.\Generated_Source\PSoC5/Tremolo.c ****     }
+ 101:.\Generated_Source\PSoC5/Tremolo.c **** 
+ 102:.\Generated_Source\PSoC5/Tremolo.c ****     /* Make the new channel connection */
+ 103:.\Generated_Source\PSoC5/Tremolo.c **** #if (Tremolo_MUXTYPE == Tremolo_MUX_SINGLE)
+ 104:.\Generated_Source\PSoC5/Tremolo.c ****     Tremolo_Set(channel);
+ 155              		.loc 1 104 0
+ 156 001c FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 157 001e 1846     		mov	r0, r3
+ 158 0020 FFF7FEFF 		bl	Tremolo_Set
+ 105:.\Generated_Source\PSoC5/Tremolo.c **** #else
+ 106:.\Generated_Source\PSoC5/Tremolo.c ****     Tremolo_CYAMUXSIDE_A_Set(channel);
+ 107:.\Generated_Source\PSoC5/Tremolo.c ****     Tremolo_CYAMUXSIDE_B_Set(channel);
+ 108:.\Generated_Source\PSoC5/Tremolo.c **** #endif
+ 109:.\Generated_Source\PSoC5/Tremolo.c **** 
+ 110:.\Generated_Source\PSoC5/Tremolo.c **** 
+ 111:.\Generated_Source\PSoC5/Tremolo.c ****     Tremolo_lastChannel = channel;   /* Update last channel */
+ 159              		.loc 1 111 0
+ 160 0024 024B     		ldr	r3, .L11
+ 161 0026 FA79     		ldrb	r2, [r7, #7]
+ 162 0028 1A70     		strb	r2, [r3]
+ 112:.\Generated_Source\PSoC5/Tremolo.c **** }
+ 163              		.loc 1 112 0
+ 164 002a 0837     		adds	r7, r7, #8
+ 165 002c BD46     		mov	sp, r7
+ 166              		@ sp needed
+ 167 002e 80BD     		pop	{r7, pc}
+ 168              	.L12:
+ 169              		.align	2
+ 170              	.L11:
+ 171 0030 00000000 		.word	Tremolo_lastChannel
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccJEwhAe.s 			page 6
+
+
+ 172              		.cfi_endproc
+ 173              	.LFE2:
+ 174              		.size	Tremolo_FastSelect, .-Tremolo_FastSelect
+ 175              		.text
+ 176              	.Letext0:
+ 177              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 178              		.section	.debug_info,"",%progbits
+ 179              	.Ldebug_info0:
+ 180 0000 05010000 		.4byte	0x105
+ 181 0004 0400     		.2byte	0x4
+ 182 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 183 000a 04       		.byte	0x4
+ 184 000b 01       		.uleb128 0x1
+ 185 000c C0000000 		.4byte	.LASF18
+ 186 0010 01       		.byte	0x1
+ 187 0011 08000000 		.4byte	.LASF19
+ 188 0015 64010000 		.4byte	.LASF20
+ 189 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 190 001d 00000000 		.4byte	0
+ 191 0021 00000000 		.4byte	.Ldebug_line0
+ 192 0025 02       		.uleb128 0x2
+ 193 0026 01       		.byte	0x1
+ 194 0027 06       		.byte	0x6
+ 195 0028 B5010000 		.4byte	.LASF0
+ 196 002c 02       		.uleb128 0x2
+ 197 002d 01       		.byte	0x1
+ 198 002e 08       		.byte	0x8
+ 199 002f 45000000 		.4byte	.LASF1
+ 200 0033 02       		.uleb128 0x2
+ 201 0034 02       		.byte	0x2
+ 202 0035 05       		.byte	0x5
+ 203 0036 54010000 		.4byte	.LASF2
+ 204 003a 02       		.uleb128 0x2
+ 205 003b 02       		.byte	0x2
+ 206 003c 07       		.byte	0x7
+ 207 003d 74000000 		.4byte	.LASF3
+ 208 0041 02       		.uleb128 0x2
+ 209 0042 04       		.byte	0x4
+ 210 0043 05       		.byte	0x5
+ 211 0044 AC010000 		.4byte	.LASF4
+ 212 0048 02       		.uleb128 0x2
+ 213 0049 04       		.byte	0x4
+ 214 004a 07       		.byte	0x7
+ 215 004b 62000000 		.4byte	.LASF5
+ 216 004f 02       		.uleb128 0x2
+ 217 0050 08       		.byte	0x8
+ 218 0051 05       		.byte	0x5
+ 219 0052 41010000 		.4byte	.LASF6
+ 220 0056 02       		.uleb128 0x2
+ 221 0057 08       		.byte	0x8
+ 222 0058 07       		.byte	0x7
+ 223 0059 A9000000 		.4byte	.LASF7
+ 224 005d 03       		.uleb128 0x3
+ 225 005e 04       		.byte	0x4
+ 226 005f 05       		.byte	0x5
+ 227 0060 696E7400 		.ascii	"int\000"
+ 228 0064 02       		.uleb128 0x2
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccJEwhAe.s 			page 7
+
+
+ 229 0065 04       		.byte	0x4
+ 230 0066 07       		.byte	0x7
+ 231 0067 9C000000 		.4byte	.LASF8
+ 232 006b 04       		.uleb128 0x4
+ 233 006c 5E010000 		.4byte	.LASF21
+ 234 0070 02       		.byte	0x2
+ 235 0071 A1       		.byte	0xa1
+ 236 0072 2C000000 		.4byte	0x2c
+ 237 0076 02       		.uleb128 0x2
+ 238 0077 04       		.byte	0x4
+ 239 0078 04       		.byte	0x4
+ 240 0079 3F000000 		.4byte	.LASF9
+ 241 007d 02       		.uleb128 0x2
+ 242 007e 08       		.byte	0x8
+ 243 007f 04       		.byte	0x4
+ 244 0080 95000000 		.4byte	.LASF10
+ 245 0084 02       		.uleb128 0x2
+ 246 0085 01       		.byte	0x1
+ 247 0086 08       		.byte	0x8
+ 248 0087 4F010000 		.4byte	.LASF11
+ 249 008b 05       		.uleb128 0x5
+ 250 008c 87000000 		.4byte	.LASF12
+ 251 0090 01       		.byte	0x1
+ 252 0091 24       		.byte	0x24
+ 253 0092 00000000 		.4byte	.LFB0
+ 254 0096 30000000 		.4byte	.LFE0-.LFB0
+ 255 009a 01       		.uleb128 0x1
+ 256 009b 9C       		.byte	0x9c
+ 257 009c AF000000 		.4byte	0xaf
+ 258 00a0 06       		.uleb128 0x6
+ 259 00a1 3C010000 		.4byte	.LASF16
+ 260 00a5 01       		.byte	0x1
+ 261 00a6 26       		.byte	0x26
+ 262 00a7 6B000000 		.4byte	0x6b
+ 263 00ab 02       		.uleb128 0x2
+ 264 00ac 91       		.byte	0x91
+ 265 00ad 77       		.sleb128 -9
+ 266 00ae 00       		.byte	0
+ 267 00af 05       		.uleb128 0x5
+ 268 00b0 53000000 		.4byte	.LASF13
+ 269 00b4 01       		.byte	0x1
+ 270 00b5 45       		.byte	0x45
+ 271 00b6 00000000 		.4byte	.LFB1
+ 272 00ba 28000000 		.4byte	.LFE1-.LFB1
+ 273 00be 01       		.uleb128 0x1
+ 274 00bf 9C       		.byte	0x9c
+ 275 00c0 D3000000 		.4byte	0xd3
+ 276 00c4 07       		.uleb128 0x7
+ 277 00c5 00000000 		.4byte	.LASF15
+ 278 00c9 01       		.byte	0x1
+ 279 00ca 45       		.byte	0x45
+ 280 00cb 6B000000 		.4byte	0x6b
+ 281 00cf 02       		.uleb128 0x2
+ 282 00d0 91       		.byte	0x91
+ 283 00d1 77       		.sleb128 -9
+ 284 00d2 00       		.byte	0
+ 285 00d3 05       		.uleb128 0x5
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccJEwhAe.s 			page 8
+
+
+ 286 00d4 C1010000 		.4byte	.LASF14
+ 287 00d8 01       		.byte	0x1
+ 288 00d9 5E       		.byte	0x5e
+ 289 00da 00000000 		.4byte	.LFB2
+ 290 00de 34000000 		.4byte	.LFE2-.LFB2
+ 291 00e2 01       		.uleb128 0x1
+ 292 00e3 9C       		.byte	0x9c
+ 293 00e4 F7000000 		.4byte	0xf7
+ 294 00e8 07       		.uleb128 0x7
+ 295 00e9 00000000 		.4byte	.LASF15
+ 296 00ed 01       		.byte	0x1
+ 297 00ee 5E       		.byte	0x5e
+ 298 00ef 6B000000 		.4byte	0x6b
+ 299 00f3 02       		.uleb128 0x2
+ 300 00f4 91       		.byte	0x91
+ 301 00f5 77       		.sleb128 -9
+ 302 00f6 00       		.byte	0
+ 303 00f7 06       		.uleb128 0x6
+ 304 00f8 2B000000 		.4byte	.LASF17
+ 305 00fc 01       		.byte	0x1
+ 306 00fd 14       		.byte	0x14
+ 307 00fe 6B000000 		.4byte	0x6b
+ 308 0102 05       		.uleb128 0x5
+ 309 0103 03       		.byte	0x3
+ 310 0104 00000000 		.4byte	Tremolo_lastChannel
+ 311 0108 00       		.byte	0
+ 312              		.section	.debug_abbrev,"",%progbits
+ 313              	.Ldebug_abbrev0:
+ 314 0000 01       		.uleb128 0x1
+ 315 0001 11       		.uleb128 0x11
+ 316 0002 01       		.byte	0x1
+ 317 0003 25       		.uleb128 0x25
+ 318 0004 0E       		.uleb128 0xe
+ 319 0005 13       		.uleb128 0x13
+ 320 0006 0B       		.uleb128 0xb
+ 321 0007 03       		.uleb128 0x3
+ 322 0008 0E       		.uleb128 0xe
+ 323 0009 1B       		.uleb128 0x1b
+ 324 000a 0E       		.uleb128 0xe
+ 325 000b 55       		.uleb128 0x55
+ 326 000c 17       		.uleb128 0x17
+ 327 000d 11       		.uleb128 0x11
+ 328 000e 01       		.uleb128 0x1
+ 329 000f 10       		.uleb128 0x10
+ 330 0010 17       		.uleb128 0x17
+ 331 0011 00       		.byte	0
+ 332 0012 00       		.byte	0
+ 333 0013 02       		.uleb128 0x2
+ 334 0014 24       		.uleb128 0x24
+ 335 0015 00       		.byte	0
+ 336 0016 0B       		.uleb128 0xb
+ 337 0017 0B       		.uleb128 0xb
+ 338 0018 3E       		.uleb128 0x3e
+ 339 0019 0B       		.uleb128 0xb
+ 340 001a 03       		.uleb128 0x3
+ 341 001b 0E       		.uleb128 0xe
+ 342 001c 00       		.byte	0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccJEwhAe.s 			page 9
+
+
+ 343 001d 00       		.byte	0
+ 344 001e 03       		.uleb128 0x3
+ 345 001f 24       		.uleb128 0x24
+ 346 0020 00       		.byte	0
+ 347 0021 0B       		.uleb128 0xb
+ 348 0022 0B       		.uleb128 0xb
+ 349 0023 3E       		.uleb128 0x3e
+ 350 0024 0B       		.uleb128 0xb
+ 351 0025 03       		.uleb128 0x3
+ 352 0026 08       		.uleb128 0x8
+ 353 0027 00       		.byte	0
+ 354 0028 00       		.byte	0
+ 355 0029 04       		.uleb128 0x4
+ 356 002a 16       		.uleb128 0x16
+ 357 002b 00       		.byte	0
+ 358 002c 03       		.uleb128 0x3
+ 359 002d 0E       		.uleb128 0xe
+ 360 002e 3A       		.uleb128 0x3a
+ 361 002f 0B       		.uleb128 0xb
+ 362 0030 3B       		.uleb128 0x3b
+ 363 0031 0B       		.uleb128 0xb
+ 364 0032 49       		.uleb128 0x49
+ 365 0033 13       		.uleb128 0x13
+ 366 0034 00       		.byte	0
+ 367 0035 00       		.byte	0
+ 368 0036 05       		.uleb128 0x5
+ 369 0037 2E       		.uleb128 0x2e
+ 370 0038 01       		.byte	0x1
+ 371 0039 3F       		.uleb128 0x3f
+ 372 003a 19       		.uleb128 0x19
+ 373 003b 03       		.uleb128 0x3
+ 374 003c 0E       		.uleb128 0xe
+ 375 003d 3A       		.uleb128 0x3a
+ 376 003e 0B       		.uleb128 0xb
+ 377 003f 3B       		.uleb128 0x3b
+ 378 0040 0B       		.uleb128 0xb
+ 379 0041 27       		.uleb128 0x27
+ 380 0042 19       		.uleb128 0x19
+ 381 0043 11       		.uleb128 0x11
+ 382 0044 01       		.uleb128 0x1
+ 383 0045 12       		.uleb128 0x12
+ 384 0046 06       		.uleb128 0x6
+ 385 0047 40       		.uleb128 0x40
+ 386 0048 18       		.uleb128 0x18
+ 387 0049 9642     		.uleb128 0x2116
+ 388 004b 19       		.uleb128 0x19
+ 389 004c 01       		.uleb128 0x1
+ 390 004d 13       		.uleb128 0x13
+ 391 004e 00       		.byte	0
+ 392 004f 00       		.byte	0
+ 393 0050 06       		.uleb128 0x6
+ 394 0051 34       		.uleb128 0x34
+ 395 0052 00       		.byte	0
+ 396 0053 03       		.uleb128 0x3
+ 397 0054 0E       		.uleb128 0xe
+ 398 0055 3A       		.uleb128 0x3a
+ 399 0056 0B       		.uleb128 0xb
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccJEwhAe.s 			page 10
+
+
+ 400 0057 3B       		.uleb128 0x3b
+ 401 0058 0B       		.uleb128 0xb
+ 402 0059 49       		.uleb128 0x49
+ 403 005a 13       		.uleb128 0x13
+ 404 005b 02       		.uleb128 0x2
+ 405 005c 18       		.uleb128 0x18
+ 406 005d 00       		.byte	0
+ 407 005e 00       		.byte	0
+ 408 005f 07       		.uleb128 0x7
+ 409 0060 05       		.uleb128 0x5
+ 410 0061 00       		.byte	0
+ 411 0062 03       		.uleb128 0x3
+ 412 0063 0E       		.uleb128 0xe
+ 413 0064 3A       		.uleb128 0x3a
+ 414 0065 0B       		.uleb128 0xb
+ 415 0066 3B       		.uleb128 0x3b
+ 416 0067 0B       		.uleb128 0xb
+ 417 0068 49       		.uleb128 0x49
+ 418 0069 13       		.uleb128 0x13
+ 419 006a 02       		.uleb128 0x2
+ 420 006b 18       		.uleb128 0x18
+ 421 006c 00       		.byte	0
+ 422 006d 00       		.byte	0
+ 423 006e 00       		.byte	0
+ 424              		.section	.debug_aranges,"",%progbits
+ 425 0000 2C000000 		.4byte	0x2c
+ 426 0004 0200     		.2byte	0x2
+ 427 0006 00000000 		.4byte	.Ldebug_info0
+ 428 000a 04       		.byte	0x4
+ 429 000b 00       		.byte	0
+ 430 000c 0000     		.2byte	0
+ 431 000e 0000     		.2byte	0
+ 432 0010 00000000 		.4byte	.LFB0
+ 433 0014 30000000 		.4byte	.LFE0-.LFB0
+ 434 0018 00000000 		.4byte	.LFB1
+ 435 001c 28000000 		.4byte	.LFE1-.LFB1
+ 436 0020 00000000 		.4byte	.LFB2
+ 437 0024 34000000 		.4byte	.LFE2-.LFB2
+ 438 0028 00000000 		.4byte	0
+ 439 002c 00000000 		.4byte	0
+ 440              		.section	.debug_ranges,"",%progbits
+ 441              	.Ldebug_ranges0:
+ 442 0000 00000000 		.4byte	.LFB0
+ 443 0004 30000000 		.4byte	.LFE0
+ 444 0008 00000000 		.4byte	.LFB1
+ 445 000c 28000000 		.4byte	.LFE1
+ 446 0010 00000000 		.4byte	.LFB2
+ 447 0014 34000000 		.4byte	.LFE2
+ 448 0018 00000000 		.4byte	0
+ 449 001c 00000000 		.4byte	0
+ 450              		.section	.debug_line,"",%progbits
+ 451              	.Ldebug_line0:
+ 452 0000 9A000000 		.section	.debug_str,"MS",%progbits,1
+ 452      02004600 
+ 452      00000201 
+ 452      FB0E0D00 
+ 452      01010101 
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccJEwhAe.s 			page 11
+
+
+ 453              	.LASF15:
+ 454 0000 6368616E 		.ascii	"channel\000"
+ 454      6E656C00 
+ 455              	.LASF19:
+ 456 0008 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Tremolo.c\000"
+ 456      6E657261 
+ 456      7465645F 
+ 456      536F7572 
+ 456      63655C50 
+ 457              	.LASF17:
+ 458 002b 5472656D 		.ascii	"Tremolo_lastChannel\000"
+ 458      6F6C6F5F 
+ 458      6C617374 
+ 458      4368616E 
+ 458      6E656C00 
+ 459              	.LASF9:
+ 460 003f 666C6F61 		.ascii	"float\000"
+ 460      7400
+ 461              	.LASF1:
+ 462 0045 756E7369 		.ascii	"unsigned char\000"
+ 462      676E6564 
+ 462      20636861 
+ 462      7200
+ 463              	.LASF13:
+ 464 0053 5472656D 		.ascii	"Tremolo_Select\000"
+ 464      6F6C6F5F 
+ 464      53656C65 
+ 464      637400
+ 465              	.LASF5:
+ 466 0062 6C6F6E67 		.ascii	"long unsigned int\000"
+ 466      20756E73 
+ 466      69676E65 
+ 466      6420696E 
+ 466      7400
+ 467              	.LASF3:
+ 468 0074 73686F72 		.ascii	"short unsigned int\000"
+ 468      7420756E 
+ 468      7369676E 
+ 468      65642069 
+ 468      6E7400
+ 469              	.LASF12:
+ 470 0087 5472656D 		.ascii	"Tremolo_Start\000"
+ 470      6F6C6F5F 
+ 470      53746172 
+ 470      7400
+ 471              	.LASF10:
+ 472 0095 646F7562 		.ascii	"double\000"
+ 472      6C6500
+ 473              	.LASF8:
+ 474 009c 756E7369 		.ascii	"unsigned int\000"
+ 474      676E6564 
+ 474      20696E74 
+ 474      00
+ 475              	.LASF7:
+ 476 00a9 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 476      206C6F6E 
+ 476      6720756E 
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccJEwhAe.s 			page 12
+
+
+ 476      7369676E 
+ 476      65642069 
+ 477              	.LASF18:
+ 478 00c0 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 478      4320342E 
+ 478      382E3420 
+ 478      32303134 
+ 478      30353236 
+ 479 00f3 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
+ 479      20726576 
+ 479      6973696F 
+ 479      6E203231 
+ 479      31333538 
+ 480 0126 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 480      66756E63 
+ 480      74696F6E 
+ 480      2D736563 
+ 480      74696F6E 
+ 481              	.LASF16:
+ 482 013c 6368616E 		.ascii	"chan\000"
+ 482      00
+ 483              	.LASF6:
+ 484 0141 6C6F6E67 		.ascii	"long long int\000"
+ 484      206C6F6E 
+ 484      6720696E 
+ 484      7400
+ 485              	.LASF11:
+ 486 014f 63686172 		.ascii	"char\000"
+ 486      00
+ 487              	.LASF2:
+ 488 0154 73686F72 		.ascii	"short int\000"
+ 488      7420696E 
+ 488      7400
+ 489              	.LASF21:
+ 490 015e 75696E74 		.ascii	"uint8\000"
+ 490      3800
+ 491              	.LASF20:
+ 492 0164 433A5C55 		.ascii	"C:\\Users\\IEUser\\Downloads\\PSoC_Creator\\Filter_"
+ 492      73657273 
+ 492      5C494555 
+ 492      7365725C 
+ 492      446F776E 
+ 493 0192 4144435F 		.ascii	"ADC_VDAC01\\Design01.cydsn\000"
+ 493      56444143 
+ 493      30315C44 
+ 493      65736967 
+ 493      6E30312E 
+ 494              	.LASF4:
+ 495 01ac 6C6F6E67 		.ascii	"long int\000"
+ 495      20696E74 
+ 495      00
+ 496              	.LASF0:
+ 497 01b5 7369676E 		.ascii	"signed char\000"
+ 497      65642063 
+ 497      68617200 
+ 498              	.LASF14:
+ 499 01c1 5472656D 		.ascii	"Tremolo_FastSelect\000"
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccJEwhAe.s 			page 13
+
+
+ 499      6F6C6F5F 
+ 499      46617374 
+ 499      53656C65 
+ 499      637400
+ 500              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

@@ -1,0 +1,2465 @@
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"A_B.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	A_B_initVar
+  19              		.bss
+  20              		.type	A_B_initVar, %object
+  21              		.size	A_B_initVar, 1
+  22              	A_B_initVar:
+  23 0000 00       		.space	1
+  24              		.global	A_B_wave1
+  25              		.section	.rodata
+  26              		.align	2
+  27              		.type	A_B_wave1, %object
+  28              		.size	A_B_wave1, 454
+  29              	A_B_wave1:
+  30 0000 80       		.byte	-128
+  31 0001 81       		.byte	-127
+  32 0002 83       		.byte	-125
+  33 0003 85       		.byte	-123
+  34 0004 86       		.byte	-122
+  35 0005 88       		.byte	-120
+  36 0006 8A       		.byte	-118
+  37 0007 8C       		.byte	-116
+  38 0008 8D       		.byte	-115
+  39 0009 8F       		.byte	-113
+  40 000a 91       		.byte	-111
+  41 000b 92       		.byte	-110
+  42 000c 94       		.byte	-108
+  43 000d 96       		.byte	-106
+  44 000e 98       		.byte	-104
+  45 000f 99       		.byte	-103
+  46 0010 9B       		.byte	-101
+  47 0011 9D       		.byte	-99
+  48 0012 9E       		.byte	-98
+  49 0013 A0       		.byte	-96
+  50 0014 A2       		.byte	-94
+  51 0015 A3       		.byte	-93
+  52 0016 A5       		.byte	-91
+  53 0017 A7       		.byte	-89
+  54 0018 A8       		.byte	-88
+  55 0019 AA       		.byte	-86
+  56 001a AC       		.byte	-84
+  57 001b AD       		.byte	-83
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 2
+
+
+  58 001c AF       		.byte	-81
+  59 001d B0       		.byte	-80
+  60 001e B2       		.byte	-78
+  61 001f B3       		.byte	-77
+  62 0020 B5       		.byte	-75
+  63 0021 B7       		.byte	-73
+  64 0022 B8       		.byte	-72
+  65 0023 BA       		.byte	-70
+  66 0024 BB       		.byte	-69
+  67 0025 BD       		.byte	-67
+  68 0026 BE       		.byte	-66
+  69 0027 C0       		.byte	-64
+  70 0028 C1       		.byte	-63
+  71 0029 C3       		.byte	-61
+  72 002a C4       		.byte	-60
+  73 002b C6       		.byte	-58
+  74 002c C7       		.byte	-57
+  75 002d C8       		.byte	-56
+  76 002e CA       		.byte	-54
+  77 002f CB       		.byte	-53
+  78 0030 CD       		.byte	-51
+  79 0031 CE       		.byte	-50
+  80 0032 CF       		.byte	-49
+  81 0033 D1       		.byte	-47
+  82 0034 D2       		.byte	-46
+  83 0035 D3       		.byte	-45
+  84 0036 D4       		.byte	-44
+  85 0037 D6       		.byte	-42
+  86 0038 D7       		.byte	-41
+  87 0039 D8       		.byte	-40
+  88 003a D9       		.byte	-39
+  89 003b DB       		.byte	-37
+  90 003c DC       		.byte	-36
+  91 003d DD       		.byte	-35
+  92 003e DE       		.byte	-34
+  93 003f DF       		.byte	-33
+  94 0040 E0       		.byte	-32
+  95 0041 E1       		.byte	-31
+  96 0042 E2       		.byte	-30
+  97 0043 E3       		.byte	-29
+  98 0044 E5       		.byte	-27
+  99 0045 E6       		.byte	-26
+ 100 0046 E7       		.byte	-25
+ 101 0047 E7       		.byte	-25
+ 102 0048 E8       		.byte	-24
+ 103 0049 E9       		.byte	-23
+ 104 004a EA       		.byte	-22
+ 105 004b EB       		.byte	-21
+ 106 004c EC       		.byte	-20
+ 107 004d ED       		.byte	-19
+ 108 004e EE       		.byte	-18
+ 109 004f EF       		.byte	-17
+ 110 0050 EF       		.byte	-17
+ 111 0051 F0       		.byte	-16
+ 112 0052 F1       		.byte	-15
+ 113 0053 F2       		.byte	-14
+ 114 0054 F2       		.byte	-14
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 3
+
+
+ 115 0055 F3       		.byte	-13
+ 116 0056 F4       		.byte	-12
+ 117 0057 F4       		.byte	-12
+ 118 0058 F5       		.byte	-11
+ 119 0059 F5       		.byte	-11
+ 120 005a F6       		.byte	-10
+ 121 005b F6       		.byte	-10
+ 122 005c F7       		.byte	-9
+ 123 005d F8       		.byte	-8
+ 124 005e F8       		.byte	-8
+ 125 005f F8       		.byte	-8
+ 126 0060 F9       		.byte	-7
+ 127 0061 F9       		.byte	-7
+ 128 0062 FA       		.byte	-6
+ 129 0063 FA       		.byte	-6
+ 130 0064 FA       		.byte	-6
+ 131 0065 FB       		.byte	-5
+ 132 0066 FB       		.byte	-5
+ 133 0067 FB       		.byte	-5
+ 134 0068 FB       		.byte	-5
+ 135 0069 FC       		.byte	-4
+ 136 006a FC       		.byte	-4
+ 137 006b FC       		.byte	-4
+ 138 006c FC       		.byte	-4
+ 139 006d FC       		.byte	-4
+ 140 006e FC       		.byte	-4
+ 141 006f FC       		.byte	-4
+ 142 0070 FC       		.byte	-4
+ 143 0071 FC       		.byte	-4
+ 144 0072 FC       		.byte	-4
+ 145 0073 FC       		.byte	-4
+ 146 0074 FC       		.byte	-4
+ 147 0075 FC       		.byte	-4
+ 148 0076 FC       		.byte	-4
+ 149 0077 FC       		.byte	-4
+ 150 0078 FC       		.byte	-4
+ 151 0079 FC       		.byte	-4
+ 152 007a FC       		.byte	-4
+ 153 007b FB       		.byte	-5
+ 154 007c FB       		.byte	-5
+ 155 007d FB       		.byte	-5
+ 156 007e FB       		.byte	-5
+ 157 007f FA       		.byte	-6
+ 158 0080 FA       		.byte	-6
+ 159 0081 FA       		.byte	-6
+ 160 0082 F9       		.byte	-7
+ 161 0083 F9       		.byte	-7
+ 162 0084 F8       		.byte	-8
+ 163 0085 F8       		.byte	-8
+ 164 0086 F8       		.byte	-8
+ 165 0087 F7       		.byte	-9
+ 166 0088 F6       		.byte	-10
+ 167 0089 F6       		.byte	-10
+ 168 008a F5       		.byte	-11
+ 169 008b F5       		.byte	-11
+ 170 008c F4       		.byte	-12
+ 171 008d F4       		.byte	-12
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 4
+
+
+ 172 008e F3       		.byte	-13
+ 173 008f F2       		.byte	-14
+ 174 0090 F2       		.byte	-14
+ 175 0091 F1       		.byte	-15
+ 176 0092 F0       		.byte	-16
+ 177 0093 EF       		.byte	-17
+ 178 0094 EF       		.byte	-17
+ 179 0095 EE       		.byte	-18
+ 180 0096 ED       		.byte	-19
+ 181 0097 EC       		.byte	-20
+ 182 0098 EB       		.byte	-21
+ 183 0099 EA       		.byte	-22
+ 184 009a E9       		.byte	-23
+ 185 009b E8       		.byte	-24
+ 186 009c E7       		.byte	-25
+ 187 009d E7       		.byte	-25
+ 188 009e E6       		.byte	-26
+ 189 009f E5       		.byte	-27
+ 190 00a0 E3       		.byte	-29
+ 191 00a1 E2       		.byte	-30
+ 192 00a2 E1       		.byte	-31
+ 193 00a3 E0       		.byte	-32
+ 194 00a4 DF       		.byte	-33
+ 195 00a5 DE       		.byte	-34
+ 196 00a6 DD       		.byte	-35
+ 197 00a7 DC       		.byte	-36
+ 198 00a8 DB       		.byte	-37
+ 199 00a9 D9       		.byte	-39
+ 200 00aa D8       		.byte	-40
+ 201 00ab D7       		.byte	-41
+ 202 00ac D6       		.byte	-42
+ 203 00ad D4       		.byte	-44
+ 204 00ae D3       		.byte	-45
+ 205 00af D2       		.byte	-46
+ 206 00b0 D1       		.byte	-47
+ 207 00b1 CF       		.byte	-49
+ 208 00b2 CE       		.byte	-50
+ 209 00b3 CD       		.byte	-51
+ 210 00b4 CB       		.byte	-53
+ 211 00b5 CA       		.byte	-54
+ 212 00b6 C8       		.byte	-56
+ 213 00b7 C7       		.byte	-57
+ 214 00b8 C6       		.byte	-58
+ 215 00b9 C4       		.byte	-60
+ 216 00ba C3       		.byte	-61
+ 217 00bb C1       		.byte	-63
+ 218 00bc C0       		.byte	-64
+ 219 00bd BE       		.byte	-66
+ 220 00be BD       		.byte	-67
+ 221 00bf BB       		.byte	-69
+ 222 00c0 BA       		.byte	-70
+ 223 00c1 B8       		.byte	-72
+ 224 00c2 B7       		.byte	-73
+ 225 00c3 B5       		.byte	-75
+ 226 00c4 B3       		.byte	-77
+ 227 00c5 B2       		.byte	-78
+ 228 00c6 B0       		.byte	-80
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 5
+
+
+ 229 00c7 AF       		.byte	-81
+ 230 00c8 AD       		.byte	-83
+ 231 00c9 AC       		.byte	-84
+ 232 00ca AA       		.byte	-86
+ 233 00cb A8       		.byte	-88
+ 234 00cc A7       		.byte	-89
+ 235 00cd A5       		.byte	-91
+ 236 00ce A3       		.byte	-93
+ 237 00cf A2       		.byte	-94
+ 238 00d0 A0       		.byte	-96
+ 239 00d1 9E       		.byte	-98
+ 240 00d2 9D       		.byte	-99
+ 241 00d3 9B       		.byte	-101
+ 242 00d4 99       		.byte	-103
+ 243 00d5 98       		.byte	-104
+ 244 00d6 96       		.byte	-106
+ 245 00d7 94       		.byte	-108
+ 246 00d8 92       		.byte	-110
+ 247 00d9 91       		.byte	-111
+ 248 00da 8F       		.byte	-113
+ 249 00db 8D       		.byte	-115
+ 250 00dc 8C       		.byte	-116
+ 251 00dd 8A       		.byte	-118
+ 252 00de 88       		.byte	-120
+ 253 00df 86       		.byte	-122
+ 254 00e0 85       		.byte	-123
+ 255 00e1 83       		.byte	-125
+ 256 00e2 81       		.byte	-127
+ 257 00e3 80       		.byte	-128
+ 258 00e4 7E       		.byte	126
+ 259 00e5 7C       		.byte	124
+ 260 00e6 7A       		.byte	122
+ 261 00e7 79       		.byte	121
+ 262 00e8 77       		.byte	119
+ 263 00e9 75       		.byte	117
+ 264 00ea 73       		.byte	115
+ 265 00eb 72       		.byte	114
+ 266 00ec 70       		.byte	112
+ 267 00ed 6E       		.byte	110
+ 268 00ee 6D       		.byte	109
+ 269 00ef 6B       		.byte	107
+ 270 00f0 69       		.byte	105
+ 271 00f1 67       		.byte	103
+ 272 00f2 66       		.byte	102
+ 273 00f3 64       		.byte	100
+ 274 00f4 62       		.byte	98
+ 275 00f5 61       		.byte	97
+ 276 00f6 5F       		.byte	95
+ 277 00f7 5D       		.byte	93
+ 278 00f8 5C       		.byte	92
+ 279 00f9 5A       		.byte	90
+ 280 00fa 58       		.byte	88
+ 281 00fb 57       		.byte	87
+ 282 00fc 55       		.byte	85
+ 283 00fd 53       		.byte	83
+ 284 00fe 52       		.byte	82
+ 285 00ff 50       		.byte	80
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 6
+
+
+ 286 0100 4F       		.byte	79
+ 287 0101 4D       		.byte	77
+ 288 0102 4C       		.byte	76
+ 289 0103 4A       		.byte	74
+ 290 0104 48       		.byte	72
+ 291 0105 47       		.byte	71
+ 292 0106 45       		.byte	69
+ 293 0107 44       		.byte	68
+ 294 0108 42       		.byte	66
+ 295 0109 41       		.byte	65
+ 296 010a 3F       		.byte	63
+ 297 010b 3E       		.byte	62
+ 298 010c 3C       		.byte	60
+ 299 010d 3B       		.byte	59
+ 300 010e 39       		.byte	57
+ 301 010f 38       		.byte	56
+ 302 0110 37       		.byte	55
+ 303 0111 35       		.byte	53
+ 304 0112 34       		.byte	52
+ 305 0113 32       		.byte	50
+ 306 0114 31       		.byte	49
+ 307 0115 30       		.byte	48
+ 308 0116 2E       		.byte	46
+ 309 0117 2D       		.byte	45
+ 310 0118 2C       		.byte	44
+ 311 0119 2B       		.byte	43
+ 312 011a 29       		.byte	41
+ 313 011b 28       		.byte	40
+ 314 011c 27       		.byte	39
+ 315 011d 26       		.byte	38
+ 316 011e 24       		.byte	36
+ 317 011f 23       		.byte	35
+ 318 0120 22       		.byte	34
+ 319 0121 21       		.byte	33
+ 320 0122 20       		.byte	32
+ 321 0123 1F       		.byte	31
+ 322 0124 1E       		.byte	30
+ 323 0125 1D       		.byte	29
+ 324 0126 1C       		.byte	28
+ 325 0127 1A       		.byte	26
+ 326 0128 19       		.byte	25
+ 327 0129 18       		.byte	24
+ 328 012a 18       		.byte	24
+ 329 012b 17       		.byte	23
+ 330 012c 16       		.byte	22
+ 331 012d 15       		.byte	21
+ 332 012e 14       		.byte	20
+ 333 012f 13       		.byte	19
+ 334 0130 12       		.byte	18
+ 335 0131 11       		.byte	17
+ 336 0132 10       		.byte	16
+ 337 0133 10       		.byte	16
+ 338 0134 0F       		.byte	15
+ 339 0135 0E       		.byte	14
+ 340 0136 0D       		.byte	13
+ 341 0137 0D       		.byte	13
+ 342 0138 0C       		.byte	12
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 7
+
+
+ 343 0139 0B       		.byte	11
+ 344 013a 0B       		.byte	11
+ 345 013b 0A       		.byte	10
+ 346 013c 0A       		.byte	10
+ 347 013d 09       		.byte	9
+ 348 013e 09       		.byte	9
+ 349 013f 08       		.byte	8
+ 350 0140 07       		.byte	7
+ 351 0141 07       		.byte	7
+ 352 0142 07       		.byte	7
+ 353 0143 06       		.byte	6
+ 354 0144 06       		.byte	6
+ 355 0145 05       		.byte	5
+ 356 0146 05       		.byte	5
+ 357 0147 05       		.byte	5
+ 358 0148 04       		.byte	4
+ 359 0149 04       		.byte	4
+ 360 014a 04       		.byte	4
+ 361 014b 04       		.byte	4
+ 362 014c 03       		.byte	3
+ 363 014d 03       		.byte	3
+ 364 014e 03       		.byte	3
+ 365 014f 03       		.byte	3
+ 366 0150 03       		.byte	3
+ 367 0151 03       		.byte	3
+ 368 0152 03       		.byte	3
+ 369 0153 03       		.byte	3
+ 370 0154 03       		.byte	3
+ 371 0155 03       		.byte	3
+ 372 0156 03       		.byte	3
+ 373 0157 03       		.byte	3
+ 374 0158 03       		.byte	3
+ 375 0159 03       		.byte	3
+ 376 015a 03       		.byte	3
+ 377 015b 03       		.byte	3
+ 378 015c 03       		.byte	3
+ 379 015d 03       		.byte	3
+ 380 015e 04       		.byte	4
+ 381 015f 04       		.byte	4
+ 382 0160 04       		.byte	4
+ 383 0161 04       		.byte	4
+ 384 0162 05       		.byte	5
+ 385 0163 05       		.byte	5
+ 386 0164 05       		.byte	5
+ 387 0165 06       		.byte	6
+ 388 0166 06       		.byte	6
+ 389 0167 07       		.byte	7
+ 390 0168 07       		.byte	7
+ 391 0169 07       		.byte	7
+ 392 016a 08       		.byte	8
+ 393 016b 09       		.byte	9
+ 394 016c 09       		.byte	9
+ 395 016d 0A       		.byte	10
+ 396 016e 0A       		.byte	10
+ 397 016f 0B       		.byte	11
+ 398 0170 0B       		.byte	11
+ 399 0171 0C       		.byte	12
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 8
+
+
+ 400 0172 0D       		.byte	13
+ 401 0173 0D       		.byte	13
+ 402 0174 0E       		.byte	14
+ 403 0175 0F       		.byte	15
+ 404 0176 10       		.byte	16
+ 405 0177 10       		.byte	16
+ 406 0178 11       		.byte	17
+ 407 0179 12       		.byte	18
+ 408 017a 13       		.byte	19
+ 409 017b 14       		.byte	20
+ 410 017c 15       		.byte	21
+ 411 017d 16       		.byte	22
+ 412 017e 17       		.byte	23
+ 413 017f 18       		.byte	24
+ 414 0180 18       		.byte	24
+ 415 0181 19       		.byte	25
+ 416 0182 1A       		.byte	26
+ 417 0183 1C       		.byte	28
+ 418 0184 1D       		.byte	29
+ 419 0185 1E       		.byte	30
+ 420 0186 1F       		.byte	31
+ 421 0187 20       		.byte	32
+ 422 0188 21       		.byte	33
+ 423 0189 22       		.byte	34
+ 424 018a 23       		.byte	35
+ 425 018b 24       		.byte	36
+ 426 018c 26       		.byte	38
+ 427 018d 27       		.byte	39
+ 428 018e 28       		.byte	40
+ 429 018f 29       		.byte	41
+ 430 0190 2B       		.byte	43
+ 431 0191 2C       		.byte	44
+ 432 0192 2D       		.byte	45
+ 433 0193 2E       		.byte	46
+ 434 0194 30       		.byte	48
+ 435 0195 31       		.byte	49
+ 436 0196 32       		.byte	50
+ 437 0197 34       		.byte	52
+ 438 0198 35       		.byte	53
+ 439 0199 37       		.byte	55
+ 440 019a 38       		.byte	56
+ 441 019b 39       		.byte	57
+ 442 019c 3B       		.byte	59
+ 443 019d 3C       		.byte	60
+ 444 019e 3E       		.byte	62
+ 445 019f 3F       		.byte	63
+ 446 01a0 41       		.byte	65
+ 447 01a1 42       		.byte	66
+ 448 01a2 44       		.byte	68
+ 449 01a3 45       		.byte	69
+ 450 01a4 47       		.byte	71
+ 451 01a5 48       		.byte	72
+ 452 01a6 4A       		.byte	74
+ 453 01a7 4C       		.byte	76
+ 454 01a8 4D       		.byte	77
+ 455 01a9 4F       		.byte	79
+ 456 01aa 50       		.byte	80
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 9
+
+
+ 457 01ab 52       		.byte	82
+ 458 01ac 53       		.byte	83
+ 459 01ad 55       		.byte	85
+ 460 01ae 57       		.byte	87
+ 461 01af 58       		.byte	88
+ 462 01b0 5A       		.byte	90
+ 463 01b1 5C       		.byte	92
+ 464 01b2 5D       		.byte	93
+ 465 01b3 5F       		.byte	95
+ 466 01b4 61       		.byte	97
+ 467 01b5 62       		.byte	98
+ 468 01b6 64       		.byte	100
+ 469 01b7 66       		.byte	102
+ 470 01b8 67       		.byte	103
+ 471 01b9 69       		.byte	105
+ 472 01ba 6B       		.byte	107
+ 473 01bb 6D       		.byte	109
+ 474 01bc 6E       		.byte	110
+ 475 01bd 70       		.byte	112
+ 476 01be 72       		.byte	114
+ 477 01bf 73       		.byte	115
+ 478 01c0 75       		.byte	117
+ 479 01c1 77       		.byte	119
+ 480 01c2 79       		.byte	121
+ 481 01c3 7A       		.byte	122
+ 482 01c4 7C       		.byte	124
+ 483 01c5 7E       		.byte	126
+ 484              		.global	A_B_wave2
+ 485 01c6 0000     		.align	2
+ 486              		.type	A_B_wave2, %object
+ 487              		.size	A_B_wave2, 405
+ 488              	A_B_wave2:
+ 489 01c8 80       		.byte	-128
+ 490 01c9 81       		.byte	-127
+ 491 01ca 83       		.byte	-125
+ 492 01cb 85       		.byte	-123
+ 493 01cc 87       		.byte	-121
+ 494 01cd 89       		.byte	-119
+ 495 01ce 8B       		.byte	-117
+ 496 01cf 8D       		.byte	-115
+ 497 01d0 8F       		.byte	-113
+ 498 01d1 91       		.byte	-111
+ 499 01d2 93       		.byte	-109
+ 500 01d3 95       		.byte	-107
+ 501 01d4 97       		.byte	-105
+ 502 01d5 99       		.byte	-103
+ 503 01d6 9A       		.byte	-102
+ 504 01d7 9C       		.byte	-100
+ 505 01d8 9E       		.byte	-98
+ 506 01d9 A0       		.byte	-96
+ 507 01da A2       		.byte	-94
+ 508 01db A4       		.byte	-92
+ 509 01dc A6       		.byte	-90
+ 510 01dd A8       		.byte	-88
+ 511 01de A9       		.byte	-87
+ 512 01df AB       		.byte	-85
+ 513 01e0 AD       		.byte	-83
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 10
+
+
+ 514 01e1 AF       		.byte	-81
+ 515 01e2 B1       		.byte	-79
+ 516 01e3 B2       		.byte	-78
+ 517 01e4 B4       		.byte	-76
+ 518 01e5 B6       		.byte	-74
+ 519 01e6 B8       		.byte	-72
+ 520 01e7 B9       		.byte	-71
+ 521 01e8 BB       		.byte	-69
+ 522 01e9 BD       		.byte	-67
+ 523 01ea BE       		.byte	-66
+ 524 01eb C0       		.byte	-64
+ 525 01ec C2       		.byte	-62
+ 526 01ed C3       		.byte	-61
+ 527 01ee C5       		.byte	-59
+ 528 01ef C7       		.byte	-57
+ 529 01f0 C8       		.byte	-56
+ 530 01f1 CA       		.byte	-54
+ 531 01f2 CB       		.byte	-53
+ 532 01f3 CD       		.byte	-51
+ 533 01f4 CE       		.byte	-50
+ 534 01f5 D0       		.byte	-48
+ 535 01f6 D1       		.byte	-47
+ 536 01f7 D3       		.byte	-45
+ 537 01f8 D4       		.byte	-44
+ 538 01f9 D6       		.byte	-42
+ 539 01fa D7       		.byte	-41
+ 540 01fb D8       		.byte	-40
+ 541 01fc DA       		.byte	-38
+ 542 01fd DB       		.byte	-37
+ 543 01fe DC       		.byte	-36
+ 544 01ff DE       		.byte	-34
+ 545 0200 DF       		.byte	-33
+ 546 0201 E0       		.byte	-32
+ 547 0202 E1       		.byte	-31
+ 548 0203 E3       		.byte	-29
+ 549 0204 E4       		.byte	-28
+ 550 0205 E5       		.byte	-27
+ 551 0206 E6       		.byte	-26
+ 552 0207 E7       		.byte	-25
+ 553 0208 E8       		.byte	-24
+ 554 0209 E9       		.byte	-23
+ 555 020a EA       		.byte	-22
+ 556 020b EB       		.byte	-21
+ 557 020c EC       		.byte	-20
+ 558 020d ED       		.byte	-19
+ 559 020e EE       		.byte	-18
+ 560 020f EF       		.byte	-17
+ 561 0210 F0       		.byte	-16
+ 562 0211 F1       		.byte	-15
+ 563 0212 F1       		.byte	-15
+ 564 0213 F2       		.byte	-14
+ 565 0214 F3       		.byte	-13
+ 566 0215 F4       		.byte	-12
+ 567 0216 F4       		.byte	-12
+ 568 0217 F5       		.byte	-11
+ 569 0218 F6       		.byte	-10
+ 570 0219 F6       		.byte	-10
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 11
+
+
+ 571 021a F7       		.byte	-9
+ 572 021b F8       		.byte	-8
+ 573 021c F8       		.byte	-8
+ 574 021d F9       		.byte	-7
+ 575 021e F9       		.byte	-7
+ 576 021f F9       		.byte	-7
+ 577 0220 FA       		.byte	-6
+ 578 0221 FA       		.byte	-6
+ 579 0222 FB       		.byte	-5
+ 580 0223 FB       		.byte	-5
+ 581 0224 FB       		.byte	-5
+ 582 0225 FB       		.byte	-5
+ 583 0226 FC       		.byte	-4
+ 584 0227 FC       		.byte	-4
+ 585 0228 FC       		.byte	-4
+ 586 0229 FC       		.byte	-4
+ 587 022a FC       		.byte	-4
+ 588 022b FC       		.byte	-4
+ 589 022c FC       		.byte	-4
+ 590 022d FC       		.byte	-4
+ 591 022e FC       		.byte	-4
+ 592 022f FC       		.byte	-4
+ 593 0230 FC       		.byte	-4
+ 594 0231 FC       		.byte	-4
+ 595 0232 FC       		.byte	-4
+ 596 0233 FC       		.byte	-4
+ 597 0234 FC       		.byte	-4
+ 598 0235 FC       		.byte	-4
+ 599 0236 FB       		.byte	-5
+ 600 0237 FB       		.byte	-5
+ 601 0238 FB       		.byte	-5
+ 602 0239 FA       		.byte	-6
+ 603 023a FA       		.byte	-6
+ 604 023b FA       		.byte	-6
+ 605 023c F9       		.byte	-7
+ 606 023d F9       		.byte	-7
+ 607 023e F8       		.byte	-8
+ 608 023f F8       		.byte	-8
+ 609 0240 F7       		.byte	-9
+ 610 0241 F7       		.byte	-9
+ 611 0242 F6       		.byte	-10
+ 612 0243 F5       		.byte	-11
+ 613 0244 F5       		.byte	-11
+ 614 0245 F4       		.byte	-12
+ 615 0246 F3       		.byte	-13
+ 616 0247 F3       		.byte	-13
+ 617 0248 F2       		.byte	-14
+ 618 0249 F1       		.byte	-15
+ 619 024a F0       		.byte	-16
+ 620 024b EF       		.byte	-17
+ 621 024c EF       		.byte	-17
+ 622 024d EE       		.byte	-18
+ 623 024e ED       		.byte	-19
+ 624 024f EC       		.byte	-20
+ 625 0250 EB       		.byte	-21
+ 626 0251 EA       		.byte	-22
+ 627 0252 E9       		.byte	-23
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 12
+
+
+ 628 0253 E8       		.byte	-24
+ 629 0254 E7       		.byte	-25
+ 630 0255 E5       		.byte	-27
+ 631 0256 E4       		.byte	-28
+ 632 0257 E3       		.byte	-29
+ 633 0258 E2       		.byte	-30
+ 634 0259 E1       		.byte	-31
+ 635 025a E0       		.byte	-32
+ 636 025b DE       		.byte	-34
+ 637 025c DD       		.byte	-35
+ 638 025d DC       		.byte	-36
+ 639 025e DA       		.byte	-38
+ 640 025f D9       		.byte	-39
+ 641 0260 D8       		.byte	-40
+ 642 0261 D6       		.byte	-42
+ 643 0262 D5       		.byte	-43
+ 644 0263 D4       		.byte	-44
+ 645 0264 D2       		.byte	-46
+ 646 0265 D1       		.byte	-47
+ 647 0266 CF       		.byte	-49
+ 648 0267 CE       		.byte	-50
+ 649 0268 CC       		.byte	-52
+ 650 0269 CB       		.byte	-53
+ 651 026a C9       		.byte	-55
+ 652 026b C7       		.byte	-57
+ 653 026c C6       		.byte	-58
+ 654 026d C4       		.byte	-60
+ 655 026e C3       		.byte	-61
+ 656 026f C1       		.byte	-63
+ 657 0270 BF       		.byte	-65
+ 658 0271 BE       		.byte	-66
+ 659 0272 BC       		.byte	-68
+ 660 0273 BA       		.byte	-70
+ 661 0274 B8       		.byte	-72
+ 662 0275 B7       		.byte	-73
+ 663 0276 B5       		.byte	-75
+ 664 0277 B3       		.byte	-77
+ 665 0278 B1       		.byte	-79
+ 666 0279 B0       		.byte	-80
+ 667 027a AE       		.byte	-82
+ 668 027b AC       		.byte	-84
+ 669 027c AA       		.byte	-86
+ 670 027d A8       		.byte	-88
+ 671 027e A7       		.byte	-89
+ 672 027f A5       		.byte	-91
+ 673 0280 A3       		.byte	-93
+ 674 0281 A1       		.byte	-95
+ 675 0282 9F       		.byte	-97
+ 676 0283 9D       		.byte	-99
+ 677 0284 9B       		.byte	-101
+ 678 0285 99       		.byte	-103
+ 679 0286 98       		.byte	-104
+ 680 0287 96       		.byte	-106
+ 681 0288 94       		.byte	-108
+ 682 0289 92       		.byte	-110
+ 683 028a 90       		.byte	-112
+ 684 028b 8E       		.byte	-114
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 13
+
+
+ 685 028c 8C       		.byte	-116
+ 686 028d 8A       		.byte	-118
+ 687 028e 88       		.byte	-120
+ 688 028f 86       		.byte	-122
+ 689 0290 84       		.byte	-124
+ 690 0291 82       		.byte	-126
+ 691 0292 80       		.byte	-128
+ 692 0293 7F       		.byte	127
+ 693 0294 7D       		.byte	125
+ 694 0295 7B       		.byte	123
+ 695 0296 79       		.byte	121
+ 696 0297 77       		.byte	119
+ 697 0298 75       		.byte	117
+ 698 0299 73       		.byte	115
+ 699 029a 71       		.byte	113
+ 700 029b 6F       		.byte	111
+ 701 029c 6D       		.byte	109
+ 702 029d 6B       		.byte	107
+ 703 029e 69       		.byte	105
+ 704 029f 67       		.byte	103
+ 705 02a0 66       		.byte	102
+ 706 02a1 64       		.byte	100
+ 707 02a2 62       		.byte	98
+ 708 02a3 60       		.byte	96
+ 709 02a4 5E       		.byte	94
+ 710 02a5 5C       		.byte	92
+ 711 02a6 5A       		.byte	90
+ 712 02a7 58       		.byte	88
+ 713 02a8 57       		.byte	87
+ 714 02a9 55       		.byte	85
+ 715 02aa 53       		.byte	83
+ 716 02ab 51       		.byte	81
+ 717 02ac 4F       		.byte	79
+ 718 02ad 4E       		.byte	78
+ 719 02ae 4C       		.byte	76
+ 720 02af 4A       		.byte	74
+ 721 02b0 48       		.byte	72
+ 722 02b1 47       		.byte	71
+ 723 02b2 45       		.byte	69
+ 724 02b3 43       		.byte	67
+ 725 02b4 41       		.byte	65
+ 726 02b5 40       		.byte	64
+ 727 02b6 3E       		.byte	62
+ 728 02b7 3C       		.byte	60
+ 729 02b8 3B       		.byte	59
+ 730 02b9 39       		.byte	57
+ 731 02ba 38       		.byte	56
+ 732 02bb 36       		.byte	54
+ 733 02bc 34       		.byte	52
+ 734 02bd 33       		.byte	51
+ 735 02be 31       		.byte	49
+ 736 02bf 30       		.byte	48
+ 737 02c0 2E       		.byte	46
+ 738 02c1 2D       		.byte	45
+ 739 02c2 2B       		.byte	43
+ 740 02c3 2A       		.byte	42
+ 741 02c4 29       		.byte	41
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 14
+
+
+ 742 02c5 27       		.byte	39
+ 743 02c6 26       		.byte	38
+ 744 02c7 25       		.byte	37
+ 745 02c8 23       		.byte	35
+ 746 02c9 22       		.byte	34
+ 747 02ca 21       		.byte	33
+ 748 02cb 1F       		.byte	31
+ 749 02cc 1E       		.byte	30
+ 750 02cd 1D       		.byte	29
+ 751 02ce 1C       		.byte	28
+ 752 02cf 1B       		.byte	27
+ 753 02d0 1A       		.byte	26
+ 754 02d1 18       		.byte	24
+ 755 02d2 17       		.byte	23
+ 756 02d3 16       		.byte	22
+ 757 02d4 15       		.byte	21
+ 758 02d5 14       		.byte	20
+ 759 02d6 13       		.byte	19
+ 760 02d7 12       		.byte	18
+ 761 02d8 11       		.byte	17
+ 762 02d9 10       		.byte	16
+ 763 02da 10       		.byte	16
+ 764 02db 0F       		.byte	15
+ 765 02dc 0E       		.byte	14
+ 766 02dd 0D       		.byte	13
+ 767 02de 0C       		.byte	12
+ 768 02df 0C       		.byte	12
+ 769 02e0 0B       		.byte	11
+ 770 02e1 0A       		.byte	10
+ 771 02e2 0A       		.byte	10
+ 772 02e3 09       		.byte	9
+ 773 02e4 08       		.byte	8
+ 774 02e5 08       		.byte	8
+ 775 02e6 07       		.byte	7
+ 776 02e7 07       		.byte	7
+ 777 02e8 06       		.byte	6
+ 778 02e9 06       		.byte	6
+ 779 02ea 05       		.byte	5
+ 780 02eb 05       		.byte	5
+ 781 02ec 05       		.byte	5
+ 782 02ed 04       		.byte	4
+ 783 02ee 04       		.byte	4
+ 784 02ef 04       		.byte	4
+ 785 02f0 03       		.byte	3
+ 786 02f1 03       		.byte	3
+ 787 02f2 03       		.byte	3
+ 788 02f3 03       		.byte	3
+ 789 02f4 03       		.byte	3
+ 790 02f5 03       		.byte	3
+ 791 02f6 03       		.byte	3
+ 792 02f7 03       		.byte	3
+ 793 02f8 03       		.byte	3
+ 794 02f9 03       		.byte	3
+ 795 02fa 03       		.byte	3
+ 796 02fb 03       		.byte	3
+ 797 02fc 03       		.byte	3
+ 798 02fd 03       		.byte	3
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 15
+
+
+ 799 02fe 03       		.byte	3
+ 800 02ff 03       		.byte	3
+ 801 0300 04       		.byte	4
+ 802 0301 04       		.byte	4
+ 803 0302 04       		.byte	4
+ 804 0303 04       		.byte	4
+ 805 0304 05       		.byte	5
+ 806 0305 05       		.byte	5
+ 807 0306 06       		.byte	6
+ 808 0307 06       		.byte	6
+ 809 0308 06       		.byte	6
+ 810 0309 07       		.byte	7
+ 811 030a 07       		.byte	7
+ 812 030b 08       		.byte	8
+ 813 030c 09       		.byte	9
+ 814 030d 09       		.byte	9
+ 815 030e 0A       		.byte	10
+ 816 030f 0B       		.byte	11
+ 817 0310 0B       		.byte	11
+ 818 0311 0C       		.byte	12
+ 819 0312 0D       		.byte	13
+ 820 0313 0E       		.byte	14
+ 821 0314 0E       		.byte	14
+ 822 0315 0F       		.byte	15
+ 823 0316 10       		.byte	16
+ 824 0317 11       		.byte	17
+ 825 0318 12       		.byte	18
+ 826 0319 13       		.byte	19
+ 827 031a 14       		.byte	20
+ 828 031b 15       		.byte	21
+ 829 031c 16       		.byte	22
+ 830 031d 17       		.byte	23
+ 831 031e 18       		.byte	24
+ 832 031f 19       		.byte	25
+ 833 0320 1A       		.byte	26
+ 834 0321 1B       		.byte	27
+ 835 0322 1C       		.byte	28
+ 836 0323 1E       		.byte	30
+ 837 0324 1F       		.byte	31
+ 838 0325 20       		.byte	32
+ 839 0326 21       		.byte	33
+ 840 0327 23       		.byte	35
+ 841 0328 24       		.byte	36
+ 842 0329 25       		.byte	37
+ 843 032a 27       		.byte	39
+ 844 032b 28       		.byte	40
+ 845 032c 29       		.byte	41
+ 846 032d 2B       		.byte	43
+ 847 032e 2C       		.byte	44
+ 848 032f 2E       		.byte	46
+ 849 0330 2F       		.byte	47
+ 850 0331 31       		.byte	49
+ 851 0332 32       		.byte	50
+ 852 0333 34       		.byte	52
+ 853 0334 35       		.byte	53
+ 854 0335 37       		.byte	55
+ 855 0336 38       		.byte	56
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 16
+
+
+ 856 0337 3A       		.byte	58
+ 857 0338 3C       		.byte	60
+ 858 0339 3D       		.byte	61
+ 859 033a 3F       		.byte	63
+ 860 033b 41       		.byte	65
+ 861 033c 42       		.byte	66
+ 862 033d 44       		.byte	68
+ 863 033e 46       		.byte	70
+ 864 033f 47       		.byte	71
+ 865 0340 49       		.byte	73
+ 866 0341 4B       		.byte	75
+ 867 0342 4D       		.byte	77
+ 868 0343 4E       		.byte	78
+ 869 0344 50       		.byte	80
+ 870 0345 52       		.byte	82
+ 871 0346 54       		.byte	84
+ 872 0347 56       		.byte	86
+ 873 0348 57       		.byte	87
+ 874 0349 59       		.byte	89
+ 875 034a 5B       		.byte	91
+ 876 034b 5D       		.byte	93
+ 877 034c 5F       		.byte	95
+ 878 034d 61       		.byte	97
+ 879 034e 63       		.byte	99
+ 880 034f 65       		.byte	101
+ 881 0350 66       		.byte	102
+ 882 0351 68       		.byte	104
+ 883 0352 6A       		.byte	106
+ 884 0353 6C       		.byte	108
+ 885 0354 6E       		.byte	110
+ 886 0355 70       		.byte	112
+ 887 0356 72       		.byte	114
+ 888 0357 74       		.byte	116
+ 889 0358 76       		.byte	118
+ 890 0359 78       		.byte	120
+ 891 035a 7A       		.byte	122
+ 892 035b 7C       		.byte	124
+ 893 035c 7E       		.byte	126
+ 894 035d 000000   		.bss
+ 895              	A_B_Wave1Chan:
+ 896 0001 00       		.space	1
+ 897              	A_B_Wave2Chan:
+ 898 0002 00       		.space	1
+ 899              	A_B_Wave1TD:
+ 900 0003 00       		.space	1
+ 901              	A_B_Wave2TD:
+ 902 0004 00       		.space	1
+ 903              		.section	.text.A_B_Init,"ax",%progbits
+ 904              		.align	2
+ 905              		.global	A_B_Init
+ 906              		.thumb
+ 907              		.thumb_func
+ 908              		.type	A_B_Init, %function
+ 909              	A_B_Init:
+ 910              	.LFB0:
+ 911              		.file 1 ".\\Generated_Source\\PSoC5\\A_B.c"
+   1:.\Generated_Source\PSoC5/A_B.c **** /*******************************************************************************
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 17
+
+
+   2:.\Generated_Source\PSoC5/A_B.c **** * File Name: A_B.c
+   3:.\Generated_Source\PSoC5/A_B.c **** * Version 2.0
+   4:.\Generated_Source\PSoC5/A_B.c **** *
+   5:.\Generated_Source\PSoC5/A_B.c **** * Description:
+   6:.\Generated_Source\PSoC5/A_B.c **** *  This file provides the source code for the 8-bit Waveform DAC 
+   7:.\Generated_Source\PSoC5/A_B.c **** *  (WaveDAC8) Component.
+   8:.\Generated_Source\PSoC5/A_B.c **** *
+   9:.\Generated_Source\PSoC5/A_B.c **** ********************************************************************************
+  10:.\Generated_Source\PSoC5/A_B.c **** * Copyright 2013, Cypress Semiconductor Corporation.  All rights reserved.
+  11:.\Generated_Source\PSoC5/A_B.c **** * You may use this file only in accordance with the license, terms, conditions,
+  12:.\Generated_Source\PSoC5/A_B.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  13:.\Generated_Source\PSoC5/A_B.c **** * the software package with which this file was provided.
+  14:.\Generated_Source\PSoC5/A_B.c **** *******************************************************************************/
+  15:.\Generated_Source\PSoC5/A_B.c **** 
+  16:.\Generated_Source\PSoC5/A_B.c **** #include "A_B.h"
+  17:.\Generated_Source\PSoC5/A_B.c **** 
+  18:.\Generated_Source\PSoC5/A_B.c **** uint8  A_B_initVar = 0u;
+  19:.\Generated_Source\PSoC5/A_B.c **** 
+  20:.\Generated_Source\PSoC5/A_B.c **** const uint8 CYCODE A_B_wave1[A_B_WAVE1_LENGTH] = { 128u,129u,131u,133u,134u,136u,138u,140u,141u,143
+  21:.\Generated_Source\PSoC5/A_B.c **** const uint8 CYCODE A_B_wave2[A_B_WAVE2_LENGTH] = { 128u,129u,131u,133u,135u,137u,139u,141u,143u,145
+  22:.\Generated_Source\PSoC5/A_B.c **** 
+  23:.\Generated_Source\PSoC5/A_B.c **** static uint8  A_B_Wave1Chan;
+  24:.\Generated_Source\PSoC5/A_B.c **** static uint8  A_B_Wave2Chan;
+  25:.\Generated_Source\PSoC5/A_B.c **** static uint8  A_B_Wave1TD;
+  26:.\Generated_Source\PSoC5/A_B.c **** static uint8  A_B_Wave2TD;
+  27:.\Generated_Source\PSoC5/A_B.c **** 
+  28:.\Generated_Source\PSoC5/A_B.c **** 
+  29:.\Generated_Source\PSoC5/A_B.c **** /*******************************************************************************
+  30:.\Generated_Source\PSoC5/A_B.c **** * Function Name: A_B_Init
+  31:.\Generated_Source\PSoC5/A_B.c **** ********************************************************************************
+  32:.\Generated_Source\PSoC5/A_B.c **** *
+  33:.\Generated_Source\PSoC5/A_B.c **** * Summary:
+  34:.\Generated_Source\PSoC5/A_B.c **** *  Initializes component with parameters set in the customizer.
+  35:.\Generated_Source\PSoC5/A_B.c **** *
+  36:.\Generated_Source\PSoC5/A_B.c **** * Parameters:  
+  37:.\Generated_Source\PSoC5/A_B.c **** *  None
+  38:.\Generated_Source\PSoC5/A_B.c **** *
+  39:.\Generated_Source\PSoC5/A_B.c **** * Return: 
+  40:.\Generated_Source\PSoC5/A_B.c **** *  None
+  41:.\Generated_Source\PSoC5/A_B.c **** *
+  42:.\Generated_Source\PSoC5/A_B.c **** *******************************************************************************/
+  43:.\Generated_Source\PSoC5/A_B.c **** void A_B_Init(void) 
+  44:.\Generated_Source\PSoC5/A_B.c **** {
+ 912              		.loc 1 44 0
+ 913              		.cfi_startproc
+ 914              		@ args = 0, pretend = 0, frame = 0
+ 915              		@ frame_needed = 1, uses_anonymous_args = 0
+ 916 0000 80B5     		push	{r7, lr}
+ 917              		.cfi_def_cfa_offset 8
+ 918              		.cfi_offset 7, -8
+ 919              		.cfi_offset 14, -4
+ 920 0002 00AF     		add	r7, sp, #0
+ 921              		.cfi_def_cfa_register 7
+  45:.\Generated_Source\PSoC5/A_B.c **** 	A_B_VDAC8_Init();
+ 922              		.loc 1 45 0
+ 923 0004 FFF7FEFF 		bl	A_B_VDAC8_Init
+  46:.\Generated_Source\PSoC5/A_B.c **** 	A_B_VDAC8_SetSpeed(A_B_HIGHSPEED);
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 18
+
+
+ 924              		.loc 1 46 0
+ 925 0008 0220     		movs	r0, #2
+ 926 000a FFF7FEFF 		bl	A_B_VDAC8_SetSpeed
+  47:.\Generated_Source\PSoC5/A_B.c **** 	A_B_VDAC8_SetRange(A_B_DAC_RANGE);
+ 927              		.loc 1 47 0
+ 928 000e 0020     		movs	r0, #0
+ 929 0010 FFF7FEFF 		bl	A_B_VDAC8_SetRange
+  48:.\Generated_Source\PSoC5/A_B.c **** 
+  49:.\Generated_Source\PSoC5/A_B.c **** 	#if(A_B_DAC_MODE == A_B_CURRENT_MODE)
+  50:.\Generated_Source\PSoC5/A_B.c **** 		A_B_IDAC8_SetPolarity(A_B_DAC_POL);
+  51:.\Generated_Source\PSoC5/A_B.c **** 	#endif /* A_B_DAC_MODE == A_B_CURRENT_MODE */
+  52:.\Generated_Source\PSoC5/A_B.c **** 
+  53:.\Generated_Source\PSoC5/A_B.c **** 	#if(A_B_OUT_MODE == A_B_BUFFER_MODE)
+  54:.\Generated_Source\PSoC5/A_B.c **** 	   A_B_BuffAmp_Init();
+  55:.\Generated_Source\PSoC5/A_B.c **** 	#endif /* A_B_OUT_MODE == A_B_BUFFER_MODE */
+  56:.\Generated_Source\PSoC5/A_B.c **** 
+  57:.\Generated_Source\PSoC5/A_B.c **** 	/* Get the TD Number for the DMA channel 1 and 2   */
+  58:.\Generated_Source\PSoC5/A_B.c **** 	A_B_Wave1TD = CyDmaTdAllocate();
+ 930              		.loc 1 58 0
+ 931 0014 FFF7FEFF 		bl	CyDmaTdAllocate
+ 932 0018 0346     		mov	r3, r0
+ 933 001a 1A46     		mov	r2, r3
+ 934 001c 094B     		ldr	r3, .L2
+ 935 001e 1A70     		strb	r2, [r3]
+  59:.\Generated_Source\PSoC5/A_B.c **** 	A_B_Wave2TD = CyDmaTdAllocate();
+ 936              		.loc 1 59 0
+ 937 0020 FFF7FEFF 		bl	CyDmaTdAllocate
+ 938 0024 0346     		mov	r3, r0
+ 939 0026 1A46     		mov	r2, r3
+ 940 0028 074B     		ldr	r3, .L2+4
+ 941 002a 1A70     		strb	r2, [r3]
+  60:.\Generated_Source\PSoC5/A_B.c **** 	
+  61:.\Generated_Source\PSoC5/A_B.c **** 	/* Initialize waveform pointers  */
+  62:.\Generated_Source\PSoC5/A_B.c **** 	A_B_Wave1Setup(A_B_wave1, A_B_WAVE1_LENGTH) ;
+ 942              		.loc 1 62 0
+ 943 002c 0748     		ldr	r0, .L2+8
+ 944 002e 4FF4E371 		mov	r1, #454
+ 945 0032 FFF7FEFF 		bl	A_B_Wave1Setup
+  63:.\Generated_Source\PSoC5/A_B.c **** 	A_B_Wave2Setup(A_B_wave2, A_B_WAVE2_LENGTH) ;
+ 946              		.loc 1 63 0
+ 947 0036 0648     		ldr	r0, .L2+12
+ 948 0038 40F29511 		movw	r1, #405
+ 949 003c FFF7FEFF 		bl	A_B_Wave2Setup
+  64:.\Generated_Source\PSoC5/A_B.c **** 	
+  65:.\Generated_Source\PSoC5/A_B.c **** 	/* Initialize the internal clock if one present  */
+  66:.\Generated_Source\PSoC5/A_B.c **** 	#if defined(A_B_DacClk_PHASE)
+  67:.\Generated_Source\PSoC5/A_B.c **** 	   A_B_DacClk_SetPhase(A_B_CLK_PHASE_0nS);
+  68:.\Generated_Source\PSoC5/A_B.c **** 	#endif /* defined(A_B_DacClk_PHASE) */
+  69:.\Generated_Source\PSoC5/A_B.c **** }
+ 950              		.loc 1 69 0
+ 951 0040 80BD     		pop	{r7, pc}
+ 952              	.L3:
+ 953 0042 00BF     		.align	2
+ 954              	.L2:
+ 955 0044 03000000 		.word	A_B_Wave1TD
+ 956 0048 04000000 		.word	A_B_Wave2TD
+ 957 004c 00000000 		.word	A_B_wave1
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 19
+
+
+ 958 0050 00000000 		.word	A_B_wave2
+ 959              		.cfi_endproc
+ 960              	.LFE0:
+ 961              		.size	A_B_Init, .-A_B_Init
+ 962              		.section	.text.A_B_Enable,"ax",%progbits
+ 963              		.align	2
+ 964              		.global	A_B_Enable
+ 965              		.thumb
+ 966              		.thumb_func
+ 967              		.type	A_B_Enable, %function
+ 968              	A_B_Enable:
+ 969              	.LFB1:
+  70:.\Generated_Source\PSoC5/A_B.c **** 
+  71:.\Generated_Source\PSoC5/A_B.c **** 
+  72:.\Generated_Source\PSoC5/A_B.c **** /*******************************************************************************
+  73:.\Generated_Source\PSoC5/A_B.c **** * Function Name: A_B_Enable
+  74:.\Generated_Source\PSoC5/A_B.c **** ********************************************************************************
+  75:.\Generated_Source\PSoC5/A_B.c **** *  
+  76:.\Generated_Source\PSoC5/A_B.c **** * Summary: 
+  77:.\Generated_Source\PSoC5/A_B.c **** *  Enables the DAC block and DMA operation.
+  78:.\Generated_Source\PSoC5/A_B.c **** *
+  79:.\Generated_Source\PSoC5/A_B.c **** * Parameters:  
+  80:.\Generated_Source\PSoC5/A_B.c **** *  None
+  81:.\Generated_Source\PSoC5/A_B.c **** *
+  82:.\Generated_Source\PSoC5/A_B.c **** * Return: 
+  83:.\Generated_Source\PSoC5/A_B.c **** *  None
+  84:.\Generated_Source\PSoC5/A_B.c **** *
+  85:.\Generated_Source\PSoC5/A_B.c **** *******************************************************************************/
+  86:.\Generated_Source\PSoC5/A_B.c **** void A_B_Enable(void) 
+  87:.\Generated_Source\PSoC5/A_B.c **** {
+ 970              		.loc 1 87 0
+ 971              		.cfi_startproc
+ 972              		@ args = 0, pretend = 0, frame = 0
+ 973              		@ frame_needed = 1, uses_anonymous_args = 0
+ 974 0000 80B5     		push	{r7, lr}
+ 975              		.cfi_def_cfa_offset 8
+ 976              		.cfi_offset 7, -8
+ 977              		.cfi_offset 14, -4
+ 978 0002 00AF     		add	r7, sp, #0
+ 979              		.cfi_def_cfa_register 7
+  88:.\Generated_Source\PSoC5/A_B.c **** 	A_B_VDAC8_Enable();
+ 980              		.loc 1 88 0
+ 981 0004 FFF7FEFF 		bl	A_B_VDAC8_Enable
+  89:.\Generated_Source\PSoC5/A_B.c **** 
+  90:.\Generated_Source\PSoC5/A_B.c **** 	#if(A_B_OUT_MODE == A_B_BUFFER_MODE)
+  91:.\Generated_Source\PSoC5/A_B.c **** 	   A_B_BuffAmp_Enable();
+  92:.\Generated_Source\PSoC5/A_B.c **** 	#endif /* A_B_OUT_MODE == A_B_BUFFER_MODE */
+  93:.\Generated_Source\PSoC5/A_B.c **** 
+  94:.\Generated_Source\PSoC5/A_B.c **** 	/* 
+  95:.\Generated_Source\PSoC5/A_B.c **** 	* Enable the channel. It is configured to remember the TD value so that
+  96:.\Generated_Source\PSoC5/A_B.c **** 	* it can be restored from the place where it has been stopped.
+  97:.\Generated_Source\PSoC5/A_B.c **** 	*/
+  98:.\Generated_Source\PSoC5/A_B.c **** 	(void)CyDmaChEnable(A_B_Wave1Chan, 1u);
+ 982              		.loc 1 98 0
+ 983 0008 084B     		ldr	r3, .L5
+ 984 000a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 985 000c 1846     		mov	r0, r3
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 20
+
+
+ 986 000e 0121     		movs	r1, #1
+ 987 0010 FFF7FEFF 		bl	CyDmaChEnable
+  99:.\Generated_Source\PSoC5/A_B.c **** 	(void)CyDmaChEnable(A_B_Wave2Chan, 1u);
+ 988              		.loc 1 99 0
+ 989 0014 064B     		ldr	r3, .L5+4
+ 990 0016 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 991 0018 1846     		mov	r0, r3
+ 992 001a 0121     		movs	r1, #1
+ 993 001c FFF7FEFF 		bl	CyDmaChEnable
+ 100:.\Generated_Source\PSoC5/A_B.c **** 	
+ 101:.\Generated_Source\PSoC5/A_B.c **** 	/* set the initial value */
+ 102:.\Generated_Source\PSoC5/A_B.c **** 	A_B_SetValue(0u);
+ 994              		.loc 1 102 0
+ 995 0020 0020     		movs	r0, #0
+ 996 0022 FFF7FEFF 		bl	A_B_VDAC8_SetValue
+ 103:.\Generated_Source\PSoC5/A_B.c **** 	
+ 104:.\Generated_Source\PSoC5/A_B.c **** 	#if(A_B_CLOCK_SRC == A_B_CLOCK_INT)  	
+ 105:.\Generated_Source\PSoC5/A_B.c **** 	   A_B_DacClk_Start();
+ 997              		.loc 1 105 0
+ 998 0026 FFF7FEFF 		bl	A_B_DacClk_Start
+ 106:.\Generated_Source\PSoC5/A_B.c **** 	#endif /* A_B_CLOCK_SRC == A_B_CLOCK_INT */
+ 107:.\Generated_Source\PSoC5/A_B.c **** }
+ 999              		.loc 1 107 0
+ 1000 002a 80BD     		pop	{r7, pc}
+ 1001              	.L6:
+ 1002              		.align	2
+ 1003              	.L5:
+ 1004 002c 01000000 		.word	A_B_Wave1Chan
+ 1005 0030 02000000 		.word	A_B_Wave2Chan
+ 1006              		.cfi_endproc
+ 1007              	.LFE1:
+ 1008              		.size	A_B_Enable, .-A_B_Enable
+ 1009              		.section	.text.A_B_Start,"ax",%progbits
+ 1010              		.align	2
+ 1011              		.global	A_B_Start
+ 1012              		.thumb
+ 1013              		.thumb_func
+ 1014              		.type	A_B_Start, %function
+ 1015              	A_B_Start:
+ 1016              	.LFB2:
+ 108:.\Generated_Source\PSoC5/A_B.c **** 
+ 109:.\Generated_Source\PSoC5/A_B.c **** 
+ 110:.\Generated_Source\PSoC5/A_B.c **** /*******************************************************************************
+ 111:.\Generated_Source\PSoC5/A_B.c **** * Function Name: A_B_Start
+ 112:.\Generated_Source\PSoC5/A_B.c **** ********************************************************************************
+ 113:.\Generated_Source\PSoC5/A_B.c **** *
+ 114:.\Generated_Source\PSoC5/A_B.c **** * Summary:
+ 115:.\Generated_Source\PSoC5/A_B.c **** *  The start function initializes the voltage DAC with the default values, 
+ 116:.\Generated_Source\PSoC5/A_B.c **** *  and sets the power to the given level.  A power level of 0, is the same as 
+ 117:.\Generated_Source\PSoC5/A_B.c **** *  executing the stop function.
+ 118:.\Generated_Source\PSoC5/A_B.c **** *
+ 119:.\Generated_Source\PSoC5/A_B.c **** * Parameters:  
+ 120:.\Generated_Source\PSoC5/A_B.c **** *  None
+ 121:.\Generated_Source\PSoC5/A_B.c **** *
+ 122:.\Generated_Source\PSoC5/A_B.c **** * Return: 
+ 123:.\Generated_Source\PSoC5/A_B.c **** *  None
+ 124:.\Generated_Source\PSoC5/A_B.c **** *
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 21
+
+
+ 125:.\Generated_Source\PSoC5/A_B.c **** * Reentrant:
+ 126:.\Generated_Source\PSoC5/A_B.c **** *  No
+ 127:.\Generated_Source\PSoC5/A_B.c **** *
+ 128:.\Generated_Source\PSoC5/A_B.c **** *******************************************************************************/
+ 129:.\Generated_Source\PSoC5/A_B.c **** void A_B_Start(void) 
+ 130:.\Generated_Source\PSoC5/A_B.c **** {
+ 1017              		.loc 1 130 0
+ 1018              		.cfi_startproc
+ 1019              		@ args = 0, pretend = 0, frame = 0
+ 1020              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1021 0000 80B5     		push	{r7, lr}
+ 1022              		.cfi_def_cfa_offset 8
+ 1023              		.cfi_offset 7, -8
+ 1024              		.cfi_offset 14, -4
+ 1025 0002 00AF     		add	r7, sp, #0
+ 1026              		.cfi_def_cfa_register 7
+ 131:.\Generated_Source\PSoC5/A_B.c **** 	/* If not Initialized then initialize all required hardware and software */
+ 132:.\Generated_Source\PSoC5/A_B.c **** 	if(A_B_initVar == 0u)
+ 1027              		.loc 1 132 0
+ 1028 0004 054B     		ldr	r3, .L9
+ 1029 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1030 0008 002B     		cmp	r3, #0
+ 1031 000a 04D1     		bne	.L8
+ 133:.\Generated_Source\PSoC5/A_B.c **** 	{
+ 134:.\Generated_Source\PSoC5/A_B.c **** 		A_B_Init();
+ 1032              		.loc 1 134 0
+ 1033 000c FFF7FEFF 		bl	A_B_Init
+ 135:.\Generated_Source\PSoC5/A_B.c **** 		A_B_initVar = 1u;
+ 1034              		.loc 1 135 0
+ 1035 0010 024B     		ldr	r3, .L9
+ 1036 0012 0122     		movs	r2, #1
+ 1037 0014 1A70     		strb	r2, [r3]
+ 1038              	.L8:
+ 136:.\Generated_Source\PSoC5/A_B.c **** 	}
+ 137:.\Generated_Source\PSoC5/A_B.c **** 	
+ 138:.\Generated_Source\PSoC5/A_B.c **** 	A_B_Enable();
+ 1039              		.loc 1 138 0
+ 1040 0016 FFF7FEFF 		bl	A_B_Enable
+ 139:.\Generated_Source\PSoC5/A_B.c **** }
+ 1041              		.loc 1 139 0
+ 1042 001a 80BD     		pop	{r7, pc}
+ 1043              	.L10:
+ 1044              		.align	2
+ 1045              	.L9:
+ 1046 001c 00000000 		.word	A_B_initVar
+ 1047              		.cfi_endproc
+ 1048              	.LFE2:
+ 1049              		.size	A_B_Start, .-A_B_Start
+ 1050              		.section	.text.A_B_StartEx,"ax",%progbits
+ 1051              		.align	2
+ 1052              		.global	A_B_StartEx
+ 1053              		.thumb
+ 1054              		.thumb_func
+ 1055              		.type	A_B_StartEx, %function
+ 1056              	A_B_StartEx:
+ 1057              	.LFB3:
+ 140:.\Generated_Source\PSoC5/A_B.c **** 
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 22
+
+
+ 141:.\Generated_Source\PSoC5/A_B.c **** 
+ 142:.\Generated_Source\PSoC5/A_B.c **** /*******************************************************************************
+ 143:.\Generated_Source\PSoC5/A_B.c **** * Function Name: A_B_StartEx
+ 144:.\Generated_Source\PSoC5/A_B.c **** ********************************************************************************
+ 145:.\Generated_Source\PSoC5/A_B.c **** *
+ 146:.\Generated_Source\PSoC5/A_B.c **** * Summary:
+ 147:.\Generated_Source\PSoC5/A_B.c **** *  The StartEx function sets pointers and sizes for both waveforms
+ 148:.\Generated_Source\PSoC5/A_B.c **** *  and then starts the component.
+ 149:.\Generated_Source\PSoC5/A_B.c **** *
+ 150:.\Generated_Source\PSoC5/A_B.c **** * Parameters:  
+ 151:.\Generated_Source\PSoC5/A_B.c **** *   uint8 * wavePtr1:     Pointer to the waveform 1 array.
+ 152:.\Generated_Source\PSoC5/A_B.c **** *   uint16  sampleSize1:  The amount of samples in the waveform 1.
+ 153:.\Generated_Source\PSoC5/A_B.c **** *   uint8 * wavePtr2:     Pointer to the waveform 2 array.
+ 154:.\Generated_Source\PSoC5/A_B.c **** *   uint16  sampleSize2:  The amount of samples in the waveform 2.
+ 155:.\Generated_Source\PSoC5/A_B.c **** *
+ 156:.\Generated_Source\PSoC5/A_B.c **** * Return: 
+ 157:.\Generated_Source\PSoC5/A_B.c **** *  None
+ 158:.\Generated_Source\PSoC5/A_B.c **** *
+ 159:.\Generated_Source\PSoC5/A_B.c **** * Reentrant:
+ 160:.\Generated_Source\PSoC5/A_B.c **** *  No
+ 161:.\Generated_Source\PSoC5/A_B.c **** *
+ 162:.\Generated_Source\PSoC5/A_B.c **** *******************************************************************************/
+ 163:.\Generated_Source\PSoC5/A_B.c **** void A_B_StartEx(const uint8 * wavePtr1, uint16 sampleSize1, const uint8 * wavePtr2, uint16 sampleS
+ 164:.\Generated_Source\PSoC5/A_B.c **** 
+ 165:.\Generated_Source\PSoC5/A_B.c **** {
+ 1058              		.loc 1 165 0
+ 1059              		.cfi_startproc
+ 1060              		@ args = 0, pretend = 0, frame = 16
+ 1061              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1062 0000 80B5     		push	{r7, lr}
+ 1063              		.cfi_def_cfa_offset 8
+ 1064              		.cfi_offset 7, -8
+ 1065              		.cfi_offset 14, -4
+ 1066 0002 84B0     		sub	sp, sp, #16
+ 1067              		.cfi_def_cfa_offset 24
+ 1068 0004 00AF     		add	r7, sp, #0
+ 1069              		.cfi_def_cfa_register 7
+ 1070 0006 F860     		str	r0, [r7, #12]
+ 1071 0008 7A60     		str	r2, [r7, #4]
+ 1072 000a 0A46     		mov	r2, r1	@ movhi
+ 1073 000c 7A81     		strh	r2, [r7, #10]	@ movhi
+ 1074 000e 3B81     		strh	r3, [r7, #8]	@ movhi
+ 166:.\Generated_Source\PSoC5/A_B.c **** 	A_B_Wave1Setup(wavePtr1, sampleSize1);
+ 1075              		.loc 1 166 0
+ 1076 0010 7B89     		ldrh	r3, [r7, #10]
+ 1077 0012 F868     		ldr	r0, [r7, #12]
+ 1078 0014 1946     		mov	r1, r3
+ 1079 0016 FFF7FEFF 		bl	A_B_Wave1Setup
+ 167:.\Generated_Source\PSoC5/A_B.c **** 	A_B_Wave2Setup(wavePtr2, sampleSize2);
+ 1080              		.loc 1 167 0
+ 1081 001a 3B89     		ldrh	r3, [r7, #8]
+ 1082 001c 7868     		ldr	r0, [r7, #4]
+ 1083 001e 1946     		mov	r1, r3
+ 1084 0020 FFF7FEFF 		bl	A_B_Wave2Setup
+ 168:.\Generated_Source\PSoC5/A_B.c **** 	A_B_Start();
+ 1085              		.loc 1 168 0
+ 1086 0024 FFF7FEFF 		bl	A_B_Start
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 23
+
+
+ 169:.\Generated_Source\PSoC5/A_B.c **** }
+ 1087              		.loc 1 169 0
+ 1088 0028 1037     		adds	r7, r7, #16
+ 1089 002a BD46     		mov	sp, r7
+ 1090              		@ sp needed
+ 1091 002c 80BD     		pop	{r7, pc}
+ 1092              		.cfi_endproc
+ 1093              	.LFE3:
+ 1094              		.size	A_B_StartEx, .-A_B_StartEx
+ 1095 002e 00BF     		.section	.text.A_B_Stop,"ax",%progbits
+ 1096              		.align	2
+ 1097              		.global	A_B_Stop
+ 1098              		.thumb
+ 1099              		.thumb_func
+ 1100              		.type	A_B_Stop, %function
+ 1101              	A_B_Stop:
+ 1102              	.LFB4:
+ 170:.\Generated_Source\PSoC5/A_B.c **** 
+ 171:.\Generated_Source\PSoC5/A_B.c **** 
+ 172:.\Generated_Source\PSoC5/A_B.c **** /*******************************************************************************
+ 173:.\Generated_Source\PSoC5/A_B.c **** * Function Name: A_B_Stop
+ 174:.\Generated_Source\PSoC5/A_B.c **** ********************************************************************************
+ 175:.\Generated_Source\PSoC5/A_B.c **** *
+ 176:.\Generated_Source\PSoC5/A_B.c **** * Summary:
+ 177:.\Generated_Source\PSoC5/A_B.c **** *  Stops the clock (if internal), disables the DMA channels
+ 178:.\Generated_Source\PSoC5/A_B.c **** *  and powers down the DAC.
+ 179:.\Generated_Source\PSoC5/A_B.c **** *
+ 180:.\Generated_Source\PSoC5/A_B.c **** * Parameters:  
+ 181:.\Generated_Source\PSoC5/A_B.c **** *  None  
+ 182:.\Generated_Source\PSoC5/A_B.c **** *
+ 183:.\Generated_Source\PSoC5/A_B.c **** * Return: 
+ 184:.\Generated_Source\PSoC5/A_B.c **** *  None
+ 185:.\Generated_Source\PSoC5/A_B.c **** *
+ 186:.\Generated_Source\PSoC5/A_B.c **** *******************************************************************************/
+ 187:.\Generated_Source\PSoC5/A_B.c **** void A_B_Stop(void) 
+ 188:.\Generated_Source\PSoC5/A_B.c **** {
+ 1103              		.loc 1 188 0
+ 1104              		.cfi_startproc
+ 1105              		@ args = 0, pretend = 0, frame = 0
+ 1106              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1107 0000 80B5     		push	{r7, lr}
+ 1108              		.cfi_def_cfa_offset 8
+ 1109              		.cfi_offset 7, -8
+ 1110              		.cfi_offset 14, -4
+ 1111 0002 00AF     		add	r7, sp, #0
+ 1112              		.cfi_def_cfa_register 7
+ 189:.\Generated_Source\PSoC5/A_B.c **** 	/* Turn off internal clock, if one present */
+ 190:.\Generated_Source\PSoC5/A_B.c **** 	#if(A_B_CLOCK_SRC == A_B_CLOCK_INT)  	
+ 191:.\Generated_Source\PSoC5/A_B.c **** 	   A_B_DacClk_Stop();
+ 1113              		.loc 1 191 0
+ 1114 0004 FFF7FEFF 		bl	A_B_DacClk_Stop
+ 192:.\Generated_Source\PSoC5/A_B.c **** 	#endif /* A_B_CLOCK_SRC == A_B_CLOCK_INT */
+ 193:.\Generated_Source\PSoC5/A_B.c **** 	
+ 194:.\Generated_Source\PSoC5/A_B.c **** 	/* Disble DMA channels */
+ 195:.\Generated_Source\PSoC5/A_B.c **** 	(void)CyDmaChDisable(A_B_Wave1Chan);
+ 1115              		.loc 1 195 0
+ 1116 0008 064B     		ldr	r3, .L13
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 24
+
+
+ 1117 000a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1118 000c 1846     		mov	r0, r3
+ 1119 000e FFF7FEFF 		bl	CyDmaChDisable
+ 196:.\Generated_Source\PSoC5/A_B.c **** 	(void)CyDmaChDisable(A_B_Wave2Chan);
+ 1120              		.loc 1 196 0
+ 1121 0012 054B     		ldr	r3, .L13+4
+ 1122 0014 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1123 0016 1846     		mov	r0, r3
+ 1124 0018 FFF7FEFF 		bl	CyDmaChDisable
+ 197:.\Generated_Source\PSoC5/A_B.c **** 
+ 198:.\Generated_Source\PSoC5/A_B.c **** 	/* Disable power to DAC */
+ 199:.\Generated_Source\PSoC5/A_B.c **** 	A_B_VDAC8_Stop();
+ 1125              		.loc 1 199 0
+ 1126 001c FFF7FEFF 		bl	A_B_VDAC8_Stop
+ 200:.\Generated_Source\PSoC5/A_B.c **** }
+ 1127              		.loc 1 200 0
+ 1128 0020 80BD     		pop	{r7, pc}
+ 1129              	.L14:
+ 1130 0022 00BF     		.align	2
+ 1131              	.L13:
+ 1132 0024 01000000 		.word	A_B_Wave1Chan
+ 1133 0028 02000000 		.word	A_B_Wave2Chan
+ 1134              		.cfi_endproc
+ 1135              	.LFE4:
+ 1136              		.size	A_B_Stop, .-A_B_Stop
+ 1137              		.section	.text.A_B_Wave1Setup,"ax",%progbits
+ 1138              		.align	2
+ 1139              		.global	A_B_Wave1Setup
+ 1140              		.thumb
+ 1141              		.thumb_func
+ 1142              		.type	A_B_Wave1Setup, %function
+ 1143              	A_B_Wave1Setup:
+ 1144              	.LFB5:
+ 201:.\Generated_Source\PSoC5/A_B.c **** 
+ 202:.\Generated_Source\PSoC5/A_B.c **** 
+ 203:.\Generated_Source\PSoC5/A_B.c **** /*******************************************************************************
+ 204:.\Generated_Source\PSoC5/A_B.c **** * Function Name: A_B_Wave1Setup
+ 205:.\Generated_Source\PSoC5/A_B.c **** ********************************************************************************
+ 206:.\Generated_Source\PSoC5/A_B.c **** *
+ 207:.\Generated_Source\PSoC5/A_B.c **** * Summary:
+ 208:.\Generated_Source\PSoC5/A_B.c **** *  Sets pointer and size for waveform 1.                                    
+ 209:.\Generated_Source\PSoC5/A_B.c **** *
+ 210:.\Generated_Source\PSoC5/A_B.c **** * Parameters:  
+ 211:.\Generated_Source\PSoC5/A_B.c **** *  uint8 * WavePtr:     Pointer to the waveform array.
+ 212:.\Generated_Source\PSoC5/A_B.c **** *  uint16  SampleSize:  The amount of samples in the waveform.
+ 213:.\Generated_Source\PSoC5/A_B.c **** *
+ 214:.\Generated_Source\PSoC5/A_B.c **** * Return: 
+ 215:.\Generated_Source\PSoC5/A_B.c **** *  None 
+ 216:.\Generated_Source\PSoC5/A_B.c **** *
+ 217:.\Generated_Source\PSoC5/A_B.c **** *******************************************************************************/
+ 218:.\Generated_Source\PSoC5/A_B.c **** void A_B_Wave1Setup(const uint8 * wavePtr, uint16 sampleSize)
+ 219:.\Generated_Source\PSoC5/A_B.c **** 
+ 220:.\Generated_Source\PSoC5/A_B.c **** {
+ 1145              		.loc 1 220 0
+ 1146              		.cfi_startproc
+ 1147              		@ args = 0, pretend = 0, frame = 8
+ 1148              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 25
+
+
+ 1149 0000 80B5     		push	{r7, lr}
+ 1150              		.cfi_def_cfa_offset 8
+ 1151              		.cfi_offset 7, -8
+ 1152              		.cfi_offset 14, -4
+ 1153 0002 82B0     		sub	sp, sp, #8
+ 1154              		.cfi_def_cfa_offset 16
+ 1155 0004 00AF     		add	r7, sp, #0
+ 1156              		.cfi_def_cfa_register 7
+ 1157 0006 7860     		str	r0, [r7, #4]
+ 1158 0008 0B46     		mov	r3, r1
+ 1159 000a 7B80     		strh	r3, [r7, #2]	@ movhi
+ 221:.\Generated_Source\PSoC5/A_B.c **** 	#if (CY_PSOC3)
+ 222:.\Generated_Source\PSoC5/A_B.c **** 		uint16 memoryType; /* determining the source memory type */
+ 223:.\Generated_Source\PSoC5/A_B.c **** 		memoryType = (A_B_HI16FLASHPTR == HI16(wavePtr)) ? HI16(CYDEV_FLS_BASE) : HI16(CYDEV_SRAM_BASE);
+ 224:.\Generated_Source\PSoC5/A_B.c **** 		
+ 225:.\Generated_Source\PSoC5/A_B.c **** 		A_B_Wave1Chan = A_B_Wave1_DMA_DmaInitialize(
+ 226:.\Generated_Source\PSoC5/A_B.c **** 		A_B_Wave1_DMA_BYTES_PER_BURST, A_B_Wave1_DMA_REQUEST_PER_BURST,
+ 227:.\Generated_Source\PSoC5/A_B.c **** 		memoryType, HI16(CYDEV_PERIPH_BASE));
+ 228:.\Generated_Source\PSoC5/A_B.c **** 	#else /* PSoC 5 */
+ 229:.\Generated_Source\PSoC5/A_B.c **** 		A_B_Wave1Chan = A_B_Wave1_DMA_DmaInitialize(
+ 230:.\Generated_Source\PSoC5/A_B.c **** 		A_B_Wave1_DMA_BYTES_PER_BURST, A_B_Wave1_DMA_REQUEST_PER_BURST,
+ 231:.\Generated_Source\PSoC5/A_B.c **** 		HI16(wavePtr), HI16(A_B_DAC8__D));
+ 1160              		.loc 1 231 0
+ 1161 000c 7B68     		ldr	r3, [r7, #4]
+ 1162 000e 1B0C     		lsrs	r3, r3, #16
+ 229:.\Generated_Source\PSoC5/A_B.c **** 		A_B_Wave1Chan = A_B_Wave1_DMA_DmaInitialize(
+ 1163              		.loc 1 229 0
+ 1164 0010 9BB2     		uxth	r3, r3
+ 1165 0012 0120     		movs	r0, #1
+ 1166 0014 0121     		movs	r1, #1
+ 1167 0016 1A46     		mov	r2, r3
+ 1168 0018 4FF48043 		mov	r3, #16384
+ 1169 001c FFF7FEFF 		bl	A_B_Wave1_DMA_DmaInitialize
+ 1170 0020 0346     		mov	r3, r0
+ 1171 0022 1A46     		mov	r2, r3
+ 1172 0024 104B     		ldr	r3, .L16
+ 1173 0026 1A70     		strb	r2, [r3]
+ 232:.\Generated_Source\PSoC5/A_B.c **** 	#endif /* CY_PSOC3 */
+ 233:.\Generated_Source\PSoC5/A_B.c **** 	
+ 234:.\Generated_Source\PSoC5/A_B.c **** 	/*
+ 235:.\Generated_Source\PSoC5/A_B.c **** 	* TD is looping on itself. 
+ 236:.\Generated_Source\PSoC5/A_B.c ****     * Increment the source address, but not the destination address. 
+ 237:.\Generated_Source\PSoC5/A_B.c **** 	*/
+ 238:.\Generated_Source\PSoC5/A_B.c **** 	(void)CyDmaTdSetConfiguration(A_B_Wave1TD, sampleSize, A_B_Wave1TD, 
+ 1174              		.loc 1 238 0
+ 1175 0028 104B     		ldr	r3, .L16+4
+ 1176 002a 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
+ 1177 002c 0F4B     		ldr	r3, .L16+4
+ 1178 002e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1179 0030 7A88     		ldrh	r2, [r7, #2]
+ 1180 0032 0846     		mov	r0, r1
+ 1181 0034 1146     		mov	r1, r2
+ 1182 0036 1A46     		mov	r2, r3
+ 1183 0038 0123     		movs	r3, #1
+ 1184 003a FFF7FEFF 		bl	CyDmaTdSetConfiguration
+ 239:.\Generated_Source\PSoC5/A_B.c ****                                     (uint8)CY_DMA_TD_INC_SRC_ADR | (uint8)A_B_Wave1_DMA__TD_TERMOUT
+ 240:.\Generated_Source\PSoC5/A_B.c **** 	
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 26
+
+
+ 241:.\Generated_Source\PSoC5/A_B.c **** 	/* Set the TD source and destination address */
+ 242:.\Generated_Source\PSoC5/A_B.c **** 	(void)CyDmaTdSetAddress(A_B_Wave1TD, LO16((uint32)wavePtr), LO16(A_B_DAC8__D));
+ 1185              		.loc 1 242 0
+ 1186 003e 0B4B     		ldr	r3, .L16+4
+ 1187 0040 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 1188 0042 7B68     		ldr	r3, [r7, #4]
+ 1189 0044 9BB2     		uxth	r3, r3
+ 1190 0046 1046     		mov	r0, r2
+ 1191 0048 1946     		mov	r1, r3
+ 1192 004a 45F68332 		movw	r2, #23427
+ 1193 004e FFF7FEFF 		bl	CyDmaTdSetAddress
+ 243:.\Generated_Source\PSoC5/A_B.c **** 	
+ 244:.\Generated_Source\PSoC5/A_B.c **** 	/* Associate the TD with the channel */
+ 245:.\Generated_Source\PSoC5/A_B.c **** 	(void)CyDmaChSetInitialTd(A_B_Wave1Chan, A_B_Wave1TD);
+ 1194              		.loc 1 245 0
+ 1195 0052 054B     		ldr	r3, .L16
+ 1196 0054 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 1197 0056 054B     		ldr	r3, .L16+4
+ 1198 0058 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1199 005a 1046     		mov	r0, r2
+ 1200 005c 1946     		mov	r1, r3
+ 1201 005e FFF7FEFF 		bl	CyDmaChSetInitialTd
+ 246:.\Generated_Source\PSoC5/A_B.c **** }
+ 1202              		.loc 1 246 0
+ 1203 0062 0837     		adds	r7, r7, #8
+ 1204 0064 BD46     		mov	sp, r7
+ 1205              		@ sp needed
+ 1206 0066 80BD     		pop	{r7, pc}
+ 1207              	.L17:
+ 1208              		.align	2
+ 1209              	.L16:
+ 1210 0068 01000000 		.word	A_B_Wave1Chan
+ 1211 006c 03000000 		.word	A_B_Wave1TD
+ 1212              		.cfi_endproc
+ 1213              	.LFE5:
+ 1214              		.size	A_B_Wave1Setup, .-A_B_Wave1Setup
+ 1215              		.section	.text.A_B_Wave2Setup,"ax",%progbits
+ 1216              		.align	2
+ 1217              		.global	A_B_Wave2Setup
+ 1218              		.thumb
+ 1219              		.thumb_func
+ 1220              		.type	A_B_Wave2Setup, %function
+ 1221              	A_B_Wave2Setup:
+ 1222              	.LFB6:
+ 247:.\Generated_Source\PSoC5/A_B.c **** 
+ 248:.\Generated_Source\PSoC5/A_B.c **** 
+ 249:.\Generated_Source\PSoC5/A_B.c **** /*******************************************************************************
+ 250:.\Generated_Source\PSoC5/A_B.c **** * Function Name: A_B_Wave2Setup
+ 251:.\Generated_Source\PSoC5/A_B.c **** ********************************************************************************
+ 252:.\Generated_Source\PSoC5/A_B.c **** *
+ 253:.\Generated_Source\PSoC5/A_B.c **** * Summary:
+ 254:.\Generated_Source\PSoC5/A_B.c **** *  Sets pointer and size for waveform 2.                                    
+ 255:.\Generated_Source\PSoC5/A_B.c **** *
+ 256:.\Generated_Source\PSoC5/A_B.c **** * Parameters:  
+ 257:.\Generated_Source\PSoC5/A_B.c **** *  uint8 * WavePtr:     Pointer to the waveform array.
+ 258:.\Generated_Source\PSoC5/A_B.c **** *  uint16  SampleSize:  The amount of samples in the waveform.
+ 259:.\Generated_Source\PSoC5/A_B.c **** *
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 27
+
+
+ 260:.\Generated_Source\PSoC5/A_B.c **** * Return: 
+ 261:.\Generated_Source\PSoC5/A_B.c **** *  None
+ 262:.\Generated_Source\PSoC5/A_B.c **** *
+ 263:.\Generated_Source\PSoC5/A_B.c **** *******************************************************************************/
+ 264:.\Generated_Source\PSoC5/A_B.c **** void A_B_Wave2Setup(const uint8 * wavePtr, uint16 sampleSize)
+ 265:.\Generated_Source\PSoC5/A_B.c ****  
+ 266:.\Generated_Source\PSoC5/A_B.c **** {
+ 1223              		.loc 1 266 0
+ 1224              		.cfi_startproc
+ 1225              		@ args = 0, pretend = 0, frame = 8
+ 1226              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1227 0000 80B5     		push	{r7, lr}
+ 1228              		.cfi_def_cfa_offset 8
+ 1229              		.cfi_offset 7, -8
+ 1230              		.cfi_offset 14, -4
+ 1231 0002 82B0     		sub	sp, sp, #8
+ 1232              		.cfi_def_cfa_offset 16
+ 1233 0004 00AF     		add	r7, sp, #0
+ 1234              		.cfi_def_cfa_register 7
+ 1235 0006 7860     		str	r0, [r7, #4]
+ 1236 0008 0B46     		mov	r3, r1
+ 1237 000a 7B80     		strh	r3, [r7, #2]	@ movhi
+ 267:.\Generated_Source\PSoC5/A_B.c **** 	#if (CY_PSOC3)
+ 268:.\Generated_Source\PSoC5/A_B.c **** 		uint16 memoryType; /* determining the source memory type */
+ 269:.\Generated_Source\PSoC5/A_B.c **** 		memoryType = (A_B_HI16FLASHPTR == HI16(wavePtr)) ? HI16(CYDEV_FLS_BASE) : HI16(CYDEV_SRAM_BASE);
+ 270:.\Generated_Source\PSoC5/A_B.c **** 			
+ 271:.\Generated_Source\PSoC5/A_B.c **** 		A_B_Wave2Chan = A_B_Wave2_DMA_DmaInitialize(
+ 272:.\Generated_Source\PSoC5/A_B.c **** 		A_B_Wave2_DMA_BYTES_PER_BURST, A_B_Wave2_DMA_REQUEST_PER_BURST,
+ 273:.\Generated_Source\PSoC5/A_B.c **** 		memoryType, HI16(CYDEV_PERIPH_BASE));
+ 274:.\Generated_Source\PSoC5/A_B.c **** 	#else /* PSoC 5 */
+ 275:.\Generated_Source\PSoC5/A_B.c **** 		A_B_Wave2Chan = A_B_Wave2_DMA_DmaInitialize(
+ 276:.\Generated_Source\PSoC5/A_B.c **** 		A_B_Wave2_DMA_BYTES_PER_BURST, A_B_Wave2_DMA_REQUEST_PER_BURST,
+ 277:.\Generated_Source\PSoC5/A_B.c **** 		HI16(wavePtr), HI16(A_B_DAC8__D));
+ 1238              		.loc 1 277 0
+ 1239 000c 7B68     		ldr	r3, [r7, #4]
+ 1240 000e 1B0C     		lsrs	r3, r3, #16
+ 275:.\Generated_Source\PSoC5/A_B.c **** 		A_B_Wave2Chan = A_B_Wave2_DMA_DmaInitialize(
+ 1241              		.loc 1 275 0
+ 1242 0010 9BB2     		uxth	r3, r3
+ 1243 0012 0120     		movs	r0, #1
+ 1244 0014 0121     		movs	r1, #1
+ 1245 0016 1A46     		mov	r2, r3
+ 1246 0018 4FF48043 		mov	r3, #16384
+ 1247 001c FFF7FEFF 		bl	A_B_Wave2_DMA_DmaInitialize
+ 1248 0020 0346     		mov	r3, r0
+ 1249 0022 1A46     		mov	r2, r3
+ 1250 0024 104B     		ldr	r3, .L19
+ 1251 0026 1A70     		strb	r2, [r3]
+ 278:.\Generated_Source\PSoC5/A_B.c **** 	#endif /* CY_PSOC3 */
+ 279:.\Generated_Source\PSoC5/A_B.c **** 	
+ 280:.\Generated_Source\PSoC5/A_B.c **** 	/*
+ 281:.\Generated_Source\PSoC5/A_B.c **** 	* TD is looping on itself. 
+ 282:.\Generated_Source\PSoC5/A_B.c **** 	* Increment the source address, but not the destination address. 
+ 283:.\Generated_Source\PSoC5/A_B.c **** 	*/
+ 284:.\Generated_Source\PSoC5/A_B.c **** 	(void)CyDmaTdSetConfiguration(A_B_Wave2TD, sampleSize, A_B_Wave2TD, 
+ 1252              		.loc 1 284 0
+ 1253 0028 104B     		ldr	r3, .L19+4
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 28
+
+
+ 1254 002a 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
+ 1255 002c 0F4B     		ldr	r3, .L19+4
+ 1256 002e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1257 0030 7A88     		ldrh	r2, [r7, #2]
+ 1258 0032 0846     		mov	r0, r1
+ 1259 0034 1146     		mov	r1, r2
+ 1260 0036 1A46     		mov	r2, r3
+ 1261 0038 0123     		movs	r3, #1
+ 1262 003a FFF7FEFF 		bl	CyDmaTdSetConfiguration
+ 285:.\Generated_Source\PSoC5/A_B.c ****                                     (uint8)CY_DMA_TD_INC_SRC_ADR | (uint8)A_B_Wave2_DMA__TD_TERMOUT
+ 286:.\Generated_Source\PSoC5/A_B.c **** 	
+ 287:.\Generated_Source\PSoC5/A_B.c **** 	/* Set the TD source and destination address */
+ 288:.\Generated_Source\PSoC5/A_B.c **** 	(void)CyDmaTdSetAddress(A_B_Wave2TD, LO16((uint32)wavePtr), LO16(A_B_DAC8__D));
+ 1263              		.loc 1 288 0
+ 1264 003e 0B4B     		ldr	r3, .L19+4
+ 1265 0040 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 1266 0042 7B68     		ldr	r3, [r7, #4]
+ 1267 0044 9BB2     		uxth	r3, r3
+ 1268 0046 1046     		mov	r0, r2
+ 1269 0048 1946     		mov	r1, r3
+ 1270 004a 45F68332 		movw	r2, #23427
+ 1271 004e FFF7FEFF 		bl	CyDmaTdSetAddress
+ 289:.\Generated_Source\PSoC5/A_B.c **** 	
+ 290:.\Generated_Source\PSoC5/A_B.c **** 	/* Associate the TD with the channel */
+ 291:.\Generated_Source\PSoC5/A_B.c **** 	(void)CyDmaChSetInitialTd(A_B_Wave2Chan, A_B_Wave2TD);
+ 1272              		.loc 1 291 0
+ 1273 0052 054B     		ldr	r3, .L19
+ 1274 0054 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 1275 0056 054B     		ldr	r3, .L19+4
+ 1276 0058 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1277 005a 1046     		mov	r0, r2
+ 1278 005c 1946     		mov	r1, r3
+ 1279 005e FFF7FEFF 		bl	CyDmaChSetInitialTd
+ 292:.\Generated_Source\PSoC5/A_B.c **** }
+ 1280              		.loc 1 292 0
+ 1281 0062 0837     		adds	r7, r7, #8
+ 1282 0064 BD46     		mov	sp, r7
+ 1283              		@ sp needed
+ 1284 0066 80BD     		pop	{r7, pc}
+ 1285              	.L20:
+ 1286              		.align	2
+ 1287              	.L19:
+ 1288 0068 02000000 		.word	A_B_Wave2Chan
+ 1289 006c 04000000 		.word	A_B_Wave2TD
+ 1290              		.cfi_endproc
+ 1291              	.LFE6:
+ 1292              		.size	A_B_Wave2Setup, .-A_B_Wave2Setup
+ 1293              		.text
+ 1294              	.Letext0:
+ 1295              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 1296              		.section	.debug_info,"",%progbits
+ 1297              	.Ldebug_info0:
+ 1298 0000 4C020000 		.4byte	0x24c
+ 1299 0004 0400     		.2byte	0x4
+ 1300 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1301 000a 04       		.byte	0x4
+ 1302 000b 01       		.uleb128 0x1
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 29
+
+
+ 1303 000c 56010000 		.4byte	.LASF36
+ 1304 0010 01       		.byte	0x1
+ 1305 0011 04010000 		.4byte	.LASF37
+ 1306 0015 12020000 		.4byte	.LASF38
+ 1307 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 1308 001d 00000000 		.4byte	0
+ 1309 0021 00000000 		.4byte	.Ldebug_line0
+ 1310 0025 02       		.uleb128 0x2
+ 1311 0026 01       		.byte	0x1
+ 1312 0027 06       		.byte	0x6
+ 1313 0028 63020000 		.4byte	.LASF0
+ 1314 002c 02       		.uleb128 0x2
+ 1315 002d 01       		.byte	0x1
+ 1316 002e 08       		.byte	0x8
+ 1317 002f C9000000 		.4byte	.LASF1
+ 1318 0033 02       		.uleb128 0x2
+ 1319 0034 02       		.byte	0x2
+ 1320 0035 05       		.byte	0x5
+ 1321 0036 08020000 		.4byte	.LASF2
+ 1322 003a 02       		.uleb128 0x2
+ 1323 003b 02       		.byte	0x2
+ 1324 003c 07       		.byte	0x7
+ 1325 003d 2C000000 		.4byte	.LASF3
+ 1326 0041 02       		.uleb128 0x2
+ 1327 0042 04       		.byte	0x4
+ 1328 0043 05       		.byte	0x5
+ 1329 0044 5A020000 		.4byte	.LASF4
+ 1330 0048 02       		.uleb128 0x2
+ 1331 0049 04       		.byte	0x4
+ 1332 004a 07       		.byte	0x7
+ 1333 004b 88000000 		.4byte	.LASF5
+ 1334 004f 02       		.uleb128 0x2
+ 1335 0050 08       		.byte	0x8
+ 1336 0051 05       		.byte	0x5
+ 1337 0052 E9010000 		.4byte	.LASF6
+ 1338 0056 02       		.uleb128 0x2
+ 1339 0057 08       		.byte	0x8
+ 1340 0058 07       		.byte	0x7
+ 1341 0059 30010000 		.4byte	.LASF7
+ 1342 005d 03       		.uleb128 0x3
+ 1343 005e 04       		.byte	0x4
+ 1344 005f 05       		.byte	0x5
+ 1345 0060 696E7400 		.ascii	"int\000"
+ 1346 0064 02       		.uleb128 0x2
+ 1347 0065 04       		.byte	0x4
+ 1348 0066 07       		.byte	0x7
+ 1349 0067 23010000 		.4byte	.LASF8
+ 1350 006b 04       		.uleb128 0x4
+ 1351 006c A2000000 		.4byte	.LASF9
+ 1352 0070 02       		.byte	0x2
+ 1353 0071 A1       		.byte	0xa1
+ 1354 0072 2C000000 		.4byte	0x2c
+ 1355 0076 04       		.uleb128 0x4
+ 1356 0077 F6000000 		.4byte	.LASF10
+ 1357 007b 02       		.byte	0x2
+ 1358 007c A2       		.byte	0xa2
+ 1359 007d 3A000000 		.4byte	0x3a
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 30
+
+
+ 1360 0081 04       		.uleb128 0x4
+ 1361 0082 FD000000 		.4byte	.LASF11
+ 1362 0086 02       		.byte	0x2
+ 1363 0087 A3       		.byte	0xa3
+ 1364 0088 48000000 		.4byte	0x48
+ 1365 008c 02       		.uleb128 0x2
+ 1366 008d 04       		.byte	0x4
+ 1367 008e 04       		.byte	0x4
+ 1368 008f 5C000000 		.4byte	.LASF12
+ 1369 0093 02       		.uleb128 0x2
+ 1370 0094 08       		.byte	0x8
+ 1371 0095 04       		.byte	0x4
+ 1372 0096 D7000000 		.4byte	.LASF13
+ 1373 009a 02       		.uleb128 0x2
+ 1374 009b 01       		.byte	0x1
+ 1375 009c 08       		.byte	0x8
+ 1376 009d F7010000 		.4byte	.LASF14
+ 1377 00a1 02       		.uleb128 0x2
+ 1378 00a2 04       		.byte	0x4
+ 1379 00a3 07       		.byte	0x7
+ 1380 00a4 E0010000 		.4byte	.LASF15
+ 1381 00a8 05       		.uleb128 0x5
+ 1382 00a9 C0000000 		.4byte	.LASF16
+ 1383 00ad 01       		.byte	0x1
+ 1384 00ae 2B       		.byte	0x2b
+ 1385 00af 00000000 		.4byte	.LFB0
+ 1386 00b3 54000000 		.4byte	.LFE0-.LFB0
+ 1387 00b7 01       		.uleb128 0x1
+ 1388 00b8 9C       		.byte	0x9c
+ 1389 00b9 05       		.uleb128 0x5
+ 1390 00ba 3F000000 		.4byte	.LASF17
+ 1391 00be 01       		.byte	0x1
+ 1392 00bf 56       		.byte	0x56
+ 1393 00c0 00000000 		.4byte	.LFB1
+ 1394 00c4 34000000 		.4byte	.LFE1-.LFB1
+ 1395 00c8 01       		.uleb128 0x1
+ 1396 00c9 9C       		.byte	0x9c
+ 1397 00ca 05       		.uleb128 0x5
+ 1398 00cb EC000000 		.4byte	.LASF18
+ 1399 00cf 01       		.byte	0x1
+ 1400 00d0 81       		.byte	0x81
+ 1401 00d1 00000000 		.4byte	.LFB2
+ 1402 00d5 20000000 		.4byte	.LFE2-.LFB2
+ 1403 00d9 01       		.uleb128 0x1
+ 1404 00da 9C       		.byte	0x9c
+ 1405 00db 06       		.uleb128 0x6
+ 1406 00dc 00000000 		.4byte	.LASF24
+ 1407 00e0 01       		.byte	0x1
+ 1408 00e1 A3       		.byte	0xa3
+ 1409 00e2 00000000 		.4byte	.LFB3
+ 1410 00e6 2E000000 		.4byte	.LFE3-.LFB3
+ 1411 00ea 01       		.uleb128 0x1
+ 1412 00eb 9C       		.byte	0x9c
+ 1413 00ec 29010000 		.4byte	0x129
+ 1414 00f0 07       		.uleb128 0x7
+ 1415 00f1 4A000000 		.4byte	.LASF19
+ 1416 00f5 01       		.byte	0x1
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 31
+
+
+ 1417 00f6 A3       		.byte	0xa3
+ 1418 00f7 29010000 		.4byte	0x129
+ 1419 00fb 02       		.uleb128 0x2
+ 1420 00fc 91       		.byte	0x91
+ 1421 00fd 74       		.sleb128 -12
+ 1422 00fe 07       		.uleb128 0x7
+ 1423 00ff A8000000 		.4byte	.LASF20
+ 1424 0103 01       		.byte	0x1
+ 1425 0104 A3       		.byte	0xa3
+ 1426 0105 76000000 		.4byte	0x76
+ 1427 0109 02       		.uleb128 0x2
+ 1428 010a 91       		.byte	0x91
+ 1429 010b 72       		.sleb128 -14
+ 1430 010c 07       		.uleb128 0x7
+ 1431 010d 53000000 		.4byte	.LASF21
+ 1432 0111 01       		.byte	0x1
+ 1433 0112 A3       		.byte	0xa3
+ 1434 0113 29010000 		.4byte	0x129
+ 1435 0117 02       		.uleb128 0x2
+ 1436 0118 91       		.byte	0x91
+ 1437 0119 6C       		.sleb128 -20
+ 1438 011a 07       		.uleb128 0x7
+ 1439 011b B4000000 		.4byte	.LASF22
+ 1440 011f 01       		.byte	0x1
+ 1441 0120 A3       		.byte	0xa3
+ 1442 0121 76000000 		.4byte	0x76
+ 1443 0125 02       		.uleb128 0x2
+ 1444 0126 91       		.byte	0x91
+ 1445 0127 70       		.sleb128 -16
+ 1446 0128 00       		.byte	0
+ 1447 0129 08       		.uleb128 0x8
+ 1448 012a 04       		.byte	0x4
+ 1449 012b 2F010000 		.4byte	0x12f
+ 1450 012f 09       		.uleb128 0x9
+ 1451 0130 6B000000 		.4byte	0x6b
+ 1452 0134 05       		.uleb128 0x5
+ 1453 0135 6F020000 		.4byte	.LASF23
+ 1454 0139 01       		.byte	0x1
+ 1455 013a BB       		.byte	0xbb
+ 1456 013b 00000000 		.4byte	.LFB4
+ 1457 013f 2C000000 		.4byte	.LFE4-.LFB4
+ 1458 0143 01       		.uleb128 0x1
+ 1459 0144 9C       		.byte	0x9c
+ 1460 0145 06       		.uleb128 0x6
+ 1461 0146 62000000 		.4byte	.LASF25
+ 1462 014a 01       		.byte	0x1
+ 1463 014b DA       		.byte	0xda
+ 1464 014c 00000000 		.4byte	.LFB5
+ 1465 0150 70000000 		.4byte	.LFE5-.LFB5
+ 1466 0154 01       		.uleb128 0x1
+ 1467 0155 9C       		.byte	0x9c
+ 1468 0156 77010000 		.4byte	0x177
+ 1469 015a 07       		.uleb128 0x7
+ 1470 015b 9A000000 		.4byte	.LASF26
+ 1471 015f 01       		.byte	0x1
+ 1472 0160 DA       		.byte	0xda
+ 1473 0161 29010000 		.4byte	0x129
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 32
+
+
+ 1474 0165 02       		.uleb128 0x2
+ 1475 0166 91       		.byte	0x91
+ 1476 0167 74       		.sleb128 -12
+ 1477 0168 07       		.uleb128 0x7
+ 1478 0169 7D000000 		.4byte	.LASF27
+ 1479 016d 01       		.byte	0x1
+ 1480 016e DA       		.byte	0xda
+ 1481 016f 76000000 		.4byte	0x76
+ 1482 0173 02       		.uleb128 0x2
+ 1483 0174 91       		.byte	0x91
+ 1484 0175 72       		.sleb128 -14
+ 1485 0176 00       		.byte	0
+ 1486 0177 0A       		.uleb128 0xa
+ 1487 0178 47010000 		.4byte	.LASF28
+ 1488 017c 01       		.byte	0x1
+ 1489 017d 0801     		.2byte	0x108
+ 1490 017f 00000000 		.4byte	.LFB6
+ 1491 0183 70000000 		.4byte	.LFE6-.LFB6
+ 1492 0187 01       		.uleb128 0x1
+ 1493 0188 9C       		.byte	0x9c
+ 1494 0189 AC010000 		.4byte	0x1ac
+ 1495 018d 0B       		.uleb128 0xb
+ 1496 018e 9A000000 		.4byte	.LASF26
+ 1497 0192 01       		.byte	0x1
+ 1498 0193 0801     		.2byte	0x108
+ 1499 0195 29010000 		.4byte	0x129
+ 1500 0199 02       		.uleb128 0x2
+ 1501 019a 91       		.byte	0x91
+ 1502 019b 74       		.sleb128 -12
+ 1503 019c 0B       		.uleb128 0xb
+ 1504 019d 7D000000 		.4byte	.LASF27
+ 1505 01a1 01       		.byte	0x1
+ 1506 01a2 0801     		.2byte	0x108
+ 1507 01a4 76000000 		.4byte	0x76
+ 1508 01a8 02       		.uleb128 0x2
+ 1509 01a9 91       		.byte	0x91
+ 1510 01aa 72       		.sleb128 -14
+ 1511 01ab 00       		.byte	0
+ 1512 01ac 0C       		.uleb128 0xc
+ 1513 01ad DE000000 		.4byte	.LASF29
+ 1514 01b1 01       		.byte	0x1
+ 1515 01b2 17       		.byte	0x17
+ 1516 01b3 6B000000 		.4byte	0x6b
+ 1517 01b7 05       		.uleb128 0x5
+ 1518 01b8 03       		.byte	0x3
+ 1519 01b9 01000000 		.4byte	A_B_Wave1Chan
+ 1520 01bd 0C       		.uleb128 0xc
+ 1521 01be D2010000 		.4byte	.LASF30
+ 1522 01c2 01       		.byte	0x1
+ 1523 01c3 18       		.byte	0x18
+ 1524 01c4 6B000000 		.4byte	0x6b
+ 1525 01c8 05       		.uleb128 0x5
+ 1526 01c9 03       		.byte	0x3
+ 1527 01ca 02000000 		.4byte	A_B_Wave2Chan
+ 1528 01ce 0C       		.uleb128 0xc
+ 1529 01cf 20000000 		.4byte	.LASF31
+ 1530 01d3 01       		.byte	0x1
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 33
+
+
+ 1531 01d4 19       		.byte	0x19
+ 1532 01d5 6B000000 		.4byte	0x6b
+ 1533 01d9 05       		.uleb128 0x5
+ 1534 01da 03       		.byte	0x3
+ 1535 01db 03000000 		.4byte	A_B_Wave1TD
+ 1536 01df 0C       		.uleb128 0xc
+ 1537 01e0 71000000 		.4byte	.LASF32
+ 1538 01e4 01       		.byte	0x1
+ 1539 01e5 1A       		.byte	0x1a
+ 1540 01e6 6B000000 		.4byte	0x6b
+ 1541 01ea 05       		.uleb128 0x5
+ 1542 01eb 03       		.byte	0x3
+ 1543 01ec 04000000 		.4byte	A_B_Wave2TD
+ 1544 01f0 0D       		.uleb128 0xd
+ 1545 01f1 FC010000 		.4byte	.LASF33
+ 1546 01f5 01       		.byte	0x1
+ 1547 01f6 12       		.byte	0x12
+ 1548 01f7 6B000000 		.4byte	0x6b
+ 1549 01fb 05       		.uleb128 0x5
+ 1550 01fc 03       		.byte	0x3
+ 1551 01fd 00000000 		.4byte	A_B_initVar
+ 1552 0201 0E       		.uleb128 0xe
+ 1553 0202 6B000000 		.4byte	0x6b
+ 1554 0206 12020000 		.4byte	0x212
+ 1555 020a 0F       		.uleb128 0xf
+ 1556 020b A1000000 		.4byte	0xa1
+ 1557 020f C501     		.2byte	0x1c5
+ 1558 0211 00       		.byte	0
+ 1559 0212 0D       		.uleb128 0xd
+ 1560 0213 0C000000 		.4byte	.LASF34
+ 1561 0217 01       		.byte	0x1
+ 1562 0218 14       		.byte	0x14
+ 1563 0219 23020000 		.4byte	0x223
+ 1564 021d 05       		.uleb128 0x5
+ 1565 021e 03       		.byte	0x3
+ 1566 021f 00000000 		.4byte	A_B_wave1
+ 1567 0223 09       		.uleb128 0x9
+ 1568 0224 01020000 		.4byte	0x201
+ 1569 0228 0E       		.uleb128 0xe
+ 1570 0229 6B000000 		.4byte	0x6b
+ 1571 022d 39020000 		.4byte	0x239
+ 1572 0231 0F       		.uleb128 0xf
+ 1573 0232 A1000000 		.4byte	0xa1
+ 1574 0236 9401     		.2byte	0x194
+ 1575 0238 00       		.byte	0
+ 1576 0239 0D       		.uleb128 0xd
+ 1577 023a 16000000 		.4byte	.LASF35
+ 1578 023e 01       		.byte	0x1
+ 1579 023f 15       		.byte	0x15
+ 1580 0240 4A020000 		.4byte	0x24a
+ 1581 0244 05       		.uleb128 0x5
+ 1582 0245 03       		.byte	0x3
+ 1583 0246 00000000 		.4byte	A_B_wave2
+ 1584 024a 09       		.uleb128 0x9
+ 1585 024b 28020000 		.4byte	0x228
+ 1586 024f 00       		.byte	0
+ 1587              		.section	.debug_abbrev,"",%progbits
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 34
+
+
+ 1588              	.Ldebug_abbrev0:
+ 1589 0000 01       		.uleb128 0x1
+ 1590 0001 11       		.uleb128 0x11
+ 1591 0002 01       		.byte	0x1
+ 1592 0003 25       		.uleb128 0x25
+ 1593 0004 0E       		.uleb128 0xe
+ 1594 0005 13       		.uleb128 0x13
+ 1595 0006 0B       		.uleb128 0xb
+ 1596 0007 03       		.uleb128 0x3
+ 1597 0008 0E       		.uleb128 0xe
+ 1598 0009 1B       		.uleb128 0x1b
+ 1599 000a 0E       		.uleb128 0xe
+ 1600 000b 55       		.uleb128 0x55
+ 1601 000c 17       		.uleb128 0x17
+ 1602 000d 11       		.uleb128 0x11
+ 1603 000e 01       		.uleb128 0x1
+ 1604 000f 10       		.uleb128 0x10
+ 1605 0010 17       		.uleb128 0x17
+ 1606 0011 00       		.byte	0
+ 1607 0012 00       		.byte	0
+ 1608 0013 02       		.uleb128 0x2
+ 1609 0014 24       		.uleb128 0x24
+ 1610 0015 00       		.byte	0
+ 1611 0016 0B       		.uleb128 0xb
+ 1612 0017 0B       		.uleb128 0xb
+ 1613 0018 3E       		.uleb128 0x3e
+ 1614 0019 0B       		.uleb128 0xb
+ 1615 001a 03       		.uleb128 0x3
+ 1616 001b 0E       		.uleb128 0xe
+ 1617 001c 00       		.byte	0
+ 1618 001d 00       		.byte	0
+ 1619 001e 03       		.uleb128 0x3
+ 1620 001f 24       		.uleb128 0x24
+ 1621 0020 00       		.byte	0
+ 1622 0021 0B       		.uleb128 0xb
+ 1623 0022 0B       		.uleb128 0xb
+ 1624 0023 3E       		.uleb128 0x3e
+ 1625 0024 0B       		.uleb128 0xb
+ 1626 0025 03       		.uleb128 0x3
+ 1627 0026 08       		.uleb128 0x8
+ 1628 0027 00       		.byte	0
+ 1629 0028 00       		.byte	0
+ 1630 0029 04       		.uleb128 0x4
+ 1631 002a 16       		.uleb128 0x16
+ 1632 002b 00       		.byte	0
+ 1633 002c 03       		.uleb128 0x3
+ 1634 002d 0E       		.uleb128 0xe
+ 1635 002e 3A       		.uleb128 0x3a
+ 1636 002f 0B       		.uleb128 0xb
+ 1637 0030 3B       		.uleb128 0x3b
+ 1638 0031 0B       		.uleb128 0xb
+ 1639 0032 49       		.uleb128 0x49
+ 1640 0033 13       		.uleb128 0x13
+ 1641 0034 00       		.byte	0
+ 1642 0035 00       		.byte	0
+ 1643 0036 05       		.uleb128 0x5
+ 1644 0037 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 35
+
+
+ 1645 0038 00       		.byte	0
+ 1646 0039 3F       		.uleb128 0x3f
+ 1647 003a 19       		.uleb128 0x19
+ 1648 003b 03       		.uleb128 0x3
+ 1649 003c 0E       		.uleb128 0xe
+ 1650 003d 3A       		.uleb128 0x3a
+ 1651 003e 0B       		.uleb128 0xb
+ 1652 003f 3B       		.uleb128 0x3b
+ 1653 0040 0B       		.uleb128 0xb
+ 1654 0041 27       		.uleb128 0x27
+ 1655 0042 19       		.uleb128 0x19
+ 1656 0043 11       		.uleb128 0x11
+ 1657 0044 01       		.uleb128 0x1
+ 1658 0045 12       		.uleb128 0x12
+ 1659 0046 06       		.uleb128 0x6
+ 1660 0047 40       		.uleb128 0x40
+ 1661 0048 18       		.uleb128 0x18
+ 1662 0049 9642     		.uleb128 0x2116
+ 1663 004b 19       		.uleb128 0x19
+ 1664 004c 00       		.byte	0
+ 1665 004d 00       		.byte	0
+ 1666 004e 06       		.uleb128 0x6
+ 1667 004f 2E       		.uleb128 0x2e
+ 1668 0050 01       		.byte	0x1
+ 1669 0051 3F       		.uleb128 0x3f
+ 1670 0052 19       		.uleb128 0x19
+ 1671 0053 03       		.uleb128 0x3
+ 1672 0054 0E       		.uleb128 0xe
+ 1673 0055 3A       		.uleb128 0x3a
+ 1674 0056 0B       		.uleb128 0xb
+ 1675 0057 3B       		.uleb128 0x3b
+ 1676 0058 0B       		.uleb128 0xb
+ 1677 0059 27       		.uleb128 0x27
+ 1678 005a 19       		.uleb128 0x19
+ 1679 005b 11       		.uleb128 0x11
+ 1680 005c 01       		.uleb128 0x1
+ 1681 005d 12       		.uleb128 0x12
+ 1682 005e 06       		.uleb128 0x6
+ 1683 005f 40       		.uleb128 0x40
+ 1684 0060 18       		.uleb128 0x18
+ 1685 0061 9642     		.uleb128 0x2116
+ 1686 0063 19       		.uleb128 0x19
+ 1687 0064 01       		.uleb128 0x1
+ 1688 0065 13       		.uleb128 0x13
+ 1689 0066 00       		.byte	0
+ 1690 0067 00       		.byte	0
+ 1691 0068 07       		.uleb128 0x7
+ 1692 0069 05       		.uleb128 0x5
+ 1693 006a 00       		.byte	0
+ 1694 006b 03       		.uleb128 0x3
+ 1695 006c 0E       		.uleb128 0xe
+ 1696 006d 3A       		.uleb128 0x3a
+ 1697 006e 0B       		.uleb128 0xb
+ 1698 006f 3B       		.uleb128 0x3b
+ 1699 0070 0B       		.uleb128 0xb
+ 1700 0071 49       		.uleb128 0x49
+ 1701 0072 13       		.uleb128 0x13
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 36
+
+
+ 1702 0073 02       		.uleb128 0x2
+ 1703 0074 18       		.uleb128 0x18
+ 1704 0075 00       		.byte	0
+ 1705 0076 00       		.byte	0
+ 1706 0077 08       		.uleb128 0x8
+ 1707 0078 0F       		.uleb128 0xf
+ 1708 0079 00       		.byte	0
+ 1709 007a 0B       		.uleb128 0xb
+ 1710 007b 0B       		.uleb128 0xb
+ 1711 007c 49       		.uleb128 0x49
+ 1712 007d 13       		.uleb128 0x13
+ 1713 007e 00       		.byte	0
+ 1714 007f 00       		.byte	0
+ 1715 0080 09       		.uleb128 0x9
+ 1716 0081 26       		.uleb128 0x26
+ 1717 0082 00       		.byte	0
+ 1718 0083 49       		.uleb128 0x49
+ 1719 0084 13       		.uleb128 0x13
+ 1720 0085 00       		.byte	0
+ 1721 0086 00       		.byte	0
+ 1722 0087 0A       		.uleb128 0xa
+ 1723 0088 2E       		.uleb128 0x2e
+ 1724 0089 01       		.byte	0x1
+ 1725 008a 3F       		.uleb128 0x3f
+ 1726 008b 19       		.uleb128 0x19
+ 1727 008c 03       		.uleb128 0x3
+ 1728 008d 0E       		.uleb128 0xe
+ 1729 008e 3A       		.uleb128 0x3a
+ 1730 008f 0B       		.uleb128 0xb
+ 1731 0090 3B       		.uleb128 0x3b
+ 1732 0091 05       		.uleb128 0x5
+ 1733 0092 27       		.uleb128 0x27
+ 1734 0093 19       		.uleb128 0x19
+ 1735 0094 11       		.uleb128 0x11
+ 1736 0095 01       		.uleb128 0x1
+ 1737 0096 12       		.uleb128 0x12
+ 1738 0097 06       		.uleb128 0x6
+ 1739 0098 40       		.uleb128 0x40
+ 1740 0099 18       		.uleb128 0x18
+ 1741 009a 9642     		.uleb128 0x2116
+ 1742 009c 19       		.uleb128 0x19
+ 1743 009d 01       		.uleb128 0x1
+ 1744 009e 13       		.uleb128 0x13
+ 1745 009f 00       		.byte	0
+ 1746 00a0 00       		.byte	0
+ 1747 00a1 0B       		.uleb128 0xb
+ 1748 00a2 05       		.uleb128 0x5
+ 1749 00a3 00       		.byte	0
+ 1750 00a4 03       		.uleb128 0x3
+ 1751 00a5 0E       		.uleb128 0xe
+ 1752 00a6 3A       		.uleb128 0x3a
+ 1753 00a7 0B       		.uleb128 0xb
+ 1754 00a8 3B       		.uleb128 0x3b
+ 1755 00a9 05       		.uleb128 0x5
+ 1756 00aa 49       		.uleb128 0x49
+ 1757 00ab 13       		.uleb128 0x13
+ 1758 00ac 02       		.uleb128 0x2
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 37
+
+
+ 1759 00ad 18       		.uleb128 0x18
+ 1760 00ae 00       		.byte	0
+ 1761 00af 00       		.byte	0
+ 1762 00b0 0C       		.uleb128 0xc
+ 1763 00b1 34       		.uleb128 0x34
+ 1764 00b2 00       		.byte	0
+ 1765 00b3 03       		.uleb128 0x3
+ 1766 00b4 0E       		.uleb128 0xe
+ 1767 00b5 3A       		.uleb128 0x3a
+ 1768 00b6 0B       		.uleb128 0xb
+ 1769 00b7 3B       		.uleb128 0x3b
+ 1770 00b8 0B       		.uleb128 0xb
+ 1771 00b9 49       		.uleb128 0x49
+ 1772 00ba 13       		.uleb128 0x13
+ 1773 00bb 02       		.uleb128 0x2
+ 1774 00bc 18       		.uleb128 0x18
+ 1775 00bd 00       		.byte	0
+ 1776 00be 00       		.byte	0
+ 1777 00bf 0D       		.uleb128 0xd
+ 1778 00c0 34       		.uleb128 0x34
+ 1779 00c1 00       		.byte	0
+ 1780 00c2 03       		.uleb128 0x3
+ 1781 00c3 0E       		.uleb128 0xe
+ 1782 00c4 3A       		.uleb128 0x3a
+ 1783 00c5 0B       		.uleb128 0xb
+ 1784 00c6 3B       		.uleb128 0x3b
+ 1785 00c7 0B       		.uleb128 0xb
+ 1786 00c8 49       		.uleb128 0x49
+ 1787 00c9 13       		.uleb128 0x13
+ 1788 00ca 3F       		.uleb128 0x3f
+ 1789 00cb 19       		.uleb128 0x19
+ 1790 00cc 02       		.uleb128 0x2
+ 1791 00cd 18       		.uleb128 0x18
+ 1792 00ce 00       		.byte	0
+ 1793 00cf 00       		.byte	0
+ 1794 00d0 0E       		.uleb128 0xe
+ 1795 00d1 01       		.uleb128 0x1
+ 1796 00d2 01       		.byte	0x1
+ 1797 00d3 49       		.uleb128 0x49
+ 1798 00d4 13       		.uleb128 0x13
+ 1799 00d5 01       		.uleb128 0x1
+ 1800 00d6 13       		.uleb128 0x13
+ 1801 00d7 00       		.byte	0
+ 1802 00d8 00       		.byte	0
+ 1803 00d9 0F       		.uleb128 0xf
+ 1804 00da 21       		.uleb128 0x21
+ 1805 00db 00       		.byte	0
+ 1806 00dc 49       		.uleb128 0x49
+ 1807 00dd 13       		.uleb128 0x13
+ 1808 00de 2F       		.uleb128 0x2f
+ 1809 00df 05       		.uleb128 0x5
+ 1810 00e0 00       		.byte	0
+ 1811 00e1 00       		.byte	0
+ 1812 00e2 00       		.byte	0
+ 1813              		.section	.debug_aranges,"",%progbits
+ 1814 0000 4C000000 		.4byte	0x4c
+ 1815 0004 0200     		.2byte	0x2
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 38
+
+
+ 1816 0006 00000000 		.4byte	.Ldebug_info0
+ 1817 000a 04       		.byte	0x4
+ 1818 000b 00       		.byte	0
+ 1819 000c 0000     		.2byte	0
+ 1820 000e 0000     		.2byte	0
+ 1821 0010 00000000 		.4byte	.LFB0
+ 1822 0014 54000000 		.4byte	.LFE0-.LFB0
+ 1823 0018 00000000 		.4byte	.LFB1
+ 1824 001c 34000000 		.4byte	.LFE1-.LFB1
+ 1825 0020 00000000 		.4byte	.LFB2
+ 1826 0024 20000000 		.4byte	.LFE2-.LFB2
+ 1827 0028 00000000 		.4byte	.LFB3
+ 1828 002c 2E000000 		.4byte	.LFE3-.LFB3
+ 1829 0030 00000000 		.4byte	.LFB4
+ 1830 0034 2C000000 		.4byte	.LFE4-.LFB4
+ 1831 0038 00000000 		.4byte	.LFB5
+ 1832 003c 70000000 		.4byte	.LFE5-.LFB5
+ 1833 0040 00000000 		.4byte	.LFB6
+ 1834 0044 70000000 		.4byte	.LFE6-.LFB6
+ 1835 0048 00000000 		.4byte	0
+ 1836 004c 00000000 		.4byte	0
+ 1837              		.section	.debug_ranges,"",%progbits
+ 1838              	.Ldebug_ranges0:
+ 1839 0000 00000000 		.4byte	.LFB0
+ 1840 0004 54000000 		.4byte	.LFE0
+ 1841 0008 00000000 		.4byte	.LFB1
+ 1842 000c 34000000 		.4byte	.LFE1
+ 1843 0010 00000000 		.4byte	.LFB2
+ 1844 0014 20000000 		.4byte	.LFE2
+ 1845 0018 00000000 		.4byte	.LFB3
+ 1846 001c 2E000000 		.4byte	.LFE3
+ 1847 0020 00000000 		.4byte	.LFB4
+ 1848 0024 2C000000 		.4byte	.LFE4
+ 1849 0028 00000000 		.4byte	.LFB5
+ 1850 002c 70000000 		.4byte	.LFE5
+ 1851 0030 00000000 		.4byte	.LFB6
+ 1852 0034 70000000 		.4byte	.LFE6
+ 1853 0038 00000000 		.4byte	0
+ 1854 003c 00000000 		.4byte	0
+ 1855              		.section	.debug_line,"",%progbits
+ 1856              	.Ldebug_line0:
+ 1857 0000 EB000000 		.section	.debug_str,"MS",%progbits,1
+ 1857      02004200 
+ 1857      00000201 
+ 1857      FB0E0D00 
+ 1857      01010101 
+ 1858              	.LASF24:
+ 1859 0000 415F425F 		.ascii	"A_B_StartEx\000"
+ 1859      53746172 
+ 1859      74457800 
+ 1860              	.LASF34:
+ 1861 000c 415F425F 		.ascii	"A_B_wave1\000"
+ 1861      77617665 
+ 1861      3100
+ 1862              	.LASF35:
+ 1863 0016 415F425F 		.ascii	"A_B_wave2\000"
+ 1863      77617665 
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 39
+
+
+ 1863      3200
+ 1864              	.LASF31:
+ 1865 0020 415F425F 		.ascii	"A_B_Wave1TD\000"
+ 1865      57617665 
+ 1865      31544400 
+ 1866              	.LASF3:
+ 1867 002c 73686F72 		.ascii	"short unsigned int\000"
+ 1867      7420756E 
+ 1867      7369676E 
+ 1867      65642069 
+ 1867      6E7400
+ 1868              	.LASF17:
+ 1869 003f 415F425F 		.ascii	"A_B_Enable\000"
+ 1869      456E6162 
+ 1869      6C6500
+ 1870              	.LASF19:
+ 1871 004a 77617665 		.ascii	"wavePtr1\000"
+ 1871      50747231 
+ 1871      00
+ 1872              	.LASF21:
+ 1873 0053 77617665 		.ascii	"wavePtr2\000"
+ 1873      50747232 
+ 1873      00
+ 1874              	.LASF12:
+ 1875 005c 666C6F61 		.ascii	"float\000"
+ 1875      7400
+ 1876              	.LASF25:
+ 1877 0062 415F425F 		.ascii	"A_B_Wave1Setup\000"
+ 1877      57617665 
+ 1877      31536574 
+ 1877      757000
+ 1878              	.LASF32:
+ 1879 0071 415F425F 		.ascii	"A_B_Wave2TD\000"
+ 1879      57617665 
+ 1879      32544400 
+ 1880              	.LASF27:
+ 1881 007d 73616D70 		.ascii	"sampleSize\000"
+ 1881      6C655369 
+ 1881      7A6500
+ 1882              	.LASF5:
+ 1883 0088 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1883      20756E73 
+ 1883      69676E65 
+ 1883      6420696E 
+ 1883      7400
+ 1884              	.LASF26:
+ 1885 009a 77617665 		.ascii	"wavePtr\000"
+ 1885      50747200 
+ 1886              	.LASF9:
+ 1887 00a2 75696E74 		.ascii	"uint8\000"
+ 1887      3800
+ 1888              	.LASF20:
+ 1889 00a8 73616D70 		.ascii	"sampleSize1\000"
+ 1889      6C655369 
+ 1889      7A653100 
+ 1890              	.LASF22:
+ 1891 00b4 73616D70 		.ascii	"sampleSize2\000"
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 40
+
+
+ 1891      6C655369 
+ 1891      7A653200 
+ 1892              	.LASF16:
+ 1893 00c0 415F425F 		.ascii	"A_B_Init\000"
+ 1893      496E6974 
+ 1893      00
+ 1894              	.LASF1:
+ 1895 00c9 756E7369 		.ascii	"unsigned char\000"
+ 1895      676E6564 
+ 1895      20636861 
+ 1895      7200
+ 1896              	.LASF13:
+ 1897 00d7 646F7562 		.ascii	"double\000"
+ 1897      6C6500
+ 1898              	.LASF29:
+ 1899 00de 415F425F 		.ascii	"A_B_Wave1Chan\000"
+ 1899      57617665 
+ 1899      31436861 
+ 1899      6E00
+ 1900              	.LASF18:
+ 1901 00ec 415F425F 		.ascii	"A_B_Start\000"
+ 1901      53746172 
+ 1901      7400
+ 1902              	.LASF10:
+ 1903 00f6 75696E74 		.ascii	"uint16\000"
+ 1903      313600
+ 1904              	.LASF11:
+ 1905 00fd 75696E74 		.ascii	"uint32\000"
+ 1905      333200
+ 1906              	.LASF37:
+ 1907 0104 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\A_B.c\000"
+ 1907      6E657261 
+ 1907      7465645F 
+ 1907      536F7572 
+ 1907      63655C50 
+ 1908              	.LASF8:
+ 1909 0123 756E7369 		.ascii	"unsigned int\000"
+ 1909      676E6564 
+ 1909      20696E74 
+ 1909      00
+ 1910              	.LASF7:
+ 1911 0130 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1911      206C6F6E 
+ 1911      6720756E 
+ 1911      7369676E 
+ 1911      65642069 
+ 1912              	.LASF28:
+ 1913 0147 415F425F 		.ascii	"A_B_Wave2Setup\000"
+ 1913      57617665 
+ 1913      32536574 
+ 1913      757000
+ 1914              	.LASF36:
+ 1915 0156 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 1915      4320342E 
+ 1915      382E3420 
+ 1915      32303134 
+ 1915      30353236 
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 41
+
+
+ 1916 0189 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
+ 1916      20726576 
+ 1916      6973696F 
+ 1916      6E203231 
+ 1916      31333538 
+ 1917 01bc 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 1917      66756E63 
+ 1917      74696F6E 
+ 1917      2D736563 
+ 1917      74696F6E 
+ 1918              	.LASF30:
+ 1919 01d2 415F425F 		.ascii	"A_B_Wave2Chan\000"
+ 1919      57617665 
+ 1919      32436861 
+ 1919      6E00
+ 1920              	.LASF15:
+ 1921 01e0 73697A65 		.ascii	"sizetype\000"
+ 1921      74797065 
+ 1921      00
+ 1922              	.LASF6:
+ 1923 01e9 6C6F6E67 		.ascii	"long long int\000"
+ 1923      206C6F6E 
+ 1923      6720696E 
+ 1923      7400
+ 1924              	.LASF14:
+ 1925 01f7 63686172 		.ascii	"char\000"
+ 1925      00
+ 1926              	.LASF33:
+ 1927 01fc 415F425F 		.ascii	"A_B_initVar\000"
+ 1927      696E6974 
+ 1927      56617200 
+ 1928              	.LASF2:
+ 1929 0208 73686F72 		.ascii	"short int\000"
+ 1929      7420696E 
+ 1929      7400
+ 1930              	.LASF38:
+ 1931 0212 433A5C55 		.ascii	"C:\\Users\\IEUser\\Downloads\\PSoC_Creator\\Filter_"
+ 1931      73657273 
+ 1931      5C494555 
+ 1931      7365725C 
+ 1931      446F776E 
+ 1932 0240 4144435F 		.ascii	"ADC_VDAC01\\Design01.cydsn\000"
+ 1932      56444143 
+ 1932      30315C44 
+ 1932      65736967 
+ 1932      6E30312E 
+ 1933              	.LASF4:
+ 1934 025a 6C6F6E67 		.ascii	"long int\000"
+ 1934      20696E74 
+ 1934      00
+ 1935              	.LASF0:
+ 1936 0263 7369676E 		.ascii	"signed char\000"
+ 1936      65642063 
+ 1936      68617200 
+ 1937              	.LASF23:
+ 1938 026f 415F425F 		.ascii	"A_B_Stop\000"
+ 1938      53746F70 
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cckrw7sx.s 			page 42
+
+
+ 1938      00
+ 1939              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

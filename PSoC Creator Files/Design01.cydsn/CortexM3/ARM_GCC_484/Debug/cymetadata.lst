@@ -1,0 +1,1233 @@
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"cymetadata.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	cy_meta_configecc
+  19              		.section	.cyconfigecc,"a",%progbits
+  20              		.align	2
+  21              		.type	cy_meta_configecc, %object
+  22              		.size	cy_meta_configecc, 700
+  23              	cy_meta_configecc:
+  24 0000 01       		.byte	1
+  25 0001 52       		.byte	82
+  26 0002 00       		.byte	0
+  27 0003 40       		.byte	64
+  28 0004 04       		.byte	4
+  29 0005 5A       		.byte	90
+  30 0006 00       		.byte	0
+  31 0007 40       		.byte	64
+  32 0008 01       		.byte	1
+  33 0009 5B       		.byte	91
+  34 000a 00       		.byte	0
+  35 000b 40       		.byte	64
+  36 000c 02       		.byte	2
+  37 000d 03       		.byte	3
+  38 000e 01       		.byte	1
+  39 000f 40       		.byte	64
+  40 0010 02       		.byte	2
+  41 0011 05       		.byte	5
+  42 0012 01       		.byte	1
+  43 0013 40       		.byte	64
+  44 0014 04       		.byte	4
+  45 0015 07       		.byte	7
+  46 0016 01       		.byte	1
+  47 0017 40       		.byte	64
+  48 0018 13       		.byte	19
+  49 0019 09       		.byte	9
+  50 001a 01       		.byte	1
+  51 001b 40       		.byte	64
+  52 001c 2B       		.byte	43
+  53 001d 0A       		.byte	10
+  54 001e 01       		.byte	1
+  55 001f 40       		.byte	64
+  56 0020 32       		.byte	50
+  57 0021 0B       		.byte	11
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 2
+
+
+  58 0022 01       		.byte	1
+  59 0023 40       		.byte	64
+  60 0024 03       		.byte	3
+  61 0025 0D       		.byte	13
+  62 0026 01       		.byte	1
+  63 0027 40       		.byte	64
+  64 0028 01       		.byte	1
+  65 0029 15       		.byte	21
+  66 002a 01       		.byte	1
+  67 002b 40       		.byte	64
+  68 002c 02       		.byte	2
+  69 002d 17       		.byte	23
+  70 002e 01       		.byte	1
+  71 002f 40       		.byte	64
+  72 0030 0E       		.byte	14
+  73 0031 19       		.byte	25
+  74 0032 01       		.byte	1
+  75 0033 40       		.byte	64
+  76 0034 04       		.byte	4
+  77 0035 1B       		.byte	27
+  78 0036 01       		.byte	1
+  79 0037 40       		.byte	64
+  80 0038 08       		.byte	8
+  81 0039 40       		.byte	64
+  82 003a 01       		.byte	1
+  83 003b 40       		.byte	64
+  84 003c 0F       		.byte	15
+  85 003d 41       		.byte	65
+  86 003e 01       		.byte	1
+  87 003f 40       		.byte	64
+  88 0040 09       		.byte	9
+  89 0041 42       		.byte	66
+  90 0042 01       		.byte	1
+  91 0043 40       		.byte	64
+  92 0044 09       		.byte	9
+  93 0045 43       		.byte	67
+  94 0046 01       		.byte	1
+  95 0047 40       		.byte	64
+  96 0048 02       		.byte	2
+  97 0049 44       		.byte	68
+  98 004a 01       		.byte	1
+  99 004b 40       		.byte	64
+ 100 004c 04       		.byte	4
+ 101 004d 45       		.byte	69
+ 102 004e 01       		.byte	1
+ 103 004f 40       		.byte	64
+ 104 0050 07       		.byte	7
+ 105 0051 46       		.byte	70
+ 106 0052 01       		.byte	1
+ 107 0053 40       		.byte	64
+ 108 0054 0B       		.byte	11
+ 109 0055 47       		.byte	71
+ 110 0056 01       		.byte	1
+ 111 0057 40       		.byte	64
+ 112 0058 0B       		.byte	11
+ 113 0059 48       		.byte	72
+ 114 005a 01       		.byte	1
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 3
+
+
+ 115 005b 40       		.byte	64
+ 116 005c 09       		.byte	9
+ 117 005d 49       		.byte	73
+ 118 005e 01       		.byte	1
+ 119 005f 40       		.byte	64
+ 120 0060 11       		.byte	17
+ 121 0061 4C       		.byte	76
+ 122 0062 01       		.byte	1
+ 123 0063 40       		.byte	64
+ 124 0064 11       		.byte	17
+ 125 0065 4D       		.byte	77
+ 126 0066 01       		.byte	1
+ 127 0067 40       		.byte	64
+ 128 0068 02       		.byte	2
+ 129 0069 50       		.byte	80
+ 130 006a 01       		.byte	1
+ 131 006b 40       		.byte	64
+ 132 006c 03       		.byte	3
+ 133 006d 51       		.byte	81
+ 134 006e 01       		.byte	1
+ 135 006f 40       		.byte	64
+ 136 0070 2C       		.byte	44
+ 137 0071 FF       		.byte	-1
+ 138 0072 87       		.byte	-121
+ 139 0073 01       		.byte	1
+ 140 0074 8F       		.byte	-113
+ 141 0075 01       		.byte	1
+ 142 0076 97       		.byte	-105
+ 143 0077 01       		.byte	1
+ 144 0078 9F       		.byte	-97
+ 145 0079 01       		.byte	1
+ 146 007a 2F       		.byte	47
+ 147 007b 84       		.byte	-124
+ 148 007c E2       		.byte	-30
+ 149 007d 0C       		.byte	12
+ 150 007e E6       		.byte	-26
+ 151 007f 04       		.byte	4
+ 152 0080 E6       		.byte	-26
+ 153 0081 42       		.byte	66
+ 154 0082 EE       		.byte	-18
+ 155 0083 40       		.byte	64
+ 156 0084 E8       		.byte	-24
+ 157 0085 10       		.byte	16
+ 158 0086 EA       		.byte	-22
+ 159 0087 60       		.byte	96
+ 160 0088 EC       		.byte	-20
+ 161 0089 01       		.byte	1
+ 162 008a EE       		.byte	-18
+ 163 008b 02       		.byte	2
+ 164 008c 81       		.byte	-127
+ 165 008d 80       		.byte	-128
+ 166 008e 8E       		.byte	-114
+ 167 008f 40       		.byte	64
+ 168 0090 94       		.byte	-108
+ 169 0091 04       		.byte	4
+ 170 0092 96       		.byte	-106
+ 171 0093 90       		.byte	-112
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 4
+
+
+ 172 0094 9C       		.byte	-100
+ 173 0095 11       		.byte	17
+ 174 0096 9D       		.byte	-99
+ 175 0097 84       		.byte	-124
+ 176 0098 9E       		.byte	-98
+ 177 0099 80       		.byte	-128
+ 178 009a A5       		.byte	-91
+ 179 009b 82       		.byte	-126
+ 180 009c A7       		.byte	-89
+ 181 009d 10       		.byte	16
+ 182 009e AB       		.byte	-85
+ 183 009f 40       		.byte	64
+ 184 00a0 AE       		.byte	-82
+ 185 00a1 01       		.byte	1
+ 186 00a2 B3       		.byte	-77
+ 187 00a3 10       		.byte	16
+ 188 00a4 B4       		.byte	-76
+ 189 00a5 04       		.byte	4
+ 190 00a6 B5       		.byte	-75
+ 191 00a7 01       		.byte	1
+ 192 00a8 B7       		.byte	-73
+ 193 00a9 80       		.byte	-128
+ 194 00aa E6       		.byte	-26
+ 195 00ab 01       		.byte	1
+ 196 00ac E8       		.byte	-24
+ 197 00ad 10       		.byte	16
+ 198 00ae EA       		.byte	-22
+ 199 00af 60       		.byte	96
+ 200 00b0 EC       		.byte	-20
+ 201 00b1 01       		.byte	1
+ 202 00b2 02       		.byte	2
+ 203 00b3 05       		.byte	5
+ 204 00b4 07       		.byte	7
+ 205 00b5 01       		.byte	1
+ 206 00b6 08       		.byte	8
+ 207 00b7 04       		.byte	4
+ 208 00b8 0A       		.byte	10
+ 209 00b9 01       		.byte	1
+ 210 00ba 0E       		.byte	14
+ 211 00bb 08       		.byte	8
+ 212 00bc 18       		.byte	24
+ 213 00bd 08       		.byte	8
+ 214 00be 1B       		.byte	27
+ 215 00bf 02       		.byte	2
+ 216 00c0 2A       		.byte	42
+ 217 00c1 02       		.byte	2
+ 218 00c2 2F       		.byte	47
+ 219 00c3 02       		.byte	2
+ 220 00c4 30       		.byte	48
+ 221 00c5 04       		.byte	4
+ 222 00c6 31       		.byte	49
+ 223 00c7 02       		.byte	2
+ 224 00c8 32       		.byte	50
+ 225 00c9 02       		.byte	2
+ 226 00ca 34       		.byte	52
+ 227 00cb 01       		.byte	1
+ 228 00cc 35       		.byte	53
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 5
+
+
+ 229 00cd 01       		.byte	1
+ 230 00ce 36       		.byte	54
+ 231 00cf 08       		.byte	8
+ 232 00d0 3E       		.byte	62
+ 233 00d1 51       		.byte	81
+ 234 00d2 3F       		.byte	63
+ 235 00d3 01       		.byte	1
+ 236 00d4 58       		.byte	88
+ 237 00d5 04       		.byte	4
+ 238 00d6 59       		.byte	89
+ 239 00d7 04       		.byte	4
+ 240 00d8 5B       		.byte	91
+ 241 00d9 04       		.byte	4
+ 242 00da 5C       		.byte	92
+ 243 00db 24       		.byte	36
+ 244 00dc 5F       		.byte	95
+ 245 00dd 01       		.byte	1
+ 246 00de 83       		.byte	-125
+ 247 00df 02       		.byte	2
+ 248 00e0 86       		.byte	-122
+ 249 00e1 08       		.byte	8
+ 250 00e2 93       		.byte	-109
+ 251 00e3 01       		.byte	1
+ 252 00e4 94       		.byte	-108
+ 253 00e5 01       		.byte	1
+ 254 00e6 95       		.byte	-107
+ 255 00e7 02       		.byte	2
+ 256 00e8 96       		.byte	-106
+ 257 00e9 04       		.byte	4
+ 258 00ea 9A       		.byte	-102
+ 259 00eb 05       		.byte	5
+ 260 00ec 9E       		.byte	-98
+ 261 00ed 02       		.byte	2
+ 262 00ee A6       		.byte	-90
+ 263 00ef 08       		.byte	8
+ 264 00f0 B0       		.byte	-80
+ 265 00f1 04       		.byte	4
+ 266 00f2 B2       		.byte	-78
+ 267 00f3 02       		.byte	2
+ 268 00f4 B3       		.byte	-77
+ 269 00f5 02       		.byte	2
+ 270 00f6 B4       		.byte	-76
+ 271 00f7 01       		.byte	1
+ 272 00f8 B5       		.byte	-75
+ 273 00f9 01       		.byte	1
+ 274 00fa B6       		.byte	-74
+ 275 00fb 08       		.byte	8
+ 276 00fc BE       		.byte	-66
+ 277 00fd 51       		.byte	81
+ 278 00fe BF       		.byte	-65
+ 279 00ff 04       		.byte	4
+ 280 0100 D8       		.byte	-40
+ 281 0101 04       		.byte	4
+ 282 0102 D9       		.byte	-39
+ 283 0103 04       		.byte	4
+ 284 0104 DC       		.byte	-36
+ 285 0105 35       		.byte	53
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 6
+
+
+ 286 0106 DF       		.byte	-33
+ 287 0107 01       		.byte	1
+ 288 0108 00       		.byte	0
+ 289 0109 10       		.byte	16
+ 290 010a 01       		.byte	1
+ 291 010b 80       		.byte	-128
+ 292 010c 03       		.byte	3
+ 293 010d 40       		.byte	64
+ 294 010e 04       		.byte	4
+ 295 010f 08       		.byte	8
+ 296 0110 09       		.byte	9
+ 297 0111 20       		.byte	32
+ 298 0112 0C       		.byte	12
+ 299 0113 10       		.byte	16
+ 300 0114 0D       		.byte	13
+ 301 0115 08       		.byte	8
+ 302 0116 0E       		.byte	14
+ 303 0117 09       		.byte	9
+ 304 0118 10       		.byte	16
+ 305 0119 08       		.byte	8
+ 306 011a 17       		.byte	23
+ 307 011b 08       		.byte	8
+ 308 011c 18       		.byte	24
+ 309 011d 10       		.byte	16
+ 310 011e 19       		.byte	25
+ 311 011f 10       		.byte	16
+ 312 0120 1A       		.byte	26
+ 313 0121 02       		.byte	2
+ 314 0122 1B       		.byte	27
+ 315 0123 02       		.byte	2
+ 316 0124 1D       		.byte	29
+ 317 0125 09       		.byte	9
+ 318 0126 1F       		.byte	31
+ 319 0127 90       		.byte	-112
+ 320 0128 21       		.byte	33
+ 321 0129 21       		.byte	33
+ 322 012a 27       		.byte	39
+ 323 012b 18       		.byte	24
+ 324 012c 2A       		.byte	42
+ 325 012d 80       		.byte	-128
+ 326 012e 31       		.byte	49
+ 327 012f 20       		.byte	32
+ 328 0130 37       		.byte	55
+ 329 0131 09       		.byte	9
+ 330 0132 39       		.byte	57
+ 331 0133 04       		.byte	4
+ 332 0134 3D       		.byte	61
+ 333 0135 02       		.byte	2
+ 334 0136 58       		.byte	88
+ 335 0137 01       		.byte	1
+ 336 0138 59       		.byte	89
+ 337 0139 04       		.byte	4
+ 338 013a 5A       		.byte	90
+ 339 013b 90       		.byte	-112
+ 340 013c 60       		.byte	96
+ 341 013d 04       		.byte	4
+ 342 013e 61       		.byte	97
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 7
+
+
+ 343 013f 82       		.byte	-126
+ 344 0140 63       		.byte	99
+ 345 0141 20       		.byte	32
+ 346 0142 68       		.byte	104
+ 347 0143 08       		.byte	8
+ 348 0144 69       		.byte	105
+ 349 0145 04       		.byte	4
+ 350 0146 6A       		.byte	106
+ 351 0147 01       		.byte	1
+ 352 0148 6B       		.byte	107
+ 353 0149 01       		.byte	1
+ 354 014a 85       		.byte	-123
+ 355 014b 01       		.byte	1
+ 356 014c 8D       		.byte	-115
+ 357 014d 01       		.byte	1
+ 358 014e 8E       		.byte	-114
+ 359 014f 04       		.byte	4
+ 360 0150 9D       		.byte	-99
+ 361 0151 10       		.byte	16
+ 362 0152 9F       		.byte	-97
+ 363 0153 10       		.byte	16
+ 364 0154 A7       		.byte	-89
+ 365 0155 02       		.byte	2
+ 366 0156 B7       		.byte	-73
+ 367 0157 02       		.byte	2
+ 368 0158 C0       		.byte	-64
+ 369 0159 2B       		.byte	43
+ 370 015a C2       		.byte	-62
+ 371 015b E2       		.byte	-30
+ 372 015c C4       		.byte	-60
+ 373 015d 22       		.byte	34
+ 374 015e CA       		.byte	-54
+ 375 015f 08       		.byte	8
+ 376 0160 CC       		.byte	-52
+ 377 0161 C4       		.byte	-60
+ 378 0162 CE       		.byte	-50
+ 379 0163 82       		.byte	-126
+ 380 0164 D6       		.byte	-42
+ 381 0165 0F       		.byte	15
+ 382 0166 D8       		.byte	-40
+ 383 0167 0F       		.byte	15
+ 384 0168 E6       		.byte	-26
+ 385 0169 40       		.byte	64
+ 386 016a EE       		.byte	-18
+ 387 016b 40       		.byte	64
+ 388 016c 81       		.byte	-127
+ 389 016d 10       		.byte	16
+ 390 016e 83       		.byte	-125
+ 391 016f 10       		.byte	16
+ 392 0170 E2       		.byte	-30
+ 393 0171 08       		.byte	8
+ 394 0172 EC       		.byte	-20
+ 395 0173 30       		.byte	48
+ 396 0174 E0       		.byte	-32
+ 397 0175 06       		.byte	6
+ 398 0176 E8       		.byte	-24
+ 399 0177 20       		.byte	32
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 8
+
+
+ 400 0178 81       		.byte	-127
+ 401 0179 80       		.byte	-128
+ 402 017a 86       		.byte	-122
+ 403 017b 80       		.byte	-128
+ 404 017c 8C       		.byte	-116
+ 405 017d 04       		.byte	4
+ 406 017e 94       		.byte	-108
+ 407 017f 04       		.byte	4
+ 408 0180 96       		.byte	-106
+ 409 0181 10       		.byte	16
+ 410 0182 9D       		.byte	-99
+ 411 0183 80       		.byte	-128
+ 412 0184 9E       		.byte	-98
+ 413 0185 80       		.byte	-128
+ 414 0186 AB       		.byte	-85
+ 415 0187 10       		.byte	16
+ 416 0188 AD       		.byte	-83
+ 417 0189 02       		.byte	2
+ 418 018a B0       		.byte	-80
+ 419 018b 11       		.byte	17
+ 420 018c B5       		.byte	-75
+ 421 018d 04       		.byte	4
+ 422 018e E8       		.byte	-24
+ 423 018f 20       		.byte	32
+ 424 0190 EA       		.byte	-22
+ 425 0191 02       		.byte	2
+ 426 0192 EE       		.byte	-18
+ 427 0193 01       		.byte	1
+ 428 0194 82       		.byte	-126
+ 429 0195 10       		.byte	16
+ 430 0196 96       		.byte	-106
+ 431 0197 10       		.byte	16
+ 432 0198 E2       		.byte	-30
+ 433 0199 01       		.byte	1
+ 434 019a EC       		.byte	-20
+ 435 019b 30       		.byte	48
+ 436 019c 31       		.byte	49
+ 437 019d 20       		.byte	32
+ 438 019e 38       		.byte	56
+ 439 019f 02       		.byte	2
+ 440 01a0 3C       		.byte	60
+ 441 01a1 04       		.byte	4
+ 442 01a2 3E       		.byte	62
+ 443 01a3 40       		.byte	64
+ 444 01a4 40       		.byte	64
+ 445 01a5 08       		.byte	8
+ 446 01a6 CC       		.byte	-52
+ 447 01a7 10       		.byte	16
+ 448 01a8 CE       		.byte	-50
+ 449 01a9 E0       		.byte	-32
+ 450 01aa D0       		.byte	-48
+ 451 01ab 10       		.byte	16
+ 452 01ac 3A       		.byte	58
+ 453 01ad 08       		.byte	8
+ 454 01ae 3C       		.byte	60
+ 455 01af 08       		.byte	8
+ 456 01b0 3F       		.byte	63
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 9
+
+
+ 457 01b1 40       		.byte	64
+ 458 01b2 43       		.byte	67
+ 459 01b3 10       		.byte	16
+ 460 01b4 80       		.byte	-128
+ 461 01b5 08       		.byte	8
+ 462 01b6 82       		.byte	-126
+ 463 01b7 40       		.byte	64
+ 464 01b8 85       		.byte	-123
+ 465 01b9 20       		.byte	32
+ 466 01ba 94       		.byte	-108
+ 467 01bb 06       		.byte	6
+ 468 01bc 96       		.byte	-106
+ 469 01bd 40       		.byte	64
+ 470 01be 9C       		.byte	-100
+ 471 01bf 08       		.byte	8
+ 472 01c0 A5       		.byte	-91
+ 473 01c1 20       		.byte	32
+ 474 01c2 CE       		.byte	-50
+ 475 01c3 E0       		.byte	-32
+ 476 01c4 D0       		.byte	-48
+ 477 01c5 10       		.byte	16
+ 478 01c6 E2       		.byte	-30
+ 479 01c7 30       		.byte	48
+ 480 01c8 E6       		.byte	-26
+ 481 01c9 20       		.byte	32
+ 482 01ca 86       		.byte	-122
+ 483 01cb 08       		.byte	8
+ 484 01cc 8F       		.byte	-113
+ 485 01cd 10       		.byte	16
+ 486 01ce 94       		.byte	-108
+ 487 01cf 02       		.byte	2
+ 488 01d0 97       		.byte	-105
+ 489 01d1 40       		.byte	64
+ 490 01d2 9E       		.byte	-98
+ 491 01d3 08       		.byte	8
+ 492 01d4 9F       		.byte	-97
+ 493 01d5 10       		.byte	16
+ 494 01d6 A4       		.byte	-92
+ 495 01d7 04       		.byte	4
+ 496 01d8 B4       		.byte	-76
+ 497 01d9 04       		.byte	4
+ 498 01da E6       		.byte	-26
+ 499 01db 40       		.byte	64
+ 500 01dc 9D       		.byte	-99
+ 501 01dd 20       		.byte	32
+ 502 01de A6       		.byte	-90
+ 503 01df 01       		.byte	1
+ 504 01e0 AA       		.byte	-86
+ 505 01e1 01       		.byte	1
+ 506 01e2 AF       		.byte	-81
+ 507 01e3 40       		.byte	64
+ 508 01e4 B0       		.byte	-80
+ 509 01e5 04       		.byte	4
+ 510 01e6 B4       		.byte	-76
+ 511 01e7 01       		.byte	1
+ 512 01e8 B5       		.byte	-75
+ 513 01e9 20       		.byte	32
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 10
+
+
+ 514 01ea EC       		.byte	-20
+ 515 01eb 80       		.byte	-128
+ 516 01ec EE       		.byte	-18
+ 517 01ed 40       		.byte	64
+ 518 01ee 30       		.byte	48
+ 519 01ef 20       		.byte	32
+ 520 01f0 CC       		.byte	-52
+ 521 01f1 08       		.byte	8
+ 522 01f2 32       		.byte	50
+ 523 01f3 40       		.byte	64
+ 524 01f4 87       		.byte	-121
+ 525 01f5 40       		.byte	64
+ 526 01f6 A4       		.byte	-92
+ 527 01f7 20       		.byte	32
+ 528 01f8 CC       		.byte	-52
+ 529 01f9 08       		.byte	8
+ 530 01fa 33       		.byte	51
+ 531 01fb 80       		.byte	-128
+ 532 01fc 8F       		.byte	-113
+ 533 01fd 80       		.byte	-128
+ 534 01fe 96       		.byte	-106
+ 535 01ff 80       		.byte	-128
+ 536 0200 97       		.byte	-105
+ 537 0201 80       		.byte	-128
+ 538 0202 A4       		.byte	-92
+ 539 0203 20       		.byte	32
+ 540 0204 CC       		.byte	-52
+ 541 0205 08       		.byte	8
+ 542 0206 E0       		.byte	-32
+ 543 0207 02       		.byte	2
+ 544 0208 32       		.byte	50
+ 545 0209 20       		.byte	32
+ 546 020a 81       		.byte	-127
+ 547 020b 01       		.byte	1
+ 548 020c 8F       		.byte	-113
+ 549 020d 40       		.byte	64
+ 550 020e 97       		.byte	-105
+ 551 020f 80       		.byte	-128
+ 552 0210 A2       		.byte	-94
+ 553 0211 20       		.byte	32
+ 554 0212 A4       		.byte	-92
+ 555 0213 20       		.byte	32
+ 556 0214 AA       		.byte	-86
+ 557 0215 40       		.byte	64
+ 558 0216 B6       		.byte	-74
+ 559 0217 20       		.byte	32
+ 560 0218 CC       		.byte	-52
+ 561 0219 08       		.byte	8
+ 562 021a E2       		.byte	-30
+ 563 021b 08       		.byte	8
+ 564 021c E8       		.byte	-24
+ 565 021d 08       		.byte	8
+ 566 021e 20       		.byte	32
+ 567 021f 80       		.byte	-128
+ 568 0220 24       		.byte	36
+ 569 0221 80       		.byte	-128
+ 570 0222 25       		.byte	37
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 11
+
+
+ 571 0223 04       		.byte	4
+ 572 0224 27       		.byte	39
+ 573 0225 20       		.byte	32
+ 574 0226 81       		.byte	-127
+ 575 0227 04       		.byte	4
+ 576 0228 87       		.byte	-121
+ 577 0229 20       		.byte	32
+ 578 022a 9D       		.byte	-99
+ 579 022b 20       		.byte	32
+ 580 022c A6       		.byte	-90
+ 581 022d 21       		.byte	33
+ 582 022e B2       		.byte	-78
+ 583 022f 20       		.byte	32
+ 584 0230 C8       		.byte	-56
+ 585 0231 C0       		.byte	-64
+ 586 0232 E0       		.byte	-32
+ 587 0233 60       		.byte	96
+ 588 0234 19       		.byte	25
+ 589 0235 20       		.byte	32
+ 590 0236 1E       		.byte	30
+ 591 0237 02       		.byte	2
+ 592 0238 22       		.byte	34
+ 593 0239 20       		.byte	32
+ 594 023a 9D       		.byte	-99
+ 595 023b 20       		.byte	32
+ 596 023c A6       		.byte	-90
+ 597 023d 21       		.byte	33
+ 598 023e B0       		.byte	-80
+ 599 023f 40       		.byte	64
+ 600 0240 B4       		.byte	-76
+ 601 0241 40       		.byte	64
+ 602 0242 C6       		.byte	-58
+ 603 0243 C0       		.byte	-64
+ 604 0244 C8       		.byte	-56
+ 605 0245 10       		.byte	16
+ 606 0246 1F       		.byte	31
+ 607 0247 40       		.byte	64
+ 608 0248 34       		.byte	52
+ 609 0249 01       		.byte	1
+ 610 024a 8C       		.byte	-116
+ 611 024b 02       		.byte	2
+ 612 024c 97       		.byte	-105
+ 613 024d 84       		.byte	-124
+ 614 024e 9D       		.byte	-99
+ 615 024f 20       		.byte	32
+ 616 0250 9F       		.byte	-97
+ 617 0251 41       		.byte	65
+ 618 0252 A4       		.byte	-92
+ 619 0253 20       		.byte	32
+ 620 0254 A5       		.byte	-91
+ 621 0255 81       		.byte	-127
+ 622 0256 A9       		.byte	-87
+ 623 0257 80       		.byte	-128
+ 624 0258 AF       		.byte	-81
+ 625 0259 04       		.byte	4
+ 626 025a B3       		.byte	-77
+ 627 025b 01       		.byte	1
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 12
+
+
+ 628 025c B5       		.byte	-75
+ 629 025d 20       		.byte	32
+ 630 025e C6       		.byte	-58
+ 631 025f 01       		.byte	1
+ 632 0260 CC       		.byte	-52
+ 633 0261 01       		.byte	1
+ 634 0262 E6       		.byte	-26
+ 635 0263 02       		.byte	2
+ 636 0264 EA       		.byte	-22
+ 637 0265 08       		.byte	8
+ 638 0266 EE       		.byte	-18
+ 639 0267 04       		.byte	4
+ 640 0268 01       		.byte	1
+ 641 0269 20       		.byte	32
+ 642 026a 03       		.byte	3
+ 643 026b 40       		.byte	64
+ 644 026c 07       		.byte	7
+ 645 026d 21       		.byte	33
+ 646 026e 09       		.byte	9
+ 647 026f 81       		.byte	-127
+ 648 0270 0C       		.byte	12
+ 649 0271 02       		.byte	2
+ 650 0272 0F       		.byte	15
+ 651 0273 04       		.byte	4
+ 652 0274 83       		.byte	-125
+ 653 0275 20       		.byte	32
+ 654 0276 97       		.byte	-105
+ 655 0277 04       		.byte	4
+ 656 0278 9D       		.byte	-99
+ 657 0279 20       		.byte	32
+ 658 027a 9F       		.byte	-97
+ 659 027b 41       		.byte	65
+ 660 027c A4       		.byte	-92
+ 661 027d 02       		.byte	2
+ 662 027e A5       		.byte	-91
+ 663 027f 81       		.byte	-127
+ 664 0280 B0       		.byte	-80
+ 665 0281 01       		.byte	1
+ 666 0282 B4       		.byte	-76
+ 667 0283 20       		.byte	32
+ 668 0284 C0       		.byte	-64
+ 669 0285 0F       		.byte	15
+ 670 0286 C2       		.byte	-62
+ 671 0287 0F       		.byte	15
+ 672 0288 EC       		.byte	-20
+ 673 0289 0C       		.byte	12
+ 674 028a 00       		.byte	0
+ 675 028b 3C       		.byte	60
+ 676 028c 0C       		.byte	12
+ 677 028d 3C       		.byte	60
+ 678 028e 00       		.byte	0
+ 679 028f 03       		.byte	3
+ 680 0290 10       		.byte	16
+ 681 0291 AA       		.byte	-86
+ 682 0292 11       		.byte	17
+ 683 0293 AA       		.byte	-86
+ 684 0294 00       		.byte	0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 13
+
+
+ 685 0295 00       		.byte	0
+ 686 0296 00       		.byte	0
+ 687 0297 00       		.byte	0
+ 688 0298 00       		.byte	0
+ 689 0299 00       		.byte	0
+ 690 029a 04       		.byte	4
+ 691 029b 00       		.byte	0
+ 692 029c 00       		.byte	0
+ 693 029d 00       		.byte	0
+ 694 029e 00       		.byte	0
+ 695 029f 00       		.byte	0
+ 696 02a0 00       		.byte	0
+ 697 02a1 00       		.byte	0
+ 698 02a2 30       		.byte	48
+ 699 02a3 00       		.byte	0
+ 700 02a4 00       		.byte	0
+ 701 02a5 00       		.byte	0
+ 702 02a6 00       		.byte	0
+ 703 02a7 00       		.byte	0
+ 704 02a8 00       		.byte	0
+ 705 02a9 00       		.byte	0
+ 706 02aa C0       		.byte	-64
+ 707 02ab 00       		.byte	0
+ 708 02ac 00       		.byte	0
+ 709 02ad 00       		.byte	0
+ 710 02ae 00       		.byte	0
+ 711 02af 00       		.byte	0
+ 712 02b0 00       		.byte	0
+ 713 02b1 00       		.byte	0
+ 714 02b2 02       		.byte	2
+ 715 02b3 00       		.byte	0
+ 716 02b4 FF       		.byte	-1
+ 717 02b5 FF       		.byte	-1
+ 718 02b6 00       		.byte	0
+ 719 02b7 00       		.byte	0
+ 720 02b8 00       		.byte	0
+ 721 02b9 00       		.byte	0
+ 722 02ba 00       		.byte	0
+ 723 02bb 00       		.byte	0
+ 724              		.global	cy_meta_custnvl
+ 725              		.section	.cycustnvl,"a",%progbits
+ 726              		.align	2
+ 727              		.type	cy_meta_custnvl, %object
+ 728              		.size	cy_meta_custnvl, 4
+ 729              	cy_meta_custnvl:
+ 730 0000 00       		.byte	0
+ 731 0001 00       		.byte	0
+ 732 0002 40       		.byte	64
+ 733 0003 05       		.byte	5
+ 734              		.global	cy_meta_wonvl
+ 735              		.section	.cywolatch,"a",%progbits
+ 736              		.align	2
+ 737              		.type	cy_meta_wonvl, %object
+ 738              		.size	cy_meta_wonvl, 4
+ 739              	cy_meta_wonvl:
+ 740 0000 BC       		.byte	-68
+ 741 0001 90       		.byte	-112
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 14
+
+
+ 742 0002 AC       		.byte	-84
+ 743 0003 AF       		.byte	-81
+ 744              		.global	cy_meta_flashprotect
+ 745              		.section	.cyflashprotect,"a",%progbits
+ 746              		.align	2
+ 747              		.type	cy_meta_flashprotect, %object
+ 748              		.size	cy_meta_flashprotect, 256
+ 749              	cy_meta_flashprotect:
+ 750 0000 00000000 		.space	256
+ 750      00000000 
+ 750      00000000 
+ 750      00000000 
+ 750      00000000 
+ 751              		.global	cy_metadata
+ 752              		.section	.cymeta,"a",%progbits
+ 753              		.align	2
+ 754              		.type	cy_metadata, %object
+ 755              		.size	cy_metadata, 12
+ 756              	cy_metadata:
+ 757 0000 00       		.byte	0
+ 758 0001 01       		.byte	1
+ 759 0002 2E       		.byte	46
+ 760 0003 16       		.byte	22
+ 761 0004 00       		.byte	0
+ 762 0005 69       		.byte	105
+ 763 0006 00       		.byte	0
+ 764 0007 01       		.byte	1
+ 765 0008 00       		.byte	0
+ 766 0009 00       		.byte	0
+ 767 000a 00       		.byte	0
+ 768 000b 00       		.byte	0
+ 769              		.text
+ 770              	.Letext0:
+ 771              		.file 1 ".\\Generated_Source\\PSoC5\\cymetadata.c"
+ 772              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 773              		.section	.debug_info,"",%progbits
+ 774              	.Ldebug_info0:
+ 775 0000 36010000 		.4byte	0x136
+ 776 0004 0400     		.2byte	0x4
+ 777 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 778 000a 04       		.byte	0x4
+ 779 000b 01       		.uleb128 0x1
+ 780 000c B8000000 		.4byte	.LASF18
+ 781 0010 01       		.byte	0x1
+ 782 0011 00000000 		.4byte	.LASF19
+ 783 0015 83010000 		.4byte	.LASF20
+ 784 0019 00000000 		.4byte	.Ldebug_line0
+ 785 001d 02       		.uleb128 0x2
+ 786 001e 01       		.byte	0x1
+ 787 001f 06       		.byte	0x6
+ 788 0020 D4010000 		.4byte	.LASF0
+ 789 0024 02       		.uleb128 0x2
+ 790 0025 01       		.byte	0x1
+ 791 0026 08       		.byte	0x8
+ 792 0027 38000000 		.4byte	.LASF1
+ 793 002b 02       		.uleb128 0x2
+ 794 002c 02       		.byte	0x2
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 15
+
+
+ 795 002d 05       		.byte	0x5
+ 796 002e 73010000 		.4byte	.LASF2
+ 797 0032 02       		.uleb128 0x2
+ 798 0033 02       		.byte	0x2
+ 799 0034 07       		.byte	0x7
+ 800 0035 58000000 		.4byte	.LASF3
+ 801 0039 02       		.uleb128 0x2
+ 802 003a 04       		.byte	0x4
+ 803 003b 05       		.byte	0x5
+ 804 003c CB010000 		.4byte	.LASF4
+ 805 0040 02       		.uleb128 0x2
+ 806 0041 04       		.byte	0x4
+ 807 0042 07       		.byte	0x7
+ 808 0043 46000000 		.4byte	.LASF5
+ 809 0047 02       		.uleb128 0x2
+ 810 0048 08       		.byte	0x8
+ 811 0049 05       		.byte	0x5
+ 812 004a 60010000 		.4byte	.LASF6
+ 813 004e 02       		.uleb128 0x2
+ 814 004f 08       		.byte	0x8
+ 815 0050 07       		.byte	0x7
+ 816 0051 A1000000 		.4byte	.LASF7
+ 817 0055 03       		.uleb128 0x3
+ 818 0056 04       		.byte	0x4
+ 819 0057 05       		.byte	0x5
+ 820 0058 696E7400 		.ascii	"int\000"
+ 821 005c 02       		.uleb128 0x2
+ 822 005d 04       		.byte	0x4
+ 823 005e 07       		.byte	0x7
+ 824 005f 94000000 		.4byte	.LASF8
+ 825 0063 04       		.uleb128 0x4
+ 826 0064 7D010000 		.4byte	.LASF21
+ 827 0068 02       		.byte	0x2
+ 828 0069 A1       		.byte	0xa1
+ 829 006a 24000000 		.4byte	0x24
+ 830 006e 02       		.uleb128 0x2
+ 831 006f 04       		.byte	0x4
+ 832 0070 04       		.byte	0x4
+ 833 0071 32000000 		.4byte	.LASF9
+ 834 0075 02       		.uleb128 0x2
+ 835 0076 08       		.byte	0x8
+ 836 0077 04       		.byte	0x4
+ 837 0078 6B000000 		.4byte	.LASF10
+ 838 007c 02       		.uleb128 0x2
+ 839 007d 01       		.byte	0x1
+ 840 007e 08       		.byte	0x8
+ 841 007f 6E010000 		.4byte	.LASF11
+ 842 0083 05       		.uleb128 0x5
+ 843 0084 63000000 		.4byte	0x63
+ 844 0088 94000000 		.4byte	0x94
+ 845 008c 06       		.uleb128 0x6
+ 846 008d 94000000 		.4byte	0x94
+ 847 0091 BB02     		.2byte	0x2bb
+ 848 0093 00       		.byte	0
+ 849 0094 02       		.uleb128 0x2
+ 850 0095 04       		.byte	0x4
+ 851 0096 07       		.byte	0x7
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 16
+
+
+ 852 0097 57010000 		.4byte	.LASF12
+ 853 009b 07       		.uleb128 0x7
+ 854 009c 82000000 		.4byte	.LASF13
+ 855 00a0 01       		.byte	0x1
+ 856 00a1 1C       		.byte	0x1c
+ 857 00a2 AC000000 		.4byte	0xac
+ 858 00a6 05       		.uleb128 0x5
+ 859 00a7 03       		.byte	0x3
+ 860 00a8 00000000 		.4byte	cy_meta_configecc
+ 861 00ac 08       		.uleb128 0x8
+ 862 00ad 83000000 		.4byte	0x83
+ 863 00b1 05       		.uleb128 0x5
+ 864 00b2 63000000 		.4byte	0x63
+ 865 00b6 C1000000 		.4byte	0xc1
+ 866 00ba 09       		.uleb128 0x9
+ 867 00bb 94000000 		.4byte	0x94
+ 868 00bf 03       		.byte	0x3
+ 869 00c0 00       		.byte	0
+ 870 00c1 07       		.uleb128 0x7
+ 871 00c2 72000000 		.4byte	.LASF14
+ 872 00c6 01       		.byte	0x1
+ 873 00c7 7E       		.byte	0x7e
+ 874 00c8 D2000000 		.4byte	0xd2
+ 875 00cc 05       		.uleb128 0x5
+ 876 00cd 03       		.byte	0x3
+ 877 00ce 00000000 		.4byte	cy_meta_custnvl
+ 878 00d2 08       		.uleb128 0x8
+ 879 00d3 B1000000 		.4byte	0xb1
+ 880 00d7 07       		.uleb128 0x7
+ 881 00d8 49010000 		.4byte	.LASF15
+ 882 00dc 01       		.byte	0x1
+ 883 00dd 89       		.byte	0x89
+ 884 00de E8000000 		.4byte	0xe8
+ 885 00e2 05       		.uleb128 0x5
+ 886 00e3 03       		.byte	0x3
+ 887 00e4 00000000 		.4byte	cy_meta_wonvl
+ 888 00e8 08       		.uleb128 0x8
+ 889 00e9 B1000000 		.4byte	0xb1
+ 890 00ed 05       		.uleb128 0x5
+ 891 00ee 63000000 		.4byte	0x63
+ 892 00f2 FD000000 		.4byte	0xfd
+ 893 00f6 09       		.uleb128 0x9
+ 894 00f7 94000000 		.4byte	0x94
+ 895 00fb FF       		.byte	0xff
+ 896 00fc 00       		.byte	0
+ 897 00fd 07       		.uleb128 0x7
+ 898 00fe 34010000 		.4byte	.LASF16
+ 899 0102 01       		.byte	0x1
+ 900 0103 94       		.byte	0x94
+ 901 0104 0E010000 		.4byte	0x10e
+ 902 0108 05       		.uleb128 0x5
+ 903 0109 03       		.byte	0x3
+ 904 010a 00000000 		.4byte	cy_meta_flashprotect
+ 905 010e 08       		.uleb128 0x8
+ 906 010f ED000000 		.4byte	0xed
+ 907 0113 05       		.uleb128 0x5
+ 908 0114 63000000 		.4byte	0x63
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 17
+
+
+ 909 0118 23010000 		.4byte	0x123
+ 910 011c 09       		.uleb128 0x9
+ 911 011d 94000000 		.4byte	0x94
+ 912 0121 0B       		.byte	0xb
+ 913 0122 00       		.byte	0
+ 914 0123 07       		.uleb128 0x7
+ 915 0124 26000000 		.4byte	.LASF17
+ 916 0128 01       		.byte	0x1
+ 917 0129 BE       		.byte	0xbe
+ 918 012a 34010000 		.4byte	0x134
+ 919 012e 05       		.uleb128 0x5
+ 920 012f 03       		.byte	0x3
+ 921 0130 00000000 		.4byte	cy_metadata
+ 922 0134 08       		.uleb128 0x8
+ 923 0135 13010000 		.4byte	0x113
+ 924 0139 00       		.byte	0
+ 925              		.section	.debug_abbrev,"",%progbits
+ 926              	.Ldebug_abbrev0:
+ 927 0000 01       		.uleb128 0x1
+ 928 0001 11       		.uleb128 0x11
+ 929 0002 01       		.byte	0x1
+ 930 0003 25       		.uleb128 0x25
+ 931 0004 0E       		.uleb128 0xe
+ 932 0005 13       		.uleb128 0x13
+ 933 0006 0B       		.uleb128 0xb
+ 934 0007 03       		.uleb128 0x3
+ 935 0008 0E       		.uleb128 0xe
+ 936 0009 1B       		.uleb128 0x1b
+ 937 000a 0E       		.uleb128 0xe
+ 938 000b 10       		.uleb128 0x10
+ 939 000c 17       		.uleb128 0x17
+ 940 000d 00       		.byte	0
+ 941 000e 00       		.byte	0
+ 942 000f 02       		.uleb128 0x2
+ 943 0010 24       		.uleb128 0x24
+ 944 0011 00       		.byte	0
+ 945 0012 0B       		.uleb128 0xb
+ 946 0013 0B       		.uleb128 0xb
+ 947 0014 3E       		.uleb128 0x3e
+ 948 0015 0B       		.uleb128 0xb
+ 949 0016 03       		.uleb128 0x3
+ 950 0017 0E       		.uleb128 0xe
+ 951 0018 00       		.byte	0
+ 952 0019 00       		.byte	0
+ 953 001a 03       		.uleb128 0x3
+ 954 001b 24       		.uleb128 0x24
+ 955 001c 00       		.byte	0
+ 956 001d 0B       		.uleb128 0xb
+ 957 001e 0B       		.uleb128 0xb
+ 958 001f 3E       		.uleb128 0x3e
+ 959 0020 0B       		.uleb128 0xb
+ 960 0021 03       		.uleb128 0x3
+ 961 0022 08       		.uleb128 0x8
+ 962 0023 00       		.byte	0
+ 963 0024 00       		.byte	0
+ 964 0025 04       		.uleb128 0x4
+ 965 0026 16       		.uleb128 0x16
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 18
+
+
+ 966 0027 00       		.byte	0
+ 967 0028 03       		.uleb128 0x3
+ 968 0029 0E       		.uleb128 0xe
+ 969 002a 3A       		.uleb128 0x3a
+ 970 002b 0B       		.uleb128 0xb
+ 971 002c 3B       		.uleb128 0x3b
+ 972 002d 0B       		.uleb128 0xb
+ 973 002e 49       		.uleb128 0x49
+ 974 002f 13       		.uleb128 0x13
+ 975 0030 00       		.byte	0
+ 976 0031 00       		.byte	0
+ 977 0032 05       		.uleb128 0x5
+ 978 0033 01       		.uleb128 0x1
+ 979 0034 01       		.byte	0x1
+ 980 0035 49       		.uleb128 0x49
+ 981 0036 13       		.uleb128 0x13
+ 982 0037 01       		.uleb128 0x1
+ 983 0038 13       		.uleb128 0x13
+ 984 0039 00       		.byte	0
+ 985 003a 00       		.byte	0
+ 986 003b 06       		.uleb128 0x6
+ 987 003c 21       		.uleb128 0x21
+ 988 003d 00       		.byte	0
+ 989 003e 49       		.uleb128 0x49
+ 990 003f 13       		.uleb128 0x13
+ 991 0040 2F       		.uleb128 0x2f
+ 992 0041 05       		.uleb128 0x5
+ 993 0042 00       		.byte	0
+ 994 0043 00       		.byte	0
+ 995 0044 07       		.uleb128 0x7
+ 996 0045 34       		.uleb128 0x34
+ 997 0046 00       		.byte	0
+ 998 0047 03       		.uleb128 0x3
+ 999 0048 0E       		.uleb128 0xe
+ 1000 0049 3A       		.uleb128 0x3a
+ 1001 004a 0B       		.uleb128 0xb
+ 1002 004b 3B       		.uleb128 0x3b
+ 1003 004c 0B       		.uleb128 0xb
+ 1004 004d 49       		.uleb128 0x49
+ 1005 004e 13       		.uleb128 0x13
+ 1006 004f 3F       		.uleb128 0x3f
+ 1007 0050 19       		.uleb128 0x19
+ 1008 0051 02       		.uleb128 0x2
+ 1009 0052 18       		.uleb128 0x18
+ 1010 0053 00       		.byte	0
+ 1011 0054 00       		.byte	0
+ 1012 0055 08       		.uleb128 0x8
+ 1013 0056 26       		.uleb128 0x26
+ 1014 0057 00       		.byte	0
+ 1015 0058 49       		.uleb128 0x49
+ 1016 0059 13       		.uleb128 0x13
+ 1017 005a 00       		.byte	0
+ 1018 005b 00       		.byte	0
+ 1019 005c 09       		.uleb128 0x9
+ 1020 005d 21       		.uleb128 0x21
+ 1021 005e 00       		.byte	0
+ 1022 005f 49       		.uleb128 0x49
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 19
+
+
+ 1023 0060 13       		.uleb128 0x13
+ 1024 0061 2F       		.uleb128 0x2f
+ 1025 0062 0B       		.uleb128 0xb
+ 1026 0063 00       		.byte	0
+ 1027 0064 00       		.byte	0
+ 1028 0065 00       		.byte	0
+ 1029              		.section	.debug_aranges,"",%progbits
+ 1030 0000 14000000 		.4byte	0x14
+ 1031 0004 0200     		.2byte	0x2
+ 1032 0006 00000000 		.4byte	.Ldebug_info0
+ 1033 000a 04       		.byte	0x4
+ 1034 000b 00       		.byte	0
+ 1035 000c 0000     		.2byte	0
+ 1036 000e 0000     		.2byte	0
+ 1037 0010 00000000 		.4byte	0
+ 1038 0014 00000000 		.4byte	0
+ 1039              		.section	.debug_line,"",%progbits
+ 1040              	.Ldebug_line0:
+ 1041 0000 4F000000 		.section	.debug_str,"MS",%progbits,1
+ 1041      02004900 
+ 1041      00000201 
+ 1041      FB0E0D00 
+ 1041      01010101 
+ 1042              	.LASF19:
+ 1043 0000 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\cymetadata.c\000"
+ 1043      6E657261 
+ 1043      7465645F 
+ 1043      536F7572 
+ 1043      63655C50 
+ 1044              	.LASF17:
+ 1045 0026 63795F6D 		.ascii	"cy_metadata\000"
+ 1045      65746164 
+ 1045      61746100 
+ 1046              	.LASF9:
+ 1047 0032 666C6F61 		.ascii	"float\000"
+ 1047      7400
+ 1048              	.LASF1:
+ 1049 0038 756E7369 		.ascii	"unsigned char\000"
+ 1049      676E6564 
+ 1049      20636861 
+ 1049      7200
+ 1050              	.LASF5:
+ 1051 0046 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1051      20756E73 
+ 1051      69676E65 
+ 1051      6420696E 
+ 1051      7400
+ 1052              	.LASF3:
+ 1053 0058 73686F72 		.ascii	"short unsigned int\000"
+ 1053      7420756E 
+ 1053      7369676E 
+ 1053      65642069 
+ 1053      6E7400
+ 1054              	.LASF10:
+ 1055 006b 646F7562 		.ascii	"double\000"
+ 1055      6C6500
+ 1056              	.LASF14:
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 20
+
+
+ 1057 0072 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 1057      6574615F 
+ 1057      63757374 
+ 1057      6E766C00 
+ 1058              	.LASF13:
+ 1059 0082 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 1059      6574615F 
+ 1059      636F6E66 
+ 1059      69676563 
+ 1059      6300
+ 1060              	.LASF8:
+ 1061 0094 756E7369 		.ascii	"unsigned int\000"
+ 1061      676E6564 
+ 1061      20696E74 
+ 1061      00
+ 1062              	.LASF7:
+ 1063 00a1 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1063      206C6F6E 
+ 1063      6720756E 
+ 1063      7369676E 
+ 1063      65642069 
+ 1064              	.LASF18:
+ 1065 00b8 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 1065      4320342E 
+ 1065      382E3420 
+ 1065      32303134 
+ 1065      30353236 
+ 1066 00eb 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
+ 1066      20726576 
+ 1066      6973696F 
+ 1066      6E203231 
+ 1066      31333538 
+ 1067 011e 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 1067      66756E63 
+ 1067      74696F6E 
+ 1067      2D736563 
+ 1067      74696F6E 
+ 1068              	.LASF16:
+ 1069 0134 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 1069      6574615F 
+ 1069      666C6173 
+ 1069      6870726F 
+ 1069      74656374 
+ 1070              	.LASF15:
+ 1071 0149 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 1071      6574615F 
+ 1071      776F6E76 
+ 1071      6C00
+ 1072              	.LASF12:
+ 1073 0157 73697A65 		.ascii	"sizetype\000"
+ 1073      74797065 
+ 1073      00
+ 1074              	.LASF6:
+ 1075 0160 6C6F6E67 		.ascii	"long long int\000"
+ 1075      206C6F6E 
+ 1075      6720696E 
+ 1075      7400
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccdFialS.s 			page 21
+
+
+ 1076              	.LASF11:
+ 1077 016e 63686172 		.ascii	"char\000"
+ 1077      00
+ 1078              	.LASF2:
+ 1079 0173 73686F72 		.ascii	"short int\000"
+ 1079      7420696E 
+ 1079      7400
+ 1080              	.LASF21:
+ 1081 017d 75696E74 		.ascii	"uint8\000"
+ 1081      3800
+ 1082              	.LASF20:
+ 1083 0183 433A5C55 		.ascii	"C:\\Users\\IEUser\\Downloads\\PSoC_Creator\\Filter_"
+ 1083      73657273 
+ 1083      5C494555 
+ 1083      7365725C 
+ 1083      446F776E 
+ 1084 01b1 4144435F 		.ascii	"ADC_VDAC01\\Design01.cydsn\000"
+ 1084      56444143 
+ 1084      30315C44 
+ 1084      65736967 
+ 1084      6E30312E 
+ 1085              	.LASF4:
+ 1086 01cb 6C6F6E67 		.ascii	"long int\000"
+ 1086      20696E74 
+ 1086      00
+ 1087              	.LASF0:
+ 1088 01d4 7369676E 		.ascii	"signed char\000"
+ 1088      65642063 
+ 1088      68617200 
+ 1089              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

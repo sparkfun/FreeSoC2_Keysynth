@@ -1,0 +1,844 @@
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc2BL4O6.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"Amp_PM.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.bss
+  19              		.align	2
+  20              	Amp_backup:
+  21 0000 00000000 		.space	4
+  22              		.section	.text.Amp_SaveConfig,"ax",%progbits
+  23              		.align	2
+  24              		.global	Amp_SaveConfig
+  25              		.thumb
+  26              		.thumb_func
+  27              		.type	Amp_SaveConfig, %function
+  28              	Amp_SaveConfig:
+  29              	.LFB0:
+  30              		.file 1 ".\\Generated_Source\\PSoC5\\Amp_PM.c"
+   1:.\Generated_Source\PSoC5/Amp_PM.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/Amp_PM.c **** * File Name: Amp_PM.c  
+   3:.\Generated_Source\PSoC5/Amp_PM.c **** * Version 2.0
+   4:.\Generated_Source\PSoC5/Amp_PM.c **** *
+   5:.\Generated_Source\PSoC5/Amp_PM.c **** * Description:
+   6:.\Generated_Source\PSoC5/Amp_PM.c **** *  This file provides the power manager source code to the API for PGA 
+   7:.\Generated_Source\PSoC5/Amp_PM.c **** *  Component.
+   8:.\Generated_Source\PSoC5/Amp_PM.c **** *
+   9:.\Generated_Source\PSoC5/Amp_PM.c **** * Note:
+  10:.\Generated_Source\PSoC5/Amp_PM.c **** *
+  11:.\Generated_Source\PSoC5/Amp_PM.c **** ********************************************************************************
+  12:.\Generated_Source\PSoC5/Amp_PM.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC5/Amp_PM.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:.\Generated_Source\PSoC5/Amp_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:.\Generated_Source\PSoC5/Amp_PM.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC5/Amp_PM.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC5/Amp_PM.c **** 
+  18:.\Generated_Source\PSoC5/Amp_PM.c **** #include "Amp.h"
+  19:.\Generated_Source\PSoC5/Amp_PM.c **** 
+  20:.\Generated_Source\PSoC5/Amp_PM.c **** static Amp_BACKUP_STRUCT  Amp_backup;
+  21:.\Generated_Source\PSoC5/Amp_PM.c **** 
+  22:.\Generated_Source\PSoC5/Amp_PM.c **** 
+  23:.\Generated_Source\PSoC5/Amp_PM.c **** /*******************************************************************************
+  24:.\Generated_Source\PSoC5/Amp_PM.c **** * Function Name: Amp_SaveConfig
+  25:.\Generated_Source\PSoC5/Amp_PM.c **** ********************************************************************************
+  26:.\Generated_Source\PSoC5/Amp_PM.c **** *
+  27:.\Generated_Source\PSoC5/Amp_PM.c **** * Summary:
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc2BL4O6.s 			page 2
+
+
+  28:.\Generated_Source\PSoC5/Amp_PM.c **** *  Save the current user register configuration.
+  29:.\Generated_Source\PSoC5/Amp_PM.c **** *
+  30:.\Generated_Source\PSoC5/Amp_PM.c **** * Parameters:
+  31:.\Generated_Source\PSoC5/Amp_PM.c **** *  void
+  32:.\Generated_Source\PSoC5/Amp_PM.c **** *
+  33:.\Generated_Source\PSoC5/Amp_PM.c **** * Return:
+  34:.\Generated_Source\PSoC5/Amp_PM.c **** *  void
+  35:.\Generated_Source\PSoC5/Amp_PM.c **** *
+  36:.\Generated_Source\PSoC5/Amp_PM.c **** *******************************************************************************/
+  37:.\Generated_Source\PSoC5/Amp_PM.c **** void Amp_SaveConfig(void) 
+  38:.\Generated_Source\PSoC5/Amp_PM.c **** {
+  31              		.loc 1 38 0
+  32              		.cfi_startproc
+  33              		@ args = 0, pretend = 0, frame = 0
+  34              		@ frame_needed = 1, uses_anonymous_args = 0
+  35              		@ link register save eliminated.
+  36 0000 80B4     		push	{r7}
+  37              		.cfi_def_cfa_offset 4
+  38              		.cfi_offset 7, -4
+  39 0002 00AF     		add	r7, sp, #0
+  40              		.cfi_def_cfa_register 7
+  39:.\Generated_Source\PSoC5/Amp_PM.c ****     /* Nothing to save as registers are System reset on retention flops */
+  40:.\Generated_Source\PSoC5/Amp_PM.c **** }
+  41              		.loc 1 40 0
+  42 0004 BD46     		mov	sp, r7
+  43              		@ sp needed
+  44 0006 5DF8047B 		ldr	r7, [sp], #4
+  45 000a 7047     		bx	lr
+  46              		.cfi_endproc
+  47              	.LFE0:
+  48              		.size	Amp_SaveConfig, .-Amp_SaveConfig
+  49              		.section	.text.Amp_RestoreConfig,"ax",%progbits
+  50              		.align	2
+  51              		.global	Amp_RestoreConfig
+  52              		.thumb
+  53              		.thumb_func
+  54              		.type	Amp_RestoreConfig, %function
+  55              	Amp_RestoreConfig:
+  56              	.LFB1:
+  41:.\Generated_Source\PSoC5/Amp_PM.c **** 
+  42:.\Generated_Source\PSoC5/Amp_PM.c **** 
+  43:.\Generated_Source\PSoC5/Amp_PM.c **** /*******************************************************************************  
+  44:.\Generated_Source\PSoC5/Amp_PM.c **** * Function Name: Amp_RestoreConfig
+  45:.\Generated_Source\PSoC5/Amp_PM.c **** ********************************************************************************
+  46:.\Generated_Source\PSoC5/Amp_PM.c **** *
+  47:.\Generated_Source\PSoC5/Amp_PM.c **** * Summary:
+  48:.\Generated_Source\PSoC5/Amp_PM.c **** *  Restore the register configurations.
+  49:.\Generated_Source\PSoC5/Amp_PM.c **** *
+  50:.\Generated_Source\PSoC5/Amp_PM.c **** * Parameters:
+  51:.\Generated_Source\PSoC5/Amp_PM.c **** *  void
+  52:.\Generated_Source\PSoC5/Amp_PM.c **** *
+  53:.\Generated_Source\PSoC5/Amp_PM.c **** * Return:
+  54:.\Generated_Source\PSoC5/Amp_PM.c **** *  void
+  55:.\Generated_Source\PSoC5/Amp_PM.c **** *
+  56:.\Generated_Source\PSoC5/Amp_PM.c **** *******************************************************************************/
+  57:.\Generated_Source\PSoC5/Amp_PM.c **** void Amp_RestoreConfig(void) 
+  58:.\Generated_Source\PSoC5/Amp_PM.c **** {
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc2BL4O6.s 			page 3
+
+
+  57              		.loc 1 58 0
+  58              		.cfi_startproc
+  59              		@ args = 0, pretend = 0, frame = 0
+  60              		@ frame_needed = 1, uses_anonymous_args = 0
+  61              		@ link register save eliminated.
+  62 0000 80B4     		push	{r7}
+  63              		.cfi_def_cfa_offset 4
+  64              		.cfi_offset 7, -4
+  65 0002 00AF     		add	r7, sp, #0
+  66              		.cfi_def_cfa_register 7
+  59:.\Generated_Source\PSoC5/Amp_PM.c ****     /* Nothing to restore */
+  60:.\Generated_Source\PSoC5/Amp_PM.c **** }
+  67              		.loc 1 60 0
+  68 0004 BD46     		mov	sp, r7
+  69              		@ sp needed
+  70 0006 5DF8047B 		ldr	r7, [sp], #4
+  71 000a 7047     		bx	lr
+  72              		.cfi_endproc
+  73              	.LFE1:
+  74              		.size	Amp_RestoreConfig, .-Amp_RestoreConfig
+  75              		.section	.text.Amp_Sleep,"ax",%progbits
+  76              		.align	2
+  77              		.global	Amp_Sleep
+  78              		.thumb
+  79              		.thumb_func
+  80              		.type	Amp_Sleep, %function
+  81              	Amp_Sleep:
+  82              	.LFB2:
+  61:.\Generated_Source\PSoC5/Amp_PM.c **** 
+  62:.\Generated_Source\PSoC5/Amp_PM.c **** 
+  63:.\Generated_Source\PSoC5/Amp_PM.c **** /*******************************************************************************   
+  64:.\Generated_Source\PSoC5/Amp_PM.c **** * Function Name: Amp_Sleep
+  65:.\Generated_Source\PSoC5/Amp_PM.c **** ********************************************************************************
+  66:.\Generated_Source\PSoC5/Amp_PM.c **** *
+  67:.\Generated_Source\PSoC5/Amp_PM.c **** * Summary:
+  68:.\Generated_Source\PSoC5/Amp_PM.c **** *  Disables block's operation and saves its configuration. Should be called 
+  69:.\Generated_Source\PSoC5/Amp_PM.c **** *  just prior to entering sleep.
+  70:.\Generated_Source\PSoC5/Amp_PM.c **** *
+  71:.\Generated_Source\PSoC5/Amp_PM.c **** * Parameters:
+  72:.\Generated_Source\PSoC5/Amp_PM.c **** *  None
+  73:.\Generated_Source\PSoC5/Amp_PM.c **** *
+  74:.\Generated_Source\PSoC5/Amp_PM.c **** * Return:
+  75:.\Generated_Source\PSoC5/Amp_PM.c **** *  None
+  76:.\Generated_Source\PSoC5/Amp_PM.c **** *
+  77:.\Generated_Source\PSoC5/Amp_PM.c **** * Global variables:
+  78:.\Generated_Source\PSoC5/Amp_PM.c **** *  Amp_backup: The structure field 'enableState' is modified 
+  79:.\Generated_Source\PSoC5/Amp_PM.c **** *  depending on the enable state of the block before entering to sleep mode.
+  80:.\Generated_Source\PSoC5/Amp_PM.c **** *
+  81:.\Generated_Source\PSoC5/Amp_PM.c **** *******************************************************************************/
+  82:.\Generated_Source\PSoC5/Amp_PM.c **** void Amp_Sleep(void) 
+  83:.\Generated_Source\PSoC5/Amp_PM.c **** {
+  83              		.loc 1 83 0
+  84              		.cfi_startproc
+  85              		@ args = 0, pretend = 0, frame = 0
+  86              		@ frame_needed = 1, uses_anonymous_args = 0
+  87 0000 80B5     		push	{r7, lr}
+  88              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc2BL4O6.s 			page 4
+
+
+  89              		.cfi_offset 7, -8
+  90              		.cfi_offset 14, -4
+  91 0002 00AF     		add	r7, sp, #0
+  92              		.cfi_def_cfa_register 7
+  84:.\Generated_Source\PSoC5/Amp_PM.c ****     /* Save PGA enable state */
+  85:.\Generated_Source\PSoC5/Amp_PM.c ****     if((Amp_PM_ACT_CFG_REG & Amp_ACT_PWR_EN) != 0u)
+  93              		.loc 1 85 0
+  94 0004 094B     		ldr	r3, .L6
+  95 0006 1B78     		ldrb	r3, [r3]
+  96 0008 DBB2     		uxtb	r3, r3
+  97 000a 03F00103 		and	r3, r3, #1
+  98 000e 002B     		cmp	r3, #0
+  99 0010 05D0     		beq	.L4
+  86:.\Generated_Source\PSoC5/Amp_PM.c ****     {
+  87:.\Generated_Source\PSoC5/Amp_PM.c ****         /* Component is enabled */
+  88:.\Generated_Source\PSoC5/Amp_PM.c ****         Amp_backup.enableState = 1u;
+ 100              		.loc 1 88 0
+ 101 0012 074B     		ldr	r3, .L6+4
+ 102 0014 0122     		movs	r2, #1
+ 103 0016 1A70     		strb	r2, [r3]
+  89:.\Generated_Source\PSoC5/Amp_PM.c ****         /* Stop the configuration */
+  90:.\Generated_Source\PSoC5/Amp_PM.c ****         Amp_Stop();
+ 104              		.loc 1 90 0
+ 105 0018 FFF7FEFF 		bl	Amp_Stop
+ 106 001c 02E0     		b	.L5
+ 107              	.L4:
+  91:.\Generated_Source\PSoC5/Amp_PM.c ****     }
+  92:.\Generated_Source\PSoC5/Amp_PM.c ****     else
+  93:.\Generated_Source\PSoC5/Amp_PM.c ****     {
+  94:.\Generated_Source\PSoC5/Amp_PM.c ****         /* Component is disabled */
+  95:.\Generated_Source\PSoC5/Amp_PM.c ****         Amp_backup.enableState = 0u;
+ 108              		.loc 1 95 0
+ 109 001e 044B     		ldr	r3, .L6+4
+ 110 0020 0022     		movs	r2, #0
+ 111 0022 1A70     		strb	r2, [r3]
+ 112              	.L5:
+  96:.\Generated_Source\PSoC5/Amp_PM.c ****     }
+  97:.\Generated_Source\PSoC5/Amp_PM.c ****     /* Save the configuration */
+  98:.\Generated_Source\PSoC5/Amp_PM.c ****     Amp_SaveConfig();
+ 113              		.loc 1 98 0
+ 114 0024 FFF7FEFF 		bl	Amp_SaveConfig
+  99:.\Generated_Source\PSoC5/Amp_PM.c **** }
+ 115              		.loc 1 99 0
+ 116 0028 80BD     		pop	{r7, pc}
+ 117              	.L7:
+ 118 002a 00BF     		.align	2
+ 119              	.L6:
+ 120 002c A9430040 		.word	1073759145
+ 121 0030 00000000 		.word	Amp_backup
+ 122              		.cfi_endproc
+ 123              	.LFE2:
+ 124              		.size	Amp_Sleep, .-Amp_Sleep
+ 125              		.section	.text.Amp_Wakeup,"ax",%progbits
+ 126              		.align	2
+ 127              		.global	Amp_Wakeup
+ 128              		.thumb
+ 129              		.thumb_func
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc2BL4O6.s 			page 5
+
+
+ 130              		.type	Amp_Wakeup, %function
+ 131              	Amp_Wakeup:
+ 132              	.LFB3:
+ 100:.\Generated_Source\PSoC5/Amp_PM.c **** 
+ 101:.\Generated_Source\PSoC5/Amp_PM.c **** 
+ 102:.\Generated_Source\PSoC5/Amp_PM.c **** /*******************************************************************************
+ 103:.\Generated_Source\PSoC5/Amp_PM.c **** * Function Name: Amp_Wakeup
+ 104:.\Generated_Source\PSoC5/Amp_PM.c **** ********************************************************************************
+ 105:.\Generated_Source\PSoC5/Amp_PM.c **** *
+ 106:.\Generated_Source\PSoC5/Amp_PM.c **** * Summary:
+ 107:.\Generated_Source\PSoC5/Amp_PM.c **** *  Enables block's operation and restores its configuration. Should be called
+ 108:.\Generated_Source\PSoC5/Amp_PM.c **** *  just after awaking from sleep.
+ 109:.\Generated_Source\PSoC5/Amp_PM.c **** *
+ 110:.\Generated_Source\PSoC5/Amp_PM.c **** * Parameters:
+ 111:.\Generated_Source\PSoC5/Amp_PM.c **** *  None
+ 112:.\Generated_Source\PSoC5/Amp_PM.c **** *
+ 113:.\Generated_Source\PSoC5/Amp_PM.c **** * Return:
+ 114:.\Generated_Source\PSoC5/Amp_PM.c **** *  void
+ 115:.\Generated_Source\PSoC5/Amp_PM.c **** *
+ 116:.\Generated_Source\PSoC5/Amp_PM.c **** * Global variables:
+ 117:.\Generated_Source\PSoC5/Amp_PM.c **** *  Amp_backup: The structure field 'enableState' is used to 
+ 118:.\Generated_Source\PSoC5/Amp_PM.c **** *  restore the enable state of block after wakeup from sleep mode.
+ 119:.\Generated_Source\PSoC5/Amp_PM.c **** * 
+ 120:.\Generated_Source\PSoC5/Amp_PM.c **** *******************************************************************************/
+ 121:.\Generated_Source\PSoC5/Amp_PM.c **** void Amp_Wakeup(void) 
+ 122:.\Generated_Source\PSoC5/Amp_PM.c **** {
+ 133              		.loc 1 122 0
+ 134              		.cfi_startproc
+ 135              		@ args = 0, pretend = 0, frame = 0
+ 136              		@ frame_needed = 1, uses_anonymous_args = 0
+ 137 0000 80B5     		push	{r7, lr}
+ 138              		.cfi_def_cfa_offset 8
+ 139              		.cfi_offset 7, -8
+ 140              		.cfi_offset 14, -4
+ 141 0002 00AF     		add	r7, sp, #0
+ 142              		.cfi_def_cfa_register 7
+ 123:.\Generated_Source\PSoC5/Amp_PM.c ****     /* Restore the configurations */
+ 124:.\Generated_Source\PSoC5/Amp_PM.c ****     Amp_RestoreConfig();
+ 143              		.loc 1 124 0
+ 144 0004 FFF7FEFF 		bl	Amp_RestoreConfig
+ 125:.\Generated_Source\PSoC5/Amp_PM.c ****      /* Enables the component operation */
+ 126:.\Generated_Source\PSoC5/Amp_PM.c ****     if(Amp_backup.enableState == 1u)
+ 145              		.loc 1 126 0
+ 146 0008 034B     		ldr	r3, .L10
+ 147 000a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 148 000c 012B     		cmp	r3, #1
+ 149 000e 01D1     		bne	.L8
+ 127:.\Generated_Source\PSoC5/Amp_PM.c ****     {
+ 128:.\Generated_Source\PSoC5/Amp_PM.c ****         Amp_Enable();
+ 150              		.loc 1 128 0
+ 151 0010 FFF7FEFF 		bl	Amp_Enable
+ 152              	.L8:
+ 129:.\Generated_Source\PSoC5/Amp_PM.c ****     } /* Do nothing if component was disable before */
+ 130:.\Generated_Source\PSoC5/Amp_PM.c **** }
+ 153              		.loc 1 130 0
+ 154 0014 80BD     		pop	{r7, pc}
+ 155              	.L11:
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc2BL4O6.s 			page 6
+
+
+ 156 0016 00BF     		.align	2
+ 157              	.L10:
+ 158 0018 00000000 		.word	Amp_backup
+ 159              		.cfi_endproc
+ 160              	.LFE3:
+ 161              		.size	Amp_Wakeup, .-Amp_Wakeup
+ 162              		.text
+ 163              	.Letext0:
+ 164              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 165              		.file 3 ".\\Generated_Source\\PSoC5\\Amp.h"
+ 166              		.section	.debug_info,"",%progbits
+ 167              	.Ldebug_info0:
+ 168 0000 39010000 		.4byte	0x139
+ 169 0004 0400     		.2byte	0x4
+ 170 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 171 000a 04       		.byte	0x4
+ 172 000b 01       		.uleb128 0x1
+ 173 000c 7A010000 		.4byte	.LASF24
+ 174 0010 01       		.byte	0x1
+ 175 0011 27000000 		.4byte	.LASF25
+ 176 0015 2C010000 		.4byte	.LASF26
+ 177 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 178 001d 00000000 		.4byte	0
+ 179 0021 00000000 		.4byte	.Ldebug_line0
+ 180 0025 02       		.uleb128 0x2
+ 181 0026 01       		.byte	0x1
+ 182 0027 06       		.byte	0x6
+ 183 0028 17010000 		.4byte	.LASF0
+ 184 002c 02       		.uleb128 0x2
+ 185 002d 01       		.byte	0x1
+ 186 002e 08       		.byte	0x8
+ 187 002f 97000000 		.4byte	.LASF1
+ 188 0033 02       		.uleb128 0x2
+ 189 0034 02       		.byte	0x2
+ 190 0035 05       		.byte	0x5
+ 191 0036 C6000000 		.4byte	.LASF2
+ 192 003a 02       		.uleb128 0x2
+ 193 003b 02       		.byte	0x2
+ 194 003c 07       		.byte	0x7
+ 195 003d 04010000 		.4byte	.LASF3
+ 196 0041 02       		.uleb128 0x2
+ 197 0042 04       		.byte	0x4
+ 198 0043 05       		.byte	0x5
+ 199 0044 E9000000 		.4byte	.LASF4
+ 200 0048 02       		.uleb128 0x2
+ 201 0049 04       		.byte	0x4
+ 202 004a 07       		.byte	0x7
+ 203 004b D0000000 		.4byte	.LASF5
+ 204 004f 02       		.uleb128 0x2
+ 205 0050 08       		.byte	0x8
+ 206 0051 05       		.byte	0x5
+ 207 0052 00000000 		.4byte	.LASF6
+ 208 0056 02       		.uleb128 0x2
+ 209 0057 08       		.byte	0x8
+ 210 0058 07       		.byte	0x7
+ 211 0059 77000000 		.4byte	.LASF7
+ 212 005d 03       		.uleb128 0x3
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc2BL4O6.s 			page 7
+
+
+ 213 005e 04       		.byte	0x4
+ 214 005f 05       		.byte	0x5
+ 215 0060 696E7400 		.ascii	"int\000"
+ 216 0064 02       		.uleb128 0x2
+ 217 0065 04       		.byte	0x4
+ 218 0066 07       		.byte	0x7
+ 219 0067 1A000000 		.4byte	.LASF8
+ 220 006b 04       		.uleb128 0x4
+ 221 006c 57000000 		.4byte	.LASF12
+ 222 0070 02       		.byte	0x2
+ 223 0071 A1       		.byte	0xa1
+ 224 0072 2C000000 		.4byte	0x2c
+ 225 0076 02       		.uleb128 0x2
+ 226 0077 04       		.byte	0x4
+ 227 0078 04       		.byte	0x4
+ 228 0079 74010000 		.4byte	.LASF9
+ 229 007d 02       		.uleb128 0x2
+ 230 007e 08       		.byte	0x8
+ 231 007f 04       		.byte	0x4
+ 232 0080 E2000000 		.4byte	.LASF10
+ 233 0084 02       		.uleb128 0x2
+ 234 0085 01       		.byte	0x1
+ 235 0086 08       		.byte	0x8
+ 236 0087 A5000000 		.4byte	.LASF11
+ 237 008b 05       		.uleb128 0x5
+ 238 008c 52000000 		.4byte	.LASF13
+ 239 0090 02       		.byte	0x2
+ 240 0091 4B01     		.2byte	0x14b
+ 241 0093 97000000 		.4byte	0x97
+ 242 0097 06       		.uleb128 0x6
+ 243 0098 6B000000 		.4byte	0x6b
+ 244 009c 02       		.uleb128 0x2
+ 245 009d 04       		.byte	0x4
+ 246 009e 07       		.byte	0x7
+ 247 009f F6010000 		.4byte	.LASF14
+ 248 00a3 07       		.uleb128 0x7
+ 249 00a4 04       		.byte	0x4
+ 250 00a5 03       		.byte	0x3
+ 251 00a6 2D       		.byte	0x2d
+ 252 00a7 DC000000 		.4byte	0xdc
+ 253 00ab 08       		.uleb128 0x8
+ 254 00ac 0E000000 		.4byte	.LASF15
+ 255 00b0 03       		.byte	0x3
+ 256 00b1 2F       		.byte	0x2f
+ 257 00b2 6B000000 		.4byte	0x6b
+ 258 00b6 00       		.byte	0
+ 259 00b7 08       		.uleb128 0x8
+ 260 00b8 49000000 		.4byte	.LASF16
+ 261 00bc 03       		.byte	0x3
+ 262 00bd 30       		.byte	0x30
+ 263 00be 6B000000 		.4byte	0x6b
+ 264 00c2 01       		.byte	0x1
+ 265 00c3 08       		.uleb128 0x8
+ 266 00c4 23010000 		.4byte	.LASF17
+ 267 00c8 03       		.byte	0x3
+ 268 00c9 31       		.byte	0x31
+ 269 00ca 6B000000 		.4byte	0x6b
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc2BL4O6.s 			page 8
+
+
+ 270 00ce 02       		.byte	0x2
+ 271 00cf 08       		.uleb128 0x8
+ 272 00d0 8E000000 		.4byte	.LASF18
+ 273 00d4 03       		.byte	0x3
+ 274 00d5 32       		.byte	0x32
+ 275 00d6 6B000000 		.4byte	0x6b
+ 276 00da 03       		.byte	0x3
+ 277 00db 00       		.byte	0
+ 278 00dc 04       		.uleb128 0x4
+ 279 00dd F2000000 		.4byte	.LASF19
+ 280 00e1 03       		.byte	0x3
+ 281 00e2 33       		.byte	0x33
+ 282 00e3 A3000000 		.4byte	0xa3
+ 283 00e7 09       		.uleb128 0x9
+ 284 00e8 5D000000 		.4byte	.LASF20
+ 285 00ec 01       		.byte	0x1
+ 286 00ed 25       		.byte	0x25
+ 287 00ee 00000000 		.4byte	.LFB0
+ 288 00f2 0C000000 		.4byte	.LFE0-.LFB0
+ 289 00f6 01       		.uleb128 0x1
+ 290 00f7 9C       		.byte	0x9c
+ 291 00f8 09       		.uleb128 0x9
+ 292 00f9 B4000000 		.4byte	.LASF21
+ 293 00fd 01       		.byte	0x1
+ 294 00fe 39       		.byte	0x39
+ 295 00ff 00000000 		.4byte	.LFB1
+ 296 0103 0C000000 		.4byte	.LFE1-.LFB1
+ 297 0107 01       		.uleb128 0x1
+ 298 0108 9C       		.byte	0x9c
+ 299 0109 0A       		.uleb128 0xa
+ 300 010a AA000000 		.4byte	.LASF22
+ 301 010e 01       		.byte	0x1
+ 302 010f 52       		.byte	0x52
+ 303 0110 00000000 		.4byte	.LFB2
+ 304 0114 34000000 		.4byte	.LFE2-.LFB2
+ 305 0118 01       		.uleb128 0x1
+ 306 0119 9C       		.byte	0x9c
+ 307 011a 0A       		.uleb128 0xa
+ 308 011b 6C000000 		.4byte	.LASF23
+ 309 011f 01       		.byte	0x1
+ 310 0120 79       		.byte	0x79
+ 311 0121 00000000 		.4byte	.LFB3
+ 312 0125 1C000000 		.4byte	.LFE3-.LFB3
+ 313 0129 01       		.uleb128 0x1
+ 314 012a 9C       		.byte	0x9c
+ 315 012b 0B       		.uleb128 0xb
+ 316 012c FF010000 		.4byte	.LASF27
+ 317 0130 01       		.byte	0x1
+ 318 0131 14       		.byte	0x14
+ 319 0132 DC000000 		.4byte	0xdc
+ 320 0136 05       		.uleb128 0x5
+ 321 0137 03       		.byte	0x3
+ 322 0138 00000000 		.4byte	Amp_backup
+ 323 013c 00       		.byte	0
+ 324              		.section	.debug_abbrev,"",%progbits
+ 325              	.Ldebug_abbrev0:
+ 326 0000 01       		.uleb128 0x1
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc2BL4O6.s 			page 9
+
+
+ 327 0001 11       		.uleb128 0x11
+ 328 0002 01       		.byte	0x1
+ 329 0003 25       		.uleb128 0x25
+ 330 0004 0E       		.uleb128 0xe
+ 331 0005 13       		.uleb128 0x13
+ 332 0006 0B       		.uleb128 0xb
+ 333 0007 03       		.uleb128 0x3
+ 334 0008 0E       		.uleb128 0xe
+ 335 0009 1B       		.uleb128 0x1b
+ 336 000a 0E       		.uleb128 0xe
+ 337 000b 55       		.uleb128 0x55
+ 338 000c 17       		.uleb128 0x17
+ 339 000d 11       		.uleb128 0x11
+ 340 000e 01       		.uleb128 0x1
+ 341 000f 10       		.uleb128 0x10
+ 342 0010 17       		.uleb128 0x17
+ 343 0011 00       		.byte	0
+ 344 0012 00       		.byte	0
+ 345 0013 02       		.uleb128 0x2
+ 346 0014 24       		.uleb128 0x24
+ 347 0015 00       		.byte	0
+ 348 0016 0B       		.uleb128 0xb
+ 349 0017 0B       		.uleb128 0xb
+ 350 0018 3E       		.uleb128 0x3e
+ 351 0019 0B       		.uleb128 0xb
+ 352 001a 03       		.uleb128 0x3
+ 353 001b 0E       		.uleb128 0xe
+ 354 001c 00       		.byte	0
+ 355 001d 00       		.byte	0
+ 356 001e 03       		.uleb128 0x3
+ 357 001f 24       		.uleb128 0x24
+ 358 0020 00       		.byte	0
+ 359 0021 0B       		.uleb128 0xb
+ 360 0022 0B       		.uleb128 0xb
+ 361 0023 3E       		.uleb128 0x3e
+ 362 0024 0B       		.uleb128 0xb
+ 363 0025 03       		.uleb128 0x3
+ 364 0026 08       		.uleb128 0x8
+ 365 0027 00       		.byte	0
+ 366 0028 00       		.byte	0
+ 367 0029 04       		.uleb128 0x4
+ 368 002a 16       		.uleb128 0x16
+ 369 002b 00       		.byte	0
+ 370 002c 03       		.uleb128 0x3
+ 371 002d 0E       		.uleb128 0xe
+ 372 002e 3A       		.uleb128 0x3a
+ 373 002f 0B       		.uleb128 0xb
+ 374 0030 3B       		.uleb128 0x3b
+ 375 0031 0B       		.uleb128 0xb
+ 376 0032 49       		.uleb128 0x49
+ 377 0033 13       		.uleb128 0x13
+ 378 0034 00       		.byte	0
+ 379 0035 00       		.byte	0
+ 380 0036 05       		.uleb128 0x5
+ 381 0037 16       		.uleb128 0x16
+ 382 0038 00       		.byte	0
+ 383 0039 03       		.uleb128 0x3
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc2BL4O6.s 			page 10
+
+
+ 384 003a 0E       		.uleb128 0xe
+ 385 003b 3A       		.uleb128 0x3a
+ 386 003c 0B       		.uleb128 0xb
+ 387 003d 3B       		.uleb128 0x3b
+ 388 003e 05       		.uleb128 0x5
+ 389 003f 49       		.uleb128 0x49
+ 390 0040 13       		.uleb128 0x13
+ 391 0041 00       		.byte	0
+ 392 0042 00       		.byte	0
+ 393 0043 06       		.uleb128 0x6
+ 394 0044 35       		.uleb128 0x35
+ 395 0045 00       		.byte	0
+ 396 0046 49       		.uleb128 0x49
+ 397 0047 13       		.uleb128 0x13
+ 398 0048 00       		.byte	0
+ 399 0049 00       		.byte	0
+ 400 004a 07       		.uleb128 0x7
+ 401 004b 13       		.uleb128 0x13
+ 402 004c 01       		.byte	0x1
+ 403 004d 0B       		.uleb128 0xb
+ 404 004e 0B       		.uleb128 0xb
+ 405 004f 3A       		.uleb128 0x3a
+ 406 0050 0B       		.uleb128 0xb
+ 407 0051 3B       		.uleb128 0x3b
+ 408 0052 0B       		.uleb128 0xb
+ 409 0053 01       		.uleb128 0x1
+ 410 0054 13       		.uleb128 0x13
+ 411 0055 00       		.byte	0
+ 412 0056 00       		.byte	0
+ 413 0057 08       		.uleb128 0x8
+ 414 0058 0D       		.uleb128 0xd
+ 415 0059 00       		.byte	0
+ 416 005a 03       		.uleb128 0x3
+ 417 005b 0E       		.uleb128 0xe
+ 418 005c 3A       		.uleb128 0x3a
+ 419 005d 0B       		.uleb128 0xb
+ 420 005e 3B       		.uleb128 0x3b
+ 421 005f 0B       		.uleb128 0xb
+ 422 0060 49       		.uleb128 0x49
+ 423 0061 13       		.uleb128 0x13
+ 424 0062 38       		.uleb128 0x38
+ 425 0063 0B       		.uleb128 0xb
+ 426 0064 00       		.byte	0
+ 427 0065 00       		.byte	0
+ 428 0066 09       		.uleb128 0x9
+ 429 0067 2E       		.uleb128 0x2e
+ 430 0068 00       		.byte	0
+ 431 0069 3F       		.uleb128 0x3f
+ 432 006a 19       		.uleb128 0x19
+ 433 006b 03       		.uleb128 0x3
+ 434 006c 0E       		.uleb128 0xe
+ 435 006d 3A       		.uleb128 0x3a
+ 436 006e 0B       		.uleb128 0xb
+ 437 006f 3B       		.uleb128 0x3b
+ 438 0070 0B       		.uleb128 0xb
+ 439 0071 27       		.uleb128 0x27
+ 440 0072 19       		.uleb128 0x19
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc2BL4O6.s 			page 11
+
+
+ 441 0073 11       		.uleb128 0x11
+ 442 0074 01       		.uleb128 0x1
+ 443 0075 12       		.uleb128 0x12
+ 444 0076 06       		.uleb128 0x6
+ 445 0077 40       		.uleb128 0x40
+ 446 0078 18       		.uleb128 0x18
+ 447 0079 9742     		.uleb128 0x2117
+ 448 007b 19       		.uleb128 0x19
+ 449 007c 00       		.byte	0
+ 450 007d 00       		.byte	0
+ 451 007e 0A       		.uleb128 0xa
+ 452 007f 2E       		.uleb128 0x2e
+ 453 0080 00       		.byte	0
+ 454 0081 3F       		.uleb128 0x3f
+ 455 0082 19       		.uleb128 0x19
+ 456 0083 03       		.uleb128 0x3
+ 457 0084 0E       		.uleb128 0xe
+ 458 0085 3A       		.uleb128 0x3a
+ 459 0086 0B       		.uleb128 0xb
+ 460 0087 3B       		.uleb128 0x3b
+ 461 0088 0B       		.uleb128 0xb
+ 462 0089 27       		.uleb128 0x27
+ 463 008a 19       		.uleb128 0x19
+ 464 008b 11       		.uleb128 0x11
+ 465 008c 01       		.uleb128 0x1
+ 466 008d 12       		.uleb128 0x12
+ 467 008e 06       		.uleb128 0x6
+ 468 008f 40       		.uleb128 0x40
+ 469 0090 18       		.uleb128 0x18
+ 470 0091 9642     		.uleb128 0x2116
+ 471 0093 19       		.uleb128 0x19
+ 472 0094 00       		.byte	0
+ 473 0095 00       		.byte	0
+ 474 0096 0B       		.uleb128 0xb
+ 475 0097 34       		.uleb128 0x34
+ 476 0098 00       		.byte	0
+ 477 0099 03       		.uleb128 0x3
+ 478 009a 0E       		.uleb128 0xe
+ 479 009b 3A       		.uleb128 0x3a
+ 480 009c 0B       		.uleb128 0xb
+ 481 009d 3B       		.uleb128 0x3b
+ 482 009e 0B       		.uleb128 0xb
+ 483 009f 49       		.uleb128 0x49
+ 484 00a0 13       		.uleb128 0x13
+ 485 00a1 02       		.uleb128 0x2
+ 486 00a2 18       		.uleb128 0x18
+ 487 00a3 00       		.byte	0
+ 488 00a4 00       		.byte	0
+ 489 00a5 00       		.byte	0
+ 490              		.section	.debug_aranges,"",%progbits
+ 491 0000 34000000 		.4byte	0x34
+ 492 0004 0200     		.2byte	0x2
+ 493 0006 00000000 		.4byte	.Ldebug_info0
+ 494 000a 04       		.byte	0x4
+ 495 000b 00       		.byte	0
+ 496 000c 0000     		.2byte	0
+ 497 000e 0000     		.2byte	0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc2BL4O6.s 			page 12
+
+
+ 498 0010 00000000 		.4byte	.LFB0
+ 499 0014 0C000000 		.4byte	.LFE0-.LFB0
+ 500 0018 00000000 		.4byte	.LFB1
+ 501 001c 0C000000 		.4byte	.LFE1-.LFB1
+ 502 0020 00000000 		.4byte	.LFB2
+ 503 0024 34000000 		.4byte	.LFE2-.LFB2
+ 504 0028 00000000 		.4byte	.LFB3
+ 505 002c 1C000000 		.4byte	.LFE3-.LFB3
+ 506 0030 00000000 		.4byte	0
+ 507 0034 00000000 		.4byte	0
+ 508              		.section	.debug_ranges,"",%progbits
+ 509              	.Ldebug_ranges0:
+ 510 0000 00000000 		.4byte	.LFB0
+ 511 0004 0C000000 		.4byte	.LFE0
+ 512 0008 00000000 		.4byte	.LFB1
+ 513 000c 0C000000 		.4byte	.LFE1
+ 514 0010 00000000 		.4byte	.LFB2
+ 515 0014 34000000 		.4byte	.LFE2
+ 516 0018 00000000 		.4byte	.LFB3
+ 517 001c 1C000000 		.4byte	.LFE3
+ 518 0020 00000000 		.4byte	0
+ 519 0024 00000000 		.4byte	0
+ 520              		.section	.debug_line,"",%progbits
+ 521              	.Ldebug_line0:
+ 522 0000 9E000000 		.section	.debug_str,"MS",%progbits,1
+ 522      02004E00 
+ 522      00000201 
+ 522      FB0E0D00 
+ 522      01010101 
+ 523              	.LASF6:
+ 524 0000 6C6F6E67 		.ascii	"long long int\000"
+ 524      206C6F6E 
+ 524      6720696E 
+ 524      7400
+ 525              	.LASF15:
+ 526 000e 656E6162 		.ascii	"enableState\000"
+ 526      6C655374 
+ 526      61746500 
+ 527              	.LASF8:
+ 528 001a 756E7369 		.ascii	"unsigned int\000"
+ 528      676E6564 
+ 528      20696E74 
+ 528      00
+ 529              	.LASF25:
+ 530 0027 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Amp_PM.c\000"
+ 530      6E657261 
+ 530      7465645F 
+ 530      536F7572 
+ 530      63655C50 
+ 531              	.LASF16:
+ 532 0049 73634352 		.ascii	"scCR1Reg\000"
+ 532      31526567 
+ 532      00
+ 533              	.LASF13:
+ 534 0052 72656738 		.ascii	"reg8\000"
+ 534      00
+ 535              	.LASF12:
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc2BL4O6.s 			page 13
+
+
+ 536 0057 75696E74 		.ascii	"uint8\000"
+ 536      3800
+ 537              	.LASF20:
+ 538 005d 416D705F 		.ascii	"Amp_SaveConfig\000"
+ 538      53617665 
+ 538      436F6E66 
+ 538      696700
+ 539              	.LASF23:
+ 540 006c 416D705F 		.ascii	"Amp_Wakeup\000"
+ 540      57616B65 
+ 540      757000
+ 541              	.LASF7:
+ 542 0077 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 542      206C6F6E 
+ 542      6720756E 
+ 542      7369676E 
+ 542      65642069 
+ 543              	.LASF18:
+ 544 008e 73634352 		.ascii	"scCR3Reg\000"
+ 544      33526567 
+ 544      00
+ 545              	.LASF1:
+ 546 0097 756E7369 		.ascii	"unsigned char\000"
+ 546      676E6564 
+ 546      20636861 
+ 546      7200
+ 547              	.LASF11:
+ 548 00a5 63686172 		.ascii	"char\000"
+ 548      00
+ 549              	.LASF22:
+ 550 00aa 416D705F 		.ascii	"Amp_Sleep\000"
+ 550      536C6565 
+ 550      7000
+ 551              	.LASF21:
+ 552 00b4 416D705F 		.ascii	"Amp_RestoreConfig\000"
+ 552      52657374 
+ 552      6F726543 
+ 552      6F6E6669 
+ 552      6700
+ 553              	.LASF2:
+ 554 00c6 73686F72 		.ascii	"short int\000"
+ 554      7420696E 
+ 554      7400
+ 555              	.LASF5:
+ 556 00d0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 556      20756E73 
+ 556      69676E65 
+ 556      6420696E 
+ 556      7400
+ 557              	.LASF10:
+ 558 00e2 646F7562 		.ascii	"double\000"
+ 558      6C6500
+ 559              	.LASF4:
+ 560 00e9 6C6F6E67 		.ascii	"long int\000"
+ 560      20696E74 
+ 560      00
+ 561              	.LASF19:
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc2BL4O6.s 			page 14
+
+
+ 562 00f2 416D705F 		.ascii	"Amp_BACKUP_STRUCT\000"
+ 562      4241434B 
+ 562      55505F53 
+ 562      54525543 
+ 562      5400
+ 563              	.LASF3:
+ 564 0104 73686F72 		.ascii	"short unsigned int\000"
+ 564      7420756E 
+ 564      7369676E 
+ 564      65642069 
+ 564      6E7400
+ 565              	.LASF0:
+ 566 0117 7369676E 		.ascii	"signed char\000"
+ 566      65642063 
+ 566      68617200 
+ 567              	.LASF17:
+ 568 0123 73634352 		.ascii	"scCR2Reg\000"
+ 568      32526567 
+ 568      00
+ 569              	.LASF26:
+ 570 012c 433A5C55 		.ascii	"C:\\Users\\IEUser\\Downloads\\PSoC_Creator\\Filter_"
+ 570      73657273 
+ 570      5C494555 
+ 570      7365725C 
+ 570      446F776E 
+ 571 015a 4144435F 		.ascii	"ADC_VDAC01\\Design01.cydsn\000"
+ 571      56444143 
+ 571      30315C44 
+ 571      65736967 
+ 571      6E30312E 
+ 572              	.LASF9:
+ 573 0174 666C6F61 		.ascii	"float\000"
+ 573      7400
+ 574              	.LASF24:
+ 575 017a 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 575      4320342E 
+ 575      382E3420 
+ 575      32303134 
+ 575      30353236 
+ 576 01ad 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
+ 576      20726576 
+ 576      6973696F 
+ 576      6E203231 
+ 576      31333538 
+ 577 01e0 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 577      66756E63 
+ 577      74696F6E 
+ 577      2D736563 
+ 577      74696F6E 
+ 578              	.LASF14:
+ 579 01f6 73697A65 		.ascii	"sizetype\000"
+ 579      74797065 
+ 579      00
+ 580              	.LASF27:
+ 581 01ff 416D705F 		.ascii	"Amp_backup\000"
+ 581      6261636B 
+ 581      757000
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc2BL4O6.s 			page 15
+
+
+ 582              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

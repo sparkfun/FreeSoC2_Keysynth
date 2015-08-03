@@ -1,0 +1,2320 @@
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"C_D.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	C_D_initVar
+  19              		.bss
+  20              		.type	C_D_initVar, %object
+  21              		.size	C_D_initVar, 1
+  22              	C_D_initVar:
+  23 0000 00       		.space	1
+  24              		.global	C_D_wave1
+  25              		.section	.rodata
+  26              		.align	2
+  27              		.type	C_D_wave1, %object
+  28              		.size	C_D_wave1, 382
+  29              	C_D_wave1:
+  30 0000 80       		.byte	-128
+  31 0001 82       		.byte	-126
+  32 0002 84       		.byte	-124
+  33 0003 86       		.byte	-122
+  34 0004 88       		.byte	-120
+  35 0005 8A       		.byte	-118
+  36 0006 8C       		.byte	-116
+  37 0007 8E       		.byte	-114
+  38 0008 90       		.byte	-112
+  39 0009 92       		.byte	-110
+  40 000a 94       		.byte	-108
+  41 000b 96       		.byte	-106
+  42 000c 98       		.byte	-104
+  43 000d 9A       		.byte	-102
+  44 000e 9C       		.byte	-100
+  45 000f 9E       		.byte	-98
+  46 0010 A0       		.byte	-96
+  47 0011 A2       		.byte	-94
+  48 0012 A4       		.byte	-92
+  49 0013 A6       		.byte	-90
+  50 0014 A8       		.byte	-88
+  51 0015 AA       		.byte	-86
+  52 0016 AC       		.byte	-84
+  53 0017 AE       		.byte	-82
+  54 0018 B0       		.byte	-80
+  55 0019 B1       		.byte	-79
+  56 001a B3       		.byte	-77
+  57 001b B5       		.byte	-75
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 2
+
+
+  58 001c B7       		.byte	-73
+  59 001d B9       		.byte	-71
+  60 001e BB       		.byte	-69
+  61 001f BD       		.byte	-67
+  62 0020 BE       		.byte	-66
+  63 0021 C0       		.byte	-64
+  64 0022 C2       		.byte	-62
+  65 0023 C4       		.byte	-60
+  66 0024 C5       		.byte	-59
+  67 0025 C7       		.byte	-57
+  68 0026 C9       		.byte	-55
+  69 0027 CA       		.byte	-54
+  70 0028 CC       		.byte	-52
+  71 0029 CE       		.byte	-50
+  72 002a CF       		.byte	-49
+  73 002b D1       		.byte	-47
+  74 002c D2       		.byte	-46
+  75 002d D4       		.byte	-44
+  76 002e D5       		.byte	-43
+  77 002f D7       		.byte	-41
+  78 0030 D8       		.byte	-40
+  79 0031 DA       		.byte	-38
+  80 0032 DB       		.byte	-37
+  81 0033 DC       		.byte	-36
+  82 0034 DE       		.byte	-34
+  83 0035 DF       		.byte	-33
+  84 0036 E0       		.byte	-32
+  85 0037 E2       		.byte	-30
+  86 0038 E3       		.byte	-29
+  87 0039 E4       		.byte	-28
+  88 003a E5       		.byte	-27
+  89 003b E7       		.byte	-25
+  90 003c E8       		.byte	-24
+  91 003d E9       		.byte	-23
+  92 003e EA       		.byte	-22
+  93 003f EB       		.byte	-21
+  94 0040 EC       		.byte	-20
+  95 0041 ED       		.byte	-19
+  96 0042 EE       		.byte	-18
+  97 0043 EF       		.byte	-17
+  98 0044 F0       		.byte	-16
+  99 0045 F1       		.byte	-15
+ 100 0046 F2       		.byte	-14
+ 101 0047 F2       		.byte	-14
+ 102 0048 F3       		.byte	-13
+ 103 0049 F4       		.byte	-12
+ 104 004a F5       		.byte	-11
+ 105 004b F5       		.byte	-11
+ 106 004c F6       		.byte	-10
+ 107 004d F7       		.byte	-9
+ 108 004e F7       		.byte	-9
+ 109 004f F8       		.byte	-8
+ 110 0050 F8       		.byte	-8
+ 111 0051 F9       		.byte	-7
+ 112 0052 F9       		.byte	-7
+ 113 0053 FA       		.byte	-6
+ 114 0054 FA       		.byte	-6
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 3
+
+
+ 115 0055 FB       		.byte	-5
+ 116 0056 FB       		.byte	-5
+ 117 0057 FB       		.byte	-5
+ 118 0058 FC       		.byte	-4
+ 119 0059 FC       		.byte	-4
+ 120 005a FC       		.byte	-4
+ 121 005b FC       		.byte	-4
+ 122 005c FC       		.byte	-4
+ 123 005d FC       		.byte	-4
+ 124 005e FC       		.byte	-4
+ 125 005f FC       		.byte	-4
+ 126 0060 FC       		.byte	-4
+ 127 0061 FC       		.byte	-4
+ 128 0062 FC       		.byte	-4
+ 129 0063 FC       		.byte	-4
+ 130 0064 FC       		.byte	-4
+ 131 0065 FC       		.byte	-4
+ 132 0066 FC       		.byte	-4
+ 133 0067 FC       		.byte	-4
+ 134 0068 FB       		.byte	-5
+ 135 0069 FB       		.byte	-5
+ 136 006a FB       		.byte	-5
+ 137 006b FA       		.byte	-6
+ 138 006c FA       		.byte	-6
+ 139 006d F9       		.byte	-7
+ 140 006e F9       		.byte	-7
+ 141 006f F8       		.byte	-8
+ 142 0070 F8       		.byte	-8
+ 143 0071 F7       		.byte	-9
+ 144 0072 F7       		.byte	-9
+ 145 0073 F6       		.byte	-10
+ 146 0074 F5       		.byte	-11
+ 147 0075 F5       		.byte	-11
+ 148 0076 F4       		.byte	-12
+ 149 0077 F3       		.byte	-13
+ 150 0078 F2       		.byte	-14
+ 151 0079 F2       		.byte	-14
+ 152 007a F1       		.byte	-15
+ 153 007b F0       		.byte	-16
+ 154 007c EF       		.byte	-17
+ 155 007d EE       		.byte	-18
+ 156 007e ED       		.byte	-19
+ 157 007f EC       		.byte	-20
+ 158 0080 EB       		.byte	-21
+ 159 0081 EA       		.byte	-22
+ 160 0082 E9       		.byte	-23
+ 161 0083 E8       		.byte	-24
+ 162 0084 E7       		.byte	-25
+ 163 0085 E5       		.byte	-27
+ 164 0086 E4       		.byte	-28
+ 165 0087 E3       		.byte	-29
+ 166 0088 E2       		.byte	-30
+ 167 0089 E0       		.byte	-32
+ 168 008a DF       		.byte	-33
+ 169 008b DE       		.byte	-34
+ 170 008c DC       		.byte	-36
+ 171 008d DB       		.byte	-37
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 4
+
+
+ 172 008e DA       		.byte	-38
+ 173 008f D8       		.byte	-40
+ 174 0090 D7       		.byte	-41
+ 175 0091 D5       		.byte	-43
+ 176 0092 D4       		.byte	-44
+ 177 0093 D2       		.byte	-46
+ 178 0094 D1       		.byte	-47
+ 179 0095 CF       		.byte	-49
+ 180 0096 CE       		.byte	-50
+ 181 0097 CC       		.byte	-52
+ 182 0098 CA       		.byte	-54
+ 183 0099 C9       		.byte	-55
+ 184 009a C7       		.byte	-57
+ 185 009b C5       		.byte	-59
+ 186 009c C4       		.byte	-60
+ 187 009d C2       		.byte	-62
+ 188 009e C0       		.byte	-64
+ 189 009f BE       		.byte	-66
+ 190 00a0 BD       		.byte	-67
+ 191 00a1 BB       		.byte	-69
+ 192 00a2 B9       		.byte	-71
+ 193 00a3 B7       		.byte	-73
+ 194 00a4 B5       		.byte	-75
+ 195 00a5 B3       		.byte	-77
+ 196 00a6 B1       		.byte	-79
+ 197 00a7 B0       		.byte	-80
+ 198 00a8 AE       		.byte	-82
+ 199 00a9 AC       		.byte	-84
+ 200 00aa AA       		.byte	-86
+ 201 00ab A8       		.byte	-88
+ 202 00ac A6       		.byte	-90
+ 203 00ad A4       		.byte	-92
+ 204 00ae A2       		.byte	-94
+ 205 00af A0       		.byte	-96
+ 206 00b0 9E       		.byte	-98
+ 207 00b1 9C       		.byte	-100
+ 208 00b2 9A       		.byte	-102
+ 209 00b3 98       		.byte	-104
+ 210 00b4 96       		.byte	-106
+ 211 00b5 94       		.byte	-108
+ 212 00b6 92       		.byte	-110
+ 213 00b7 90       		.byte	-112
+ 214 00b8 8E       		.byte	-114
+ 215 00b9 8C       		.byte	-116
+ 216 00ba 8A       		.byte	-118
+ 217 00bb 88       		.byte	-120
+ 218 00bc 86       		.byte	-122
+ 219 00bd 84       		.byte	-124
+ 220 00be 82       		.byte	-126
+ 221 00bf 80       		.byte	-128
+ 222 00c0 7D       		.byte	125
+ 223 00c1 7B       		.byte	123
+ 224 00c2 79       		.byte	121
+ 225 00c3 77       		.byte	119
+ 226 00c4 75       		.byte	117
+ 227 00c5 73       		.byte	115
+ 228 00c6 71       		.byte	113
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 5
+
+
+ 229 00c7 6F       		.byte	111
+ 230 00c8 6D       		.byte	109
+ 231 00c9 6B       		.byte	107
+ 232 00ca 69       		.byte	105
+ 233 00cb 67       		.byte	103
+ 234 00cc 65       		.byte	101
+ 235 00cd 63       		.byte	99
+ 236 00ce 61       		.byte	97
+ 237 00cf 5F       		.byte	95
+ 238 00d0 5D       		.byte	93
+ 239 00d1 5B       		.byte	91
+ 240 00d2 59       		.byte	89
+ 241 00d3 57       		.byte	87
+ 242 00d4 55       		.byte	85
+ 243 00d5 53       		.byte	83
+ 244 00d6 51       		.byte	81
+ 245 00d7 4F       		.byte	79
+ 246 00d8 4E       		.byte	78
+ 247 00d9 4C       		.byte	76
+ 248 00da 4A       		.byte	74
+ 249 00db 48       		.byte	72
+ 250 00dc 46       		.byte	70
+ 251 00dd 44       		.byte	68
+ 252 00de 42       		.byte	66
+ 253 00df 41       		.byte	65
+ 254 00e0 3F       		.byte	63
+ 255 00e1 3D       		.byte	61
+ 256 00e2 3B       		.byte	59
+ 257 00e3 3A       		.byte	58
+ 258 00e4 38       		.byte	56
+ 259 00e5 36       		.byte	54
+ 260 00e6 35       		.byte	53
+ 261 00e7 33       		.byte	51
+ 262 00e8 31       		.byte	49
+ 263 00e9 30       		.byte	48
+ 264 00ea 2E       		.byte	46
+ 265 00eb 2D       		.byte	45
+ 266 00ec 2B       		.byte	43
+ 267 00ed 2A       		.byte	42
+ 268 00ee 28       		.byte	40
+ 269 00ef 27       		.byte	39
+ 270 00f0 25       		.byte	37
+ 271 00f1 24       		.byte	36
+ 272 00f2 23       		.byte	35
+ 273 00f3 21       		.byte	33
+ 274 00f4 20       		.byte	32
+ 275 00f5 1F       		.byte	31
+ 276 00f6 1D       		.byte	29
+ 277 00f7 1C       		.byte	28
+ 278 00f8 1B       		.byte	27
+ 279 00f9 1A       		.byte	26
+ 280 00fa 18       		.byte	24
+ 281 00fb 17       		.byte	23
+ 282 00fc 16       		.byte	22
+ 283 00fd 15       		.byte	21
+ 284 00fe 14       		.byte	20
+ 285 00ff 13       		.byte	19
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 6
+
+
+ 286 0100 12       		.byte	18
+ 287 0101 11       		.byte	17
+ 288 0102 10       		.byte	16
+ 289 0103 0F       		.byte	15
+ 290 0104 0E       		.byte	14
+ 291 0105 0D       		.byte	13
+ 292 0106 0D       		.byte	13
+ 293 0107 0C       		.byte	12
+ 294 0108 0B       		.byte	11
+ 295 0109 0A       		.byte	10
+ 296 010a 0A       		.byte	10
+ 297 010b 09       		.byte	9
+ 298 010c 08       		.byte	8
+ 299 010d 08       		.byte	8
+ 300 010e 07       		.byte	7
+ 301 010f 07       		.byte	7
+ 302 0110 06       		.byte	6
+ 303 0111 06       		.byte	6
+ 304 0112 05       		.byte	5
+ 305 0113 05       		.byte	5
+ 306 0114 04       		.byte	4
+ 307 0115 04       		.byte	4
+ 308 0116 04       		.byte	4
+ 309 0117 03       		.byte	3
+ 310 0118 03       		.byte	3
+ 311 0119 03       		.byte	3
+ 312 011a 03       		.byte	3
+ 313 011b 03       		.byte	3
+ 314 011c 03       		.byte	3
+ 315 011d 03       		.byte	3
+ 316 011e 03       		.byte	3
+ 317 011f 03       		.byte	3
+ 318 0120 03       		.byte	3
+ 319 0121 03       		.byte	3
+ 320 0122 03       		.byte	3
+ 321 0123 03       		.byte	3
+ 322 0124 03       		.byte	3
+ 323 0125 03       		.byte	3
+ 324 0126 03       		.byte	3
+ 325 0127 04       		.byte	4
+ 326 0128 04       		.byte	4
+ 327 0129 04       		.byte	4
+ 328 012a 05       		.byte	5
+ 329 012b 05       		.byte	5
+ 330 012c 06       		.byte	6
+ 331 012d 06       		.byte	6
+ 332 012e 07       		.byte	7
+ 333 012f 07       		.byte	7
+ 334 0130 08       		.byte	8
+ 335 0131 08       		.byte	8
+ 336 0132 09       		.byte	9
+ 337 0133 0A       		.byte	10
+ 338 0134 0A       		.byte	10
+ 339 0135 0B       		.byte	11
+ 340 0136 0C       		.byte	12
+ 341 0137 0D       		.byte	13
+ 342 0138 0D       		.byte	13
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 7
+
+
+ 343 0139 0E       		.byte	14
+ 344 013a 0F       		.byte	15
+ 345 013b 10       		.byte	16
+ 346 013c 11       		.byte	17
+ 347 013d 12       		.byte	18
+ 348 013e 13       		.byte	19
+ 349 013f 14       		.byte	20
+ 350 0140 15       		.byte	21
+ 351 0141 16       		.byte	22
+ 352 0142 17       		.byte	23
+ 353 0143 18       		.byte	24
+ 354 0144 1A       		.byte	26
+ 355 0145 1B       		.byte	27
+ 356 0146 1C       		.byte	28
+ 357 0147 1D       		.byte	29
+ 358 0148 1F       		.byte	31
+ 359 0149 20       		.byte	32
+ 360 014a 21       		.byte	33
+ 361 014b 23       		.byte	35
+ 362 014c 24       		.byte	36
+ 363 014d 25       		.byte	37
+ 364 014e 27       		.byte	39
+ 365 014f 28       		.byte	40
+ 366 0150 2A       		.byte	42
+ 367 0151 2B       		.byte	43
+ 368 0152 2D       		.byte	45
+ 369 0153 2E       		.byte	46
+ 370 0154 30       		.byte	48
+ 371 0155 31       		.byte	49
+ 372 0156 33       		.byte	51
+ 373 0157 35       		.byte	53
+ 374 0158 36       		.byte	54
+ 375 0159 38       		.byte	56
+ 376 015a 3A       		.byte	58
+ 377 015b 3B       		.byte	59
+ 378 015c 3D       		.byte	61
+ 379 015d 3F       		.byte	63
+ 380 015e 41       		.byte	65
+ 381 015f 42       		.byte	66
+ 382 0160 44       		.byte	68
+ 383 0161 46       		.byte	70
+ 384 0162 48       		.byte	72
+ 385 0163 4A       		.byte	74
+ 386 0164 4C       		.byte	76
+ 387 0165 4E       		.byte	78
+ 388 0166 4F       		.byte	79
+ 389 0167 51       		.byte	81
+ 390 0168 53       		.byte	83
+ 391 0169 55       		.byte	85
+ 392 016a 57       		.byte	87
+ 393 016b 59       		.byte	89
+ 394 016c 5B       		.byte	91
+ 395 016d 5D       		.byte	93
+ 396 016e 5F       		.byte	95
+ 397 016f 61       		.byte	97
+ 398 0170 63       		.byte	99
+ 399 0171 65       		.byte	101
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 8
+
+
+ 400 0172 67       		.byte	103
+ 401 0173 69       		.byte	105
+ 402 0174 6B       		.byte	107
+ 403 0175 6D       		.byte	109
+ 404 0176 6F       		.byte	111
+ 405 0177 71       		.byte	113
+ 406 0178 73       		.byte	115
+ 407 0179 75       		.byte	117
+ 408 017a 77       		.byte	119
+ 409 017b 79       		.byte	121
+ 410 017c 7B       		.byte	123
+ 411 017d 7D       		.byte	125
+ 412              		.global	C_D_wave2
+ 413 017e 0000     		.align	2
+ 414              		.type	C_D_wave2, %object
+ 415              		.size	C_D_wave2, 341
+ 416              	C_D_wave2:
+ 417 0180 80       		.byte	-128
+ 418 0181 82       		.byte	-126
+ 419 0182 84       		.byte	-124
+ 420 0183 86       		.byte	-122
+ 421 0184 89       		.byte	-119
+ 422 0185 8B       		.byte	-117
+ 423 0186 8D       		.byte	-115
+ 424 0187 90       		.byte	-112
+ 425 0188 92       		.byte	-110
+ 426 0189 94       		.byte	-108
+ 427 018a 96       		.byte	-106
+ 428 018b 99       		.byte	-103
+ 429 018c 9B       		.byte	-101
+ 430 018d 9D       		.byte	-99
+ 431 018e 9F       		.byte	-97
+ 432 018f A2       		.byte	-94
+ 433 0190 A4       		.byte	-92
+ 434 0191 A6       		.byte	-90
+ 435 0192 A8       		.byte	-88
+ 436 0193 AA       		.byte	-86
+ 437 0194 AD       		.byte	-83
+ 438 0195 AF       		.byte	-81
+ 439 0196 B1       		.byte	-79
+ 440 0197 B3       		.byte	-77
+ 441 0198 B5       		.byte	-75
+ 442 0199 B7       		.byte	-73
+ 443 019a B9       		.byte	-71
+ 444 019b BB       		.byte	-69
+ 445 019c BD       		.byte	-67
+ 446 019d BF       		.byte	-65
+ 447 019e C1       		.byte	-63
+ 448 019f C3       		.byte	-61
+ 449 01a0 C5       		.byte	-59
+ 450 01a1 C7       		.byte	-57
+ 451 01a2 C9       		.byte	-55
+ 452 01a3 CB       		.byte	-53
+ 453 01a4 CC       		.byte	-52
+ 454 01a5 CE       		.byte	-50
+ 455 01a6 D0       		.byte	-48
+ 456 01a7 D2       		.byte	-46
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 9
+
+
+ 457 01a8 D4       		.byte	-44
+ 458 01a9 D5       		.byte	-43
+ 459 01aa D7       		.byte	-41
+ 460 01ab D8       		.byte	-40
+ 461 01ac DA       		.byte	-38
+ 462 01ad DC       		.byte	-36
+ 463 01ae DD       		.byte	-35
+ 464 01af DF       		.byte	-33
+ 465 01b0 E0       		.byte	-32
+ 466 01b1 E2       		.byte	-30
+ 467 01b2 E3       		.byte	-29
+ 468 01b3 E4       		.byte	-28
+ 469 01b4 E6       		.byte	-26
+ 470 01b5 E7       		.byte	-25
+ 471 01b6 E8       		.byte	-24
+ 472 01b7 EA       		.byte	-22
+ 473 01b8 EB       		.byte	-21
+ 474 01b9 EC       		.byte	-20
+ 475 01ba ED       		.byte	-19
+ 476 01bb EE       		.byte	-18
+ 477 01bc EF       		.byte	-17
+ 478 01bd F0       		.byte	-16
+ 479 01be F1       		.byte	-15
+ 480 01bf F2       		.byte	-14
+ 481 01c0 F3       		.byte	-13
+ 482 01c1 F4       		.byte	-12
+ 483 01c2 F5       		.byte	-11
+ 484 01c3 F5       		.byte	-11
+ 485 01c4 F6       		.byte	-10
+ 486 01c5 F7       		.byte	-9
+ 487 01c6 F8       		.byte	-8
+ 488 01c7 F8       		.byte	-8
+ 489 01c8 F9       		.byte	-7
+ 490 01c9 F9       		.byte	-7
+ 491 01ca FA       		.byte	-6
+ 492 01cb FA       		.byte	-6
+ 493 01cc FB       		.byte	-5
+ 494 01cd FB       		.byte	-5
+ 495 01ce FB       		.byte	-5
+ 496 01cf FC       		.byte	-4
+ 497 01d0 FC       		.byte	-4
+ 498 01d1 FC       		.byte	-4
+ 499 01d2 FC       		.byte	-4
+ 500 01d3 FC       		.byte	-4
+ 501 01d4 FC       		.byte	-4
+ 502 01d5 FC       		.byte	-4
+ 503 01d6 FC       		.byte	-4
+ 504 01d7 FC       		.byte	-4
+ 505 01d8 FC       		.byte	-4
+ 506 01d9 FC       		.byte	-4
+ 507 01da FC       		.byte	-4
+ 508 01db FC       		.byte	-4
+ 509 01dc FC       		.byte	-4
+ 510 01dd FB       		.byte	-5
+ 511 01de FB       		.byte	-5
+ 512 01df FA       		.byte	-6
+ 513 01e0 FA       		.byte	-6
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 10
+
+
+ 514 01e1 FA       		.byte	-6
+ 515 01e2 F9       		.byte	-7
+ 516 01e3 F9       		.byte	-7
+ 517 01e4 F8       		.byte	-8
+ 518 01e5 F7       		.byte	-9
+ 519 01e6 F7       		.byte	-9
+ 520 01e7 F6       		.byte	-10
+ 521 01e8 F5       		.byte	-11
+ 522 01e9 F4       		.byte	-12
+ 523 01ea F3       		.byte	-13
+ 524 01eb F3       		.byte	-13
+ 525 01ec F2       		.byte	-14
+ 526 01ed F1       		.byte	-15
+ 527 01ee F0       		.byte	-16
+ 528 01ef EF       		.byte	-17
+ 529 01f0 EE       		.byte	-18
+ 530 01f1 ED       		.byte	-19
+ 531 01f2 EB       		.byte	-21
+ 532 01f3 EA       		.byte	-22
+ 533 01f4 E9       		.byte	-23
+ 534 01f5 E8       		.byte	-24
+ 535 01f6 E6       		.byte	-26
+ 536 01f7 E5       		.byte	-27
+ 537 01f8 E4       		.byte	-28
+ 538 01f9 E2       		.byte	-30
+ 539 01fa E1       		.byte	-31
+ 540 01fb DF       		.byte	-33
+ 541 01fc DE       		.byte	-34
+ 542 01fd DC       		.byte	-36
+ 543 01fe DB       		.byte	-37
+ 544 01ff D9       		.byte	-39
+ 545 0200 D8       		.byte	-40
+ 546 0201 D6       		.byte	-42
+ 547 0202 D4       		.byte	-44
+ 548 0203 D3       		.byte	-45
+ 549 0204 D1       		.byte	-47
+ 550 0205 CF       		.byte	-49
+ 551 0206 CD       		.byte	-51
+ 552 0207 CC       		.byte	-52
+ 553 0208 CA       		.byte	-54
+ 554 0209 C8       		.byte	-56
+ 555 020a C6       		.byte	-58
+ 556 020b C4       		.byte	-60
+ 557 020c C2       		.byte	-62
+ 558 020d C0       		.byte	-64
+ 559 020e BE       		.byte	-66
+ 560 020f BC       		.byte	-68
+ 561 0210 BA       		.byte	-70
+ 562 0211 B8       		.byte	-72
+ 563 0212 B6       		.byte	-74
+ 564 0213 B4       		.byte	-76
+ 565 0214 B2       		.byte	-78
+ 566 0215 B0       		.byte	-80
+ 567 0216 AE       		.byte	-82
+ 568 0217 AB       		.byte	-85
+ 569 0218 A9       		.byte	-87
+ 570 0219 A7       		.byte	-89
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 11
+
+
+ 571 021a A5       		.byte	-91
+ 572 021b A3       		.byte	-93
+ 573 021c A1       		.byte	-95
+ 574 021d 9E       		.byte	-98
+ 575 021e 9C       		.byte	-100
+ 576 021f 9A       		.byte	-102
+ 577 0220 98       		.byte	-104
+ 578 0221 95       		.byte	-107
+ 579 0222 93       		.byte	-109
+ 580 0223 91       		.byte	-111
+ 581 0224 8E       		.byte	-114
+ 582 0225 8C       		.byte	-116
+ 583 0226 8A       		.byte	-118
+ 584 0227 88       		.byte	-120
+ 585 0228 85       		.byte	-123
+ 586 0229 83       		.byte	-125
+ 587 022a 81       		.byte	-127
+ 588 022b 7E       		.byte	126
+ 589 022c 7C       		.byte	124
+ 590 022d 7A       		.byte	122
+ 591 022e 77       		.byte	119
+ 592 022f 75       		.byte	117
+ 593 0230 73       		.byte	115
+ 594 0231 71       		.byte	113
+ 595 0232 6E       		.byte	110
+ 596 0233 6C       		.byte	108
+ 597 0234 6A       		.byte	106
+ 598 0235 67       		.byte	103
+ 599 0236 65       		.byte	101
+ 600 0237 63       		.byte	99
+ 601 0238 61       		.byte	97
+ 602 0239 5E       		.byte	94
+ 603 023a 5C       		.byte	92
+ 604 023b 5A       		.byte	90
+ 605 023c 58       		.byte	88
+ 606 023d 56       		.byte	86
+ 607 023e 54       		.byte	84
+ 608 023f 51       		.byte	81
+ 609 0240 4F       		.byte	79
+ 610 0241 4D       		.byte	77
+ 611 0242 4B       		.byte	75
+ 612 0243 49       		.byte	73
+ 613 0244 47       		.byte	71
+ 614 0245 45       		.byte	69
+ 615 0246 43       		.byte	67
+ 616 0247 41       		.byte	65
+ 617 0248 3F       		.byte	63
+ 618 0249 3D       		.byte	61
+ 619 024a 3B       		.byte	59
+ 620 024b 39       		.byte	57
+ 621 024c 37       		.byte	55
+ 622 024d 35       		.byte	53
+ 623 024e 33       		.byte	51
+ 624 024f 32       		.byte	50
+ 625 0250 30       		.byte	48
+ 626 0251 2E       		.byte	46
+ 627 0252 2C       		.byte	44
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 12
+
+
+ 628 0253 2B       		.byte	43
+ 629 0254 29       		.byte	41
+ 630 0255 27       		.byte	39
+ 631 0256 26       		.byte	38
+ 632 0257 24       		.byte	36
+ 633 0258 23       		.byte	35
+ 634 0259 21       		.byte	33
+ 635 025a 20       		.byte	32
+ 636 025b 1E       		.byte	30
+ 637 025c 1D       		.byte	29
+ 638 025d 1B       		.byte	27
+ 639 025e 1A       		.byte	26
+ 640 025f 19       		.byte	25
+ 641 0260 17       		.byte	23
+ 642 0261 16       		.byte	22
+ 643 0262 15       		.byte	21
+ 644 0263 14       		.byte	20
+ 645 0264 12       		.byte	18
+ 646 0265 11       		.byte	17
+ 647 0266 10       		.byte	16
+ 648 0267 0F       		.byte	15
+ 649 0268 0E       		.byte	14
+ 650 0269 0D       		.byte	13
+ 651 026a 0C       		.byte	12
+ 652 026b 0C       		.byte	12
+ 653 026c 0B       		.byte	11
+ 654 026d 0A       		.byte	10
+ 655 026e 09       		.byte	9
+ 656 026f 08       		.byte	8
+ 657 0270 08       		.byte	8
+ 658 0271 07       		.byte	7
+ 659 0272 06       		.byte	6
+ 660 0273 06       		.byte	6
+ 661 0274 05       		.byte	5
+ 662 0275 05       		.byte	5
+ 663 0276 05       		.byte	5
+ 664 0277 04       		.byte	4
+ 665 0278 04       		.byte	4
+ 666 0279 03       		.byte	3
+ 667 027a 03       		.byte	3
+ 668 027b 03       		.byte	3
+ 669 027c 03       		.byte	3
+ 670 027d 03       		.byte	3
+ 671 027e 03       		.byte	3
+ 672 027f 03       		.byte	3
+ 673 0280 03       		.byte	3
+ 674 0281 03       		.byte	3
+ 675 0282 03       		.byte	3
+ 676 0283 03       		.byte	3
+ 677 0284 03       		.byte	3
+ 678 0285 03       		.byte	3
+ 679 0286 03       		.byte	3
+ 680 0287 04       		.byte	4
+ 681 0288 04       		.byte	4
+ 682 0289 04       		.byte	4
+ 683 028a 05       		.byte	5
+ 684 028b 05       		.byte	5
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 13
+
+
+ 685 028c 06       		.byte	6
+ 686 028d 06       		.byte	6
+ 687 028e 07       		.byte	7
+ 688 028f 07       		.byte	7
+ 689 0290 08       		.byte	8
+ 690 0291 09       		.byte	9
+ 691 0292 0A       		.byte	10
+ 692 0293 0A       		.byte	10
+ 693 0294 0B       		.byte	11
+ 694 0295 0C       		.byte	12
+ 695 0296 0D       		.byte	13
+ 696 0297 0E       		.byte	14
+ 697 0298 0F       		.byte	15
+ 698 0299 10       		.byte	16
+ 699 029a 11       		.byte	17
+ 700 029b 12       		.byte	18
+ 701 029c 13       		.byte	19
+ 702 029d 14       		.byte	20
+ 703 029e 15       		.byte	21
+ 704 029f 17       		.byte	23
+ 705 02a0 18       		.byte	24
+ 706 02a1 19       		.byte	25
+ 707 02a2 1B       		.byte	27
+ 708 02a3 1C       		.byte	28
+ 709 02a4 1D       		.byte	29
+ 710 02a5 1F       		.byte	31
+ 711 02a6 20       		.byte	32
+ 712 02a7 22       		.byte	34
+ 713 02a8 23       		.byte	35
+ 714 02a9 25       		.byte	37
+ 715 02aa 27       		.byte	39
+ 716 02ab 28       		.byte	40
+ 717 02ac 2A       		.byte	42
+ 718 02ad 2B       		.byte	43
+ 719 02ae 2D       		.byte	45
+ 720 02af 2F       		.byte	47
+ 721 02b0 31       		.byte	49
+ 722 02b1 33       		.byte	51
+ 723 02b2 34       		.byte	52
+ 724 02b3 36       		.byte	54
+ 725 02b4 38       		.byte	56
+ 726 02b5 3A       		.byte	58
+ 727 02b6 3C       		.byte	60
+ 728 02b7 3E       		.byte	62
+ 729 02b8 40       		.byte	64
+ 730 02b9 42       		.byte	66
+ 731 02ba 44       		.byte	68
+ 732 02bb 46       		.byte	70
+ 733 02bc 48       		.byte	72
+ 734 02bd 4A       		.byte	74
+ 735 02be 4C       		.byte	76
+ 736 02bf 4E       		.byte	78
+ 737 02c0 50       		.byte	80
+ 738 02c1 52       		.byte	82
+ 739 02c2 55       		.byte	85
+ 740 02c3 57       		.byte	87
+ 741 02c4 59       		.byte	89
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 14
+
+
+ 742 02c5 5B       		.byte	91
+ 743 02c6 5D       		.byte	93
+ 744 02c7 60       		.byte	96
+ 745 02c8 62       		.byte	98
+ 746 02c9 64       		.byte	100
+ 747 02ca 66       		.byte	102
+ 748 02cb 69       		.byte	105
+ 749 02cc 6B       		.byte	107
+ 750 02cd 6D       		.byte	109
+ 751 02ce 6F       		.byte	111
+ 752 02cf 72       		.byte	114
+ 753 02d0 74       		.byte	116
+ 754 02d1 76       		.byte	118
+ 755 02d2 79       		.byte	121
+ 756 02d3 7B       		.byte	123
+ 757 02d4 7D       		.byte	125
+ 758 02d5 000000   		.bss
+ 759              	C_D_Wave1Chan:
+ 760 0001 00       		.space	1
+ 761              	C_D_Wave2Chan:
+ 762 0002 00       		.space	1
+ 763              	C_D_Wave1TD:
+ 764 0003 00       		.space	1
+ 765              	C_D_Wave2TD:
+ 766 0004 00       		.space	1
+ 767              		.section	.text.C_D_Init,"ax",%progbits
+ 768              		.align	2
+ 769              		.global	C_D_Init
+ 770              		.thumb
+ 771              		.thumb_func
+ 772              		.type	C_D_Init, %function
+ 773              	C_D_Init:
+ 774              	.LFB0:
+ 775              		.file 1 ".\\Generated_Source\\PSoC5\\C_D.c"
+   1:.\Generated_Source\PSoC5/C_D.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/C_D.c **** * File Name: C_D.c
+   3:.\Generated_Source\PSoC5/C_D.c **** * Version 2.0
+   4:.\Generated_Source\PSoC5/C_D.c **** *
+   5:.\Generated_Source\PSoC5/C_D.c **** * Description:
+   6:.\Generated_Source\PSoC5/C_D.c **** *  This file provides the source code for the 8-bit Waveform DAC 
+   7:.\Generated_Source\PSoC5/C_D.c **** *  (WaveDAC8) Component.
+   8:.\Generated_Source\PSoC5/C_D.c **** *
+   9:.\Generated_Source\PSoC5/C_D.c **** ********************************************************************************
+  10:.\Generated_Source\PSoC5/C_D.c **** * Copyright 2013, Cypress Semiconductor Corporation.  All rights reserved.
+  11:.\Generated_Source\PSoC5/C_D.c **** * You may use this file only in accordance with the license, terms, conditions,
+  12:.\Generated_Source\PSoC5/C_D.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  13:.\Generated_Source\PSoC5/C_D.c **** * the software package with which this file was provided.
+  14:.\Generated_Source\PSoC5/C_D.c **** *******************************************************************************/
+  15:.\Generated_Source\PSoC5/C_D.c **** 
+  16:.\Generated_Source\PSoC5/C_D.c **** #include "C_D.h"
+  17:.\Generated_Source\PSoC5/C_D.c **** 
+  18:.\Generated_Source\PSoC5/C_D.c **** uint8  C_D_initVar = 0u;
+  19:.\Generated_Source\PSoC5/C_D.c **** 
+  20:.\Generated_Source\PSoC5/C_D.c **** const uint8 CYCODE C_D_wave1[C_D_WAVE1_LENGTH] = { 128u,130u,132u,134u,136u,138u,140u,142u,144u,146
+  21:.\Generated_Source\PSoC5/C_D.c **** const uint8 CYCODE C_D_wave2[C_D_WAVE2_LENGTH] = { 128u,130u,132u,134u,137u,139u,141u,144u,146u,148
+  22:.\Generated_Source\PSoC5/C_D.c **** 
+  23:.\Generated_Source\PSoC5/C_D.c **** static uint8  C_D_Wave1Chan;
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 15
+
+
+  24:.\Generated_Source\PSoC5/C_D.c **** static uint8  C_D_Wave2Chan;
+  25:.\Generated_Source\PSoC5/C_D.c **** static uint8  C_D_Wave1TD;
+  26:.\Generated_Source\PSoC5/C_D.c **** static uint8  C_D_Wave2TD;
+  27:.\Generated_Source\PSoC5/C_D.c **** 
+  28:.\Generated_Source\PSoC5/C_D.c **** 
+  29:.\Generated_Source\PSoC5/C_D.c **** /*******************************************************************************
+  30:.\Generated_Source\PSoC5/C_D.c **** * Function Name: C_D_Init
+  31:.\Generated_Source\PSoC5/C_D.c **** ********************************************************************************
+  32:.\Generated_Source\PSoC5/C_D.c **** *
+  33:.\Generated_Source\PSoC5/C_D.c **** * Summary:
+  34:.\Generated_Source\PSoC5/C_D.c **** *  Initializes component with parameters set in the customizer.
+  35:.\Generated_Source\PSoC5/C_D.c **** *
+  36:.\Generated_Source\PSoC5/C_D.c **** * Parameters:  
+  37:.\Generated_Source\PSoC5/C_D.c **** *  None
+  38:.\Generated_Source\PSoC5/C_D.c **** *
+  39:.\Generated_Source\PSoC5/C_D.c **** * Return: 
+  40:.\Generated_Source\PSoC5/C_D.c **** *  None
+  41:.\Generated_Source\PSoC5/C_D.c **** *
+  42:.\Generated_Source\PSoC5/C_D.c **** *******************************************************************************/
+  43:.\Generated_Source\PSoC5/C_D.c **** void C_D_Init(void) 
+  44:.\Generated_Source\PSoC5/C_D.c **** {
+ 776              		.loc 1 44 0
+ 777              		.cfi_startproc
+ 778              		@ args = 0, pretend = 0, frame = 0
+ 779              		@ frame_needed = 1, uses_anonymous_args = 0
+ 780 0000 80B5     		push	{r7, lr}
+ 781              		.cfi_def_cfa_offset 8
+ 782              		.cfi_offset 7, -8
+ 783              		.cfi_offset 14, -4
+ 784 0002 00AF     		add	r7, sp, #0
+ 785              		.cfi_def_cfa_register 7
+  45:.\Generated_Source\PSoC5/C_D.c **** 	C_D_VDAC8_Init();
+ 786              		.loc 1 45 0
+ 787 0004 FFF7FEFF 		bl	C_D_VDAC8_Init
+  46:.\Generated_Source\PSoC5/C_D.c **** 	C_D_VDAC8_SetSpeed(C_D_HIGHSPEED);
+ 788              		.loc 1 46 0
+ 789 0008 0220     		movs	r0, #2
+ 790 000a FFF7FEFF 		bl	C_D_VDAC8_SetSpeed
+  47:.\Generated_Source\PSoC5/C_D.c **** 	C_D_VDAC8_SetRange(C_D_DAC_RANGE);
+ 791              		.loc 1 47 0
+ 792 000e 0020     		movs	r0, #0
+ 793 0010 FFF7FEFF 		bl	C_D_VDAC8_SetRange
+  48:.\Generated_Source\PSoC5/C_D.c **** 
+  49:.\Generated_Source\PSoC5/C_D.c **** 	#if(C_D_DAC_MODE == C_D_CURRENT_MODE)
+  50:.\Generated_Source\PSoC5/C_D.c **** 		C_D_IDAC8_SetPolarity(C_D_DAC_POL);
+  51:.\Generated_Source\PSoC5/C_D.c **** 	#endif /* C_D_DAC_MODE == C_D_CURRENT_MODE */
+  52:.\Generated_Source\PSoC5/C_D.c **** 
+  53:.\Generated_Source\PSoC5/C_D.c **** 	#if(C_D_OUT_MODE == C_D_BUFFER_MODE)
+  54:.\Generated_Source\PSoC5/C_D.c **** 	   C_D_BuffAmp_Init();
+  55:.\Generated_Source\PSoC5/C_D.c **** 	#endif /* C_D_OUT_MODE == C_D_BUFFER_MODE */
+  56:.\Generated_Source\PSoC5/C_D.c **** 
+  57:.\Generated_Source\PSoC5/C_D.c **** 	/* Get the TD Number for the DMA channel 1 and 2   */
+  58:.\Generated_Source\PSoC5/C_D.c **** 	C_D_Wave1TD = CyDmaTdAllocate();
+ 794              		.loc 1 58 0
+ 795 0014 FFF7FEFF 		bl	CyDmaTdAllocate
+ 796 0018 0346     		mov	r3, r0
+ 797 001a 1A46     		mov	r2, r3
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 16
+
+
+ 798 001c 094B     		ldr	r3, .L2
+ 799 001e 1A70     		strb	r2, [r3]
+  59:.\Generated_Source\PSoC5/C_D.c **** 	C_D_Wave2TD = CyDmaTdAllocate();
+ 800              		.loc 1 59 0
+ 801 0020 FFF7FEFF 		bl	CyDmaTdAllocate
+ 802 0024 0346     		mov	r3, r0
+ 803 0026 1A46     		mov	r2, r3
+ 804 0028 074B     		ldr	r3, .L2+4
+ 805 002a 1A70     		strb	r2, [r3]
+  60:.\Generated_Source\PSoC5/C_D.c **** 	
+  61:.\Generated_Source\PSoC5/C_D.c **** 	/* Initialize waveform pointers  */
+  62:.\Generated_Source\PSoC5/C_D.c **** 	C_D_Wave1Setup(C_D_wave1, C_D_WAVE1_LENGTH) ;
+ 806              		.loc 1 62 0
+ 807 002c 0748     		ldr	r0, .L2+8
+ 808 002e 4FF4BF71 		mov	r1, #382
+ 809 0032 FFF7FEFF 		bl	C_D_Wave1Setup
+  63:.\Generated_Source\PSoC5/C_D.c **** 	C_D_Wave2Setup(C_D_wave2, C_D_WAVE2_LENGTH) ;
+ 810              		.loc 1 63 0
+ 811 0036 0648     		ldr	r0, .L2+12
+ 812 0038 40F25511 		movw	r1, #341
+ 813 003c FFF7FEFF 		bl	C_D_Wave2Setup
+  64:.\Generated_Source\PSoC5/C_D.c **** 	
+  65:.\Generated_Source\PSoC5/C_D.c **** 	/* Initialize the internal clock if one present  */
+  66:.\Generated_Source\PSoC5/C_D.c **** 	#if defined(C_D_DacClk_PHASE)
+  67:.\Generated_Source\PSoC5/C_D.c **** 	   C_D_DacClk_SetPhase(C_D_CLK_PHASE_0nS);
+  68:.\Generated_Source\PSoC5/C_D.c **** 	#endif /* defined(C_D_DacClk_PHASE) */
+  69:.\Generated_Source\PSoC5/C_D.c **** }
+ 814              		.loc 1 69 0
+ 815 0040 80BD     		pop	{r7, pc}
+ 816              	.L3:
+ 817 0042 00BF     		.align	2
+ 818              	.L2:
+ 819 0044 03000000 		.word	C_D_Wave1TD
+ 820 0048 04000000 		.word	C_D_Wave2TD
+ 821 004c 00000000 		.word	C_D_wave1
+ 822 0050 00000000 		.word	C_D_wave2
+ 823              		.cfi_endproc
+ 824              	.LFE0:
+ 825              		.size	C_D_Init, .-C_D_Init
+ 826              		.section	.text.C_D_Enable,"ax",%progbits
+ 827              		.align	2
+ 828              		.global	C_D_Enable
+ 829              		.thumb
+ 830              		.thumb_func
+ 831              		.type	C_D_Enable, %function
+ 832              	C_D_Enable:
+ 833              	.LFB1:
+  70:.\Generated_Source\PSoC5/C_D.c **** 
+  71:.\Generated_Source\PSoC5/C_D.c **** 
+  72:.\Generated_Source\PSoC5/C_D.c **** /*******************************************************************************
+  73:.\Generated_Source\PSoC5/C_D.c **** * Function Name: C_D_Enable
+  74:.\Generated_Source\PSoC5/C_D.c **** ********************************************************************************
+  75:.\Generated_Source\PSoC5/C_D.c **** *  
+  76:.\Generated_Source\PSoC5/C_D.c **** * Summary: 
+  77:.\Generated_Source\PSoC5/C_D.c **** *  Enables the DAC block and DMA operation.
+  78:.\Generated_Source\PSoC5/C_D.c **** *
+  79:.\Generated_Source\PSoC5/C_D.c **** * Parameters:  
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 17
+
+
+  80:.\Generated_Source\PSoC5/C_D.c **** *  None
+  81:.\Generated_Source\PSoC5/C_D.c **** *
+  82:.\Generated_Source\PSoC5/C_D.c **** * Return: 
+  83:.\Generated_Source\PSoC5/C_D.c **** *  None
+  84:.\Generated_Source\PSoC5/C_D.c **** *
+  85:.\Generated_Source\PSoC5/C_D.c **** *******************************************************************************/
+  86:.\Generated_Source\PSoC5/C_D.c **** void C_D_Enable(void) 
+  87:.\Generated_Source\PSoC5/C_D.c **** {
+ 834              		.loc 1 87 0
+ 835              		.cfi_startproc
+ 836              		@ args = 0, pretend = 0, frame = 0
+ 837              		@ frame_needed = 1, uses_anonymous_args = 0
+ 838 0000 80B5     		push	{r7, lr}
+ 839              		.cfi_def_cfa_offset 8
+ 840              		.cfi_offset 7, -8
+ 841              		.cfi_offset 14, -4
+ 842 0002 00AF     		add	r7, sp, #0
+ 843              		.cfi_def_cfa_register 7
+  88:.\Generated_Source\PSoC5/C_D.c **** 	C_D_VDAC8_Enable();
+ 844              		.loc 1 88 0
+ 845 0004 FFF7FEFF 		bl	C_D_VDAC8_Enable
+  89:.\Generated_Source\PSoC5/C_D.c **** 
+  90:.\Generated_Source\PSoC5/C_D.c **** 	#if(C_D_OUT_MODE == C_D_BUFFER_MODE)
+  91:.\Generated_Source\PSoC5/C_D.c **** 	   C_D_BuffAmp_Enable();
+  92:.\Generated_Source\PSoC5/C_D.c **** 	#endif /* C_D_OUT_MODE == C_D_BUFFER_MODE */
+  93:.\Generated_Source\PSoC5/C_D.c **** 
+  94:.\Generated_Source\PSoC5/C_D.c **** 	/* 
+  95:.\Generated_Source\PSoC5/C_D.c **** 	* Enable the channel. It is configured to remember the TD value so that
+  96:.\Generated_Source\PSoC5/C_D.c **** 	* it can be restored from the place where it has been stopped.
+  97:.\Generated_Source\PSoC5/C_D.c **** 	*/
+  98:.\Generated_Source\PSoC5/C_D.c **** 	(void)CyDmaChEnable(C_D_Wave1Chan, 1u);
+ 846              		.loc 1 98 0
+ 847 0008 084B     		ldr	r3, .L5
+ 848 000a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 849 000c 1846     		mov	r0, r3
+ 850 000e 0121     		movs	r1, #1
+ 851 0010 FFF7FEFF 		bl	CyDmaChEnable
+  99:.\Generated_Source\PSoC5/C_D.c **** 	(void)CyDmaChEnable(C_D_Wave2Chan, 1u);
+ 852              		.loc 1 99 0
+ 853 0014 064B     		ldr	r3, .L5+4
+ 854 0016 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 855 0018 1846     		mov	r0, r3
+ 856 001a 0121     		movs	r1, #1
+ 857 001c FFF7FEFF 		bl	CyDmaChEnable
+ 100:.\Generated_Source\PSoC5/C_D.c **** 	
+ 101:.\Generated_Source\PSoC5/C_D.c **** 	/* set the initial value */
+ 102:.\Generated_Source\PSoC5/C_D.c **** 	C_D_SetValue(0u);
+ 858              		.loc 1 102 0
+ 859 0020 0020     		movs	r0, #0
+ 860 0022 FFF7FEFF 		bl	C_D_VDAC8_SetValue
+ 103:.\Generated_Source\PSoC5/C_D.c **** 	
+ 104:.\Generated_Source\PSoC5/C_D.c **** 	#if(C_D_CLOCK_SRC == C_D_CLOCK_INT)  	
+ 105:.\Generated_Source\PSoC5/C_D.c **** 	   C_D_DacClk_Start();
+ 861              		.loc 1 105 0
+ 862 0026 FFF7FEFF 		bl	C_D_DacClk_Start
+ 106:.\Generated_Source\PSoC5/C_D.c **** 	#endif /* C_D_CLOCK_SRC == C_D_CLOCK_INT */
+ 107:.\Generated_Source\PSoC5/C_D.c **** }
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 18
+
+
+ 863              		.loc 1 107 0
+ 864 002a 80BD     		pop	{r7, pc}
+ 865              	.L6:
+ 866              		.align	2
+ 867              	.L5:
+ 868 002c 01000000 		.word	C_D_Wave1Chan
+ 869 0030 02000000 		.word	C_D_Wave2Chan
+ 870              		.cfi_endproc
+ 871              	.LFE1:
+ 872              		.size	C_D_Enable, .-C_D_Enable
+ 873              		.section	.text.C_D_Start,"ax",%progbits
+ 874              		.align	2
+ 875              		.global	C_D_Start
+ 876              		.thumb
+ 877              		.thumb_func
+ 878              		.type	C_D_Start, %function
+ 879              	C_D_Start:
+ 880              	.LFB2:
+ 108:.\Generated_Source\PSoC5/C_D.c **** 
+ 109:.\Generated_Source\PSoC5/C_D.c **** 
+ 110:.\Generated_Source\PSoC5/C_D.c **** /*******************************************************************************
+ 111:.\Generated_Source\PSoC5/C_D.c **** * Function Name: C_D_Start
+ 112:.\Generated_Source\PSoC5/C_D.c **** ********************************************************************************
+ 113:.\Generated_Source\PSoC5/C_D.c **** *
+ 114:.\Generated_Source\PSoC5/C_D.c **** * Summary:
+ 115:.\Generated_Source\PSoC5/C_D.c **** *  The start function initializes the voltage DAC with the default values, 
+ 116:.\Generated_Source\PSoC5/C_D.c **** *  and sets the power to the given level.  A power level of 0, is the same as 
+ 117:.\Generated_Source\PSoC5/C_D.c **** *  executing the stop function.
+ 118:.\Generated_Source\PSoC5/C_D.c **** *
+ 119:.\Generated_Source\PSoC5/C_D.c **** * Parameters:  
+ 120:.\Generated_Source\PSoC5/C_D.c **** *  None
+ 121:.\Generated_Source\PSoC5/C_D.c **** *
+ 122:.\Generated_Source\PSoC5/C_D.c **** * Return: 
+ 123:.\Generated_Source\PSoC5/C_D.c **** *  None
+ 124:.\Generated_Source\PSoC5/C_D.c **** *
+ 125:.\Generated_Source\PSoC5/C_D.c **** * Reentrant:
+ 126:.\Generated_Source\PSoC5/C_D.c **** *  No
+ 127:.\Generated_Source\PSoC5/C_D.c **** *
+ 128:.\Generated_Source\PSoC5/C_D.c **** *******************************************************************************/
+ 129:.\Generated_Source\PSoC5/C_D.c **** void C_D_Start(void) 
+ 130:.\Generated_Source\PSoC5/C_D.c **** {
+ 881              		.loc 1 130 0
+ 882              		.cfi_startproc
+ 883              		@ args = 0, pretend = 0, frame = 0
+ 884              		@ frame_needed = 1, uses_anonymous_args = 0
+ 885 0000 80B5     		push	{r7, lr}
+ 886              		.cfi_def_cfa_offset 8
+ 887              		.cfi_offset 7, -8
+ 888              		.cfi_offset 14, -4
+ 889 0002 00AF     		add	r7, sp, #0
+ 890              		.cfi_def_cfa_register 7
+ 131:.\Generated_Source\PSoC5/C_D.c **** 	/* If not Initialized then initialize all required hardware and software */
+ 132:.\Generated_Source\PSoC5/C_D.c **** 	if(C_D_initVar == 0u)
+ 891              		.loc 1 132 0
+ 892 0004 054B     		ldr	r3, .L9
+ 893 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 894 0008 002B     		cmp	r3, #0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 19
+
+
+ 895 000a 04D1     		bne	.L8
+ 133:.\Generated_Source\PSoC5/C_D.c **** 	{
+ 134:.\Generated_Source\PSoC5/C_D.c **** 		C_D_Init();
+ 896              		.loc 1 134 0
+ 897 000c FFF7FEFF 		bl	C_D_Init
+ 135:.\Generated_Source\PSoC5/C_D.c **** 		C_D_initVar = 1u;
+ 898              		.loc 1 135 0
+ 899 0010 024B     		ldr	r3, .L9
+ 900 0012 0122     		movs	r2, #1
+ 901 0014 1A70     		strb	r2, [r3]
+ 902              	.L8:
+ 136:.\Generated_Source\PSoC5/C_D.c **** 	}
+ 137:.\Generated_Source\PSoC5/C_D.c **** 	
+ 138:.\Generated_Source\PSoC5/C_D.c **** 	C_D_Enable();
+ 903              		.loc 1 138 0
+ 904 0016 FFF7FEFF 		bl	C_D_Enable
+ 139:.\Generated_Source\PSoC5/C_D.c **** }
+ 905              		.loc 1 139 0
+ 906 001a 80BD     		pop	{r7, pc}
+ 907              	.L10:
+ 908              		.align	2
+ 909              	.L9:
+ 910 001c 00000000 		.word	C_D_initVar
+ 911              		.cfi_endproc
+ 912              	.LFE2:
+ 913              		.size	C_D_Start, .-C_D_Start
+ 914              		.section	.text.C_D_StartEx,"ax",%progbits
+ 915              		.align	2
+ 916              		.global	C_D_StartEx
+ 917              		.thumb
+ 918              		.thumb_func
+ 919              		.type	C_D_StartEx, %function
+ 920              	C_D_StartEx:
+ 921              	.LFB3:
+ 140:.\Generated_Source\PSoC5/C_D.c **** 
+ 141:.\Generated_Source\PSoC5/C_D.c **** 
+ 142:.\Generated_Source\PSoC5/C_D.c **** /*******************************************************************************
+ 143:.\Generated_Source\PSoC5/C_D.c **** * Function Name: C_D_StartEx
+ 144:.\Generated_Source\PSoC5/C_D.c **** ********************************************************************************
+ 145:.\Generated_Source\PSoC5/C_D.c **** *
+ 146:.\Generated_Source\PSoC5/C_D.c **** * Summary:
+ 147:.\Generated_Source\PSoC5/C_D.c **** *  The StartEx function sets pointers and sizes for both waveforms
+ 148:.\Generated_Source\PSoC5/C_D.c **** *  and then starts the component.
+ 149:.\Generated_Source\PSoC5/C_D.c **** *
+ 150:.\Generated_Source\PSoC5/C_D.c **** * Parameters:  
+ 151:.\Generated_Source\PSoC5/C_D.c **** *   uint8 * wavePtr1:     Pointer to the waveform 1 array.
+ 152:.\Generated_Source\PSoC5/C_D.c **** *   uint16  sampleSize1:  The amount of samples in the waveform 1.
+ 153:.\Generated_Source\PSoC5/C_D.c **** *   uint8 * wavePtr2:     Pointer to the waveform 2 array.
+ 154:.\Generated_Source\PSoC5/C_D.c **** *   uint16  sampleSize2:  The amount of samples in the waveform 2.
+ 155:.\Generated_Source\PSoC5/C_D.c **** *
+ 156:.\Generated_Source\PSoC5/C_D.c **** * Return: 
+ 157:.\Generated_Source\PSoC5/C_D.c **** *  None
+ 158:.\Generated_Source\PSoC5/C_D.c **** *
+ 159:.\Generated_Source\PSoC5/C_D.c **** * Reentrant:
+ 160:.\Generated_Source\PSoC5/C_D.c **** *  No
+ 161:.\Generated_Source\PSoC5/C_D.c **** *
+ 162:.\Generated_Source\PSoC5/C_D.c **** *******************************************************************************/
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 20
+
+
+ 163:.\Generated_Source\PSoC5/C_D.c **** void C_D_StartEx(const uint8 * wavePtr1, uint16 sampleSize1, const uint8 * wavePtr2, uint16 sampleS
+ 164:.\Generated_Source\PSoC5/C_D.c **** 
+ 165:.\Generated_Source\PSoC5/C_D.c **** {
+ 922              		.loc 1 165 0
+ 923              		.cfi_startproc
+ 924              		@ args = 0, pretend = 0, frame = 16
+ 925              		@ frame_needed = 1, uses_anonymous_args = 0
+ 926 0000 80B5     		push	{r7, lr}
+ 927              		.cfi_def_cfa_offset 8
+ 928              		.cfi_offset 7, -8
+ 929              		.cfi_offset 14, -4
+ 930 0002 84B0     		sub	sp, sp, #16
+ 931              		.cfi_def_cfa_offset 24
+ 932 0004 00AF     		add	r7, sp, #0
+ 933              		.cfi_def_cfa_register 7
+ 934 0006 F860     		str	r0, [r7, #12]
+ 935 0008 7A60     		str	r2, [r7, #4]
+ 936 000a 0A46     		mov	r2, r1	@ movhi
+ 937 000c 7A81     		strh	r2, [r7, #10]	@ movhi
+ 938 000e 3B81     		strh	r3, [r7, #8]	@ movhi
+ 166:.\Generated_Source\PSoC5/C_D.c **** 	C_D_Wave1Setup(wavePtr1, sampleSize1);
+ 939              		.loc 1 166 0
+ 940 0010 7B89     		ldrh	r3, [r7, #10]
+ 941 0012 F868     		ldr	r0, [r7, #12]
+ 942 0014 1946     		mov	r1, r3
+ 943 0016 FFF7FEFF 		bl	C_D_Wave1Setup
+ 167:.\Generated_Source\PSoC5/C_D.c **** 	C_D_Wave2Setup(wavePtr2, sampleSize2);
+ 944              		.loc 1 167 0
+ 945 001a 3B89     		ldrh	r3, [r7, #8]
+ 946 001c 7868     		ldr	r0, [r7, #4]
+ 947 001e 1946     		mov	r1, r3
+ 948 0020 FFF7FEFF 		bl	C_D_Wave2Setup
+ 168:.\Generated_Source\PSoC5/C_D.c **** 	C_D_Start();
+ 949              		.loc 1 168 0
+ 950 0024 FFF7FEFF 		bl	C_D_Start
+ 169:.\Generated_Source\PSoC5/C_D.c **** }
+ 951              		.loc 1 169 0
+ 952 0028 1037     		adds	r7, r7, #16
+ 953 002a BD46     		mov	sp, r7
+ 954              		@ sp needed
+ 955 002c 80BD     		pop	{r7, pc}
+ 956              		.cfi_endproc
+ 957              	.LFE3:
+ 958              		.size	C_D_StartEx, .-C_D_StartEx
+ 959 002e 00BF     		.section	.text.C_D_Stop,"ax",%progbits
+ 960              		.align	2
+ 961              		.global	C_D_Stop
+ 962              		.thumb
+ 963              		.thumb_func
+ 964              		.type	C_D_Stop, %function
+ 965              	C_D_Stop:
+ 966              	.LFB4:
+ 170:.\Generated_Source\PSoC5/C_D.c **** 
+ 171:.\Generated_Source\PSoC5/C_D.c **** 
+ 172:.\Generated_Source\PSoC5/C_D.c **** /*******************************************************************************
+ 173:.\Generated_Source\PSoC5/C_D.c **** * Function Name: C_D_Stop
+ 174:.\Generated_Source\PSoC5/C_D.c **** ********************************************************************************
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 21
+
+
+ 175:.\Generated_Source\PSoC5/C_D.c **** *
+ 176:.\Generated_Source\PSoC5/C_D.c **** * Summary:
+ 177:.\Generated_Source\PSoC5/C_D.c **** *  Stops the clock (if internal), disables the DMA channels
+ 178:.\Generated_Source\PSoC5/C_D.c **** *  and powers down the DAC.
+ 179:.\Generated_Source\PSoC5/C_D.c **** *
+ 180:.\Generated_Source\PSoC5/C_D.c **** * Parameters:  
+ 181:.\Generated_Source\PSoC5/C_D.c **** *  None  
+ 182:.\Generated_Source\PSoC5/C_D.c **** *
+ 183:.\Generated_Source\PSoC5/C_D.c **** * Return: 
+ 184:.\Generated_Source\PSoC5/C_D.c **** *  None
+ 185:.\Generated_Source\PSoC5/C_D.c **** *
+ 186:.\Generated_Source\PSoC5/C_D.c **** *******************************************************************************/
+ 187:.\Generated_Source\PSoC5/C_D.c **** void C_D_Stop(void) 
+ 188:.\Generated_Source\PSoC5/C_D.c **** {
+ 967              		.loc 1 188 0
+ 968              		.cfi_startproc
+ 969              		@ args = 0, pretend = 0, frame = 0
+ 970              		@ frame_needed = 1, uses_anonymous_args = 0
+ 971 0000 80B5     		push	{r7, lr}
+ 972              		.cfi_def_cfa_offset 8
+ 973              		.cfi_offset 7, -8
+ 974              		.cfi_offset 14, -4
+ 975 0002 00AF     		add	r7, sp, #0
+ 976              		.cfi_def_cfa_register 7
+ 189:.\Generated_Source\PSoC5/C_D.c **** 	/* Turn off internal clock, if one present */
+ 190:.\Generated_Source\PSoC5/C_D.c **** 	#if(C_D_CLOCK_SRC == C_D_CLOCK_INT)  	
+ 191:.\Generated_Source\PSoC5/C_D.c **** 	   C_D_DacClk_Stop();
+ 977              		.loc 1 191 0
+ 978 0004 FFF7FEFF 		bl	C_D_DacClk_Stop
+ 192:.\Generated_Source\PSoC5/C_D.c **** 	#endif /* C_D_CLOCK_SRC == C_D_CLOCK_INT */
+ 193:.\Generated_Source\PSoC5/C_D.c **** 	
+ 194:.\Generated_Source\PSoC5/C_D.c **** 	/* Disble DMA channels */
+ 195:.\Generated_Source\PSoC5/C_D.c **** 	(void)CyDmaChDisable(C_D_Wave1Chan);
+ 979              		.loc 1 195 0
+ 980 0008 064B     		ldr	r3, .L13
+ 981 000a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 982 000c 1846     		mov	r0, r3
+ 983 000e FFF7FEFF 		bl	CyDmaChDisable
+ 196:.\Generated_Source\PSoC5/C_D.c **** 	(void)CyDmaChDisable(C_D_Wave2Chan);
+ 984              		.loc 1 196 0
+ 985 0012 054B     		ldr	r3, .L13+4
+ 986 0014 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 987 0016 1846     		mov	r0, r3
+ 988 0018 FFF7FEFF 		bl	CyDmaChDisable
+ 197:.\Generated_Source\PSoC5/C_D.c **** 
+ 198:.\Generated_Source\PSoC5/C_D.c **** 	/* Disable power to DAC */
+ 199:.\Generated_Source\PSoC5/C_D.c **** 	C_D_VDAC8_Stop();
+ 989              		.loc 1 199 0
+ 990 001c FFF7FEFF 		bl	C_D_VDAC8_Stop
+ 200:.\Generated_Source\PSoC5/C_D.c **** }
+ 991              		.loc 1 200 0
+ 992 0020 80BD     		pop	{r7, pc}
+ 993              	.L14:
+ 994 0022 00BF     		.align	2
+ 995              	.L13:
+ 996 0024 01000000 		.word	C_D_Wave1Chan
+ 997 0028 02000000 		.word	C_D_Wave2Chan
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 22
+
+
+ 998              		.cfi_endproc
+ 999              	.LFE4:
+ 1000              		.size	C_D_Stop, .-C_D_Stop
+ 1001              		.section	.text.C_D_Wave1Setup,"ax",%progbits
+ 1002              		.align	2
+ 1003              		.global	C_D_Wave1Setup
+ 1004              		.thumb
+ 1005              		.thumb_func
+ 1006              		.type	C_D_Wave1Setup, %function
+ 1007              	C_D_Wave1Setup:
+ 1008              	.LFB5:
+ 201:.\Generated_Source\PSoC5/C_D.c **** 
+ 202:.\Generated_Source\PSoC5/C_D.c **** 
+ 203:.\Generated_Source\PSoC5/C_D.c **** /*******************************************************************************
+ 204:.\Generated_Source\PSoC5/C_D.c **** * Function Name: C_D_Wave1Setup
+ 205:.\Generated_Source\PSoC5/C_D.c **** ********************************************************************************
+ 206:.\Generated_Source\PSoC5/C_D.c **** *
+ 207:.\Generated_Source\PSoC5/C_D.c **** * Summary:
+ 208:.\Generated_Source\PSoC5/C_D.c **** *  Sets pointer and size for waveform 1.                                    
+ 209:.\Generated_Source\PSoC5/C_D.c **** *
+ 210:.\Generated_Source\PSoC5/C_D.c **** * Parameters:  
+ 211:.\Generated_Source\PSoC5/C_D.c **** *  uint8 * WavePtr:     Pointer to the waveform array.
+ 212:.\Generated_Source\PSoC5/C_D.c **** *  uint16  SampleSize:  The amount of samples in the waveform.
+ 213:.\Generated_Source\PSoC5/C_D.c **** *
+ 214:.\Generated_Source\PSoC5/C_D.c **** * Return: 
+ 215:.\Generated_Source\PSoC5/C_D.c **** *  None 
+ 216:.\Generated_Source\PSoC5/C_D.c **** *
+ 217:.\Generated_Source\PSoC5/C_D.c **** *******************************************************************************/
+ 218:.\Generated_Source\PSoC5/C_D.c **** void C_D_Wave1Setup(const uint8 * wavePtr, uint16 sampleSize)
+ 219:.\Generated_Source\PSoC5/C_D.c **** 
+ 220:.\Generated_Source\PSoC5/C_D.c **** {
+ 1009              		.loc 1 220 0
+ 1010              		.cfi_startproc
+ 1011              		@ args = 0, pretend = 0, frame = 8
+ 1012              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1013 0000 80B5     		push	{r7, lr}
+ 1014              		.cfi_def_cfa_offset 8
+ 1015              		.cfi_offset 7, -8
+ 1016              		.cfi_offset 14, -4
+ 1017 0002 82B0     		sub	sp, sp, #8
+ 1018              		.cfi_def_cfa_offset 16
+ 1019 0004 00AF     		add	r7, sp, #0
+ 1020              		.cfi_def_cfa_register 7
+ 1021 0006 7860     		str	r0, [r7, #4]
+ 1022 0008 0B46     		mov	r3, r1
+ 1023 000a 7B80     		strh	r3, [r7, #2]	@ movhi
+ 221:.\Generated_Source\PSoC5/C_D.c **** 	#if (CY_PSOC3)
+ 222:.\Generated_Source\PSoC5/C_D.c **** 		uint16 memoryType; /* determining the source memory type */
+ 223:.\Generated_Source\PSoC5/C_D.c **** 		memoryType = (C_D_HI16FLASHPTR == HI16(wavePtr)) ? HI16(CYDEV_FLS_BASE) : HI16(CYDEV_SRAM_BASE);
+ 224:.\Generated_Source\PSoC5/C_D.c **** 		
+ 225:.\Generated_Source\PSoC5/C_D.c **** 		C_D_Wave1Chan = C_D_Wave1_DMA_DmaInitialize(
+ 226:.\Generated_Source\PSoC5/C_D.c **** 		C_D_Wave1_DMA_BYTES_PER_BURST, C_D_Wave1_DMA_REQUEST_PER_BURST,
+ 227:.\Generated_Source\PSoC5/C_D.c **** 		memoryType, HI16(CYDEV_PERIPH_BASE));
+ 228:.\Generated_Source\PSoC5/C_D.c **** 	#else /* PSoC 5 */
+ 229:.\Generated_Source\PSoC5/C_D.c **** 		C_D_Wave1Chan = C_D_Wave1_DMA_DmaInitialize(
+ 230:.\Generated_Source\PSoC5/C_D.c **** 		C_D_Wave1_DMA_BYTES_PER_BURST, C_D_Wave1_DMA_REQUEST_PER_BURST,
+ 231:.\Generated_Source\PSoC5/C_D.c **** 		HI16(wavePtr), HI16(C_D_DAC8__D));
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 23
+
+
+ 1024              		.loc 1 231 0
+ 1025 000c 7B68     		ldr	r3, [r7, #4]
+ 1026 000e 1B0C     		lsrs	r3, r3, #16
+ 229:.\Generated_Source\PSoC5/C_D.c **** 		C_D_Wave1Chan = C_D_Wave1_DMA_DmaInitialize(
+ 1027              		.loc 1 229 0
+ 1028 0010 9BB2     		uxth	r3, r3
+ 1029 0012 0120     		movs	r0, #1
+ 1030 0014 0121     		movs	r1, #1
+ 1031 0016 1A46     		mov	r2, r3
+ 1032 0018 4FF48043 		mov	r3, #16384
+ 1033 001c FFF7FEFF 		bl	C_D_Wave1_DMA_DmaInitialize
+ 1034 0020 0346     		mov	r3, r0
+ 1035 0022 1A46     		mov	r2, r3
+ 1036 0024 104B     		ldr	r3, .L16
+ 1037 0026 1A70     		strb	r2, [r3]
+ 232:.\Generated_Source\PSoC5/C_D.c **** 	#endif /* CY_PSOC3 */
+ 233:.\Generated_Source\PSoC5/C_D.c **** 	
+ 234:.\Generated_Source\PSoC5/C_D.c **** 	/*
+ 235:.\Generated_Source\PSoC5/C_D.c **** 	* TD is looping on itself. 
+ 236:.\Generated_Source\PSoC5/C_D.c ****     * Increment the source address, but not the destination address. 
+ 237:.\Generated_Source\PSoC5/C_D.c **** 	*/
+ 238:.\Generated_Source\PSoC5/C_D.c **** 	(void)CyDmaTdSetConfiguration(C_D_Wave1TD, sampleSize, C_D_Wave1TD, 
+ 1038              		.loc 1 238 0
+ 1039 0028 104B     		ldr	r3, .L16+4
+ 1040 002a 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
+ 1041 002c 0F4B     		ldr	r3, .L16+4
+ 1042 002e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1043 0030 7A88     		ldrh	r2, [r7, #2]
+ 1044 0032 0846     		mov	r0, r1
+ 1045 0034 1146     		mov	r1, r2
+ 1046 0036 1A46     		mov	r2, r3
+ 1047 0038 0123     		movs	r3, #1
+ 1048 003a FFF7FEFF 		bl	CyDmaTdSetConfiguration
+ 239:.\Generated_Source\PSoC5/C_D.c ****                                     (uint8)CY_DMA_TD_INC_SRC_ADR | (uint8)C_D_Wave1_DMA__TD_TERMOUT
+ 240:.\Generated_Source\PSoC5/C_D.c **** 	
+ 241:.\Generated_Source\PSoC5/C_D.c **** 	/* Set the TD source and destination address */
+ 242:.\Generated_Source\PSoC5/C_D.c **** 	(void)CyDmaTdSetAddress(C_D_Wave1TD, LO16((uint32)wavePtr), LO16(C_D_DAC8__D));
+ 1049              		.loc 1 242 0
+ 1050 003e 0B4B     		ldr	r3, .L16+4
+ 1051 0040 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 1052 0042 7B68     		ldr	r3, [r7, #4]
+ 1053 0044 9BB2     		uxth	r3, r3
+ 1054 0046 1046     		mov	r0, r2
+ 1055 0048 1946     		mov	r1, r3
+ 1056 004a 45F68132 		movw	r2, #23425
+ 1057 004e FFF7FEFF 		bl	CyDmaTdSetAddress
+ 243:.\Generated_Source\PSoC5/C_D.c **** 	
+ 244:.\Generated_Source\PSoC5/C_D.c **** 	/* Associate the TD with the channel */
+ 245:.\Generated_Source\PSoC5/C_D.c **** 	(void)CyDmaChSetInitialTd(C_D_Wave1Chan, C_D_Wave1TD);
+ 1058              		.loc 1 245 0
+ 1059 0052 054B     		ldr	r3, .L16
+ 1060 0054 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 1061 0056 054B     		ldr	r3, .L16+4
+ 1062 0058 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1063 005a 1046     		mov	r0, r2
+ 1064 005c 1946     		mov	r1, r3
+ 1065 005e FFF7FEFF 		bl	CyDmaChSetInitialTd
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 24
+
+
+ 246:.\Generated_Source\PSoC5/C_D.c **** }
+ 1066              		.loc 1 246 0
+ 1067 0062 0837     		adds	r7, r7, #8
+ 1068 0064 BD46     		mov	sp, r7
+ 1069              		@ sp needed
+ 1070 0066 80BD     		pop	{r7, pc}
+ 1071              	.L17:
+ 1072              		.align	2
+ 1073              	.L16:
+ 1074 0068 01000000 		.word	C_D_Wave1Chan
+ 1075 006c 03000000 		.word	C_D_Wave1TD
+ 1076              		.cfi_endproc
+ 1077              	.LFE5:
+ 1078              		.size	C_D_Wave1Setup, .-C_D_Wave1Setup
+ 1079              		.section	.text.C_D_Wave2Setup,"ax",%progbits
+ 1080              		.align	2
+ 1081              		.global	C_D_Wave2Setup
+ 1082              		.thumb
+ 1083              		.thumb_func
+ 1084              		.type	C_D_Wave2Setup, %function
+ 1085              	C_D_Wave2Setup:
+ 1086              	.LFB6:
+ 247:.\Generated_Source\PSoC5/C_D.c **** 
+ 248:.\Generated_Source\PSoC5/C_D.c **** 
+ 249:.\Generated_Source\PSoC5/C_D.c **** /*******************************************************************************
+ 250:.\Generated_Source\PSoC5/C_D.c **** * Function Name: C_D_Wave2Setup
+ 251:.\Generated_Source\PSoC5/C_D.c **** ********************************************************************************
+ 252:.\Generated_Source\PSoC5/C_D.c **** *
+ 253:.\Generated_Source\PSoC5/C_D.c **** * Summary:
+ 254:.\Generated_Source\PSoC5/C_D.c **** *  Sets pointer and size for waveform 2.                                    
+ 255:.\Generated_Source\PSoC5/C_D.c **** *
+ 256:.\Generated_Source\PSoC5/C_D.c **** * Parameters:  
+ 257:.\Generated_Source\PSoC5/C_D.c **** *  uint8 * WavePtr:     Pointer to the waveform array.
+ 258:.\Generated_Source\PSoC5/C_D.c **** *  uint16  SampleSize:  The amount of samples in the waveform.
+ 259:.\Generated_Source\PSoC5/C_D.c **** *
+ 260:.\Generated_Source\PSoC5/C_D.c **** * Return: 
+ 261:.\Generated_Source\PSoC5/C_D.c **** *  None
+ 262:.\Generated_Source\PSoC5/C_D.c **** *
+ 263:.\Generated_Source\PSoC5/C_D.c **** *******************************************************************************/
+ 264:.\Generated_Source\PSoC5/C_D.c **** void C_D_Wave2Setup(const uint8 * wavePtr, uint16 sampleSize)
+ 265:.\Generated_Source\PSoC5/C_D.c ****  
+ 266:.\Generated_Source\PSoC5/C_D.c **** {
+ 1087              		.loc 1 266 0
+ 1088              		.cfi_startproc
+ 1089              		@ args = 0, pretend = 0, frame = 8
+ 1090              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1091 0000 80B5     		push	{r7, lr}
+ 1092              		.cfi_def_cfa_offset 8
+ 1093              		.cfi_offset 7, -8
+ 1094              		.cfi_offset 14, -4
+ 1095 0002 82B0     		sub	sp, sp, #8
+ 1096              		.cfi_def_cfa_offset 16
+ 1097 0004 00AF     		add	r7, sp, #0
+ 1098              		.cfi_def_cfa_register 7
+ 1099 0006 7860     		str	r0, [r7, #4]
+ 1100 0008 0B46     		mov	r3, r1
+ 1101 000a 7B80     		strh	r3, [r7, #2]	@ movhi
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 25
+
+
+ 267:.\Generated_Source\PSoC5/C_D.c **** 	#if (CY_PSOC3)
+ 268:.\Generated_Source\PSoC5/C_D.c **** 		uint16 memoryType; /* determining the source memory type */
+ 269:.\Generated_Source\PSoC5/C_D.c **** 		memoryType = (C_D_HI16FLASHPTR == HI16(wavePtr)) ? HI16(CYDEV_FLS_BASE) : HI16(CYDEV_SRAM_BASE);
+ 270:.\Generated_Source\PSoC5/C_D.c **** 			
+ 271:.\Generated_Source\PSoC5/C_D.c **** 		C_D_Wave2Chan = C_D_Wave2_DMA_DmaInitialize(
+ 272:.\Generated_Source\PSoC5/C_D.c **** 		C_D_Wave2_DMA_BYTES_PER_BURST, C_D_Wave2_DMA_REQUEST_PER_BURST,
+ 273:.\Generated_Source\PSoC5/C_D.c **** 		memoryType, HI16(CYDEV_PERIPH_BASE));
+ 274:.\Generated_Source\PSoC5/C_D.c **** 	#else /* PSoC 5 */
+ 275:.\Generated_Source\PSoC5/C_D.c **** 		C_D_Wave2Chan = C_D_Wave2_DMA_DmaInitialize(
+ 276:.\Generated_Source\PSoC5/C_D.c **** 		C_D_Wave2_DMA_BYTES_PER_BURST, C_D_Wave2_DMA_REQUEST_PER_BURST,
+ 277:.\Generated_Source\PSoC5/C_D.c **** 		HI16(wavePtr), HI16(C_D_DAC8__D));
+ 1102              		.loc 1 277 0
+ 1103 000c 7B68     		ldr	r3, [r7, #4]
+ 1104 000e 1B0C     		lsrs	r3, r3, #16
+ 275:.\Generated_Source\PSoC5/C_D.c **** 		C_D_Wave2Chan = C_D_Wave2_DMA_DmaInitialize(
+ 1105              		.loc 1 275 0
+ 1106 0010 9BB2     		uxth	r3, r3
+ 1107 0012 0120     		movs	r0, #1
+ 1108 0014 0121     		movs	r1, #1
+ 1109 0016 1A46     		mov	r2, r3
+ 1110 0018 4FF48043 		mov	r3, #16384
+ 1111 001c FFF7FEFF 		bl	C_D_Wave2_DMA_DmaInitialize
+ 1112 0020 0346     		mov	r3, r0
+ 1113 0022 1A46     		mov	r2, r3
+ 1114 0024 104B     		ldr	r3, .L19
+ 1115 0026 1A70     		strb	r2, [r3]
+ 278:.\Generated_Source\PSoC5/C_D.c **** 	#endif /* CY_PSOC3 */
+ 279:.\Generated_Source\PSoC5/C_D.c **** 	
+ 280:.\Generated_Source\PSoC5/C_D.c **** 	/*
+ 281:.\Generated_Source\PSoC5/C_D.c **** 	* TD is looping on itself. 
+ 282:.\Generated_Source\PSoC5/C_D.c **** 	* Increment the source address, but not the destination address. 
+ 283:.\Generated_Source\PSoC5/C_D.c **** 	*/
+ 284:.\Generated_Source\PSoC5/C_D.c **** 	(void)CyDmaTdSetConfiguration(C_D_Wave2TD, sampleSize, C_D_Wave2TD, 
+ 1116              		.loc 1 284 0
+ 1117 0028 104B     		ldr	r3, .L19+4
+ 1118 002a 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
+ 1119 002c 0F4B     		ldr	r3, .L19+4
+ 1120 002e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1121 0030 7A88     		ldrh	r2, [r7, #2]
+ 1122 0032 0846     		mov	r0, r1
+ 1123 0034 1146     		mov	r1, r2
+ 1124 0036 1A46     		mov	r2, r3
+ 1125 0038 0123     		movs	r3, #1
+ 1126 003a FFF7FEFF 		bl	CyDmaTdSetConfiguration
+ 285:.\Generated_Source\PSoC5/C_D.c ****                                     (uint8)CY_DMA_TD_INC_SRC_ADR | (uint8)C_D_Wave2_DMA__TD_TERMOUT
+ 286:.\Generated_Source\PSoC5/C_D.c **** 	
+ 287:.\Generated_Source\PSoC5/C_D.c **** 	/* Set the TD source and destination address */
+ 288:.\Generated_Source\PSoC5/C_D.c **** 	(void)CyDmaTdSetAddress(C_D_Wave2TD, LO16((uint32)wavePtr), LO16(C_D_DAC8__D));
+ 1127              		.loc 1 288 0
+ 1128 003e 0B4B     		ldr	r3, .L19+4
+ 1129 0040 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 1130 0042 7B68     		ldr	r3, [r7, #4]
+ 1131 0044 9BB2     		uxth	r3, r3
+ 1132 0046 1046     		mov	r0, r2
+ 1133 0048 1946     		mov	r1, r3
+ 1134 004a 45F68132 		movw	r2, #23425
+ 1135 004e FFF7FEFF 		bl	CyDmaTdSetAddress
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 26
+
+
+ 289:.\Generated_Source\PSoC5/C_D.c **** 	
+ 290:.\Generated_Source\PSoC5/C_D.c **** 	/* Associate the TD with the channel */
+ 291:.\Generated_Source\PSoC5/C_D.c **** 	(void)CyDmaChSetInitialTd(C_D_Wave2Chan, C_D_Wave2TD);
+ 1136              		.loc 1 291 0
+ 1137 0052 054B     		ldr	r3, .L19
+ 1138 0054 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 1139 0056 054B     		ldr	r3, .L19+4
+ 1140 0058 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1141 005a 1046     		mov	r0, r2
+ 1142 005c 1946     		mov	r1, r3
+ 1143 005e FFF7FEFF 		bl	CyDmaChSetInitialTd
+ 292:.\Generated_Source\PSoC5/C_D.c **** }
+ 1144              		.loc 1 292 0
+ 1145 0062 0837     		adds	r7, r7, #8
+ 1146 0064 BD46     		mov	sp, r7
+ 1147              		@ sp needed
+ 1148 0066 80BD     		pop	{r7, pc}
+ 1149              	.L20:
+ 1150              		.align	2
+ 1151              	.L19:
+ 1152 0068 02000000 		.word	C_D_Wave2Chan
+ 1153 006c 04000000 		.word	C_D_Wave2TD
+ 1154              		.cfi_endproc
+ 1155              	.LFE6:
+ 1156              		.size	C_D_Wave2Setup, .-C_D_Wave2Setup
+ 1157              		.text
+ 1158              	.Letext0:
+ 1159              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 1160              		.section	.debug_info,"",%progbits
+ 1161              	.Ldebug_info0:
+ 1162 0000 4C020000 		.4byte	0x24c
+ 1163 0004 0400     		.2byte	0x4
+ 1164 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1165 000a 04       		.byte	0x4
+ 1166 000b 01       		.uleb128 0x1
+ 1167 000c 37010000 		.4byte	.LASF36
+ 1168 0010 01       		.byte	0x1
+ 1169 0011 CA010000 		.4byte	.LASF37
+ 1170 0015 0F020000 		.4byte	.LASF38
+ 1171 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 1172 001d 00000000 		.4byte	0
+ 1173 0021 00000000 		.4byte	.Ldebug_line0
+ 1174 0025 02       		.uleb128 0x2
+ 1175 0026 01       		.byte	0x1
+ 1176 0027 06       		.byte	0x6
+ 1177 0028 60020000 		.4byte	.LASF0
+ 1178 002c 02       		.uleb128 0x2
+ 1179 002d 01       		.byte	0x1
+ 1180 002e 08       		.byte	0x8
+ 1181 002f D7000000 		.4byte	.LASF1
+ 1182 0033 02       		.uleb128 0x2
+ 1183 0034 02       		.byte	0x2
+ 1184 0035 05       		.byte	0x5
+ 1185 0036 FC010000 		.4byte	.LASF2
+ 1186 003a 02       		.uleb128 0x2
+ 1187 003b 02       		.byte	0x2
+ 1188 003c 07       		.byte	0x7
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 27
+
+
+ 1189 003d 22000000 		.4byte	.LASF3
+ 1190 0041 02       		.uleb128 0x2
+ 1191 0042 04       		.byte	0x4
+ 1192 0043 05       		.byte	0x5
+ 1193 0044 57020000 		.4byte	.LASF4
+ 1194 0048 02       		.uleb128 0x2
+ 1195 0049 04       		.byte	0x4
+ 1196 004a 07       		.byte	0x7
+ 1197 004b 9F000000 		.4byte	.LASF5
+ 1198 004f 02       		.uleb128 0x2
+ 1199 0050 08       		.byte	0x8
+ 1200 0051 05       		.byte	0x5
+ 1201 0052 BC010000 		.4byte	.LASF6
+ 1202 0056 02       		.uleb128 0x2
+ 1203 0057 08       		.byte	0x8
+ 1204 0058 07       		.byte	0x7
+ 1205 0059 7D000000 		.4byte	.LASF7
+ 1206 005d 03       		.uleb128 0x3
+ 1207 005e 04       		.byte	0x4
+ 1208 005f 05       		.byte	0x5
+ 1209 0060 696E7400 		.ascii	"int\000"
+ 1210 0064 02       		.uleb128 0x2
+ 1211 0065 04       		.byte	0x4
+ 1212 0066 07       		.byte	0x7
+ 1213 0067 0F010000 		.4byte	.LASF8
+ 1214 006b 04       		.uleb128 0x4
+ 1215 006c B9000000 		.4byte	.LASF9
+ 1216 0070 02       		.byte	0x2
+ 1217 0071 A1       		.byte	0xa1
+ 1218 0072 2C000000 		.4byte	0x2c
+ 1219 0076 04       		.uleb128 0x4
+ 1220 0077 F6000000 		.4byte	.LASF10
+ 1221 007b 02       		.byte	0x2
+ 1222 007c A2       		.byte	0xa2
+ 1223 007d 3A000000 		.4byte	0x3a
+ 1224 0081 04       		.uleb128 0x4
+ 1225 0082 08010000 		.4byte	.LASF11
+ 1226 0086 02       		.byte	0x2
+ 1227 0087 A3       		.byte	0xa3
+ 1228 0088 48000000 		.4byte	0x48
+ 1229 008c 02       		.uleb128 0x2
+ 1230 008d 04       		.byte	0x4
+ 1231 008e 04       		.byte	0x4
+ 1232 008f 68000000 		.4byte	.LASF12
+ 1233 0093 02       		.uleb128 0x2
+ 1234 0094 08       		.byte	0x8
+ 1235 0095 04       		.byte	0x4
+ 1236 0096 EF000000 		.4byte	.LASF13
+ 1237 009a 02       		.uleb128 0x2
+ 1238 009b 01       		.byte	0x1
+ 1239 009c 08       		.byte	0x8
+ 1240 009d E9010000 		.4byte	.LASF14
+ 1241 00a1 02       		.uleb128 0x2
+ 1242 00a2 04       		.byte	0x4
+ 1243 00a3 07       		.byte	0x7
+ 1244 00a4 B3010000 		.4byte	.LASF15
+ 1245 00a8 05       		.uleb128 0x5
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 28
+
+
+ 1246 00a9 06020000 		.4byte	.LASF16
+ 1247 00ad 01       		.byte	0x1
+ 1248 00ae 2B       		.byte	0x2b
+ 1249 00af 00000000 		.4byte	.LFB0
+ 1250 00b3 54000000 		.4byte	.LFE0-.LFB0
+ 1251 00b7 01       		.uleb128 0x1
+ 1252 00b8 9C       		.byte	0x9c
+ 1253 00b9 05       		.uleb128 0x5
+ 1254 00ba FD000000 		.4byte	.LASF17
+ 1255 00be 01       		.byte	0x1
+ 1256 00bf 56       		.byte	0x56
+ 1257 00c0 00000000 		.4byte	.LFB1
+ 1258 00c4 34000000 		.4byte	.LFE1-.LFB1
+ 1259 00c8 01       		.uleb128 0x1
+ 1260 00c9 9C       		.byte	0x9c
+ 1261 00ca 05       		.uleb128 0x5
+ 1262 00cb E5000000 		.4byte	.LASF18
+ 1263 00cf 01       		.byte	0x1
+ 1264 00d0 81       		.byte	0x81
+ 1265 00d1 00000000 		.4byte	.LFB2
+ 1266 00d5 20000000 		.4byte	.LFE2-.LFB2
+ 1267 00d9 01       		.uleb128 0x1
+ 1268 00da 9C       		.byte	0x9c
+ 1269 00db 06       		.uleb128 0x6
+ 1270 00dc 3E000000 		.4byte	.LASF24
+ 1271 00e0 01       		.byte	0x1
+ 1272 00e1 A3       		.byte	0xa3
+ 1273 00e2 00000000 		.4byte	.LFB3
+ 1274 00e6 2E000000 		.4byte	.LFE3-.LFB3
+ 1275 00ea 01       		.uleb128 0x1
+ 1276 00eb 9C       		.byte	0x9c
+ 1277 00ec 29010000 		.4byte	0x129
+ 1278 00f0 07       		.uleb128 0x7
+ 1279 00f1 4A000000 		.4byte	.LASF19
+ 1280 00f5 01       		.byte	0x1
+ 1281 00f6 A3       		.byte	0xa3
+ 1282 00f7 29010000 		.4byte	0x129
+ 1283 00fb 02       		.uleb128 0x2
+ 1284 00fc 91       		.byte	0x91
+ 1285 00fd 74       		.sleb128 -12
+ 1286 00fe 07       		.uleb128 0x7
+ 1287 00ff BF000000 		.4byte	.LASF20
+ 1288 0103 01       		.byte	0x1
+ 1289 0104 A3       		.byte	0xa3
+ 1290 0105 76000000 		.4byte	0x76
+ 1291 0109 02       		.uleb128 0x2
+ 1292 010a 91       		.byte	0x91
+ 1293 010b 72       		.sleb128 -14
+ 1294 010c 07       		.uleb128 0x7
+ 1295 010d 53000000 		.4byte	.LASF21
+ 1296 0111 01       		.byte	0x1
+ 1297 0112 A3       		.byte	0xa3
+ 1298 0113 29010000 		.4byte	0x129
+ 1299 0117 02       		.uleb128 0x2
+ 1300 0118 91       		.byte	0x91
+ 1301 0119 6C       		.sleb128 -20
+ 1302 011a 07       		.uleb128 0x7
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 29
+
+
+ 1303 011b CB000000 		.4byte	.LASF22
+ 1304 011f 01       		.byte	0x1
+ 1305 0120 A3       		.byte	0xa3
+ 1306 0121 76000000 		.4byte	0x76
+ 1307 0125 02       		.uleb128 0x2
+ 1308 0126 91       		.byte	0x91
+ 1309 0127 70       		.sleb128 -16
+ 1310 0128 00       		.byte	0
+ 1311 0129 08       		.uleb128 0x8
+ 1312 012a 04       		.byte	0x4
+ 1313 012b 2F010000 		.4byte	0x12f
+ 1314 012f 09       		.uleb128 0x9
+ 1315 0130 6B000000 		.4byte	0x6b
+ 1316 0134 05       		.uleb128 0x5
+ 1317 0135 35000000 		.4byte	.LASF23
+ 1318 0139 01       		.byte	0x1
+ 1319 013a BB       		.byte	0xbb
+ 1320 013b 00000000 		.4byte	.LFB4
+ 1321 013f 2C000000 		.4byte	.LFE4-.LFB4
+ 1322 0143 01       		.uleb128 0x1
+ 1323 0144 9C       		.byte	0x9c
+ 1324 0145 06       		.uleb128 0x6
+ 1325 0146 6E000000 		.4byte	.LASF25
+ 1326 014a 01       		.byte	0x1
+ 1327 014b DA       		.byte	0xda
+ 1328 014c 00000000 		.4byte	.LFB5
+ 1329 0150 70000000 		.4byte	.LFE5-.LFB5
+ 1330 0154 01       		.uleb128 0x1
+ 1331 0155 9C       		.byte	0x9c
+ 1332 0156 77010000 		.4byte	0x177
+ 1333 015a 07       		.uleb128 0x7
+ 1334 015b B1000000 		.4byte	.LASF26
+ 1335 015f 01       		.byte	0x1
+ 1336 0160 DA       		.byte	0xda
+ 1337 0161 29010000 		.4byte	0x129
+ 1338 0165 02       		.uleb128 0x2
+ 1339 0166 91       		.byte	0x91
+ 1340 0167 74       		.sleb128 -12
+ 1341 0168 07       		.uleb128 0x7
+ 1342 0169 94000000 		.4byte	.LASF27
+ 1343 016d 01       		.byte	0x1
+ 1344 016e DA       		.byte	0xda
+ 1345 016f 76000000 		.4byte	0x76
+ 1346 0173 02       		.uleb128 0x2
+ 1347 0174 91       		.byte	0x91
+ 1348 0175 72       		.sleb128 -14
+ 1349 0176 00       		.byte	0
+ 1350 0177 0A       		.uleb128 0xa
+ 1351 0178 28010000 		.4byte	.LASF28
+ 1352 017c 01       		.byte	0x1
+ 1353 017d 0801     		.2byte	0x108
+ 1354 017f 00000000 		.4byte	.LFB6
+ 1355 0183 70000000 		.4byte	.LFE6-.LFB6
+ 1356 0187 01       		.uleb128 0x1
+ 1357 0188 9C       		.byte	0x9c
+ 1358 0189 AC010000 		.4byte	0x1ac
+ 1359 018d 0B       		.uleb128 0xb
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 30
+
+
+ 1360 018e B1000000 		.4byte	.LASF26
+ 1361 0192 01       		.byte	0x1
+ 1362 0193 0801     		.2byte	0x108
+ 1363 0195 29010000 		.4byte	0x129
+ 1364 0199 02       		.uleb128 0x2
+ 1365 019a 91       		.byte	0x91
+ 1366 019b 74       		.sleb128 -12
+ 1367 019c 0B       		.uleb128 0xb
+ 1368 019d 94000000 		.4byte	.LASF27
+ 1369 01a1 01       		.byte	0x1
+ 1370 01a2 0801     		.2byte	0x108
+ 1371 01a4 76000000 		.4byte	0x76
+ 1372 01a8 02       		.uleb128 0x2
+ 1373 01a9 91       		.byte	0x91
+ 1374 01aa 72       		.sleb128 -14
+ 1375 01ab 00       		.byte	0
+ 1376 01ac 0C       		.uleb128 0xc
+ 1377 01ad EE010000 		.4byte	.LASF29
+ 1378 01b1 01       		.byte	0x1
+ 1379 01b2 17       		.byte	0x17
+ 1380 01b3 6B000000 		.4byte	0x6b
+ 1381 01b7 05       		.uleb128 0x5
+ 1382 01b8 03       		.byte	0x3
+ 1383 01b9 01000000 		.4byte	C_D_Wave1Chan
+ 1384 01bd 0C       		.uleb128 0xc
+ 1385 01be 00000000 		.4byte	.LASF30
+ 1386 01c2 01       		.byte	0x1
+ 1387 01c3 18       		.byte	0x18
+ 1388 01c4 6B000000 		.4byte	0x6b
+ 1389 01c8 05       		.uleb128 0x5
+ 1390 01c9 03       		.byte	0x3
+ 1391 01ca 02000000 		.4byte	C_D_Wave2Chan
+ 1392 01ce 0C       		.uleb128 0xc
+ 1393 01cf 5C000000 		.4byte	.LASF31
+ 1394 01d3 01       		.byte	0x1
+ 1395 01d4 19       		.byte	0x19
+ 1396 01d5 6B000000 		.4byte	0x6b
+ 1397 01d9 05       		.uleb128 0x5
+ 1398 01da 03       		.byte	0x3
+ 1399 01db 03000000 		.4byte	C_D_Wave1TD
+ 1400 01df 0C       		.uleb128 0xc
+ 1401 01e0 1C010000 		.4byte	.LASF32
+ 1402 01e4 01       		.byte	0x1
+ 1403 01e5 1A       		.byte	0x1a
+ 1404 01e6 6B000000 		.4byte	0x6b
+ 1405 01ea 05       		.uleb128 0x5
+ 1406 01eb 03       		.byte	0x3
+ 1407 01ec 04000000 		.4byte	C_D_Wave2TD
+ 1408 01f0 0D       		.uleb128 0xd
+ 1409 01f1 6C020000 		.4byte	.LASF33
+ 1410 01f5 01       		.byte	0x1
+ 1411 01f6 12       		.byte	0x12
+ 1412 01f7 6B000000 		.4byte	0x6b
+ 1413 01fb 05       		.uleb128 0x5
+ 1414 01fc 03       		.byte	0x3
+ 1415 01fd 00000000 		.4byte	C_D_initVar
+ 1416 0201 0E       		.uleb128 0xe
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 31
+
+
+ 1417 0202 6B000000 		.4byte	0x6b
+ 1418 0206 12020000 		.4byte	0x212
+ 1419 020a 0F       		.uleb128 0xf
+ 1420 020b A1000000 		.4byte	0xa1
+ 1421 020f 7D01     		.2byte	0x17d
+ 1422 0211 00       		.byte	0
+ 1423 0212 0D       		.uleb128 0xd
+ 1424 0213 0E000000 		.4byte	.LASF34
+ 1425 0217 01       		.byte	0x1
+ 1426 0218 14       		.byte	0x14
+ 1427 0219 23020000 		.4byte	0x223
+ 1428 021d 05       		.uleb128 0x5
+ 1429 021e 03       		.byte	0x3
+ 1430 021f 00000000 		.4byte	C_D_wave1
+ 1431 0223 09       		.uleb128 0x9
+ 1432 0224 01020000 		.4byte	0x201
+ 1433 0228 0E       		.uleb128 0xe
+ 1434 0229 6B000000 		.4byte	0x6b
+ 1435 022d 39020000 		.4byte	0x239
+ 1436 0231 0F       		.uleb128 0xf
+ 1437 0232 A1000000 		.4byte	0xa1
+ 1438 0236 5401     		.2byte	0x154
+ 1439 0238 00       		.byte	0
+ 1440 0239 0D       		.uleb128 0xd
+ 1441 023a 18000000 		.4byte	.LASF35
+ 1442 023e 01       		.byte	0x1
+ 1443 023f 15       		.byte	0x15
+ 1444 0240 4A020000 		.4byte	0x24a
+ 1445 0244 05       		.uleb128 0x5
+ 1446 0245 03       		.byte	0x3
+ 1447 0246 00000000 		.4byte	C_D_wave2
+ 1448 024a 09       		.uleb128 0x9
+ 1449 024b 28020000 		.4byte	0x228
+ 1450 024f 00       		.byte	0
+ 1451              		.section	.debug_abbrev,"",%progbits
+ 1452              	.Ldebug_abbrev0:
+ 1453 0000 01       		.uleb128 0x1
+ 1454 0001 11       		.uleb128 0x11
+ 1455 0002 01       		.byte	0x1
+ 1456 0003 25       		.uleb128 0x25
+ 1457 0004 0E       		.uleb128 0xe
+ 1458 0005 13       		.uleb128 0x13
+ 1459 0006 0B       		.uleb128 0xb
+ 1460 0007 03       		.uleb128 0x3
+ 1461 0008 0E       		.uleb128 0xe
+ 1462 0009 1B       		.uleb128 0x1b
+ 1463 000a 0E       		.uleb128 0xe
+ 1464 000b 55       		.uleb128 0x55
+ 1465 000c 17       		.uleb128 0x17
+ 1466 000d 11       		.uleb128 0x11
+ 1467 000e 01       		.uleb128 0x1
+ 1468 000f 10       		.uleb128 0x10
+ 1469 0010 17       		.uleb128 0x17
+ 1470 0011 00       		.byte	0
+ 1471 0012 00       		.byte	0
+ 1472 0013 02       		.uleb128 0x2
+ 1473 0014 24       		.uleb128 0x24
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 32
+
+
+ 1474 0015 00       		.byte	0
+ 1475 0016 0B       		.uleb128 0xb
+ 1476 0017 0B       		.uleb128 0xb
+ 1477 0018 3E       		.uleb128 0x3e
+ 1478 0019 0B       		.uleb128 0xb
+ 1479 001a 03       		.uleb128 0x3
+ 1480 001b 0E       		.uleb128 0xe
+ 1481 001c 00       		.byte	0
+ 1482 001d 00       		.byte	0
+ 1483 001e 03       		.uleb128 0x3
+ 1484 001f 24       		.uleb128 0x24
+ 1485 0020 00       		.byte	0
+ 1486 0021 0B       		.uleb128 0xb
+ 1487 0022 0B       		.uleb128 0xb
+ 1488 0023 3E       		.uleb128 0x3e
+ 1489 0024 0B       		.uleb128 0xb
+ 1490 0025 03       		.uleb128 0x3
+ 1491 0026 08       		.uleb128 0x8
+ 1492 0027 00       		.byte	0
+ 1493 0028 00       		.byte	0
+ 1494 0029 04       		.uleb128 0x4
+ 1495 002a 16       		.uleb128 0x16
+ 1496 002b 00       		.byte	0
+ 1497 002c 03       		.uleb128 0x3
+ 1498 002d 0E       		.uleb128 0xe
+ 1499 002e 3A       		.uleb128 0x3a
+ 1500 002f 0B       		.uleb128 0xb
+ 1501 0030 3B       		.uleb128 0x3b
+ 1502 0031 0B       		.uleb128 0xb
+ 1503 0032 49       		.uleb128 0x49
+ 1504 0033 13       		.uleb128 0x13
+ 1505 0034 00       		.byte	0
+ 1506 0035 00       		.byte	0
+ 1507 0036 05       		.uleb128 0x5
+ 1508 0037 2E       		.uleb128 0x2e
+ 1509 0038 00       		.byte	0
+ 1510 0039 3F       		.uleb128 0x3f
+ 1511 003a 19       		.uleb128 0x19
+ 1512 003b 03       		.uleb128 0x3
+ 1513 003c 0E       		.uleb128 0xe
+ 1514 003d 3A       		.uleb128 0x3a
+ 1515 003e 0B       		.uleb128 0xb
+ 1516 003f 3B       		.uleb128 0x3b
+ 1517 0040 0B       		.uleb128 0xb
+ 1518 0041 27       		.uleb128 0x27
+ 1519 0042 19       		.uleb128 0x19
+ 1520 0043 11       		.uleb128 0x11
+ 1521 0044 01       		.uleb128 0x1
+ 1522 0045 12       		.uleb128 0x12
+ 1523 0046 06       		.uleb128 0x6
+ 1524 0047 40       		.uleb128 0x40
+ 1525 0048 18       		.uleb128 0x18
+ 1526 0049 9642     		.uleb128 0x2116
+ 1527 004b 19       		.uleb128 0x19
+ 1528 004c 00       		.byte	0
+ 1529 004d 00       		.byte	0
+ 1530 004e 06       		.uleb128 0x6
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 33
+
+
+ 1531 004f 2E       		.uleb128 0x2e
+ 1532 0050 01       		.byte	0x1
+ 1533 0051 3F       		.uleb128 0x3f
+ 1534 0052 19       		.uleb128 0x19
+ 1535 0053 03       		.uleb128 0x3
+ 1536 0054 0E       		.uleb128 0xe
+ 1537 0055 3A       		.uleb128 0x3a
+ 1538 0056 0B       		.uleb128 0xb
+ 1539 0057 3B       		.uleb128 0x3b
+ 1540 0058 0B       		.uleb128 0xb
+ 1541 0059 27       		.uleb128 0x27
+ 1542 005a 19       		.uleb128 0x19
+ 1543 005b 11       		.uleb128 0x11
+ 1544 005c 01       		.uleb128 0x1
+ 1545 005d 12       		.uleb128 0x12
+ 1546 005e 06       		.uleb128 0x6
+ 1547 005f 40       		.uleb128 0x40
+ 1548 0060 18       		.uleb128 0x18
+ 1549 0061 9642     		.uleb128 0x2116
+ 1550 0063 19       		.uleb128 0x19
+ 1551 0064 01       		.uleb128 0x1
+ 1552 0065 13       		.uleb128 0x13
+ 1553 0066 00       		.byte	0
+ 1554 0067 00       		.byte	0
+ 1555 0068 07       		.uleb128 0x7
+ 1556 0069 05       		.uleb128 0x5
+ 1557 006a 00       		.byte	0
+ 1558 006b 03       		.uleb128 0x3
+ 1559 006c 0E       		.uleb128 0xe
+ 1560 006d 3A       		.uleb128 0x3a
+ 1561 006e 0B       		.uleb128 0xb
+ 1562 006f 3B       		.uleb128 0x3b
+ 1563 0070 0B       		.uleb128 0xb
+ 1564 0071 49       		.uleb128 0x49
+ 1565 0072 13       		.uleb128 0x13
+ 1566 0073 02       		.uleb128 0x2
+ 1567 0074 18       		.uleb128 0x18
+ 1568 0075 00       		.byte	0
+ 1569 0076 00       		.byte	0
+ 1570 0077 08       		.uleb128 0x8
+ 1571 0078 0F       		.uleb128 0xf
+ 1572 0079 00       		.byte	0
+ 1573 007a 0B       		.uleb128 0xb
+ 1574 007b 0B       		.uleb128 0xb
+ 1575 007c 49       		.uleb128 0x49
+ 1576 007d 13       		.uleb128 0x13
+ 1577 007e 00       		.byte	0
+ 1578 007f 00       		.byte	0
+ 1579 0080 09       		.uleb128 0x9
+ 1580 0081 26       		.uleb128 0x26
+ 1581 0082 00       		.byte	0
+ 1582 0083 49       		.uleb128 0x49
+ 1583 0084 13       		.uleb128 0x13
+ 1584 0085 00       		.byte	0
+ 1585 0086 00       		.byte	0
+ 1586 0087 0A       		.uleb128 0xa
+ 1587 0088 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 34
+
+
+ 1588 0089 01       		.byte	0x1
+ 1589 008a 3F       		.uleb128 0x3f
+ 1590 008b 19       		.uleb128 0x19
+ 1591 008c 03       		.uleb128 0x3
+ 1592 008d 0E       		.uleb128 0xe
+ 1593 008e 3A       		.uleb128 0x3a
+ 1594 008f 0B       		.uleb128 0xb
+ 1595 0090 3B       		.uleb128 0x3b
+ 1596 0091 05       		.uleb128 0x5
+ 1597 0092 27       		.uleb128 0x27
+ 1598 0093 19       		.uleb128 0x19
+ 1599 0094 11       		.uleb128 0x11
+ 1600 0095 01       		.uleb128 0x1
+ 1601 0096 12       		.uleb128 0x12
+ 1602 0097 06       		.uleb128 0x6
+ 1603 0098 40       		.uleb128 0x40
+ 1604 0099 18       		.uleb128 0x18
+ 1605 009a 9642     		.uleb128 0x2116
+ 1606 009c 19       		.uleb128 0x19
+ 1607 009d 01       		.uleb128 0x1
+ 1608 009e 13       		.uleb128 0x13
+ 1609 009f 00       		.byte	0
+ 1610 00a0 00       		.byte	0
+ 1611 00a1 0B       		.uleb128 0xb
+ 1612 00a2 05       		.uleb128 0x5
+ 1613 00a3 00       		.byte	0
+ 1614 00a4 03       		.uleb128 0x3
+ 1615 00a5 0E       		.uleb128 0xe
+ 1616 00a6 3A       		.uleb128 0x3a
+ 1617 00a7 0B       		.uleb128 0xb
+ 1618 00a8 3B       		.uleb128 0x3b
+ 1619 00a9 05       		.uleb128 0x5
+ 1620 00aa 49       		.uleb128 0x49
+ 1621 00ab 13       		.uleb128 0x13
+ 1622 00ac 02       		.uleb128 0x2
+ 1623 00ad 18       		.uleb128 0x18
+ 1624 00ae 00       		.byte	0
+ 1625 00af 00       		.byte	0
+ 1626 00b0 0C       		.uleb128 0xc
+ 1627 00b1 34       		.uleb128 0x34
+ 1628 00b2 00       		.byte	0
+ 1629 00b3 03       		.uleb128 0x3
+ 1630 00b4 0E       		.uleb128 0xe
+ 1631 00b5 3A       		.uleb128 0x3a
+ 1632 00b6 0B       		.uleb128 0xb
+ 1633 00b7 3B       		.uleb128 0x3b
+ 1634 00b8 0B       		.uleb128 0xb
+ 1635 00b9 49       		.uleb128 0x49
+ 1636 00ba 13       		.uleb128 0x13
+ 1637 00bb 02       		.uleb128 0x2
+ 1638 00bc 18       		.uleb128 0x18
+ 1639 00bd 00       		.byte	0
+ 1640 00be 00       		.byte	0
+ 1641 00bf 0D       		.uleb128 0xd
+ 1642 00c0 34       		.uleb128 0x34
+ 1643 00c1 00       		.byte	0
+ 1644 00c2 03       		.uleb128 0x3
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 35
+
+
+ 1645 00c3 0E       		.uleb128 0xe
+ 1646 00c4 3A       		.uleb128 0x3a
+ 1647 00c5 0B       		.uleb128 0xb
+ 1648 00c6 3B       		.uleb128 0x3b
+ 1649 00c7 0B       		.uleb128 0xb
+ 1650 00c8 49       		.uleb128 0x49
+ 1651 00c9 13       		.uleb128 0x13
+ 1652 00ca 3F       		.uleb128 0x3f
+ 1653 00cb 19       		.uleb128 0x19
+ 1654 00cc 02       		.uleb128 0x2
+ 1655 00cd 18       		.uleb128 0x18
+ 1656 00ce 00       		.byte	0
+ 1657 00cf 00       		.byte	0
+ 1658 00d0 0E       		.uleb128 0xe
+ 1659 00d1 01       		.uleb128 0x1
+ 1660 00d2 01       		.byte	0x1
+ 1661 00d3 49       		.uleb128 0x49
+ 1662 00d4 13       		.uleb128 0x13
+ 1663 00d5 01       		.uleb128 0x1
+ 1664 00d6 13       		.uleb128 0x13
+ 1665 00d7 00       		.byte	0
+ 1666 00d8 00       		.byte	0
+ 1667 00d9 0F       		.uleb128 0xf
+ 1668 00da 21       		.uleb128 0x21
+ 1669 00db 00       		.byte	0
+ 1670 00dc 49       		.uleb128 0x49
+ 1671 00dd 13       		.uleb128 0x13
+ 1672 00de 2F       		.uleb128 0x2f
+ 1673 00df 05       		.uleb128 0x5
+ 1674 00e0 00       		.byte	0
+ 1675 00e1 00       		.byte	0
+ 1676 00e2 00       		.byte	0
+ 1677              		.section	.debug_aranges,"",%progbits
+ 1678 0000 4C000000 		.4byte	0x4c
+ 1679 0004 0200     		.2byte	0x2
+ 1680 0006 00000000 		.4byte	.Ldebug_info0
+ 1681 000a 04       		.byte	0x4
+ 1682 000b 00       		.byte	0
+ 1683 000c 0000     		.2byte	0
+ 1684 000e 0000     		.2byte	0
+ 1685 0010 00000000 		.4byte	.LFB0
+ 1686 0014 54000000 		.4byte	.LFE0-.LFB0
+ 1687 0018 00000000 		.4byte	.LFB1
+ 1688 001c 34000000 		.4byte	.LFE1-.LFB1
+ 1689 0020 00000000 		.4byte	.LFB2
+ 1690 0024 20000000 		.4byte	.LFE2-.LFB2
+ 1691 0028 00000000 		.4byte	.LFB3
+ 1692 002c 2E000000 		.4byte	.LFE3-.LFB3
+ 1693 0030 00000000 		.4byte	.LFB4
+ 1694 0034 2C000000 		.4byte	.LFE4-.LFB4
+ 1695 0038 00000000 		.4byte	.LFB5
+ 1696 003c 70000000 		.4byte	.LFE5-.LFB5
+ 1697 0040 00000000 		.4byte	.LFB6
+ 1698 0044 70000000 		.4byte	.LFE6-.LFB6
+ 1699 0048 00000000 		.4byte	0
+ 1700 004c 00000000 		.4byte	0
+ 1701              		.section	.debug_ranges,"",%progbits
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 36
+
+
+ 1702              	.Ldebug_ranges0:
+ 1703 0000 00000000 		.4byte	.LFB0
+ 1704 0004 54000000 		.4byte	.LFE0
+ 1705 0008 00000000 		.4byte	.LFB1
+ 1706 000c 34000000 		.4byte	.LFE1
+ 1707 0010 00000000 		.4byte	.LFB2
+ 1708 0014 20000000 		.4byte	.LFE2
+ 1709 0018 00000000 		.4byte	.LFB3
+ 1710 001c 2E000000 		.4byte	.LFE3
+ 1711 0020 00000000 		.4byte	.LFB4
+ 1712 0024 2C000000 		.4byte	.LFE4
+ 1713 0028 00000000 		.4byte	.LFB5
+ 1714 002c 70000000 		.4byte	.LFE5
+ 1715 0030 00000000 		.4byte	.LFB6
+ 1716 0034 70000000 		.4byte	.LFE6
+ 1717 0038 00000000 		.4byte	0
+ 1718 003c 00000000 		.4byte	0
+ 1719              		.section	.debug_line,"",%progbits
+ 1720              	.Ldebug_line0:
+ 1721 0000 EB000000 		.section	.debug_str,"MS",%progbits,1
+ 1721      02004200 
+ 1721      00000201 
+ 1721      FB0E0D00 
+ 1721      01010101 
+ 1722              	.LASF30:
+ 1723 0000 435F445F 		.ascii	"C_D_Wave2Chan\000"
+ 1723      57617665 
+ 1723      32436861 
+ 1723      6E00
+ 1724              	.LASF34:
+ 1725 000e 435F445F 		.ascii	"C_D_wave1\000"
+ 1725      77617665 
+ 1725      3100
+ 1726              	.LASF35:
+ 1727 0018 435F445F 		.ascii	"C_D_wave2\000"
+ 1727      77617665 
+ 1727      3200
+ 1728              	.LASF3:
+ 1729 0022 73686F72 		.ascii	"short unsigned int\000"
+ 1729      7420756E 
+ 1729      7369676E 
+ 1729      65642069 
+ 1729      6E7400
+ 1730              	.LASF23:
+ 1731 0035 435F445F 		.ascii	"C_D_Stop\000"
+ 1731      53746F70 
+ 1731      00
+ 1732              	.LASF24:
+ 1733 003e 435F445F 		.ascii	"C_D_StartEx\000"
+ 1733      53746172 
+ 1733      74457800 
+ 1734              	.LASF19:
+ 1735 004a 77617665 		.ascii	"wavePtr1\000"
+ 1735      50747231 
+ 1735      00
+ 1736              	.LASF21:
+ 1737 0053 77617665 		.ascii	"wavePtr2\000"
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 37
+
+
+ 1737      50747232 
+ 1737      00
+ 1738              	.LASF31:
+ 1739 005c 435F445F 		.ascii	"C_D_Wave1TD\000"
+ 1739      57617665 
+ 1739      31544400 
+ 1740              	.LASF12:
+ 1741 0068 666C6F61 		.ascii	"float\000"
+ 1741      7400
+ 1742              	.LASF25:
+ 1743 006e 435F445F 		.ascii	"C_D_Wave1Setup\000"
+ 1743      57617665 
+ 1743      31536574 
+ 1743      757000
+ 1744              	.LASF7:
+ 1745 007d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1745      206C6F6E 
+ 1745      6720756E 
+ 1745      7369676E 
+ 1745      65642069 
+ 1746              	.LASF27:
+ 1747 0094 73616D70 		.ascii	"sampleSize\000"
+ 1747      6C655369 
+ 1747      7A6500
+ 1748              	.LASF5:
+ 1749 009f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1749      20756E73 
+ 1749      69676E65 
+ 1749      6420696E 
+ 1749      7400
+ 1750              	.LASF26:
+ 1751 00b1 77617665 		.ascii	"wavePtr\000"
+ 1751      50747200 
+ 1752              	.LASF9:
+ 1753 00b9 75696E74 		.ascii	"uint8\000"
+ 1753      3800
+ 1754              	.LASF20:
+ 1755 00bf 73616D70 		.ascii	"sampleSize1\000"
+ 1755      6C655369 
+ 1755      7A653100 
+ 1756              	.LASF22:
+ 1757 00cb 73616D70 		.ascii	"sampleSize2\000"
+ 1757      6C655369 
+ 1757      7A653200 
+ 1758              	.LASF1:
+ 1759 00d7 756E7369 		.ascii	"unsigned char\000"
+ 1759      676E6564 
+ 1759      20636861 
+ 1759      7200
+ 1760              	.LASF18:
+ 1761 00e5 435F445F 		.ascii	"C_D_Start\000"
+ 1761      53746172 
+ 1761      7400
+ 1762              	.LASF13:
+ 1763 00ef 646F7562 		.ascii	"double\000"
+ 1763      6C6500
+ 1764              	.LASF10:
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 38
+
+
+ 1765 00f6 75696E74 		.ascii	"uint16\000"
+ 1765      313600
+ 1766              	.LASF17:
+ 1767 00fd 435F445F 		.ascii	"C_D_Enable\000"
+ 1767      456E6162 
+ 1767      6C6500
+ 1768              	.LASF11:
+ 1769 0108 75696E74 		.ascii	"uint32\000"
+ 1769      333200
+ 1770              	.LASF8:
+ 1771 010f 756E7369 		.ascii	"unsigned int\000"
+ 1771      676E6564 
+ 1771      20696E74 
+ 1771      00
+ 1772              	.LASF32:
+ 1773 011c 435F445F 		.ascii	"C_D_Wave2TD\000"
+ 1773      57617665 
+ 1773      32544400 
+ 1774              	.LASF28:
+ 1775 0128 435F445F 		.ascii	"C_D_Wave2Setup\000"
+ 1775      57617665 
+ 1775      32536574 
+ 1775      757000
+ 1776              	.LASF36:
+ 1777 0137 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 1777      4320342E 
+ 1777      382E3420 
+ 1777      32303134 
+ 1777      30353236 
+ 1778 016a 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
+ 1778      20726576 
+ 1778      6973696F 
+ 1778      6E203231 
+ 1778      31333538 
+ 1779 019d 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 1779      66756E63 
+ 1779      74696F6E 
+ 1779      2D736563 
+ 1779      74696F6E 
+ 1780              	.LASF15:
+ 1781 01b3 73697A65 		.ascii	"sizetype\000"
+ 1781      74797065 
+ 1781      00
+ 1782              	.LASF6:
+ 1783 01bc 6C6F6E67 		.ascii	"long long int\000"
+ 1783      206C6F6E 
+ 1783      6720696E 
+ 1783      7400
+ 1784              	.LASF37:
+ 1785 01ca 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\C_D.c\000"
+ 1785      6E657261 
+ 1785      7465645F 
+ 1785      536F7572 
+ 1785      63655C50 
+ 1786              	.LASF14:
+ 1787 01e9 63686172 		.ascii	"char\000"
+ 1787      00
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc3dsz8c.s 			page 39
+
+
+ 1788              	.LASF29:
+ 1789 01ee 435F445F 		.ascii	"C_D_Wave1Chan\000"
+ 1789      57617665 
+ 1789      31436861 
+ 1789      6E00
+ 1790              	.LASF2:
+ 1791 01fc 73686F72 		.ascii	"short int\000"
+ 1791      7420696E 
+ 1791      7400
+ 1792              	.LASF16:
+ 1793 0206 435F445F 		.ascii	"C_D_Init\000"
+ 1793      496E6974 
+ 1793      00
+ 1794              	.LASF38:
+ 1795 020f 433A5C55 		.ascii	"C:\\Users\\IEUser\\Downloads\\PSoC_Creator\\Filter_"
+ 1795      73657273 
+ 1795      5C494555 
+ 1795      7365725C 
+ 1795      446F776E 
+ 1796 023d 4144435F 		.ascii	"ADC_VDAC01\\Design01.cydsn\000"
+ 1796      56444143 
+ 1796      30315C44 
+ 1796      65736967 
+ 1796      6E30312E 
+ 1797              	.LASF4:
+ 1798 0257 6C6F6E67 		.ascii	"long int\000"
+ 1798      20696E74 
+ 1798      00
+ 1799              	.LASF0:
+ 1800 0260 7369676E 		.ascii	"signed char\000"
+ 1800      65642063 
+ 1800      68617200 
+ 1801              	.LASF33:
+ 1802 026c 435F445F 		.ascii	"C_D_initVar\000"
+ 1802      696E6974 
+ 1802      56617200 
+ 1803              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

@@ -1,0 +1,651 @@
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc9MQ2pc.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"A_B_PM.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.bss
+  19              		.align	2
+  20              	A_B_backup:
+  21 0000 00       		.space	1
+  22 0001 000000   		.section	.text.A_B_Sleep,"ax",%progbits
+  23              		.align	2
+  24              		.global	A_B_Sleep
+  25              		.thumb
+  26              		.thumb_func
+  27              		.type	A_B_Sleep, %function
+  28              	A_B_Sleep:
+  29              	.LFB0:
+  30              		.file 1 ".\\Generated_Source\\PSoC5\\A_B_PM.c"
+   1:.\Generated_Source\PSoC5/A_B_PM.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/A_B_PM.c **** * File Name: A_B_PM.c  
+   3:.\Generated_Source\PSoC5/A_B_PM.c **** * Version 2.0
+   4:.\Generated_Source\PSoC5/A_B_PM.c **** *
+   5:.\Generated_Source\PSoC5/A_B_PM.c **** * Description:
+   6:.\Generated_Source\PSoC5/A_B_PM.c **** *  This file provides the power manager source code to the API for 
+   7:.\Generated_Source\PSoC5/A_B_PM.c **** *  the WaveDAC8 component.
+   8:.\Generated_Source\PSoC5/A_B_PM.c **** *
+   9:.\Generated_Source\PSoC5/A_B_PM.c **** ********************************************************************************
+  10:.\Generated_Source\PSoC5/A_B_PM.c **** * Copyright 2013, Cypress Semiconductor Corporation.  All rights reserved.
+  11:.\Generated_Source\PSoC5/A_B_PM.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  12:.\Generated_Source\PSoC5/A_B_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  13:.\Generated_Source\PSoC5/A_B_PM.c **** * the software package with which this file was provided.
+  14:.\Generated_Source\PSoC5/A_B_PM.c **** *******************************************************************************/
+  15:.\Generated_Source\PSoC5/A_B_PM.c **** 
+  16:.\Generated_Source\PSoC5/A_B_PM.c **** #include "A_B.h"
+  17:.\Generated_Source\PSoC5/A_B_PM.c **** 
+  18:.\Generated_Source\PSoC5/A_B_PM.c **** static A_B_BACKUP_STRUCT  A_B_backup;
+  19:.\Generated_Source\PSoC5/A_B_PM.c **** 
+  20:.\Generated_Source\PSoC5/A_B_PM.c **** 
+  21:.\Generated_Source\PSoC5/A_B_PM.c **** /*******************************************************************************
+  22:.\Generated_Source\PSoC5/A_B_PM.c **** * Function Name: A_B_Sleep
+  23:.\Generated_Source\PSoC5/A_B_PM.c **** ********************************************************************************
+  24:.\Generated_Source\PSoC5/A_B_PM.c **** *
+  25:.\Generated_Source\PSoC5/A_B_PM.c **** * Summary:
+  26:.\Generated_Source\PSoC5/A_B_PM.c **** *  Stops the component and saves its configuration. Should be called 
+  27:.\Generated_Source\PSoC5/A_B_PM.c **** *  just prior to entering sleep.
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc9MQ2pc.s 			page 2
+
+
+  28:.\Generated_Source\PSoC5/A_B_PM.c **** *  
+  29:.\Generated_Source\PSoC5/A_B_PM.c **** * Parameters:  
+  30:.\Generated_Source\PSoC5/A_B_PM.c **** *  None
+  31:.\Generated_Source\PSoC5/A_B_PM.c **** *
+  32:.\Generated_Source\PSoC5/A_B_PM.c **** * Return: 
+  33:.\Generated_Source\PSoC5/A_B_PM.c **** *  None
+  34:.\Generated_Source\PSoC5/A_B_PM.c **** *
+  35:.\Generated_Source\PSoC5/A_B_PM.c **** * Global variables:
+  36:.\Generated_Source\PSoC5/A_B_PM.c **** *  A_B_backup:  The structure field 'enableState' is modified 
+  37:.\Generated_Source\PSoC5/A_B_PM.c **** *  depending on the enable state of the block before entering to sleep mode.
+  38:.\Generated_Source\PSoC5/A_B_PM.c **** *
+  39:.\Generated_Source\PSoC5/A_B_PM.c **** * Reentrant:
+  40:.\Generated_Source\PSoC5/A_B_PM.c **** *  No
+  41:.\Generated_Source\PSoC5/A_B_PM.c **** *
+  42:.\Generated_Source\PSoC5/A_B_PM.c **** *******************************************************************************/
+  43:.\Generated_Source\PSoC5/A_B_PM.c **** void A_B_Sleep(void) 
+  44:.\Generated_Source\PSoC5/A_B_PM.c **** {
+  31              		.loc 1 44 0
+  32              		.cfi_startproc
+  33              		@ args = 0, pretend = 0, frame = 0
+  34              		@ frame_needed = 1, uses_anonymous_args = 0
+  35 0000 80B5     		push	{r7, lr}
+  36              		.cfi_def_cfa_offset 8
+  37              		.cfi_offset 7, -8
+  38              		.cfi_offset 14, -4
+  39 0002 00AF     		add	r7, sp, #0
+  40              		.cfi_def_cfa_register 7
+  45:.\Generated_Source\PSoC5/A_B_PM.c **** 	/* Save DAC8's enable state */
+  46:.\Generated_Source\PSoC5/A_B_PM.c **** 
+  47:.\Generated_Source\PSoC5/A_B_PM.c **** 	A_B_backup.enableState = (A_B_VDAC8_ACT_PWR_EN == 
+  48:.\Generated_Source\PSoC5/A_B_PM.c **** 		(A_B_VDAC8_PWRMGR_REG & A_B_VDAC8_ACT_PWR_EN)) ? 1u : 0u ;
+  41              		.loc 1 48 0
+  42 0004 084B     		ldr	r3, .L4
+  43 0006 1B78     		ldrb	r3, [r3]
+  44 0008 DBB2     		uxtb	r3, r3
+  45 000a 03F00803 		and	r3, r3, #8
+  47:.\Generated_Source\PSoC5/A_B_PM.c **** 	A_B_backup.enableState = (A_B_VDAC8_ACT_PWR_EN == 
+  46              		.loc 1 47 0
+  47 000e 002B     		cmp	r3, #0
+  48 0010 01D0     		beq	.L2
+  47:.\Generated_Source\PSoC5/A_B_PM.c **** 	A_B_backup.enableState = (A_B_VDAC8_ACT_PWR_EN == 
+  49              		.loc 1 47 0 is_stmt 0 discriminator 1
+  50 0012 0123     		movs	r3, #1
+  51 0014 00E0     		b	.L3
+  52              	.L2:
+  47:.\Generated_Source\PSoC5/A_B_PM.c **** 	A_B_backup.enableState = (A_B_VDAC8_ACT_PWR_EN == 
+  53              		.loc 1 47 0 discriminator 2
+  54 0016 0023     		movs	r3, #0
+  55              	.L3:
+  47:.\Generated_Source\PSoC5/A_B_PM.c **** 	A_B_backup.enableState = (A_B_VDAC8_ACT_PWR_EN == 
+  56              		.loc 1 47 0 discriminator 3
+  57 0018 044A     		ldr	r2, .L4+4
+  58 001a 1370     		strb	r3, [r2]
+  49:.\Generated_Source\PSoC5/A_B_PM.c **** 	
+  50:.\Generated_Source\PSoC5/A_B_PM.c **** 	A_B_Stop();
+  59              		.loc 1 50 0 is_stmt 1 discriminator 3
+  60 001c FFF7FEFF 		bl	A_B_Stop
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc9MQ2pc.s 			page 3
+
+
+  51:.\Generated_Source\PSoC5/A_B_PM.c **** 	A_B_SaveConfig();
+  61              		.loc 1 51 0 discriminator 3
+  62 0020 FFF7FEFF 		bl	A_B_VDAC8_SaveConfig
+  52:.\Generated_Source\PSoC5/A_B_PM.c **** }
+  63              		.loc 1 52 0 discriminator 3
+  64 0024 80BD     		pop	{r7, pc}
+  65              	.L5:
+  66 0026 00BF     		.align	2
+  67              	.L4:
+  68 0028 A8430040 		.word	1073759144
+  69 002c 00000000 		.word	A_B_backup
+  70              		.cfi_endproc
+  71              	.LFE0:
+  72              		.size	A_B_Sleep, .-A_B_Sleep
+  73              		.section	.text.A_B_Wakeup,"ax",%progbits
+  74              		.align	2
+  75              		.global	A_B_Wakeup
+  76              		.thumb
+  77              		.thumb_func
+  78              		.type	A_B_Wakeup, %function
+  79              	A_B_Wakeup:
+  80              	.LFB1:
+  53:.\Generated_Source\PSoC5/A_B_PM.c **** 
+  54:.\Generated_Source\PSoC5/A_B_PM.c **** 
+  55:.\Generated_Source\PSoC5/A_B_PM.c **** /*******************************************************************************
+  56:.\Generated_Source\PSoC5/A_B_PM.c **** * Function Name: A_B_Wakeup
+  57:.\Generated_Source\PSoC5/A_B_PM.c **** ********************************************************************************
+  58:.\Generated_Source\PSoC5/A_B_PM.c **** *
+  59:.\Generated_Source\PSoC5/A_B_PM.c **** * Summary:
+  60:.\Generated_Source\PSoC5/A_B_PM.c **** *  Restores the component configuration. Should be called
+  61:.\Generated_Source\PSoC5/A_B_PM.c **** *  just after awaking from sleep.
+  62:.\Generated_Source\PSoC5/A_B_PM.c **** *  
+  63:.\Generated_Source\PSoC5/A_B_PM.c **** * Parameters:  
+  64:.\Generated_Source\PSoC5/A_B_PM.c **** *  None
+  65:.\Generated_Source\PSoC5/A_B_PM.c **** *
+  66:.\Generated_Source\PSoC5/A_B_PM.c **** * Return: 
+  67:.\Generated_Source\PSoC5/A_B_PM.c **** *  void
+  68:.\Generated_Source\PSoC5/A_B_PM.c **** *
+  69:.\Generated_Source\PSoC5/A_B_PM.c **** * Global variables:
+  70:.\Generated_Source\PSoC5/A_B_PM.c **** *  A_B_backup:  The structure field 'enableState' is used to 
+  71:.\Generated_Source\PSoC5/A_B_PM.c **** *  restore the enable state of block after wakeup from sleep mode.
+  72:.\Generated_Source\PSoC5/A_B_PM.c **** *
+  73:.\Generated_Source\PSoC5/A_B_PM.c **** * Reentrant:
+  74:.\Generated_Source\PSoC5/A_B_PM.c **** *  No
+  75:.\Generated_Source\PSoC5/A_B_PM.c **** *
+  76:.\Generated_Source\PSoC5/A_B_PM.c **** *******************************************************************************/
+  77:.\Generated_Source\PSoC5/A_B_PM.c **** void A_B_Wakeup(void) 
+  78:.\Generated_Source\PSoC5/A_B_PM.c **** {
+  81              		.loc 1 78 0
+  82              		.cfi_startproc
+  83              		@ args = 0, pretend = 0, frame = 0
+  84              		@ frame_needed = 1, uses_anonymous_args = 0
+  85 0000 80B5     		push	{r7, lr}
+  86              		.cfi_def_cfa_offset 8
+  87              		.cfi_offset 7, -8
+  88              		.cfi_offset 14, -4
+  89 0002 00AF     		add	r7, sp, #0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc9MQ2pc.s 			page 4
+
+
+  90              		.cfi_def_cfa_register 7
+  79:.\Generated_Source\PSoC5/A_B_PM.c **** 	A_B_RestoreConfig();
+  91              		.loc 1 79 0
+  92 0004 FFF7FEFF 		bl	A_B_VDAC8_RestoreConfig
+  80:.\Generated_Source\PSoC5/A_B_PM.c **** 
+  81:.\Generated_Source\PSoC5/A_B_PM.c **** 	if(A_B_backup.enableState == 1u)
+  93              		.loc 1 81 0
+  94 0008 034B     		ldr	r3, .L8
+  95 000a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  96 000c 012B     		cmp	r3, #1
+  97 000e 01D1     		bne	.L6
+  82:.\Generated_Source\PSoC5/A_B_PM.c **** 	{
+  83:.\Generated_Source\PSoC5/A_B_PM.c **** 		A_B_Enable();
+  98              		.loc 1 83 0
+  99 0010 FFF7FEFF 		bl	A_B_Enable
+ 100              	.L6:
+  84:.\Generated_Source\PSoC5/A_B_PM.c **** 	}
+  85:.\Generated_Source\PSoC5/A_B_PM.c **** }
+ 101              		.loc 1 85 0
+ 102 0014 80BD     		pop	{r7, pc}
+ 103              	.L9:
+ 104 0016 00BF     		.align	2
+ 105              	.L8:
+ 106 0018 00000000 		.word	A_B_backup
+ 107              		.cfi_endproc
+ 108              	.LFE1:
+ 109              		.size	A_B_Wakeup, .-A_B_Wakeup
+ 110              		.text
+ 111              	.Letext0:
+ 112              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 113              		.file 3 ".\\Generated_Source\\PSoC5\\A_B.h"
+ 114              		.section	.debug_info,"",%progbits
+ 115              	.Ldebug_info0:
+ 116 0000 F3000000 		.4byte	0xf3
+ 117 0004 0400     		.2byte	0x4
+ 118 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 119 000a 04       		.byte	0x4
+ 120 000b 01       		.uleb128 0x1
+ 121 000c 49010000 		.4byte	.LASF18
+ 122 0010 01       		.byte	0x1
+ 123 0011 27000000 		.4byte	.LASF19
+ 124 0015 F7000000 		.4byte	.LASF20
+ 125 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 126 001d 00000000 		.4byte	0
+ 127 0021 00000000 		.4byte	.Ldebug_line0
+ 128 0025 02       		.uleb128 0x2
+ 129 0026 01       		.byte	0x1
+ 130 0027 06       		.byte	0x6
+ 131 0028 E1000000 		.4byte	.LASF0
+ 132 002c 02       		.uleb128 0x2
+ 133 002d 01       		.byte	0x1
+ 134 002e 08       		.byte	0x8
+ 135 002f AB000000 		.4byte	.LASF1
+ 136 0033 02       		.uleb128 0x2
+ 137 0034 02       		.byte	0x2
+ 138 0035 05       		.byte	0x5
+ 139 0036 3F010000 		.4byte	.LASF2
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc9MQ2pc.s 			page 5
+
+
+ 140 003a 02       		.uleb128 0x2
+ 141 003b 02       		.byte	0x2
+ 142 003c 07       		.byte	0x7
+ 143 003d CE000000 		.4byte	.LASF3
+ 144 0041 02       		.uleb128 0x2
+ 145 0042 04       		.byte	0x4
+ 146 0043 05       		.byte	0x5
+ 147 0044 BE000000 		.4byte	.LASF4
+ 148 0048 02       		.uleb128 0x2
+ 149 0049 04       		.byte	0x4
+ 150 004a 07       		.byte	0x7
+ 151 004b 6A000000 		.4byte	.LASF5
+ 152 004f 02       		.uleb128 0x2
+ 153 0050 08       		.byte	0x8
+ 154 0051 05       		.byte	0x5
+ 155 0052 00000000 		.4byte	.LASF6
+ 156 0056 02       		.uleb128 0x2
+ 157 0057 08       		.byte	0x8
+ 158 0058 07       		.byte	0x7
+ 159 0059 8E000000 		.4byte	.LASF7
+ 160 005d 03       		.uleb128 0x3
+ 161 005e 04       		.byte	0x4
+ 162 005f 05       		.byte	0x5
+ 163 0060 696E7400 		.ascii	"int\000"
+ 164 0064 02       		.uleb128 0x2
+ 165 0065 04       		.byte	0x4
+ 166 0066 07       		.byte	0x7
+ 167 0067 1A000000 		.4byte	.LASF8
+ 168 006b 04       		.uleb128 0x4
+ 169 006c 64000000 		.4byte	.LASF12
+ 170 0070 02       		.byte	0x2
+ 171 0071 A1       		.byte	0xa1
+ 172 0072 2C000000 		.4byte	0x2c
+ 173 0076 02       		.uleb128 0x2
+ 174 0077 04       		.byte	0x4
+ 175 0078 04       		.byte	0x4
+ 176 0079 A5000000 		.4byte	.LASF9
+ 177 007d 02       		.uleb128 0x2
+ 178 007e 08       		.byte	0x8
+ 179 007f 04       		.byte	0x4
+ 180 0080 C7000000 		.4byte	.LASF10
+ 181 0084 02       		.uleb128 0x2
+ 182 0085 01       		.byte	0x1
+ 183 0086 08       		.byte	0x8
+ 184 0087 B9000000 		.4byte	.LASF11
+ 185 008b 05       		.uleb128 0x5
+ 186 008c 5F000000 		.4byte	.LASF13
+ 187 0090 02       		.byte	0x2
+ 188 0091 4B01     		.2byte	0x14b
+ 189 0093 97000000 		.4byte	0x97
+ 190 0097 06       		.uleb128 0x6
+ 191 0098 6B000000 		.4byte	0x6b
+ 192 009c 02       		.uleb128 0x2
+ 193 009d 04       		.byte	0x4
+ 194 009e 07       		.byte	0x7
+ 195 009f C5010000 		.4byte	.LASF14
+ 196 00a3 07       		.uleb128 0x7
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc9MQ2pc.s 			page 6
+
+
+ 197 00a4 01       		.byte	0x1
+ 198 00a5 03       		.byte	0x3
+ 199 00a6 5D       		.byte	0x5d
+ 200 00a7 B8000000 		.4byte	0xb8
+ 201 00ab 08       		.uleb128 0x8
+ 202 00ac 0E000000 		.4byte	.LASF21
+ 203 00b0 03       		.byte	0x3
+ 204 00b1 5F       		.byte	0x5f
+ 205 00b2 6B000000 		.4byte	0x6b
+ 206 00b6 00       		.byte	0
+ 207 00b7 00       		.byte	0
+ 208 00b8 04       		.uleb128 0x4
+ 209 00b9 7C000000 		.4byte	.LASF15
+ 210 00bd 03       		.byte	0x3
+ 211 00be 60       		.byte	0x60
+ 212 00bf A3000000 		.4byte	0xa3
+ 213 00c3 09       		.uleb128 0x9
+ 214 00c4 ED000000 		.4byte	.LASF16
+ 215 00c8 01       		.byte	0x1
+ 216 00c9 2B       		.byte	0x2b
+ 217 00ca 00000000 		.4byte	.LFB0
+ 218 00ce 30000000 		.4byte	.LFE0-.LFB0
+ 219 00d2 01       		.uleb128 0x1
+ 220 00d3 9C       		.byte	0x9c
+ 221 00d4 09       		.uleb128 0x9
+ 222 00d5 54000000 		.4byte	.LASF17
+ 223 00d9 01       		.byte	0x1
+ 224 00da 4D       		.byte	0x4d
+ 225 00db 00000000 		.4byte	.LFB1
+ 226 00df 1C000000 		.4byte	.LFE1-.LFB1
+ 227 00e3 01       		.uleb128 0x1
+ 228 00e4 9C       		.byte	0x9c
+ 229 00e5 0A       		.uleb128 0xa
+ 230 00e6 49000000 		.4byte	.LASF22
+ 231 00ea 01       		.byte	0x1
+ 232 00eb 12       		.byte	0x12
+ 233 00ec B8000000 		.4byte	0xb8
+ 234 00f0 05       		.uleb128 0x5
+ 235 00f1 03       		.byte	0x3
+ 236 00f2 00000000 		.4byte	A_B_backup
+ 237 00f6 00       		.byte	0
+ 238              		.section	.debug_abbrev,"",%progbits
+ 239              	.Ldebug_abbrev0:
+ 240 0000 01       		.uleb128 0x1
+ 241 0001 11       		.uleb128 0x11
+ 242 0002 01       		.byte	0x1
+ 243 0003 25       		.uleb128 0x25
+ 244 0004 0E       		.uleb128 0xe
+ 245 0005 13       		.uleb128 0x13
+ 246 0006 0B       		.uleb128 0xb
+ 247 0007 03       		.uleb128 0x3
+ 248 0008 0E       		.uleb128 0xe
+ 249 0009 1B       		.uleb128 0x1b
+ 250 000a 0E       		.uleb128 0xe
+ 251 000b 55       		.uleb128 0x55
+ 252 000c 17       		.uleb128 0x17
+ 253 000d 11       		.uleb128 0x11
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc9MQ2pc.s 			page 7
+
+
+ 254 000e 01       		.uleb128 0x1
+ 255 000f 10       		.uleb128 0x10
+ 256 0010 17       		.uleb128 0x17
+ 257 0011 00       		.byte	0
+ 258 0012 00       		.byte	0
+ 259 0013 02       		.uleb128 0x2
+ 260 0014 24       		.uleb128 0x24
+ 261 0015 00       		.byte	0
+ 262 0016 0B       		.uleb128 0xb
+ 263 0017 0B       		.uleb128 0xb
+ 264 0018 3E       		.uleb128 0x3e
+ 265 0019 0B       		.uleb128 0xb
+ 266 001a 03       		.uleb128 0x3
+ 267 001b 0E       		.uleb128 0xe
+ 268 001c 00       		.byte	0
+ 269 001d 00       		.byte	0
+ 270 001e 03       		.uleb128 0x3
+ 271 001f 24       		.uleb128 0x24
+ 272 0020 00       		.byte	0
+ 273 0021 0B       		.uleb128 0xb
+ 274 0022 0B       		.uleb128 0xb
+ 275 0023 3E       		.uleb128 0x3e
+ 276 0024 0B       		.uleb128 0xb
+ 277 0025 03       		.uleb128 0x3
+ 278 0026 08       		.uleb128 0x8
+ 279 0027 00       		.byte	0
+ 280 0028 00       		.byte	0
+ 281 0029 04       		.uleb128 0x4
+ 282 002a 16       		.uleb128 0x16
+ 283 002b 00       		.byte	0
+ 284 002c 03       		.uleb128 0x3
+ 285 002d 0E       		.uleb128 0xe
+ 286 002e 3A       		.uleb128 0x3a
+ 287 002f 0B       		.uleb128 0xb
+ 288 0030 3B       		.uleb128 0x3b
+ 289 0031 0B       		.uleb128 0xb
+ 290 0032 49       		.uleb128 0x49
+ 291 0033 13       		.uleb128 0x13
+ 292 0034 00       		.byte	0
+ 293 0035 00       		.byte	0
+ 294 0036 05       		.uleb128 0x5
+ 295 0037 16       		.uleb128 0x16
+ 296 0038 00       		.byte	0
+ 297 0039 03       		.uleb128 0x3
+ 298 003a 0E       		.uleb128 0xe
+ 299 003b 3A       		.uleb128 0x3a
+ 300 003c 0B       		.uleb128 0xb
+ 301 003d 3B       		.uleb128 0x3b
+ 302 003e 05       		.uleb128 0x5
+ 303 003f 49       		.uleb128 0x49
+ 304 0040 13       		.uleb128 0x13
+ 305 0041 00       		.byte	0
+ 306 0042 00       		.byte	0
+ 307 0043 06       		.uleb128 0x6
+ 308 0044 35       		.uleb128 0x35
+ 309 0045 00       		.byte	0
+ 310 0046 49       		.uleb128 0x49
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc9MQ2pc.s 			page 8
+
+
+ 311 0047 13       		.uleb128 0x13
+ 312 0048 00       		.byte	0
+ 313 0049 00       		.byte	0
+ 314 004a 07       		.uleb128 0x7
+ 315 004b 13       		.uleb128 0x13
+ 316 004c 01       		.byte	0x1
+ 317 004d 0B       		.uleb128 0xb
+ 318 004e 0B       		.uleb128 0xb
+ 319 004f 3A       		.uleb128 0x3a
+ 320 0050 0B       		.uleb128 0xb
+ 321 0051 3B       		.uleb128 0x3b
+ 322 0052 0B       		.uleb128 0xb
+ 323 0053 01       		.uleb128 0x1
+ 324 0054 13       		.uleb128 0x13
+ 325 0055 00       		.byte	0
+ 326 0056 00       		.byte	0
+ 327 0057 08       		.uleb128 0x8
+ 328 0058 0D       		.uleb128 0xd
+ 329 0059 00       		.byte	0
+ 330 005a 03       		.uleb128 0x3
+ 331 005b 0E       		.uleb128 0xe
+ 332 005c 3A       		.uleb128 0x3a
+ 333 005d 0B       		.uleb128 0xb
+ 334 005e 3B       		.uleb128 0x3b
+ 335 005f 0B       		.uleb128 0xb
+ 336 0060 49       		.uleb128 0x49
+ 337 0061 13       		.uleb128 0x13
+ 338 0062 38       		.uleb128 0x38
+ 339 0063 0B       		.uleb128 0xb
+ 340 0064 00       		.byte	0
+ 341 0065 00       		.byte	0
+ 342 0066 09       		.uleb128 0x9
+ 343 0067 2E       		.uleb128 0x2e
+ 344 0068 00       		.byte	0
+ 345 0069 3F       		.uleb128 0x3f
+ 346 006a 19       		.uleb128 0x19
+ 347 006b 03       		.uleb128 0x3
+ 348 006c 0E       		.uleb128 0xe
+ 349 006d 3A       		.uleb128 0x3a
+ 350 006e 0B       		.uleb128 0xb
+ 351 006f 3B       		.uleb128 0x3b
+ 352 0070 0B       		.uleb128 0xb
+ 353 0071 27       		.uleb128 0x27
+ 354 0072 19       		.uleb128 0x19
+ 355 0073 11       		.uleb128 0x11
+ 356 0074 01       		.uleb128 0x1
+ 357 0075 12       		.uleb128 0x12
+ 358 0076 06       		.uleb128 0x6
+ 359 0077 40       		.uleb128 0x40
+ 360 0078 18       		.uleb128 0x18
+ 361 0079 9642     		.uleb128 0x2116
+ 362 007b 19       		.uleb128 0x19
+ 363 007c 00       		.byte	0
+ 364 007d 00       		.byte	0
+ 365 007e 0A       		.uleb128 0xa
+ 366 007f 34       		.uleb128 0x34
+ 367 0080 00       		.byte	0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc9MQ2pc.s 			page 9
+
+
+ 368 0081 03       		.uleb128 0x3
+ 369 0082 0E       		.uleb128 0xe
+ 370 0083 3A       		.uleb128 0x3a
+ 371 0084 0B       		.uleb128 0xb
+ 372 0085 3B       		.uleb128 0x3b
+ 373 0086 0B       		.uleb128 0xb
+ 374 0087 49       		.uleb128 0x49
+ 375 0088 13       		.uleb128 0x13
+ 376 0089 02       		.uleb128 0x2
+ 377 008a 18       		.uleb128 0x18
+ 378 008b 00       		.byte	0
+ 379 008c 00       		.byte	0
+ 380 008d 00       		.byte	0
+ 381              		.section	.debug_aranges,"",%progbits
+ 382 0000 24000000 		.4byte	0x24
+ 383 0004 0200     		.2byte	0x2
+ 384 0006 00000000 		.4byte	.Ldebug_info0
+ 385 000a 04       		.byte	0x4
+ 386 000b 00       		.byte	0
+ 387 000c 0000     		.2byte	0
+ 388 000e 0000     		.2byte	0
+ 389 0010 00000000 		.4byte	.LFB0
+ 390 0014 30000000 		.4byte	.LFE0-.LFB0
+ 391 0018 00000000 		.4byte	.LFB1
+ 392 001c 1C000000 		.4byte	.LFE1-.LFB1
+ 393 0020 00000000 		.4byte	0
+ 394 0024 00000000 		.4byte	0
+ 395              		.section	.debug_ranges,"",%progbits
+ 396              	.Ldebug_ranges0:
+ 397 0000 00000000 		.4byte	.LFB0
+ 398 0004 30000000 		.4byte	.LFE0
+ 399 0008 00000000 		.4byte	.LFB1
+ 400 000c 1C000000 		.4byte	.LFE1
+ 401 0010 00000000 		.4byte	0
+ 402 0014 00000000 		.4byte	0
+ 403              		.section	.debug_line,"",%progbits
+ 404              	.Ldebug_line0:
+ 405 0000 99000000 		.section	.debug_str,"MS",%progbits,1
+ 405      02004E00 
+ 405      00000201 
+ 405      FB0E0D00 
+ 405      01010101 
+ 406              	.LASF6:
+ 407 0000 6C6F6E67 		.ascii	"long long int\000"
+ 407      206C6F6E 
+ 407      6720696E 
+ 407      7400
+ 408              	.LASF21:
+ 409 000e 656E6162 		.ascii	"enableState\000"
+ 409      6C655374 
+ 409      61746500 
+ 410              	.LASF8:
+ 411 001a 756E7369 		.ascii	"unsigned int\000"
+ 411      676E6564 
+ 411      20696E74 
+ 411      00
+ 412              	.LASF19:
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc9MQ2pc.s 			page 10
+
+
+ 413 0027 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\A_B_PM.c\000"
+ 413      6E657261 
+ 413      7465645F 
+ 413      536F7572 
+ 413      63655C50 
+ 414              	.LASF22:
+ 415 0049 415F425F 		.ascii	"A_B_backup\000"
+ 415      6261636B 
+ 415      757000
+ 416              	.LASF17:
+ 417 0054 415F425F 		.ascii	"A_B_Wakeup\000"
+ 417      57616B65 
+ 417      757000
+ 418              	.LASF13:
+ 419 005f 72656738 		.ascii	"reg8\000"
+ 419      00
+ 420              	.LASF12:
+ 421 0064 75696E74 		.ascii	"uint8\000"
+ 421      3800
+ 422              	.LASF5:
+ 423 006a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 423      20756E73 
+ 423      69676E65 
+ 423      6420696E 
+ 423      7400
+ 424              	.LASF15:
+ 425 007c 415F425F 		.ascii	"A_B_BACKUP_STRUCT\000"
+ 425      4241434B 
+ 425      55505F53 
+ 425      54525543 
+ 425      5400
+ 426              	.LASF7:
+ 427 008e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 427      206C6F6E 
+ 427      6720756E 
+ 427      7369676E 
+ 427      65642069 
+ 428              	.LASF9:
+ 429 00a5 666C6F61 		.ascii	"float\000"
+ 429      7400
+ 430              	.LASF1:
+ 431 00ab 756E7369 		.ascii	"unsigned char\000"
+ 431      676E6564 
+ 431      20636861 
+ 431      7200
+ 432              	.LASF11:
+ 433 00b9 63686172 		.ascii	"char\000"
+ 433      00
+ 434              	.LASF4:
+ 435 00be 6C6F6E67 		.ascii	"long int\000"
+ 435      20696E74 
+ 435      00
+ 436              	.LASF10:
+ 437 00c7 646F7562 		.ascii	"double\000"
+ 437      6C6500
+ 438              	.LASF3:
+ 439 00ce 73686F72 		.ascii	"short unsigned int\000"
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc9MQ2pc.s 			page 11
+
+
+ 439      7420756E 
+ 439      7369676E 
+ 439      65642069 
+ 439      6E7400
+ 440              	.LASF0:
+ 441 00e1 7369676E 		.ascii	"signed char\000"
+ 441      65642063 
+ 441      68617200 
+ 442              	.LASF16:
+ 443 00ed 415F425F 		.ascii	"A_B_Sleep\000"
+ 443      536C6565 
+ 443      7000
+ 444              	.LASF20:
+ 445 00f7 433A5C55 		.ascii	"C:\\Users\\IEUser\\Downloads\\PSoC_Creator\\Filter_"
+ 445      73657273 
+ 445      5C494555 
+ 445      7365725C 
+ 445      446F776E 
+ 446 0125 4144435F 		.ascii	"ADC_VDAC01\\Design01.cydsn\000"
+ 446      56444143 
+ 446      30315C44 
+ 446      65736967 
+ 446      6E30312E 
+ 447              	.LASF2:
+ 448 013f 73686F72 		.ascii	"short int\000"
+ 448      7420696E 
+ 448      7400
+ 449              	.LASF18:
+ 450 0149 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 450      4320342E 
+ 450      382E3420 
+ 450      32303134 
+ 450      30353236 
+ 451 017c 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
+ 451      20726576 
+ 451      6973696F 
+ 451      6E203231 
+ 451      31333538 
+ 452 01af 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 452      66756E63 
+ 452      74696F6E 
+ 452      2D736563 
+ 452      74696F6E 
+ 453              	.LASF14:
+ 454 01c5 73697A65 		.ascii	"sizetype\000"
+ 454      74797065 
+ 454      00
+ 455              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

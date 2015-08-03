@@ -1,0 +1,1364 @@
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"Amp.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	Amp_initVar
+  19              		.bss
+  20              		.type	Amp_initVar, %object
+  21              		.size	Amp_initVar, 1
+  22              	Amp_initVar:
+  23 0000 00       		.space	1
+  24              		.section	.text.Amp_Init,"ax",%progbits
+  25              		.align	2
+  26              		.global	Amp_Init
+  27              		.thumb
+  28              		.thumb_func
+  29              		.type	Amp_Init, %function
+  30              	Amp_Init:
+  31              	.LFB0:
+  32              		.file 1 ".\\Generated_Source\\PSoC5\\Amp.c"
+   1:.\Generated_Source\PSoC5/Amp.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/Amp.c **** * File Name: Amp.c  
+   3:.\Generated_Source\PSoC5/Amp.c **** * Version 2.0
+   4:.\Generated_Source\PSoC5/Amp.c **** *
+   5:.\Generated_Source\PSoC5/Amp.c **** * Description:
+   6:.\Generated_Source\PSoC5/Amp.c **** *  This file provides the source code to the API for the PGA 
+   7:.\Generated_Source\PSoC5/Amp.c **** *  User Module.
+   8:.\Generated_Source\PSoC5/Amp.c **** *
+   9:.\Generated_Source\PSoC5/Amp.c **** * Note:
+  10:.\Generated_Source\PSoC5/Amp.c **** *
+  11:.\Generated_Source\PSoC5/Amp.c **** ********************************************************************************
+  12:.\Generated_Source\PSoC5/Amp.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC5/Amp.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:.\Generated_Source\PSoC5/Amp.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:.\Generated_Source\PSoC5/Amp.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC5/Amp.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC5/Amp.c **** 
+  18:.\Generated_Source\PSoC5/Amp.c **** #include "Amp.h"
+  19:.\Generated_Source\PSoC5/Amp.c **** 
+  20:.\Generated_Source\PSoC5/Amp.c **** #if (!CY_PSOC5A)
+  21:.\Generated_Source\PSoC5/Amp.c ****     #if (CYDEV_VARIABLE_VDDA == 1u)
+  22:.\Generated_Source\PSoC5/Amp.c ****         #include "CyScBoostClk.h"
+  23:.\Generated_Source\PSoC5/Amp.c ****     #endif /* (CYDEV_VARIABLE_VDDA == 1u) */
+  24:.\Generated_Source\PSoC5/Amp.c **** #endif /* (!CY_PSOC5A) */
+  25:.\Generated_Source\PSoC5/Amp.c **** 
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 2
+
+
+  26:.\Generated_Source\PSoC5/Amp.c **** #if (CY_PSOC5A)
+  27:.\Generated_Source\PSoC5/Amp.c ****     static Amp_BACKUP_STRUCT  Amp_P5backup;
+  28:.\Generated_Source\PSoC5/Amp.c **** #endif /* (CY_ PSOC5A) */
+  29:.\Generated_Source\PSoC5/Amp.c **** 
+  30:.\Generated_Source\PSoC5/Amp.c **** uint8 Amp_initVar = 0u;
+  31:.\Generated_Source\PSoC5/Amp.c **** 
+  32:.\Generated_Source\PSoC5/Amp.c **** 
+  33:.\Generated_Source\PSoC5/Amp.c **** /*******************************************************************************   
+  34:.\Generated_Source\PSoC5/Amp.c **** * Function Name: Amp_Init
+  35:.\Generated_Source\PSoC5/Amp.c **** ********************************************************************************
+  36:.\Generated_Source\PSoC5/Amp.c **** *
+  37:.\Generated_Source\PSoC5/Amp.c **** * Summary:
+  38:.\Generated_Source\PSoC5/Amp.c **** *  Initialize component's parameters to the parameters set by user in the 
+  39:.\Generated_Source\PSoC5/Amp.c **** *  customizer of the component placed onto schematic. Usually called in 
+  40:.\Generated_Source\PSoC5/Amp.c **** *  Amp_Start().
+  41:.\Generated_Source\PSoC5/Amp.c **** *
+  42:.\Generated_Source\PSoC5/Amp.c **** * Parameters:
+  43:.\Generated_Source\PSoC5/Amp.c **** *  void
+  44:.\Generated_Source\PSoC5/Amp.c **** *
+  45:.\Generated_Source\PSoC5/Amp.c **** * Return:
+  46:.\Generated_Source\PSoC5/Amp.c **** *  void
+  47:.\Generated_Source\PSoC5/Amp.c **** *
+  48:.\Generated_Source\PSoC5/Amp.c **** *******************************************************************************/
+  49:.\Generated_Source\PSoC5/Amp.c **** void Amp_Init(void) 
+  50:.\Generated_Source\PSoC5/Amp.c **** {
+  33              		.loc 1 50 0
+  34              		.cfi_startproc
+  35              		@ args = 0, pretend = 0, frame = 0
+  36              		@ frame_needed = 1, uses_anonymous_args = 0
+  37 0000 80B5     		push	{r7, lr}
+  38              		.cfi_def_cfa_offset 8
+  39              		.cfi_offset 7, -8
+  40              		.cfi_offset 14, -4
+  41 0002 00AF     		add	r7, sp, #0
+  42              		.cfi_def_cfa_register 7
+  51:.\Generated_Source\PSoC5/Amp.c ****     /* Set PGA mode */
+  52:.\Generated_Source\PSoC5/Amp.c ****     Amp_CR0_REG = Amp_MODE_PGA;      
+  43              		.loc 1 52 0
+  44 0004 0A4B     		ldr	r3, .L2
+  45 0006 0C22     		movs	r2, #12
+  46 0008 1A70     		strb	r2, [r3]
+  53:.\Generated_Source\PSoC5/Amp.c ****     /* Set non-inverting PGA mode and reference mode */
+  54:.\Generated_Source\PSoC5/Amp.c ****     Amp_CR1_REG |= Amp_PGA_NINV;  
+  47              		.loc 1 54 0
+  48 000a 0A4B     		ldr	r3, .L2+4
+  49 000c 094A     		ldr	r2, .L2+4
+  50 000e 1278     		ldrb	r2, [r2]
+  51 0010 D2B2     		uxtb	r2, r2
+  52 0012 42F02002 		orr	r2, r2, #32
+  53 0016 D2B2     		uxtb	r2, r2
+  54 0018 1A70     		strb	r2, [r3]
+  55:.\Generated_Source\PSoC5/Amp.c ****     /* Set default gain and ref mode */
+  56:.\Generated_Source\PSoC5/Amp.c ****     Amp_CR2_REG = Amp_VREF_MODE;
+  55              		.loc 1 56 0
+  56 001a 074B     		ldr	r3, .L2+8
+  57 001c 8022     		movs	r2, #128
+  58 001e 1A70     		strb	r2, [r3]
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 3
+
+
+  57:.\Generated_Source\PSoC5/Amp.c ****     /* Set gain and compensation */
+  58:.\Generated_Source\PSoC5/Amp.c ****     Amp_SetGain(Amp_DEFAULT_GAIN);
+  59              		.loc 1 58 0
+  60 0020 0020     		movs	r0, #0
+  61 0022 FFF7FEFF 		bl	Amp_SetGain
+  59:.\Generated_Source\PSoC5/Amp.c ****     /* Set power */
+  60:.\Generated_Source\PSoC5/Amp.c ****     Amp_SetPower(Amp_DEFAULT_POWER);
+  62              		.loc 1 60 0
+  63 0026 0120     		movs	r0, #1
+  64 0028 FFF7FEFF 		bl	Amp_SetPower
+  61:.\Generated_Source\PSoC5/Amp.c **** }
+  65              		.loc 1 61 0
+  66 002c 80BD     		pop	{r7, pc}
+  67              	.L3:
+  68 002e 00BF     		.align	2
+  69              	.L2:
+  70 0030 00580040 		.word	1073764352
+  71 0034 01580040 		.word	1073764353
+  72 0038 02580040 		.word	1073764354
+  73              		.cfi_endproc
+  74              	.LFE0:
+  75              		.size	Amp_Init, .-Amp_Init
+  76              		.section	.text.Amp_Enable,"ax",%progbits
+  77              		.align	2
+  78              		.global	Amp_Enable
+  79              		.thumb
+  80              		.thumb_func
+  81              		.type	Amp_Enable, %function
+  82              	Amp_Enable:
+  83              	.LFB1:
+  62:.\Generated_Source\PSoC5/Amp.c **** 
+  63:.\Generated_Source\PSoC5/Amp.c **** 
+  64:.\Generated_Source\PSoC5/Amp.c **** /*******************************************************************************   
+  65:.\Generated_Source\PSoC5/Amp.c **** * Function Name: Amp_Enable
+  66:.\Generated_Source\PSoC5/Amp.c **** ********************************************************************************
+  67:.\Generated_Source\PSoC5/Amp.c **** *
+  68:.\Generated_Source\PSoC5/Amp.c **** * Summary:
+  69:.\Generated_Source\PSoC5/Amp.c **** *  Enables the PGA block operation.
+  70:.\Generated_Source\PSoC5/Amp.c **** *
+  71:.\Generated_Source\PSoC5/Amp.c **** * Parameters:
+  72:.\Generated_Source\PSoC5/Amp.c **** *  void
+  73:.\Generated_Source\PSoC5/Amp.c **** *
+  74:.\Generated_Source\PSoC5/Amp.c **** * Return:
+  75:.\Generated_Source\PSoC5/Amp.c **** *  void
+  76:.\Generated_Source\PSoC5/Amp.c **** *
+  77:.\Generated_Source\PSoC5/Amp.c **** *******************************************************************************/
+  78:.\Generated_Source\PSoC5/Amp.c **** void Amp_Enable(void) 
+  79:.\Generated_Source\PSoC5/Amp.c **** {
+  84              		.loc 1 79 0
+  85              		.cfi_startproc
+  86              		@ args = 0, pretend = 0, frame = 0
+  87              		@ frame_needed = 1, uses_anonymous_args = 0
+  88              		@ link register save eliminated.
+  89 0000 80B4     		push	{r7}
+  90              		.cfi_def_cfa_offset 4
+  91              		.cfi_offset 7, -4
+  92 0002 00AF     		add	r7, sp, #0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 4
+
+
+  93              		.cfi_def_cfa_register 7
+  80:.\Generated_Source\PSoC5/Amp.c ****     /* This is to restore the value of register CR1 and CR2 which is saved 
+  81:.\Generated_Source\PSoC5/Amp.c ****       in prior to the modifications in stop() API */
+  82:.\Generated_Source\PSoC5/Amp.c ****     #if (CY_PSOC5A)
+  83:.\Generated_Source\PSoC5/Amp.c ****         if(Amp_P5backup.enableState == 1u)
+  84:.\Generated_Source\PSoC5/Amp.c ****         {
+  85:.\Generated_Source\PSoC5/Amp.c ****             Amp_CR1_REG = Amp_P5backup.scCR1Reg;
+  86:.\Generated_Source\PSoC5/Amp.c ****             Amp_CR2_REG = Amp_P5backup.scCR2Reg;
+  87:.\Generated_Source\PSoC5/Amp.c ****             Amp_P5backup.enableState = 0u;
+  88:.\Generated_Source\PSoC5/Amp.c ****         }
+  89:.\Generated_Source\PSoC5/Amp.c ****     #endif /* CY_PSOC5A */   
+  90:.\Generated_Source\PSoC5/Amp.c **** 
+  91:.\Generated_Source\PSoC5/Amp.c ****     /* Enable power to the Amp in Active mode*/
+  92:.\Generated_Source\PSoC5/Amp.c ****     Amp_PM_ACT_CFG_REG |= Amp_ACT_PWR_EN;
+  94              		.loc 1 92 0
+  95 0004 0D4B     		ldr	r3, .L5
+  96 0006 0D4A     		ldr	r2, .L5
+  97 0008 1278     		ldrb	r2, [r2]
+  98 000a D2B2     		uxtb	r2, r2
+  99 000c 42F00102 		orr	r2, r2, #1
+ 100 0010 D2B2     		uxtb	r2, r2
+ 101 0012 1A70     		strb	r2, [r3]
+  93:.\Generated_Source\PSoC5/Amp.c **** 
+  94:.\Generated_Source\PSoC5/Amp.c ****     /* Enable power to the Amp in Alternative Active mode*/
+  95:.\Generated_Source\PSoC5/Amp.c ****     Amp_PM_STBY_CFG_REG |= Amp_STBY_PWR_EN;
+ 102              		.loc 1 95 0
+ 103 0014 0A4B     		ldr	r3, .L5+4
+ 104 0016 0A4A     		ldr	r2, .L5+4
+ 105 0018 1278     		ldrb	r2, [r2]
+ 106 001a D2B2     		uxtb	r2, r2
+ 107 001c 42F00102 		orr	r2, r2, #1
+ 108 0020 D2B2     		uxtb	r2, r2
+ 109 0022 1A70     		strb	r2, [r3]
+  96:.\Generated_Source\PSoC5/Amp.c ****     
+  97:.\Generated_Source\PSoC5/Amp.c ****     Amp_PUMP_CR1_REG |= Amp_PUMP_CR1_SC_CLKSEL;
+ 110              		.loc 1 97 0
+ 111 0024 074B     		ldr	r3, .L5+8
+ 112 0026 074A     		ldr	r2, .L5+8
+ 113 0028 1278     		ldrb	r2, [r2]
+ 114 002a D2B2     		uxtb	r2, r2
+ 115 002c 62F07F02 		orn	r2, r2, #127
+ 116 0030 D2B2     		uxtb	r2, r2
+ 117 0032 1A70     		strb	r2, [r3]
+  98:.\Generated_Source\PSoC5/Amp.c ****     
+  99:.\Generated_Source\PSoC5/Amp.c ****     #if (!CY_PSOC5A)
+ 100:.\Generated_Source\PSoC5/Amp.c ****         #if (CYDEV_VARIABLE_VDDA == 1u)
+ 101:.\Generated_Source\PSoC5/Amp.c ****             if(CyScPumpEnabled == 1u)
+ 102:.\Generated_Source\PSoC5/Amp.c ****             {
+ 103:.\Generated_Source\PSoC5/Amp.c ****                 Amp_BSTCLK_REG &= (uint8)(~Amp_BST_CLK_INDEX_MASK);
+ 104:.\Generated_Source\PSoC5/Amp.c ****                 Amp_BSTCLK_REG |= Amp_BST_CLK_EN | CyScBoostClk__INDEX;
+ 105:.\Generated_Source\PSoC5/Amp.c ****                 Amp_SC_MISC_REG |= Amp_PUMP_FORCE;
+ 106:.\Generated_Source\PSoC5/Amp.c ****                 CyScBoostClk_Start();
+ 107:.\Generated_Source\PSoC5/Amp.c ****             }
+ 108:.\Generated_Source\PSoC5/Amp.c ****             else
+ 109:.\Generated_Source\PSoC5/Amp.c ****             {
+ 110:.\Generated_Source\PSoC5/Amp.c ****                 Amp_BSTCLK_REG &= (uint8)(~Amp_BST_CLK_EN);
+ 111:.\Generated_Source\PSoC5/Amp.c ****                 Amp_SC_MISC_REG &= (uint8)(~Amp_PUMP_FORCE);
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 5
+
+
+ 112:.\Generated_Source\PSoC5/Amp.c ****             }
+ 113:.\Generated_Source\PSoC5/Amp.c ****         #endif /* (CYDEV_VARIABLE_VDDA == 1u) */
+ 114:.\Generated_Source\PSoC5/Amp.c ****     #endif /* (!CY_PSOC5A) */
+ 115:.\Generated_Source\PSoC5/Amp.c **** }
+ 118              		.loc 1 115 0
+ 119 0034 BD46     		mov	sp, r7
+ 120              		@ sp needed
+ 121 0036 5DF8047B 		ldr	r7, [sp], #4
+ 122 003a 7047     		bx	lr
+ 123              	.L6:
+ 124              		.align	2
+ 125              	.L5:
+ 126 003c A9430040 		.word	1073759145
+ 127 0040 B9430040 		.word	1073759161
+ 128 0044 77580040 		.word	1073764471
+ 129              		.cfi_endproc
+ 130              	.LFE1:
+ 131              		.size	Amp_Enable, .-Amp_Enable
+ 132              		.section	.text.Amp_Start,"ax",%progbits
+ 133              		.align	2
+ 134              		.global	Amp_Start
+ 135              		.thumb
+ 136              		.thumb_func
+ 137              		.type	Amp_Start, %function
+ 138              	Amp_Start:
+ 139              	.LFB2:
+ 116:.\Generated_Source\PSoC5/Amp.c **** 
+ 117:.\Generated_Source\PSoC5/Amp.c **** 
+ 118:.\Generated_Source\PSoC5/Amp.c **** /*******************************************************************************
+ 119:.\Generated_Source\PSoC5/Amp.c **** * Function Name: Amp_Start
+ 120:.\Generated_Source\PSoC5/Amp.c **** ********************************************************************************
+ 121:.\Generated_Source\PSoC5/Amp.c **** *
+ 122:.\Generated_Source\PSoC5/Amp.c **** * Summary:
+ 123:.\Generated_Source\PSoC5/Amp.c **** *  The start function initializes the PGA with the default values and sets
+ 124:.\Generated_Source\PSoC5/Amp.c **** *  the power to the given level. A power level of 0, is same as executing
+ 125:.\Generated_Source\PSoC5/Amp.c **** *  the stop function.
+ 126:.\Generated_Source\PSoC5/Amp.c **** *
+ 127:.\Generated_Source\PSoC5/Amp.c **** * Parameters:
+ 128:.\Generated_Source\PSoC5/Amp.c **** *  void
+ 129:.\Generated_Source\PSoC5/Amp.c **** *
+ 130:.\Generated_Source\PSoC5/Amp.c **** * Return:
+ 131:.\Generated_Source\PSoC5/Amp.c **** *  void
+ 132:.\Generated_Source\PSoC5/Amp.c **** *
+ 133:.\Generated_Source\PSoC5/Amp.c **** *******************************************************************************/
+ 134:.\Generated_Source\PSoC5/Amp.c **** void Amp_Start(void) 
+ 135:.\Generated_Source\PSoC5/Amp.c **** {
+ 140              		.loc 1 135 0
+ 141              		.cfi_startproc
+ 142              		@ args = 0, pretend = 0, frame = 0
+ 143              		@ frame_needed = 1, uses_anonymous_args = 0
+ 144 0000 80B5     		push	{r7, lr}
+ 145              		.cfi_def_cfa_offset 8
+ 146              		.cfi_offset 7, -8
+ 147              		.cfi_offset 14, -4
+ 148 0002 00AF     		add	r7, sp, #0
+ 149              		.cfi_def_cfa_register 7
+ 136:.\Generated_Source\PSoC5/Amp.c **** 
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 6
+
+
+ 137:.\Generated_Source\PSoC5/Amp.c ****     /* This is to restore the value of register CR1 and CR2 which is saved 
+ 138:.\Generated_Source\PSoC5/Amp.c ****       in prior to the modification in stop() API */
+ 139:.\Generated_Source\PSoC5/Amp.c **** 
+ 140:.\Generated_Source\PSoC5/Amp.c ****     if(Amp_initVar == 0u)
+ 150              		.loc 1 140 0
+ 151 0004 054B     		ldr	r3, .L9
+ 152 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 153 0008 002B     		cmp	r3, #0
+ 154 000a 04D1     		bne	.L8
+ 141:.\Generated_Source\PSoC5/Amp.c ****     {
+ 142:.\Generated_Source\PSoC5/Amp.c ****         Amp_Init();
+ 155              		.loc 1 142 0
+ 156 000c FFF7FEFF 		bl	Amp_Init
+ 143:.\Generated_Source\PSoC5/Amp.c ****         Amp_initVar = 1u;
+ 157              		.loc 1 143 0
+ 158 0010 024B     		ldr	r3, .L9
+ 159 0012 0122     		movs	r2, #1
+ 160 0014 1A70     		strb	r2, [r3]
+ 161              	.L8:
+ 144:.\Generated_Source\PSoC5/Amp.c ****     }
+ 145:.\Generated_Source\PSoC5/Amp.c **** 
+ 146:.\Generated_Source\PSoC5/Amp.c ****     Amp_Enable();
+ 162              		.loc 1 146 0
+ 163 0016 FFF7FEFF 		bl	Amp_Enable
+ 147:.\Generated_Source\PSoC5/Amp.c **** }
+ 164              		.loc 1 147 0
+ 165 001a 80BD     		pop	{r7, pc}
+ 166              	.L10:
+ 167              		.align	2
+ 168              	.L9:
+ 169 001c 00000000 		.word	Amp_initVar
+ 170              		.cfi_endproc
+ 171              	.LFE2:
+ 172              		.size	Amp_Start, .-Amp_Start
+ 173              		.section	.text.Amp_Stop,"ax",%progbits
+ 174              		.align	2
+ 175              		.global	Amp_Stop
+ 176              		.thumb
+ 177              		.thumb_func
+ 178              		.type	Amp_Stop, %function
+ 179              	Amp_Stop:
+ 180              	.LFB3:
+ 148:.\Generated_Source\PSoC5/Amp.c **** 
+ 149:.\Generated_Source\PSoC5/Amp.c **** 
+ 150:.\Generated_Source\PSoC5/Amp.c **** /*******************************************************************************
+ 151:.\Generated_Source\PSoC5/Amp.c **** * Function Name: Amp_Stop
+ 152:.\Generated_Source\PSoC5/Amp.c **** ********************************************************************************
+ 153:.\Generated_Source\PSoC5/Amp.c **** *
+ 154:.\Generated_Source\PSoC5/Amp.c **** * Summary:
+ 155:.\Generated_Source\PSoC5/Amp.c **** *  Powers down amplifier to lowest power state.
+ 156:.\Generated_Source\PSoC5/Amp.c **** *
+ 157:.\Generated_Source\PSoC5/Amp.c **** * Parameters:
+ 158:.\Generated_Source\PSoC5/Amp.c **** *  void
+ 159:.\Generated_Source\PSoC5/Amp.c **** *
+ 160:.\Generated_Source\PSoC5/Amp.c **** * Return:
+ 161:.\Generated_Source\PSoC5/Amp.c **** *  void
+ 162:.\Generated_Source\PSoC5/Amp.c **** *
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 7
+
+
+ 163:.\Generated_Source\PSoC5/Amp.c **** *******************************************************************************/
+ 164:.\Generated_Source\PSoC5/Amp.c **** void Amp_Stop(void) 
+ 165:.\Generated_Source\PSoC5/Amp.c **** { 
+ 181              		.loc 1 165 0
+ 182              		.cfi_startproc
+ 183              		@ args = 0, pretend = 0, frame = 0
+ 184              		@ frame_needed = 1, uses_anonymous_args = 0
+ 185              		@ link register save eliminated.
+ 186 0000 80B4     		push	{r7}
+ 187              		.cfi_def_cfa_offset 4
+ 188              		.cfi_offset 7, -4
+ 189 0002 00AF     		add	r7, sp, #0
+ 190              		.cfi_def_cfa_register 7
+ 166:.\Generated_Source\PSoC5/Amp.c ****     /* Disble power to the Amp in Active mode template */
+ 167:.\Generated_Source\PSoC5/Amp.c ****     Amp_PM_ACT_CFG_REG &= (uint8)(~Amp_ACT_PWR_EN);
+ 191              		.loc 1 167 0
+ 192 0004 094B     		ldr	r3, .L12
+ 193 0006 094A     		ldr	r2, .L12
+ 194 0008 1278     		ldrb	r2, [r2]
+ 195 000a D2B2     		uxtb	r2, r2
+ 196 000c 22F00102 		bic	r2, r2, #1
+ 197 0010 D2B2     		uxtb	r2, r2
+ 198 0012 1A70     		strb	r2, [r3]
+ 168:.\Generated_Source\PSoC5/Amp.c **** 
+ 169:.\Generated_Source\PSoC5/Amp.c ****     /* Disble power to the Amp in Alternative Active mode template */
+ 170:.\Generated_Source\PSoC5/Amp.c ****     Amp_PM_STBY_CFG_REG &= (uint8)(~Amp_STBY_PWR_EN);
+ 199              		.loc 1 170 0
+ 200 0014 064B     		ldr	r3, .L12+4
+ 201 0016 064A     		ldr	r2, .L12+4
+ 202 0018 1278     		ldrb	r2, [r2]
+ 203 001a D2B2     		uxtb	r2, r2
+ 204 001c 22F00102 		bic	r2, r2, #1
+ 205 0020 D2B2     		uxtb	r2, r2
+ 206 0022 1A70     		strb	r2, [r3]
+ 171:.\Generated_Source\PSoC5/Amp.c **** 
+ 172:.\Generated_Source\PSoC5/Amp.c ****     #if (!CY_PSOC5A)
+ 173:.\Generated_Source\PSoC5/Amp.c ****         #if (CYDEV_VARIABLE_VDDA == 1u)
+ 174:.\Generated_Source\PSoC5/Amp.c ****             Amp_BSTCLK_REG &= (uint8)(~Amp_BST_CLK_EN);
+ 175:.\Generated_Source\PSoC5/Amp.c ****             /* Disable pumps only if there aren't any SC block in use */
+ 176:.\Generated_Source\PSoC5/Amp.c ****             if ((Amp_PM_ACT_CFG_REG & Amp_PM_ACT_CFG_MASK) == 0u)
+ 177:.\Generated_Source\PSoC5/Amp.c ****             {
+ 178:.\Generated_Source\PSoC5/Amp.c ****                 Amp_SC_MISC_REG &= (uint8)(~Amp_PUMP_FORCE);
+ 179:.\Generated_Source\PSoC5/Amp.c ****                 Amp_PUMP_CR1_REG &= (uint8)(~Amp_PUMP_CR1_SC_CLKSEL);
+ 180:.\Generated_Source\PSoC5/Amp.c ****                 CyScBoostClk_Stop();
+ 181:.\Generated_Source\PSoC5/Amp.c ****             }
+ 182:.\Generated_Source\PSoC5/Amp.c ****         #endif /* CYDEV_VARIABLE_VDDA == 1u */
+ 183:.\Generated_Source\PSoC5/Amp.c ****     #endif /* (CY_PSOC3 || CY_PSOC5LP) */
+ 184:.\Generated_Source\PSoC5/Amp.c **** 
+ 185:.\Generated_Source\PSoC5/Amp.c ****     /* This sets PGA in zero current mode and output routes are valid */
+ 186:.\Generated_Source\PSoC5/Amp.c ****     #if (CY_PSOC5A)
+ 187:.\Generated_Source\PSoC5/Amp.c ****         Amp_P5backup.scCR1Reg = Amp_CR1_REG;
+ 188:.\Generated_Source\PSoC5/Amp.c ****         Amp_P5backup.scCR2Reg = Amp_CR2_REG;
+ 189:.\Generated_Source\PSoC5/Amp.c ****         Amp_CR1_REG = 0x00u;
+ 190:.\Generated_Source\PSoC5/Amp.c ****         Amp_CR2_REG = 0x00u;
+ 191:.\Generated_Source\PSoC5/Amp.c ****         Amp_P5backup.enableState = 1u;
+ 192:.\Generated_Source\PSoC5/Amp.c ****     #endif /* CY_PSOC5A */
+ 193:.\Generated_Source\PSoC5/Amp.c **** }
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 8
+
+
+ 207              		.loc 1 193 0
+ 208 0024 BD46     		mov	sp, r7
+ 209              		@ sp needed
+ 210 0026 5DF8047B 		ldr	r7, [sp], #4
+ 211 002a 7047     		bx	lr
+ 212              	.L13:
+ 213              		.align	2
+ 214              	.L12:
+ 215 002c A9430040 		.word	1073759145
+ 216 0030 B9430040 		.word	1073759161
+ 217              		.cfi_endproc
+ 218              	.LFE3:
+ 219              		.size	Amp_Stop, .-Amp_Stop
+ 220              		.section	.text.Amp_SetPower,"ax",%progbits
+ 221              		.align	2
+ 222              		.global	Amp_SetPower
+ 223              		.thumb
+ 224              		.thumb_func
+ 225              		.type	Amp_SetPower, %function
+ 226              	Amp_SetPower:
+ 227              	.LFB4:
+ 194:.\Generated_Source\PSoC5/Amp.c **** 
+ 195:.\Generated_Source\PSoC5/Amp.c **** 
+ 196:.\Generated_Source\PSoC5/Amp.c **** /*******************************************************************************
+ 197:.\Generated_Source\PSoC5/Amp.c **** * Function Name: Amp_SetPower
+ 198:.\Generated_Source\PSoC5/Amp.c **** ********************************************************************************
+ 199:.\Generated_Source\PSoC5/Amp.c **** *
+ 200:.\Generated_Source\PSoC5/Amp.c **** * Summary:
+ 201:.\Generated_Source\PSoC5/Amp.c **** *  Set the power of the PGA.
+ 202:.\Generated_Source\PSoC5/Amp.c **** *
+ 203:.\Generated_Source\PSoC5/Amp.c **** * Parameters:
+ 204:.\Generated_Source\PSoC5/Amp.c **** *  power: Sets power level between (0) and (3) high power
+ 205:.\Generated_Source\PSoC5/Amp.c **** *
+ 206:.\Generated_Source\PSoC5/Amp.c **** * Return:
+ 207:.\Generated_Source\PSoC5/Amp.c **** *  void
+ 208:.\Generated_Source\PSoC5/Amp.c **** *
+ 209:.\Generated_Source\PSoC5/Amp.c **** *******************************************************************************/
+ 210:.\Generated_Source\PSoC5/Amp.c **** void Amp_SetPower(uint8 power) 
+ 211:.\Generated_Source\PSoC5/Amp.c **** {
+ 228              		.loc 1 211 0
+ 229              		.cfi_startproc
+ 230              		@ args = 0, pretend = 0, frame = 16
+ 231              		@ frame_needed = 1, uses_anonymous_args = 0
+ 232              		@ link register save eliminated.
+ 233 0000 80B4     		push	{r7}
+ 234              		.cfi_def_cfa_offset 4
+ 235              		.cfi_offset 7, -4
+ 236 0002 85B0     		sub	sp, sp, #20
+ 237              		.cfi_def_cfa_offset 24
+ 238 0004 00AF     		add	r7, sp, #0
+ 239              		.cfi_def_cfa_register 7
+ 240 0006 0346     		mov	r3, r0
+ 241 0008 FB71     		strb	r3, [r7, #7]
+ 212:.\Generated_Source\PSoC5/Amp.c ****     uint8 tmpCR;
+ 213:.\Generated_Source\PSoC5/Amp.c **** 
+ 214:.\Generated_Source\PSoC5/Amp.c ****     tmpCR = Amp_CR1_REG & (uint8)(~Amp_DRIVE_MASK);
+ 242              		.loc 1 214 0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 9
+
+
+ 243 000a 0A4B     		ldr	r3, .L15
+ 244 000c 1B78     		ldrb	r3, [r3]
+ 245 000e DBB2     		uxtb	r3, r3
+ 246 0010 23F00303 		bic	r3, r3, #3
+ 247 0014 FB73     		strb	r3, [r7, #15]
+ 215:.\Generated_Source\PSoC5/Amp.c ****     tmpCR |= (power & Amp_DRIVE_MASK);
+ 248              		.loc 1 215 0
+ 249 0016 FB79     		ldrb	r3, [r7, #7]
+ 250 0018 03F00303 		and	r3, r3, #3
+ 251 001c DAB2     		uxtb	r2, r3
+ 252 001e FB7B     		ldrb	r3, [r7, #15]
+ 253 0020 1343     		orrs	r3, r3, r2
+ 254 0022 FB73     		strb	r3, [r7, #15]
+ 216:.\Generated_Source\PSoC5/Amp.c ****     Amp_CR1_REG = tmpCR;  
+ 255              		.loc 1 216 0
+ 256 0024 034B     		ldr	r3, .L15
+ 257 0026 FA7B     		ldrb	r2, [r7, #15]
+ 258 0028 1A70     		strb	r2, [r3]
+ 217:.\Generated_Source\PSoC5/Amp.c **** }
+ 259              		.loc 1 217 0
+ 260 002a 1437     		adds	r7, r7, #20
+ 261 002c BD46     		mov	sp, r7
+ 262              		@ sp needed
+ 263 002e 5DF8047B 		ldr	r7, [sp], #4
+ 264 0032 7047     		bx	lr
+ 265              	.L16:
+ 266              		.align	2
+ 267              	.L15:
+ 268 0034 01580040 		.word	1073764353
+ 269              		.cfi_endproc
+ 270              	.LFE4:
+ 271              		.size	Amp_SetPower, .-Amp_SetPower
+ 272              		.section	.rodata
+ 273              		.align	2
+ 274              	.LC0:
+ 275 0000 01       		.byte	1
+ 276 0001 11       		.byte	17
+ 277 0002 21       		.byte	33
+ 278 0003 31       		.byte	49
+ 279 0004 41       		.byte	65
+ 280 0005 61       		.byte	97
+ 281 0006 53       		.byte	83
+ 282 0007 63       		.byte	99
+ 283 0008 73       		.byte	115
+ 284 0009 000000   		.align	2
+ 285              	.LC1:
+ 286 000c 08       		.byte	8
+ 287 000d 09       		.byte	9
+ 288 000e 01       		.byte	1
+ 289 000f 01       		.byte	1
+ 290 0010 05       		.byte	5
+ 291 0011 07       		.byte	7
+ 292 0012 07       		.byte	7
+ 293 0013 04       		.byte	4
+ 294 0014 04       		.byte	4
+ 295 0015 000000   		.section	.text.Amp_SetGain,"ax",%progbits
+ 296              		.align	2
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 10
+
+
+ 297              		.global	Amp_SetGain
+ 298              		.thumb
+ 299              		.thumb_func
+ 300              		.type	Amp_SetGain, %function
+ 301              	Amp_SetGain:
+ 302              	.LFB5:
+ 218:.\Generated_Source\PSoC5/Amp.c **** 
+ 219:.\Generated_Source\PSoC5/Amp.c **** 
+ 220:.\Generated_Source\PSoC5/Amp.c **** /*******************************************************************************
+ 221:.\Generated_Source\PSoC5/Amp.c **** * Function Name: Amp_SetGain
+ 222:.\Generated_Source\PSoC5/Amp.c **** ********************************************************************************
+ 223:.\Generated_Source\PSoC5/Amp.c **** *
+ 224:.\Generated_Source\PSoC5/Amp.c **** * Summary:
+ 225:.\Generated_Source\PSoC5/Amp.c **** *  This function sets values of the input and feedback resistors to set a 
+ 226:.\Generated_Source\PSoC5/Amp.c **** *  specific gain of the amplifier.
+ 227:.\Generated_Source\PSoC5/Amp.c **** *
+ 228:.\Generated_Source\PSoC5/Amp.c **** * Parameters:
+ 229:.\Generated_Source\PSoC5/Amp.c **** *  gain: Gain value of PGA (See header file for gain values.)
+ 230:.\Generated_Source\PSoC5/Amp.c **** *
+ 231:.\Generated_Source\PSoC5/Amp.c **** * Return:
+ 232:.\Generated_Source\PSoC5/Amp.c **** *  void 
+ 233:.\Generated_Source\PSoC5/Amp.c **** *
+ 234:.\Generated_Source\PSoC5/Amp.c **** *******************************************************************************/
+ 235:.\Generated_Source\PSoC5/Amp.c **** void Amp_SetGain(uint8 gain) 
+ 236:.\Generated_Source\PSoC5/Amp.c **** {
+ 303              		.loc 1 236 0
+ 304              		.cfi_startproc
+ 305              		@ args = 0, pretend = 0, frame = 32
+ 306              		@ frame_needed = 1, uses_anonymous_args = 0
+ 307              		@ link register save eliminated.
+ 308 0000 80B4     		push	{r7}
+ 309              		.cfi_def_cfa_offset 4
+ 310              		.cfi_offset 7, -4
+ 311 0002 89B0     		sub	sp, sp, #36
+ 312              		.cfi_def_cfa_offset 40
+ 313 0004 00AF     		add	r7, sp, #0
+ 314              		.cfi_def_cfa_register 7
+ 315 0006 0346     		mov	r3, r0
+ 316 0008 FB71     		strb	r3, [r7, #7]
+ 237:.\Generated_Source\PSoC5/Amp.c ****     /* Constant array for gain settings */
+ 238:.\Generated_Source\PSoC5/Amp.c ****     const uint8 Amp_GainArray[9] = { 
+ 317              		.loc 1 238 0
+ 318 000a 294A     		ldr	r2, .L19
+ 319 000c 07F11403 		add	r3, r7, #20
+ 320 0010 1068     		ldr	r0, [r2]	@ unaligned
+ 321 0012 5168     		ldr	r1, [r2, #4]	@ unaligned
+ 322 0014 03C3     		stmia	r3!, {r0, r1}
+ 323 0016 127A     		ldrb	r2, [r2, #8]
+ 324 0018 1A70     		strb	r2, [r3]
+ 239:.\Generated_Source\PSoC5/Amp.c ****         (Amp_RVAL_0K   | Amp_R20_40B_40K | Amp_BIAS_LOW), /* G=1  */
+ 240:.\Generated_Source\PSoC5/Amp.c ****         (Amp_RVAL_40K  | Amp_R20_40B_40K | Amp_BIAS_LOW), /* G=2  */
+ 241:.\Generated_Source\PSoC5/Amp.c ****         (Amp_RVAL_120K | Amp_R20_40B_40K | Amp_BIAS_LOW), /* G=4  */
+ 242:.\Generated_Source\PSoC5/Amp.c ****         (Amp_RVAL_280K | Amp_R20_40B_40K | Amp_BIAS_LOW), /* G=8  */
+ 243:.\Generated_Source\PSoC5/Amp.c ****         (Amp_RVAL_600K | Amp_R20_40B_40K | Amp_BIAS_LOW), /* G=16 */
+ 244:.\Generated_Source\PSoC5/Amp.c ****         (Amp_RVAL_460K | Amp_R20_40B_40K | Amp_BIAS_LOW), /* G=24, Sets Rin as 20k */
+ 245:.\Generated_Source\PSoC5/Amp.c ****         (Amp_RVAL_620K | Amp_R20_40B_20K | Amp_BIAS_LOW), /* G=32 */
+ 246:.\Generated_Source\PSoC5/Amp.c ****         (Amp_RVAL_470K | Amp_R20_40B_20K | Amp_BIAS_LOW), /* G=48, Sets Rin as 10k */
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 11
+
+
+ 247:.\Generated_Source\PSoC5/Amp.c ****         (Amp_RVAL_490K | Amp_R20_40B_20K | Amp_BIAS_LOW)  /* G=50, Sets Rin as 10k */
+ 248:.\Generated_Source\PSoC5/Amp.c ****     };
+ 249:.\Generated_Source\PSoC5/Amp.c ****     
+ 250:.\Generated_Source\PSoC5/Amp.c ****     /* Constant array for gain compenstion settings */
+ 251:.\Generated_Source\PSoC5/Amp.c ****     const uint8 Amp_GainComp[9] = { 
+ 325              		.loc 1 251 0
+ 326 001a 264A     		ldr	r2, .L19+4
+ 327 001c 07F10803 		add	r3, r7, #8
+ 328 0020 1068     		ldr	r0, [r2]	@ unaligned
+ 329 0022 5168     		ldr	r1, [r2, #4]	@ unaligned
+ 330 0024 03C3     		stmia	r3!, {r0, r1}
+ 331 0026 127A     		ldrb	r2, [r2, #8]
+ 332 0028 1A70     		strb	r2, [r3]
+ 252:.\Generated_Source\PSoC5/Amp.c ****         ( Amp_COMP_4P35PF  | (uint8)( Amp_REDC_00 >> 2 )), /* G=1  */
+ 253:.\Generated_Source\PSoC5/Amp.c ****         ( Amp_COMP_4P35PF  | (uint8)( Amp_REDC_01 >> 2 )), /* G=2  */
+ 254:.\Generated_Source\PSoC5/Amp.c ****         ( Amp_COMP_3P0PF   | (uint8)( Amp_REDC_01 >> 2 )), /* G=4  */
+ 255:.\Generated_Source\PSoC5/Amp.c ****         ( Amp_COMP_3P0PF   | (uint8)( Amp_REDC_01 >> 2 )), /* G=8  */
+ 256:.\Generated_Source\PSoC5/Amp.c ****         ( Amp_COMP_3P6PF   | (uint8)( Amp_REDC_01 >> 2 )), /* G=16 */
+ 257:.\Generated_Source\PSoC5/Amp.c ****         ( Amp_COMP_3P6PF   | (uint8)( Amp_REDC_11 >> 2 )), /* G=24 */
+ 258:.\Generated_Source\PSoC5/Amp.c ****         ( Amp_COMP_3P6PF   | (uint8)( Amp_REDC_11 >> 2 )), /* G=32 */
+ 259:.\Generated_Source\PSoC5/Amp.c ****         ( Amp_COMP_3P6PF   | (uint8)( Amp_REDC_00 >> 2 )), /* G=48 */
+ 260:.\Generated_Source\PSoC5/Amp.c ****         ( Amp_COMP_3P6PF   | (uint8)( Amp_REDC_00 >> 2 ))  /* G=50 */
+ 261:.\Generated_Source\PSoC5/Amp.c ****     };
+ 262:.\Generated_Source\PSoC5/Amp.c ****     
+ 263:.\Generated_Source\PSoC5/Amp.c ****     /* Only set new gain if it is a valid gain */
+ 264:.\Generated_Source\PSoC5/Amp.c ****     if( gain <= Amp_GAIN_MAX)
+ 333              		.loc 1 264 0
+ 334 002a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 335 002c 082B     		cmp	r3, #8
+ 336 002e 39D8     		bhi	.L17
+ 265:.\Generated_Source\PSoC5/Amp.c ****     {
+ 266:.\Generated_Source\PSoC5/Amp.c ****         /* Clear resistors, redc, and bias */
+ 267:.\Generated_Source\PSoC5/Amp.c ****         Amp_CR2_REG &= (uint8)(~(Amp_RVAL_MASK | Amp_R20_40B_MASK | 
+ 337              		.loc 1 267 0
+ 338 0030 214B     		ldr	r3, .L19+8
+ 339 0032 214A     		ldr	r2, .L19+8
+ 340 0034 1278     		ldrb	r2, [r2]
+ 341 0036 D2B2     		uxtb	r2, r2
+ 342 0038 22F07F02 		bic	r2, r2, #127
+ 343 003c D2B2     		uxtb	r2, r2
+ 344 003e 1A70     		strb	r2, [r3]
+ 268:.\Generated_Source\PSoC5/Amp.c ****                                 Amp_REDC_MASK | Amp_BIAS_MASK ));
+ 269:.\Generated_Source\PSoC5/Amp.c **** 
+ 270:.\Generated_Source\PSoC5/Amp.c ****         /* Set gain value resistors, redc comp, and bias */
+ 271:.\Generated_Source\PSoC5/Amp.c ****         Amp_CR2_REG |= (Amp_GainArray[gain] |
+ 345              		.loc 1 271 0
+ 346 0040 1D4B     		ldr	r3, .L19+8
+ 347 0042 1D4A     		ldr	r2, .L19+8
+ 348 0044 1278     		ldrb	r2, [r2]
+ 349 0046 D1B2     		uxtb	r1, r2
+ 350 0048 FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 351 004a 07F12000 		add	r0, r7, #32
+ 352 004e 0244     		add	r2, r2, r0
+ 353 0050 12F80C0C 		ldrb	r0, [r2, #-12]	@ zero_extendqisi2
+ 272:.\Generated_Source\PSoC5/Amp.c ****                                 ((uint8)(Amp_GainComp[gain] << 2 ) & Amp_REDC_MASK));
+ 354              		.loc 1 272 0
+ 355 0054 FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 12
+
+
+ 356 0056 07F1200C 		add	ip, r7, #32
+ 357 005a 6244     		add	r2, r2, ip
+ 358 005c 12F8182C 		ldrb	r2, [r2, #-24]	@ zero_extendqisi2
+ 359 0060 9200     		lsls	r2, r2, #2
+ 360 0062 D2B2     		uxtb	r2, r2
+ 271:.\Generated_Source\PSoC5/Amp.c ****         Amp_CR2_REG |= (Amp_GainArray[gain] |
+ 361              		.loc 1 271 0
+ 362 0064 02F00C02 		and	r2, r2, #12
+ 363 0068 D2B2     		uxtb	r2, r2
+ 364 006a 0243     		orrs	r2, r2, r0
+ 365 006c D2B2     		uxtb	r2, r2
+ 366 006e 0A43     		orrs	r2, r2, r1
+ 367 0070 D2B2     		uxtb	r2, r2
+ 368 0072 1A70     		strb	r2, [r3]
+ 273:.\Generated_Source\PSoC5/Amp.c **** 
+ 274:.\Generated_Source\PSoC5/Amp.c ****         /* Clear sc_comp  */
+ 275:.\Generated_Source\PSoC5/Amp.c ****         Amp_CR1_REG &= (uint8)(~Amp_COMP_MASK);
+ 369              		.loc 1 275 0
+ 370 0074 114B     		ldr	r3, .L19+12
+ 371 0076 114A     		ldr	r2, .L19+12
+ 372 0078 1278     		ldrb	r2, [r2]
+ 373 007a D2B2     		uxtb	r2, r2
+ 374 007c 22F00C02 		bic	r2, r2, #12
+ 375 0080 D2B2     		uxtb	r2, r2
+ 376 0082 1A70     		strb	r2, [r3]
+ 276:.\Generated_Source\PSoC5/Amp.c ****         /* Set sc_comp  */
+ 277:.\Generated_Source\PSoC5/Amp.c ****         Amp_CR1_REG |= ( Amp_GainComp[gain] | Amp_COMP_MASK );
+ 377              		.loc 1 277 0
+ 378 0084 0D4B     		ldr	r3, .L19+12
+ 379 0086 0D4A     		ldr	r2, .L19+12
+ 380 0088 1278     		ldrb	r2, [r2]
+ 381 008a D1B2     		uxtb	r1, r2
+ 382 008c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 383 008e 07F12000 		add	r0, r7, #32
+ 384 0092 0244     		add	r2, r2, r0
+ 385 0094 12F8182C 		ldrb	r2, [r2, #-24]	@ zero_extendqisi2
+ 386 0098 0A43     		orrs	r2, r2, r1
+ 387 009a D2B2     		uxtb	r2, r2
+ 388 009c 42F00C02 		orr	r2, r2, #12
+ 389 00a0 D2B2     		uxtb	r2, r2
+ 390 00a2 1A70     		strb	r2, [r3]
+ 391              	.L17:
+ 278:.\Generated_Source\PSoC5/Amp.c ****     }
+ 279:.\Generated_Source\PSoC5/Amp.c **** }
+ 392              		.loc 1 279 0
+ 393 00a4 2437     		adds	r7, r7, #36
+ 394 00a6 BD46     		mov	sp, r7
+ 395              		@ sp needed
+ 396 00a8 5DF8047B 		ldr	r7, [sp], #4
+ 397 00ac 7047     		bx	lr
+ 398              	.L20:
+ 399 00ae 00BF     		.align	2
+ 400              	.L19:
+ 401 00b0 00000000 		.word	.LC0
+ 402 00b4 0C000000 		.word	.LC1
+ 403 00b8 02580040 		.word	1073764354
+ 404 00bc 01580040 		.word	1073764353
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 13
+
+
+ 405              		.cfi_endproc
+ 406              	.LFE5:
+ 407              		.size	Amp_SetGain, .-Amp_SetGain
+ 408              		.text
+ 409              	.Letext0:
+ 410              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 411              		.section	.debug_info,"",%progbits
+ 412              	.Ldebug_info0:
+ 413 0000 81010000 		.4byte	0x181
+ 414 0004 0400     		.2byte	0x4
+ 415 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 416 000a 04       		.byte	0x4
+ 417 000b 01       		.uleb128 0x1
+ 418 000c B6000000 		.4byte	.LASF26
+ 419 0010 01       		.byte	0x1
+ 420 0011 E6010000 		.4byte	.LASF27
+ 421 0015 7F010000 		.4byte	.LASF28
+ 422 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 423 001d 00000000 		.4byte	0
+ 424 0021 00000000 		.4byte	.Ldebug_line0
+ 425 0025 02       		.uleb128 0x2
+ 426 0026 01       		.byte	0x1
+ 427 0027 06       		.byte	0x6
+ 428 0028 DA010000 		.4byte	.LASF0
+ 429 002c 02       		.uleb128 0x2
+ 430 002d 01       		.byte	0x1
+ 431 002e 08       		.byte	0x8
+ 432 002f 4B000000 		.4byte	.LASF1
+ 433 0033 02       		.uleb128 0x2
+ 434 0034 02       		.byte	0x2
+ 435 0035 05       		.byte	0x5
+ 436 0036 5D010000 		.4byte	.LASF2
+ 437 003a 02       		.uleb128 0x2
+ 438 003b 02       		.byte	0x2
+ 439 003c 07       		.byte	0x7
+ 440 003d 2D000000 		.4byte	.LASF3
+ 441 0041 02       		.uleb128 0x2
+ 442 0042 04       		.byte	0x4
+ 443 0043 05       		.byte	0x5
+ 444 0044 C7010000 		.4byte	.LASF4
+ 445 0048 02       		.uleb128 0x2
+ 446 0049 04       		.byte	0x4
+ 447 004a 07       		.byte	0x7
+ 448 004b 5E000000 		.4byte	.LASF5
+ 449 004f 02       		.uleb128 0x2
+ 450 0050 08       		.byte	0x8
+ 451 0051 05       		.byte	0x5
+ 452 0052 4A010000 		.4byte	.LASF6
+ 453 0056 02       		.uleb128 0x2
+ 454 0057 08       		.byte	0x8
+ 455 0058 07       		.byte	0x7
+ 456 0059 9F000000 		.4byte	.LASF7
+ 457 005d 03       		.uleb128 0x3
+ 458 005e 04       		.byte	0x4
+ 459 005f 05       		.byte	0x5
+ 460 0060 696E7400 		.ascii	"int\000"
+ 461 0064 02       		.uleb128 0x2
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 14
+
+
+ 462 0065 04       		.byte	0x4
+ 463 0066 07       		.byte	0x7
+ 464 0067 92000000 		.4byte	.LASF8
+ 465 006b 04       		.uleb128 0x4
+ 466 006c 70000000 		.4byte	.LASF12
+ 467 0070 02       		.byte	0x2
+ 468 0071 A1       		.byte	0xa1
+ 469 0072 2C000000 		.4byte	0x2c
+ 470 0076 02       		.uleb128 0x2
+ 471 0077 04       		.byte	0x4
+ 472 0078 04       		.byte	0x4
+ 473 0079 45000000 		.4byte	.LASF9
+ 474 007d 02       		.uleb128 0x2
+ 475 007e 08       		.byte	0x8
+ 476 007f 04       		.byte	0x4
+ 477 0080 7F000000 		.4byte	.LASF10
+ 478 0084 02       		.uleb128 0x2
+ 479 0085 01       		.byte	0x1
+ 480 0086 08       		.byte	0x8
+ 481 0087 58010000 		.4byte	.LASF11
+ 482 008b 05       		.uleb128 0x5
+ 483 008c 59000000 		.4byte	.LASF13
+ 484 0090 02       		.byte	0x2
+ 485 0091 4B01     		.2byte	0x14b
+ 486 0093 97000000 		.4byte	0x97
+ 487 0097 06       		.uleb128 0x6
+ 488 0098 6B000000 		.4byte	0x6b
+ 489 009c 02       		.uleb128 0x2
+ 490 009d 04       		.byte	0x4
+ 491 009e 07       		.byte	0x7
+ 492 009f 3B010000 		.4byte	.LASF14
+ 493 00a3 07       		.uleb128 0x7
+ 494 00a4 76000000 		.4byte	.LASF15
+ 495 00a8 01       		.byte	0x1
+ 496 00a9 31       		.byte	0x31
+ 497 00aa 00000000 		.4byte	.LFB0
+ 498 00ae 3C000000 		.4byte	.LFE0-.LFB0
+ 499 00b2 01       		.uleb128 0x1
+ 500 00b3 9C       		.byte	0x9c
+ 501 00b4 08       		.uleb128 0x8
+ 502 00b5 67010000 		.4byte	.LASF16
+ 503 00b9 01       		.byte	0x1
+ 504 00ba 4E       		.byte	0x4e
+ 505 00bb 00000000 		.4byte	.LFB1
+ 506 00bf 48000000 		.4byte	.LFE1-.LFB1
+ 507 00c3 01       		.uleb128 0x1
+ 508 00c4 9C       		.byte	0x9c
+ 509 00c5 07       		.uleb128 0x7
+ 510 00c6 D0010000 		.4byte	.LASF17
+ 511 00ca 01       		.byte	0x1
+ 512 00cb 86       		.byte	0x86
+ 513 00cc 00000000 		.4byte	.LFB2
+ 514 00d0 20000000 		.4byte	.LFE2-.LFB2
+ 515 00d4 01       		.uleb128 0x1
+ 516 00d5 9C       		.byte	0x9c
+ 517 00d6 08       		.uleb128 0x8
+ 518 00d7 32010000 		.4byte	.LASF18
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 15
+
+
+ 519 00db 01       		.byte	0x1
+ 520 00dc A4       		.byte	0xa4
+ 521 00dd 00000000 		.4byte	.LFB3
+ 522 00e1 34000000 		.4byte	.LFE3-.LFB3
+ 523 00e5 01       		.uleb128 0x1
+ 524 00e6 9C       		.byte	0x9c
+ 525 00e7 09       		.uleb128 0x9
+ 526 00e8 0C000000 		.4byte	.LASF19
+ 527 00ec 01       		.byte	0x1
+ 528 00ed D2       		.byte	0xd2
+ 529 00ee 00000000 		.4byte	.LFB4
+ 530 00f2 38000000 		.4byte	.LFE4-.LFB4
+ 531 00f6 01       		.uleb128 0x1
+ 532 00f7 9C       		.byte	0x9c
+ 533 00f8 19010000 		.4byte	0x119
+ 534 00fc 0A       		.uleb128 0xa
+ 535 00fd 44010000 		.4byte	.LASF21
+ 536 0101 01       		.byte	0x1
+ 537 0102 D2       		.byte	0xd2
+ 538 0103 6B000000 		.4byte	0x6b
+ 539 0107 02       		.uleb128 0x2
+ 540 0108 91       		.byte	0x91
+ 541 0109 6F       		.sleb128 -17
+ 542 010a 0B       		.uleb128 0xb
+ 543 010b 19000000 		.4byte	.LASF23
+ 544 010f 01       		.byte	0x1
+ 545 0110 D4       		.byte	0xd4
+ 546 0111 6B000000 		.4byte	0x6b
+ 547 0115 02       		.uleb128 0x2
+ 548 0116 91       		.byte	0x91
+ 549 0117 77       		.sleb128 -9
+ 550 0118 00       		.byte	0
+ 551 0119 09       		.uleb128 0x9
+ 552 011a 00000000 		.4byte	.LASF20
+ 553 011e 01       		.byte	0x1
+ 554 011f EB       		.byte	0xeb
+ 555 0120 00000000 		.4byte	.LFB5
+ 556 0124 C0000000 		.4byte	.LFE5-.LFB5
+ 557 0128 01       		.uleb128 0x1
+ 558 0129 9C       		.byte	0x9c
+ 559 012a 59010000 		.4byte	0x159
+ 560 012e 0A       		.uleb128 0xa
+ 561 012f 40000000 		.4byte	.LASF22
+ 562 0133 01       		.byte	0x1
+ 563 0134 EB       		.byte	0xeb
+ 564 0135 6B000000 		.4byte	0x6b
+ 565 0139 02       		.uleb128 0x2
+ 566 013a 91       		.byte	0x91
+ 567 013b 5F       		.sleb128 -33
+ 568 013c 0B       		.uleb128 0xb
+ 569 013d 1F000000 		.4byte	.LASF24
+ 570 0141 01       		.byte	0x1
+ 571 0142 EE       		.byte	0xee
+ 572 0143 69010000 		.4byte	0x169
+ 573 0147 02       		.uleb128 0x2
+ 574 0148 91       		.byte	0x91
+ 575 0149 6C       		.sleb128 -20
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 16
+
+
+ 576 014a 0B       		.uleb128 0xb
+ 577 014b 72010000 		.4byte	.LASF25
+ 578 014f 01       		.byte	0x1
+ 579 0150 FB       		.byte	0xfb
+ 580 0151 6E010000 		.4byte	0x16e
+ 581 0155 02       		.uleb128 0x2
+ 582 0156 91       		.byte	0x91
+ 583 0157 60       		.sleb128 -32
+ 584 0158 00       		.byte	0
+ 585 0159 0C       		.uleb128 0xc
+ 586 015a 6B000000 		.4byte	0x6b
+ 587 015e 69010000 		.4byte	0x169
+ 588 0162 0D       		.uleb128 0xd
+ 589 0163 9C000000 		.4byte	0x9c
+ 590 0167 08       		.byte	0x8
+ 591 0168 00       		.byte	0
+ 592 0169 0E       		.uleb128 0xe
+ 593 016a 59010000 		.4byte	0x159
+ 594 016e 0E       		.uleb128 0xe
+ 595 016f 59010000 		.4byte	0x159
+ 596 0173 0F       		.uleb128 0xf
+ 597 0174 86000000 		.4byte	.LASF29
+ 598 0178 01       		.byte	0x1
+ 599 0179 1E       		.byte	0x1e
+ 600 017a 6B000000 		.4byte	0x6b
+ 601 017e 05       		.uleb128 0x5
+ 602 017f 03       		.byte	0x3
+ 603 0180 00000000 		.4byte	Amp_initVar
+ 604 0184 00       		.byte	0
+ 605              		.section	.debug_abbrev,"",%progbits
+ 606              	.Ldebug_abbrev0:
+ 607 0000 01       		.uleb128 0x1
+ 608 0001 11       		.uleb128 0x11
+ 609 0002 01       		.byte	0x1
+ 610 0003 25       		.uleb128 0x25
+ 611 0004 0E       		.uleb128 0xe
+ 612 0005 13       		.uleb128 0x13
+ 613 0006 0B       		.uleb128 0xb
+ 614 0007 03       		.uleb128 0x3
+ 615 0008 0E       		.uleb128 0xe
+ 616 0009 1B       		.uleb128 0x1b
+ 617 000a 0E       		.uleb128 0xe
+ 618 000b 55       		.uleb128 0x55
+ 619 000c 17       		.uleb128 0x17
+ 620 000d 11       		.uleb128 0x11
+ 621 000e 01       		.uleb128 0x1
+ 622 000f 10       		.uleb128 0x10
+ 623 0010 17       		.uleb128 0x17
+ 624 0011 00       		.byte	0
+ 625 0012 00       		.byte	0
+ 626 0013 02       		.uleb128 0x2
+ 627 0014 24       		.uleb128 0x24
+ 628 0015 00       		.byte	0
+ 629 0016 0B       		.uleb128 0xb
+ 630 0017 0B       		.uleb128 0xb
+ 631 0018 3E       		.uleb128 0x3e
+ 632 0019 0B       		.uleb128 0xb
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 17
+
+
+ 633 001a 03       		.uleb128 0x3
+ 634 001b 0E       		.uleb128 0xe
+ 635 001c 00       		.byte	0
+ 636 001d 00       		.byte	0
+ 637 001e 03       		.uleb128 0x3
+ 638 001f 24       		.uleb128 0x24
+ 639 0020 00       		.byte	0
+ 640 0021 0B       		.uleb128 0xb
+ 641 0022 0B       		.uleb128 0xb
+ 642 0023 3E       		.uleb128 0x3e
+ 643 0024 0B       		.uleb128 0xb
+ 644 0025 03       		.uleb128 0x3
+ 645 0026 08       		.uleb128 0x8
+ 646 0027 00       		.byte	0
+ 647 0028 00       		.byte	0
+ 648 0029 04       		.uleb128 0x4
+ 649 002a 16       		.uleb128 0x16
+ 650 002b 00       		.byte	0
+ 651 002c 03       		.uleb128 0x3
+ 652 002d 0E       		.uleb128 0xe
+ 653 002e 3A       		.uleb128 0x3a
+ 654 002f 0B       		.uleb128 0xb
+ 655 0030 3B       		.uleb128 0x3b
+ 656 0031 0B       		.uleb128 0xb
+ 657 0032 49       		.uleb128 0x49
+ 658 0033 13       		.uleb128 0x13
+ 659 0034 00       		.byte	0
+ 660 0035 00       		.byte	0
+ 661 0036 05       		.uleb128 0x5
+ 662 0037 16       		.uleb128 0x16
+ 663 0038 00       		.byte	0
+ 664 0039 03       		.uleb128 0x3
+ 665 003a 0E       		.uleb128 0xe
+ 666 003b 3A       		.uleb128 0x3a
+ 667 003c 0B       		.uleb128 0xb
+ 668 003d 3B       		.uleb128 0x3b
+ 669 003e 05       		.uleb128 0x5
+ 670 003f 49       		.uleb128 0x49
+ 671 0040 13       		.uleb128 0x13
+ 672 0041 00       		.byte	0
+ 673 0042 00       		.byte	0
+ 674 0043 06       		.uleb128 0x6
+ 675 0044 35       		.uleb128 0x35
+ 676 0045 00       		.byte	0
+ 677 0046 49       		.uleb128 0x49
+ 678 0047 13       		.uleb128 0x13
+ 679 0048 00       		.byte	0
+ 680 0049 00       		.byte	0
+ 681 004a 07       		.uleb128 0x7
+ 682 004b 2E       		.uleb128 0x2e
+ 683 004c 00       		.byte	0
+ 684 004d 3F       		.uleb128 0x3f
+ 685 004e 19       		.uleb128 0x19
+ 686 004f 03       		.uleb128 0x3
+ 687 0050 0E       		.uleb128 0xe
+ 688 0051 3A       		.uleb128 0x3a
+ 689 0052 0B       		.uleb128 0xb
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 18
+
+
+ 690 0053 3B       		.uleb128 0x3b
+ 691 0054 0B       		.uleb128 0xb
+ 692 0055 27       		.uleb128 0x27
+ 693 0056 19       		.uleb128 0x19
+ 694 0057 11       		.uleb128 0x11
+ 695 0058 01       		.uleb128 0x1
+ 696 0059 12       		.uleb128 0x12
+ 697 005a 06       		.uleb128 0x6
+ 698 005b 40       		.uleb128 0x40
+ 699 005c 18       		.uleb128 0x18
+ 700 005d 9642     		.uleb128 0x2116
+ 701 005f 19       		.uleb128 0x19
+ 702 0060 00       		.byte	0
+ 703 0061 00       		.byte	0
+ 704 0062 08       		.uleb128 0x8
+ 705 0063 2E       		.uleb128 0x2e
+ 706 0064 00       		.byte	0
+ 707 0065 3F       		.uleb128 0x3f
+ 708 0066 19       		.uleb128 0x19
+ 709 0067 03       		.uleb128 0x3
+ 710 0068 0E       		.uleb128 0xe
+ 711 0069 3A       		.uleb128 0x3a
+ 712 006a 0B       		.uleb128 0xb
+ 713 006b 3B       		.uleb128 0x3b
+ 714 006c 0B       		.uleb128 0xb
+ 715 006d 27       		.uleb128 0x27
+ 716 006e 19       		.uleb128 0x19
+ 717 006f 11       		.uleb128 0x11
+ 718 0070 01       		.uleb128 0x1
+ 719 0071 12       		.uleb128 0x12
+ 720 0072 06       		.uleb128 0x6
+ 721 0073 40       		.uleb128 0x40
+ 722 0074 18       		.uleb128 0x18
+ 723 0075 9742     		.uleb128 0x2117
+ 724 0077 19       		.uleb128 0x19
+ 725 0078 00       		.byte	0
+ 726 0079 00       		.byte	0
+ 727 007a 09       		.uleb128 0x9
+ 728 007b 2E       		.uleb128 0x2e
+ 729 007c 01       		.byte	0x1
+ 730 007d 3F       		.uleb128 0x3f
+ 731 007e 19       		.uleb128 0x19
+ 732 007f 03       		.uleb128 0x3
+ 733 0080 0E       		.uleb128 0xe
+ 734 0081 3A       		.uleb128 0x3a
+ 735 0082 0B       		.uleb128 0xb
+ 736 0083 3B       		.uleb128 0x3b
+ 737 0084 0B       		.uleb128 0xb
+ 738 0085 27       		.uleb128 0x27
+ 739 0086 19       		.uleb128 0x19
+ 740 0087 11       		.uleb128 0x11
+ 741 0088 01       		.uleb128 0x1
+ 742 0089 12       		.uleb128 0x12
+ 743 008a 06       		.uleb128 0x6
+ 744 008b 40       		.uleb128 0x40
+ 745 008c 18       		.uleb128 0x18
+ 746 008d 9742     		.uleb128 0x2117
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 19
+
+
+ 747 008f 19       		.uleb128 0x19
+ 748 0090 01       		.uleb128 0x1
+ 749 0091 13       		.uleb128 0x13
+ 750 0092 00       		.byte	0
+ 751 0093 00       		.byte	0
+ 752 0094 0A       		.uleb128 0xa
+ 753 0095 05       		.uleb128 0x5
+ 754 0096 00       		.byte	0
+ 755 0097 03       		.uleb128 0x3
+ 756 0098 0E       		.uleb128 0xe
+ 757 0099 3A       		.uleb128 0x3a
+ 758 009a 0B       		.uleb128 0xb
+ 759 009b 3B       		.uleb128 0x3b
+ 760 009c 0B       		.uleb128 0xb
+ 761 009d 49       		.uleb128 0x49
+ 762 009e 13       		.uleb128 0x13
+ 763 009f 02       		.uleb128 0x2
+ 764 00a0 18       		.uleb128 0x18
+ 765 00a1 00       		.byte	0
+ 766 00a2 00       		.byte	0
+ 767 00a3 0B       		.uleb128 0xb
+ 768 00a4 34       		.uleb128 0x34
+ 769 00a5 00       		.byte	0
+ 770 00a6 03       		.uleb128 0x3
+ 771 00a7 0E       		.uleb128 0xe
+ 772 00a8 3A       		.uleb128 0x3a
+ 773 00a9 0B       		.uleb128 0xb
+ 774 00aa 3B       		.uleb128 0x3b
+ 775 00ab 0B       		.uleb128 0xb
+ 776 00ac 49       		.uleb128 0x49
+ 777 00ad 13       		.uleb128 0x13
+ 778 00ae 02       		.uleb128 0x2
+ 779 00af 18       		.uleb128 0x18
+ 780 00b0 00       		.byte	0
+ 781 00b1 00       		.byte	0
+ 782 00b2 0C       		.uleb128 0xc
+ 783 00b3 01       		.uleb128 0x1
+ 784 00b4 01       		.byte	0x1
+ 785 00b5 49       		.uleb128 0x49
+ 786 00b6 13       		.uleb128 0x13
+ 787 00b7 01       		.uleb128 0x1
+ 788 00b8 13       		.uleb128 0x13
+ 789 00b9 00       		.byte	0
+ 790 00ba 00       		.byte	0
+ 791 00bb 0D       		.uleb128 0xd
+ 792 00bc 21       		.uleb128 0x21
+ 793 00bd 00       		.byte	0
+ 794 00be 49       		.uleb128 0x49
+ 795 00bf 13       		.uleb128 0x13
+ 796 00c0 2F       		.uleb128 0x2f
+ 797 00c1 0B       		.uleb128 0xb
+ 798 00c2 00       		.byte	0
+ 799 00c3 00       		.byte	0
+ 800 00c4 0E       		.uleb128 0xe
+ 801 00c5 26       		.uleb128 0x26
+ 802 00c6 00       		.byte	0
+ 803 00c7 49       		.uleb128 0x49
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 20
+
+
+ 804 00c8 13       		.uleb128 0x13
+ 805 00c9 00       		.byte	0
+ 806 00ca 00       		.byte	0
+ 807 00cb 0F       		.uleb128 0xf
+ 808 00cc 34       		.uleb128 0x34
+ 809 00cd 00       		.byte	0
+ 810 00ce 03       		.uleb128 0x3
+ 811 00cf 0E       		.uleb128 0xe
+ 812 00d0 3A       		.uleb128 0x3a
+ 813 00d1 0B       		.uleb128 0xb
+ 814 00d2 3B       		.uleb128 0x3b
+ 815 00d3 0B       		.uleb128 0xb
+ 816 00d4 49       		.uleb128 0x49
+ 817 00d5 13       		.uleb128 0x13
+ 818 00d6 3F       		.uleb128 0x3f
+ 819 00d7 19       		.uleb128 0x19
+ 820 00d8 02       		.uleb128 0x2
+ 821 00d9 18       		.uleb128 0x18
+ 822 00da 00       		.byte	0
+ 823 00db 00       		.byte	0
+ 824 00dc 00       		.byte	0
+ 825              		.section	.debug_aranges,"",%progbits
+ 826 0000 44000000 		.4byte	0x44
+ 827 0004 0200     		.2byte	0x2
+ 828 0006 00000000 		.4byte	.Ldebug_info0
+ 829 000a 04       		.byte	0x4
+ 830 000b 00       		.byte	0
+ 831 000c 0000     		.2byte	0
+ 832 000e 0000     		.2byte	0
+ 833 0010 00000000 		.4byte	.LFB0
+ 834 0014 3C000000 		.4byte	.LFE0-.LFB0
+ 835 0018 00000000 		.4byte	.LFB1
+ 836 001c 48000000 		.4byte	.LFE1-.LFB1
+ 837 0020 00000000 		.4byte	.LFB2
+ 838 0024 20000000 		.4byte	.LFE2-.LFB2
+ 839 0028 00000000 		.4byte	.LFB3
+ 840 002c 34000000 		.4byte	.LFE3-.LFB3
+ 841 0030 00000000 		.4byte	.LFB4
+ 842 0034 38000000 		.4byte	.LFE4-.LFB4
+ 843 0038 00000000 		.4byte	.LFB5
+ 844 003c C0000000 		.4byte	.LFE5-.LFB5
+ 845 0040 00000000 		.4byte	0
+ 846 0044 00000000 		.4byte	0
+ 847              		.section	.debug_ranges,"",%progbits
+ 848              	.Ldebug_ranges0:
+ 849 0000 00000000 		.4byte	.LFB0
+ 850 0004 3C000000 		.4byte	.LFE0
+ 851 0008 00000000 		.4byte	.LFB1
+ 852 000c 48000000 		.4byte	.LFE1
+ 853 0010 00000000 		.4byte	.LFB2
+ 854 0014 20000000 		.4byte	.LFE2
+ 855 0018 00000000 		.4byte	.LFB3
+ 856 001c 34000000 		.4byte	.LFE3
+ 857 0020 00000000 		.4byte	.LFB4
+ 858 0024 38000000 		.4byte	.LFE4
+ 859 0028 00000000 		.4byte	.LFB5
+ 860 002c C0000000 		.4byte	.LFE5
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 21
+
+
+ 861 0030 00000000 		.4byte	0
+ 862 0034 00000000 		.4byte	0
+ 863              		.section	.debug_line,"",%progbits
+ 864              	.Ldebug_line0:
+ 865 0000 D1000000 		.section	.debug_str,"MS",%progbits,1
+ 865      02004200 
+ 865      00000201 
+ 865      FB0E0D00 
+ 865      01010101 
+ 866              	.LASF20:
+ 867 0000 416D705F 		.ascii	"Amp_SetGain\000"
+ 867      53657447 
+ 867      61696E00 
+ 868              	.LASF19:
+ 869 000c 416D705F 		.ascii	"Amp_SetPower\000"
+ 869      53657450 
+ 869      6F776572 
+ 869      00
+ 870              	.LASF23:
+ 871 0019 746D7043 		.ascii	"tmpCR\000"
+ 871      5200
+ 872              	.LASF24:
+ 873 001f 416D705F 		.ascii	"Amp_GainArray\000"
+ 873      4761696E 
+ 873      41727261 
+ 873      7900
+ 874              	.LASF3:
+ 875 002d 73686F72 		.ascii	"short unsigned int\000"
+ 875      7420756E 
+ 875      7369676E 
+ 875      65642069 
+ 875      6E7400
+ 876              	.LASF22:
+ 877 0040 6761696E 		.ascii	"gain\000"
+ 877      00
+ 878              	.LASF9:
+ 879 0045 666C6F61 		.ascii	"float\000"
+ 879      7400
+ 880              	.LASF1:
+ 881 004b 756E7369 		.ascii	"unsigned char\000"
+ 881      676E6564 
+ 881      20636861 
+ 881      7200
+ 882              	.LASF13:
+ 883 0059 72656738 		.ascii	"reg8\000"
+ 883      00
+ 884              	.LASF5:
+ 885 005e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 885      20756E73 
+ 885      69676E65 
+ 885      6420696E 
+ 885      7400
+ 886              	.LASF12:
+ 887 0070 75696E74 		.ascii	"uint8\000"
+ 887      3800
+ 888              	.LASF15:
+ 889 0076 416D705F 		.ascii	"Amp_Init\000"
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 22
+
+
+ 889      496E6974 
+ 889      00
+ 890              	.LASF10:
+ 891 007f 646F7562 		.ascii	"double\000"
+ 891      6C6500
+ 892              	.LASF29:
+ 893 0086 416D705F 		.ascii	"Amp_initVar\000"
+ 893      696E6974 
+ 893      56617200 
+ 894              	.LASF8:
+ 895 0092 756E7369 		.ascii	"unsigned int\000"
+ 895      676E6564 
+ 895      20696E74 
+ 895      00
+ 896              	.LASF7:
+ 897 009f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 897      206C6F6E 
+ 897      6720756E 
+ 897      7369676E 
+ 897      65642069 
+ 898              	.LASF26:
+ 899 00b6 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 899      4320342E 
+ 899      382E3420 
+ 899      32303134 
+ 899      30353236 
+ 900 00e9 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
+ 900      20726576 
+ 900      6973696F 
+ 900      6E203231 
+ 900      31333538 
+ 901 011c 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 901      66756E63 
+ 901      74696F6E 
+ 901      2D736563 
+ 901      74696F6E 
+ 902              	.LASF18:
+ 903 0132 416D705F 		.ascii	"Amp_Stop\000"
+ 903      53746F70 
+ 903      00
+ 904              	.LASF14:
+ 905 013b 73697A65 		.ascii	"sizetype\000"
+ 905      74797065 
+ 905      00
+ 906              	.LASF21:
+ 907 0144 706F7765 		.ascii	"power\000"
+ 907      7200
+ 908              	.LASF6:
+ 909 014a 6C6F6E67 		.ascii	"long long int\000"
+ 909      206C6F6E 
+ 909      6720696E 
+ 909      7400
+ 910              	.LASF11:
+ 911 0158 63686172 		.ascii	"char\000"
+ 911      00
+ 912              	.LASF2:
+ 913 015d 73686F72 		.ascii	"short int\000"
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\cc80ftkz.s 			page 23
+
+
+ 913      7420696E 
+ 913      7400
+ 914              	.LASF16:
+ 915 0167 416D705F 		.ascii	"Amp_Enable\000"
+ 915      456E6162 
+ 915      6C6500
+ 916              	.LASF25:
+ 917 0172 416D705F 		.ascii	"Amp_GainComp\000"
+ 917      4761696E 
+ 917      436F6D70 
+ 917      00
+ 918              	.LASF28:
+ 919 017f 433A5C55 		.ascii	"C:\\Users\\IEUser\\Downloads\\PSoC_Creator\\Filter_"
+ 919      73657273 
+ 919      5C494555 
+ 919      7365725C 
+ 919      446F776E 
+ 920 01ad 4144435F 		.ascii	"ADC_VDAC01\\Design01.cydsn\000"
+ 920      56444143 
+ 920      30315C44 
+ 920      65736967 
+ 920      6E30312E 
+ 921              	.LASF4:
+ 922 01c7 6C6F6E67 		.ascii	"long int\000"
+ 922      20696E74 
+ 922      00
+ 923              	.LASF17:
+ 924 01d0 416D705F 		.ascii	"Amp_Start\000"
+ 924      53746172 
+ 924      7400
+ 925              	.LASF0:
+ 926 01da 7369676E 		.ascii	"signed char\000"
+ 926      65642063 
+ 926      68617200 
+ 927              	.LASF27:
+ 928 01e6 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Amp.c\000"
+ 928      6E657261 
+ 928      7465645F 
+ 928      536F7572 
+ 928      63655C50 
+ 929              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
