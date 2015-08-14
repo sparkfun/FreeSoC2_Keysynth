@@ -9,4 +9,5 @@ In order to view the source files you'll need to download and install PSoC Creat
 http://www.cypress.com/products/psoc-creator
 
 Netlist.png - screengrab of the pin assignments from the PSoC Creator project
+
 Schematic.jpg - screengrab of PSoC Creator schematic.
